@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import SoftwareCard from '@/components/SoftwareCard';
+import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
 import { categories, software, subscriptionTools } from '@/lib/data';
 
 interface PageProps {
@@ -19,9 +20,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const category = categories.find((c) => c.slug === slug);
   if (!category) return {};
 
+  const title = `Best No-Subscription ${category.name} Software`;
+  const description = category.description;
+
   return {
-    title: `Best No-Subscription ${category.name} Software`,
-    description: category.description,
+    title,
+    description,
+    alternates: {
+      canonical: `/categories/${slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/categories/${slug}`,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
   };
 }
 
@@ -42,6 +60,13 @@ export default async function CategoryPage({ params }: PageProps) {
 
   return (
     <div>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Categories', url: '/categories/design' },
+          { name: category.name, url: `/categories/${slug}` },
+        ])}
+      />
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

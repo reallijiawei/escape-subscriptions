@@ -5,6 +5,16 @@ export const metadata: Metadata = {
   title: 'Software Subscription Cost Calculator',
   description:
     'See how much you spend on software subscriptions every year and discover one-time or open-source alternatives.',
+  alternates: {
+    canonical: '/calculator',
+  },
+  openGraph: {
+    title: 'Software Subscription Cost Calculator',
+    description:
+      'See how much you spend on software subscriptions every year and discover one-time or open-source alternatives.',
+    url: '/calculator',
+    type: 'website',
+  },
 };
 
 export default function CalculatorPage() {

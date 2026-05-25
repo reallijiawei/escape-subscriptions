@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
+import JsonLd, { softwareApplicationSchema, breadcrumbSchema } from '@/components/JsonLd';
 import { software, getSubscriptionToolBySlug } from '@/lib/data';
 import { formatCategory, formatPlatform } from '@/lib/utils';
 
@@ -21,9 +22,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const sw = software.find((s) => s.slug === slug);
   if (!sw) return {};
 
+  const title = `${sw.name} — One-Time Purchase Alternative`;
+  const description = sw.description;
+
   return {
-    title: `${sw.name} — One-Time Purchase Alternative`,
-    description: sw.description,
+    title,
+    description,
+    alternates: {
+      canonical: `/software/${slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/software/${slug}`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
   };
 }
 
@@ -41,6 +59,23 @@ export default async function SoftwarePage({ params }: PageProps) {
 
   return (
     <div>
+      <JsonLd
+        data={softwareApplicationSchema({
+          name: sw.name,
+          description: sw.description,
+          url: `https://escapesubscriptions.online/software/${slug}`,
+          pricingType: sw.pricingType,
+          priceText: sw.priceText,
+          platforms: sw.platforms,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Software', url: '/search' },
+          { name: sw.name, url: `/software/${slug}` },
+        ])}
+      />
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

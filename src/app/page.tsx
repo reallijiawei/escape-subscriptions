@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
 import SoftwareCard from '@/components/SoftwareCard';
+import JsonLd, { websiteSchema, organizationSchema } from '@/components/JsonLd';
 import { subscriptionTools, software } from '@/lib/data';
 
 const popularSearches = [
@@ -30,6 +31,8 @@ export default function HomePage() {
 
   return (
     <div>
+      <JsonLd data={websiteSchema()} />
+      <JsonLd data={organizationSchema()} />
       {/* Hero */}
       <section className="relative bg-slate-900 overflow-hidden grain-bg">
         {/* Geometric accent */}

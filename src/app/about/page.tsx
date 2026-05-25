@@ -5,6 +5,16 @@ export const metadata: Metadata = {
   title: 'About Escape Subscriptions',
   description:
     'Learn about our mission to help users find one-time purchase, open-source, and lifetime alternatives to subscription software.',
+  alternates: {
+    canonical: '/about',
+  },
+  openGraph: {
+    title: 'About Escape Subscriptions',
+    description:
+      'Learn about our mission to help users find one-time purchase, open-source, and lifetime alternatives to subscription software.',
+    url: '/about',
+    type: 'website',
+  },
 };
 
 export default function AboutPage() {

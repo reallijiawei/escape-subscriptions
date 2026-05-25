@@ -7,12 +7,31 @@ const FONT_URL =
   'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://escapesubscriptions.online'),
   title: {
     default: 'Escape Subscriptions — Own Your Software Again',
     template: '%s | Escape Subscriptions',
   },
   description:
     'Find one-time payment, open-source, offline, and lifetime alternatives to expensive software subscriptions.',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Escape Subscriptions',
+    title: 'Escape Subscriptions — Own Your Software Again',
+    description:
+      'Find one-time payment, open-source, offline, and lifetime alternatives to expensive software subscriptions.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Escape Subscriptions — Own Your Software Again',
+    description:
+      'Find one-time payment, open-source, offline, and lifetime alternatives to expensive software subscriptions.',
+  },
+  icons: {
+    icon: '/favicon.svg',
+  },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({

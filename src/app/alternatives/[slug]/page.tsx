@@ -6,6 +6,7 @@ import AlternativeVoteButtons from '@/components/AlternativeVoteButtons';
 import SubmitRecommendation from '@/components/SubmitRecommendation';
 import FAQSection from '@/components/FAQSection';
 import PricingBadge from '@/components/PricingBadge';
+import JsonLd, { faqSchema, breadcrumbSchema } from '@/components/JsonLd';
 import {
   subscriptionTools,
   getAlternativesForTool,
@@ -30,9 +31,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tool = subscriptionTools.find((t) => t.slug === slug);
   if (!tool) return {};
 
+  const title = `Best ${tool.name} Alternatives Without Subscription in 2026`;
+  const description = `Looking for a no-subscription alternative to ${tool.name}? Compare one-time purchase, open-source, offline, and lifetime alternatives with pricing, pros, cons, and migration tips.`;
+
   return {
-    title: `Best ${tool.name} Alternatives Without Subscription in 2026`,
-    description: `Looking for a no-subscription alternative to ${tool.name}? Compare one-time purchase, open-source, offline, and lifetime alternatives with pricing, pros, cons, and migration tips.`,
+    title,
+    description,
+    alternates: {
+      canonical: `/alternatives/${slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/alternatives/${slug}`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
   };
 }
 
@@ -97,6 +115,14 @@ export default async function AlternativePage({ params }: PageProps) {
 
   return (
     <div>
+      <JsonLd data={faqSchema(faqItems)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Alternatives', url: '/search' },
+          { name: `${tool.name} Alternatives`, url: `/alternatives/${slug}` },
+        ])}
+      />
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
