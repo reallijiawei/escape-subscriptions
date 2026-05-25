@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1779630783850-u1rod5",
+    "softwareId": "affinity-designer",
+    "subscriptionToolId": "canva",
+    "vote": "up",
+    "createdAt": "2026-05-24T13:53:03.850Z"
+  },
+  {
+    "id": "1779630818858-5hbtkd",
+    "softwareId": "penpot",
+    "subscriptionToolId": "canva",
+    "vote": "up",
+    "createdAt": "2026-05-24T13:53:38.858Z"
+  },
+  {
+    "id": "1779631376362-h4ekmz",
+    "softwareId": "lm-studio",
+    "subscriptionToolId": "chatgpt-plus",
+    "vote": "up",
+    "createdAt": "2026-05-24T14:02:56.362Z"
+  },
+  {
+    "id": "1779631383269-3i4mxb",
+    "softwareId": "huggingchat",
+    "subscriptionToolId": "chatgpt-plus",
+    "vote": "up",
+    "createdAt": "2026-05-24T14:03:03.269Z"
+  }
+]

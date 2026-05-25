@@ -1,0 +1,79 @@
+[
+  {
+    "id": "design",
+    "name": "Design",
+    "slug": "design",
+    "description": "Find one-time purchase, open-source, and offline design tools that can replace expensive subscription software.",
+    "icon": "🎨"
+  },
+  {
+    "id": "productivity",
+    "name": "Productivity",
+    "slug": "productivity",
+    "description": "Find one-time purchase, open-source, and offline productivity tools that can replace expensive subscription software.",
+    "icon": "📝"
+  },
+  {
+    "id": "writing",
+    "name": "Writing",
+    "slug": "writing",
+    "description": "Find one-time purchase, open-source, and offline writing tools that can replace expensive subscription software.",
+    "icon": "✍️"
+  },
+  {
+    "id": "video-audio",
+    "name": "Video & Audio",
+    "slug": "video-audio",
+    "description": "Find one-time purchase, open-source, and offline video and audio tools that can replace expensive subscription software.",
+    "icon": "🎬"
+  },
+  {
+    "id": "developer-tools",
+    "name": "Developer Tools",
+    "slug": "developer-tools",
+    "description": "Find one-time purchase, open-source, and offline developer tools that can replace expensive subscription software.",
+    "icon": "💻"
+  },
+  {
+    "id": "business",
+    "name": "Business",
+    "slug": "business",
+    "description": "Find one-time purchase, open-source, and offline business tools that can replace expensive subscription software.",
+    "icon": "💼"
+  },
+  {
+    "id": "security",
+    "name": "Security",
+    "slug": "security",
+    "description": "Find one-time purchase, open-source, and offline security tools that can replace expensive subscription software.",
+    "icon": "🔒"
+  },
+  {
+    "id": "storage",
+    "name": "Storage",
+    "slug": "storage",
+    "description": "Find one-time purchase, open-source, and offline storage tools that can replace expensive subscription software.",
+    "icon": "☁️"
+  },
+  {
+    "id": "ai-tools",
+    "name": "AI Tools",
+    "slug": "ai-tools",
+    "description": "Find one-time purchase, open-source, and offline AI tools that can replace expensive subscription software.",
+    "icon": "🤖"
+  },
+  {
+    "id": "education",
+    "name": "Education",
+    "slug": "education",
+    "description": "Find one-time purchase, open-source, and offline education tools that can replace expensive subscription software.",
+    "icon": "📚"
+  },
+  {
+    "id": "entertainment",
+    "name": "Entertainment",
+    "slug": "entertainment",
+    "description": "Find one-time purchase, open-source, and offline entertainment tools that can replace expensive subscription software.",
+    "icon": "🎵"
+  }
+]
