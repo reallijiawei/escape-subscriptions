@@ -4,7 +4,7 @@ import { software, subscriptionTools, categories } from '@/lib/data';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://escapesubscriptions.com';
+  const baseUrl = 'https://escapesubscriptions.online';
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },

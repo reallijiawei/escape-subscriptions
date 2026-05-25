@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://escapesubscriptions.com/sitemap.xml',
+    sitemap: 'https://escapesubscriptions.online/sitemap.xml',
   };
 }
