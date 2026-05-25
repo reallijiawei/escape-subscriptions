@@ -21,7 +21,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Navigate</h4>
             <ul className="space-y-3">
               {[
@@ -39,7 +39,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-5">
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Popular</h4>
             <ul className="space-y-3">
               {[
@@ -57,20 +57,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
-            <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Newsletter</h4>
-            <p className="text-sm text-slate-400 mb-4">Get weekly no-subscription software picks.</p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="flex-1 px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition-colors"
-              />
-              <button className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold text-sm rounded-lg transition-colors">
-                Join
-              </button>
-            </div>
-          </div>
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
