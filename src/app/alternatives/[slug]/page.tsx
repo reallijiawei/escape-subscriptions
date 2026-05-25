@@ -306,17 +306,28 @@ export default async function AlternativePage({ params }: PageProps) {
                       Migration: <span className="font-medium text-slate-600">{relation.migrationDifficulty}</span>
                     </span>
                   </div>
-                  <a
-                    href={software.websiteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm text-amber-600 hover:text-amber-700 font-semibold transition-colors"
-                  >
-                    Visit Website
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
-                    </svg>
-                  </a>
+                  <div className="flex items-center gap-4">
+                    <Link
+                      href={`/compare/${software.slug}-vs-${tool.slug}`}
+                      className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-amber-600 font-semibold transition-colors"
+                    >
+                      Compare
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                      </svg>
+                    </Link>
+                    <a
+                      href={software.websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm text-amber-600 hover:text-amber-700 font-semibold transition-colors"
+                    >
+                      Visit Website
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

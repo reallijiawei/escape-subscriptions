@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { software, subscriptionTools, categories } from '@/lib/data';
+import { software, subscriptionTools, categories, getAllComparisons } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
@@ -34,5 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages];
+  const comparisonPages: MetadataRoute.Sitemap = getAllComparisons().map((c) => ({
+    url: `${baseUrl}/compare/${c.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages, ...comparisonPages];
 }

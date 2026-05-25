@@ -64,3 +64,47 @@ export function getVotesForSoftware(softwareId: string, subscriptionToolId: stri
 export function getSubmissionsForTool(toolId: string): UserSubmission[] {
   return userSubmissions.filter((s) => s.subscriptionToolId === toolId);
 }
+
+export interface Comparison {
+  software: Software;
+  subscriptionTool: SubscriptionTool;
+  relation: AlternativeRelation;
+  slug: string;
+}
+
+export function getAllComparisons(): Comparison[] {
+  return alternativeRelations
+    .map((relation) => {
+      const sw = software.find((s) => s.id === relation.softwareId);
+      const tool = subscriptionTools.find((t) => t.id === relation.subscriptionToolId);
+      if (!sw || !tool) return null;
+      return {
+        software: sw,
+        subscriptionTool: tool,
+        relation,
+        slug: `${sw.slug}-vs-${tool.slug}`,
+      };
+    })
+    .filter(Boolean) as Comparison[];
+}
+
+export function getComparisonBySlug(slug: string): Comparison | undefined {
+  const parts = slug.split('-vs-');
+  if (parts.length < 2) return undefined;
+
+  // Find the split point: everything before first "-vs-" is software slug, rest is tool slug
+  const vsIndex = slug.indexOf('-vs-');
+  const softwareSlug = slug.substring(0, vsIndex);
+  const toolSlug = slug.substring(vsIndex + 4);
+
+  const sw = software.find((s) => s.slug === softwareSlug);
+  const tool = subscriptionTools.find((t) => t.slug === toolSlug);
+  if (!sw || !tool) return undefined;
+
+  const relation = alternativeRelations.find(
+    (r) => r.softwareId === sw.id && r.subscriptionToolId === tool.id
+  );
+  if (!relation) return undefined;
+
+  return { software: sw, subscriptionTool: tool, relation, slug };
+}

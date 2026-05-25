@@ -66,3 +66,22 @@ export function formatMigrationDifficulty(difficulty: string): string {
   };
   return map[difficulty] || difficulty;
 }
+
+export function formatOwnershipLevel(level: string): string {
+  const map: Record<string, string> = {
+    HIGH: 'Full ownership',
+    MEDIUM: 'Partial ownership',
+    LOW: 'Limited ownership',
+  };
+  return map[level] || level;
+}
+
+export function formatCloudDependency(level: string): string {
+  const map: Record<string, string> = {
+    NONE: 'No cloud needed',
+    LOW: 'Mostly offline',
+    MEDIUM: 'Hybrid',
+    HIGH: 'Cloud required',
+  };
+  return map[level] || level;
+}
