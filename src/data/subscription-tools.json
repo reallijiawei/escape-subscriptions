@@ -9,7 +9,13 @@
     "yearlyPrice": 263.88,
     "currency": "USD",
     "category": "DESIGN",
-    "commonUseCases": ["Photo editing", "Graphic design", "Digital art", "Image compositing"]
+    "commonUseCases": [
+      "Photo editing",
+      "Graphic design",
+      "Digital art",
+      "Image compositing"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "adobe-illustrator",
@@ -21,7 +27,13 @@
     "yearlyPrice": 263.88,
     "currency": "USD",
     "category": "DESIGN",
-    "commonUseCases": ["Logo design", "Icon creation", "Illustration", "Typography"]
+    "commonUseCases": [
+      "Logo design",
+      "Icon creation",
+      "Illustration",
+      "Typography"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "adobe-premiere-pro",
@@ -33,7 +45,13 @@
     "yearlyPrice": 263.88,
     "currency": "USD",
     "category": "VIDEO_AUDIO",
-    "commonUseCases": ["Video editing", "Film production", "YouTube content", "Documentary editing"]
+    "commonUseCases": [
+      "Video editing",
+      "Film production",
+      "YouTube content",
+      "Documentary editing"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "adobe-lightroom",
@@ -45,7 +63,13 @@
     "yearlyPrice": 143.88,
     "currency": "USD",
     "category": "DESIGN",
-    "commonUseCases": ["Photo editing", "Photo management", "RAW processing", "Batch editing"]
+    "commonUseCases": [
+      "Photo editing",
+      "Photo management",
+      "RAW processing",
+      "Batch editing"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "canva",
@@ -53,11 +77,17 @@
     "slug": "canva",
     "description": "An online design platform for creating graphics, presentations, and social media content.",
     "websiteUrl": "https://www.canva.com/",
-    "monthlyPrice": 14.29,
-    "yearlyPrice": 144,
+    "monthlyPrice": 12.99,
+    "yearlyPrice": 119.99,
     "currency": "USD",
     "category": "DESIGN",
-    "commonUseCases": ["Social media graphics", "Presentations", "Posters", "Marketing materials"]
+    "commonUseCases": [
+      "Social media graphics",
+      "Presentations",
+      "Posters",
+      "Marketing materials"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "notion",
@@ -69,7 +99,13 @@
     "yearlyPrice": 96,
     "currency": "USD",
     "category": "PRODUCTIVITY",
-    "commonUseCases": ["Note-taking", "Project management", "Knowledge base", "Documentation"]
+    "commonUseCases": [
+      "Note-taking",
+      "Project management",
+      "Knowledge base",
+      "Documentation"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "evernote",
@@ -81,7 +117,12 @@
     "yearlyPrice": 249.99,
     "currency": "USD",
     "category": "PRODUCTIVITY",
-    "commonUseCases": ["Note-taking", "Web clipping", "Document scanning", "Task management"]
+    "commonUseCases": [
+      "Note-taking",
+      "Web clipping",
+      "Document scanning",
+      "Task management"
+    ]
   },
   {
     "id": "grammarly",
@@ -93,7 +134,13 @@
     "yearlyPrice": 144,
     "currency": "USD",
     "category": "WRITING",
-    "commonUseCases": ["Grammar checking", "Writing improvement", "Email writing", "Academic writing"]
+    "commonUseCases": [
+      "Grammar checking",
+      "Writing improvement",
+      "Email writing",
+      "Academic writing"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "todoist",
@@ -105,7 +152,13 @@
     "yearlyPrice": 60,
     "currency": "USD",
     "category": "PRODUCTIVITY",
-    "commonUseCases": ["Task management", "To-do lists", "Project planning", "Habit tracking"]
+    "commonUseCases": [
+      "Task management",
+      "To-do lists",
+      "Project planning",
+      "Habit tracking"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "1password",
@@ -117,7 +170,13 @@
     "yearlyPrice": 47.88,
     "currency": "USD",
     "category": "SECURITY",
-    "commonUseCases": ["Password management", "Secure notes", "Document storage", "Two-factor authentication"]
+    "commonUseCases": [
+      "Password management",
+      "Secure notes",
+      "Document storage",
+      "Two-factor authentication"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "dropbox",
@@ -129,7 +188,12 @@
     "yearlyPrice": 119.88,
     "currency": "USD",
     "category": "STORAGE",
-    "commonUseCases": ["File storage", "File sharing", "Backup", "Collaboration"]
+    "commonUseCases": [
+      "File storage",
+      "File sharing",
+      "Backup",
+      "Collaboration"
+    ]
   },
   {
     "id": "google-drive",
@@ -138,10 +202,16 @@
     "description": "A cloud storage service integrated with Google Workspace.",
     "websiteUrl": "https://drive.google.com/",
     "monthlyPrice": 1.99,
-    "yearlyPrice": 23.88,
+    "yearlyPrice": 19.99,
     "currency": "USD",
     "category": "STORAGE",
-    "commonUseCases": ["File storage", "Document collaboration", "Photo backup", "File sharing"]
+    "commonUseCases": [
+      "File storage",
+      "Document collaboration",
+      "Photo backup",
+      "File sharing"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "figma",
@@ -153,7 +223,13 @@
     "yearlyPrice": 192,
     "currency": "USD",
     "category": "DESIGN",
-    "commonUseCases": ["UI design", "UX design", "Prototyping", "Design systems"]
+    "commonUseCases": [
+      "UI design",
+      "UX design",
+      "Prototyping",
+      "Design systems"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "quickbooks",
@@ -165,7 +241,13 @@
     "yearlyPrice": 420,
     "currency": "USD",
     "category": "BUSINESS",
-    "commonUseCases": ["Accounting", "Invoicing", "Expense tracking", "Tax preparation"]
+    "commonUseCases": [
+      "Accounting",
+      "Invoicing",
+      "Expense tracking",
+      "Tax preparation"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "microsoft-365",
@@ -177,7 +259,13 @@
     "yearlyPrice": 99.99,
     "currency": "USD",
     "category": "PRODUCTIVITY",
-    "commonUseCases": ["Document editing", "Spreadsheets", "Presentations", "Email"]
+    "commonUseCases": [
+      "Document editing",
+      "Spreadsheets",
+      "Presentations",
+      "Email"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "slack",
@@ -189,7 +277,13 @@
     "yearlyPrice": 87,
     "currency": "USD",
     "category": "PRODUCTIVITY",
-    "commonUseCases": ["Team messaging", "File sharing", "Video calls", "Integration hub"]
+    "commonUseCases": [
+      "Team messaging",
+      "File sharing",
+      "Video calls",
+      "Integration hub"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "zoom",
@@ -201,7 +295,13 @@
     "yearlyPrice": 159.96,
     "currency": "USD",
     "category": "PRODUCTIVITY",
-    "commonUseCases": ["Video meetings", "Webinars", "Screen sharing", "Team collaboration"]
+    "commonUseCases": [
+      "Video meetings",
+      "Webinars",
+      "Screen sharing",
+      "Team collaboration"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "trello",
@@ -213,7 +313,13 @@
     "yearlyPrice": 60,
     "currency": "USD",
     "category": "PRODUCTIVITY",
-    "commonUseCases": ["Project management", "Task tracking", "Team collaboration", "Workflow management"]
+    "commonUseCases": [
+      "Project management",
+      "Task tracking",
+      "Team collaboration",
+      "Workflow management"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "asana",
@@ -225,7 +331,13 @@
     "yearlyPrice": 131.88,
     "currency": "USD",
     "category": "PRODUCTIVITY",
-    "commonUseCases": ["Project management", "Task management", "Team coordination", "Goal tracking"]
+    "commonUseCases": [
+      "Project management",
+      "Task management",
+      "Team coordination",
+      "Goal tracking"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "calendly",
@@ -237,7 +349,13 @@
     "yearlyPrice": 120,
     "currency": "USD",
     "category": "BUSINESS",
-    "commonUseCases": ["Meeting scheduling", "Appointment booking", "Sales calls", "Interview scheduling"]
+    "commonUseCases": [
+      "Meeting scheduling",
+      "Appointment booking",
+      "Sales calls",
+      "Interview scheduling"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "chatgpt-plus",
@@ -249,7 +367,12 @@
     "yearlyPrice": 240,
     "currency": "USD",
     "category": "AI_TOOLS",
-    "commonUseCases": ["AI assistant", "Writing assistance", "Code generation", "Research"]
+    "commonUseCases": [
+      "AI assistant",
+      "Writing assistance",
+      "Code generation",
+      "Research"
+    ]
   },
   {
     "id": "github-copilot",
@@ -261,7 +384,13 @@
     "yearlyPrice": 120,
     "currency": "USD",
     "category": "DEVELOPER_TOOLS",
-    "commonUseCases": ["Code completion", "Code generation", "Pair programming", "Documentation"]
+    "commonUseCases": [
+      "Code completion",
+      "Code generation",
+      "Pair programming",
+      "Documentation"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "spotify-premium",
@@ -273,7 +402,13 @@
     "yearlyPrice": 155.88,
     "currency": "USD",
     "category": "ENTERTAINMENT",
-    "commonUseCases": ["Music streaming", "Podcast listening", "Offline playback", "Playlist curation"]
+    "commonUseCases": [
+      "Music streaming",
+      "Podcast listening",
+      "Offline playback",
+      "Playlist curation"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "netflix",
@@ -285,7 +420,13 @@
     "yearlyPrice": 239.88,
     "currency": "USD",
     "category": "ENTERTAINMENT",
-    "commonUseCases": ["Video streaming", "Movie watching", "TV shows", "Original content"]
+    "commonUseCases": [
+      "Video streaming",
+      "Movie watching",
+      "TV shows",
+      "Original content"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "icloud-plus",
@@ -297,7 +438,13 @@
     "yearlyPrice": 11.88,
     "currency": "USD",
     "category": "STORAGE",
-    "commonUseCases": ["Cloud storage", "Photo backup", "Device sync", "Email privacy"]
+    "commonUseCases": [
+      "Cloud storage",
+      "Photo backup",
+      "Device sync",
+      "Email privacy"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "duolingo-super",
@@ -309,7 +456,13 @@
     "yearlyPrice": 83.99,
     "currency": "USD",
     "category": "EDUCATION",
-    "commonUseCases": ["Language learning", "Vocabulary building", "Grammar practice", "Conversation skills"]
+    "commonUseCases": [
+      "Language learning",
+      "Vocabulary building",
+      "Grammar practice",
+      "Conversation skills"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "lastpass-premium",
@@ -321,7 +474,13 @@
     "yearlyPrice": 36,
     "currency": "USD",
     "category": "SECURITY",
-    "commonUseCases": ["Password management", "Secure notes", "Dark web monitoring", "Family sharing"]
+    "commonUseCases": [
+      "Password management",
+      "Secure notes",
+      "Dark web monitoring",
+      "Family sharing"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "mailchimp",
@@ -333,7 +492,13 @@
     "yearlyPrice": 240,
     "currency": "USD",
     "category": "BUSINESS",
-    "commonUseCases": ["Email marketing", "Newsletter creation", "Marketing automation", "Audience management"]
+    "commonUseCases": [
+      "Email marketing",
+      "Newsletter creation",
+      "Marketing automation",
+      "Audience management"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "sketch",
@@ -345,7 +510,13 @@
     "yearlyPrice": 144,
     "currency": "USD",
     "category": "DESIGN",
-    "commonUseCases": ["UI design", "UX design", "Prototyping", "Design systems"]
+    "commonUseCases": [
+      "UI design",
+      "UX design",
+      "Prototyping",
+      "Design systems"
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "heroku",
@@ -357,6 +528,12 @@
     "yearlyPrice": 84,
     "currency": "USD",
     "category": "DEVELOPER_TOOLS",
-    "commonUseCases": ["App hosting", "Web deployment", "API hosting", "Backend services"]
+    "commonUseCases": [
+      "App hosting",
+      "Web deployment",
+      "API hosting",
+      "Backend services"
+    ],
+    "lastCheckedAt": "2026-05-25"
   }
 ]

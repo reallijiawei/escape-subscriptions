@@ -9,19 +9,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "IPAD"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "IPAD"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Photographers", "Designers", "Adobe Photoshop switchers"],
-    "pros": ["Free to use", "Professional photo editing features", "Good performance", "Works offline"],
-    "cons": ["Not open source", "Requires Canva account", "Smaller plugin ecosystem than Photoshop"],
-    "replaces": ["adobe-photoshop"],
+    "bestFor": [
+      "Photographers",
+      "Designers",
+      "Adobe Photoshop switchers"
+    ],
+    "pros": [
+      "Free to use",
+      "Professional photo editing features",
+      "Good performance",
+      "Works offline"
+    ],
+    "cons": [
+      "Not open source",
+      "Requires Canva account",
+      "Smaller plugin ecosystem than Photoshop"
+    ],
+    "replaces": [
+      "adobe-photoshop"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -35,19 +55,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Budget-conscious users", "Open-source advocates", "Linux users"],
-    "pros": ["Completely free", "Open source", "Extensible with plugins", "Active community"],
-    "cons": ["Steeper learning curve", "UI feels dated", "Slower performance on large files"],
-    "replaces": ["adobe-photoshop"],
+    "bestFor": [
+      "Budget-conscious users",
+      "Open-source advocates",
+      "Linux users"
+    ],
+    "pros": [
+      "Completely free",
+      "Open source",
+      "Extensible with plugins",
+      "Active community"
+    ],
+    "cons": [
+      "Steeper learning curve",
+      "UI feels dated",
+      "Slower performance on large files"
+    ],
+    "replaces": [
+      "adobe-photoshop"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -61,19 +101,40 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "ANDROID"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "ANDROID"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Digital artists", "Illustrators", "Painters"],
-    "pros": ["Free and open source", "Excellent brush engine", "Animation support", "Active development"],
-    "cons": ["Less suited for photo editing", "Fewer photo manipulation tools", "Different workflow from Photoshop"],
-    "replaces": ["adobe-photoshop"],
+    "bestFor": [
+      "Digital artists",
+      "Illustrators",
+      "Painters"
+    ],
+    "pros": [
+      "Free and open source",
+      "Excellent brush engine",
+      "Animation support",
+      "Active development"
+    ],
+    "cons": [
+      "Less suited for photo editing",
+      "Fewer photo manipulation tools",
+      "Different workflow from Photoshop"
+    ],
+    "replaces": [
+      "adobe-photoshop"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -87,19 +148,37 @@
     "priceText": "Free with ads, $5/month premium",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": false,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "LOW",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Quick edits", "Users who need PSD support", "No-install users"],
-    "pros": ["Works in browser", "Supports PSD files", "Free to use", "No installation needed"],
-    "cons": ["Requires internet", "Ad-supported free tier", "Limited by browser performance"],
-    "replaces": ["adobe-photoshop"],
+    "bestFor": [
+      "Quick edits",
+      "Users who need PSD support",
+      "No-install users"
+    ],
+    "pros": [
+      "Works in browser",
+      "Supports PSD files",
+      "Free to use",
+      "No installation needed"
+    ],
+    "cons": [
+      "Requires internet",
+      "Ad-supported free tier",
+      "Limited by browser performance"
+    ],
+    "replaces": [
+      "adobe-photoshop"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -113,19 +192,38 @@
     "priceText": "$49.99 one-time",
     "startingPrice": 49.99,
     "currency": "USD",
-    "platforms": ["MACOS", "IPAD"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "MACOS",
+      "IPAD"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": true,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Mac users", "Casual editors", "Budget photographers"],
-    "pros": ["One-time purchase", "Native Mac app", "ML-powered tools", "Clean interface"],
-    "cons": ["Mac only", "Fewer features than Photoshop", "Smaller community"],
-    "replaces": ["adobe-photoshop"],
+    "bestFor": [
+      "Mac users",
+      "Casual editors",
+      "Budget photographers"
+    ],
+    "pros": [
+      "One-time purchase",
+      "Native Mac app",
+      "ML-powered tools",
+      "Clean interface"
+    ],
+    "cons": [
+      "Mac only",
+      "Fewer features than Photoshop",
+      "Smaller community"
+    ],
+    "replaces": [
+      "adobe-photoshop"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -139,19 +237,40 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "IPAD"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "IPAD"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Graphic designers", "Illustrators", "UI designers"],
-    "pros": ["Free to use", "Professional vector tools", "Good performance", "Works offline"],
-    "cons": ["Not open source", "Requires Canva account", "Smaller community than Adobe"],
-    "replaces": ["adobe-illustrator", "figma"],
+    "bestFor": [
+      "Graphic designers",
+      "Illustrators",
+      "UI designers"
+    ],
+    "pros": [
+      "Free to use",
+      "Professional vector tools",
+      "Good performance",
+      "Works offline"
+    ],
+    "cons": [
+      "Not open source",
+      "Requires Canva account",
+      "Smaller community than Adobe"
+    ],
+    "replaces": [
+      "adobe-illustrator",
+      "figma"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -165,19 +284,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Open-source advocates", "Budget designers", "Linux users"],
-    "pros": ["Free and open source", "Full vector editing", "Extensible", "Cross-platform"],
-    "cons": ["Slower performance", "UI less polished", "Fewer advanced features"],
-    "replaces": ["adobe-illustrator"],
+    "bestFor": [
+      "Open-source advocates",
+      "Budget designers",
+      "Linux users"
+    ],
+    "pros": [
+      "Free and open source",
+      "Full vector editing",
+      "Extensible",
+      "Cross-platform"
+    ],
+    "cons": [
+      "Slower performance",
+      "UI less polished",
+      "Fewer advanced features"
+    ],
+    "replaces": [
+      "adobe-illustrator"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -191,19 +330,43 @@
     "priceText": "Free, optional $50/year commercial license",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Note-takers", "Researchers", "Writers", "Knowledge workers"],
-    "pros": ["Local-first storage", "Markdown based", "Powerful linking", "Plugin ecosystem"],
-    "cons": ["Sync costs extra", "Learning curve", "No web version"],
-    "replaces": ["notion", "evernote"],
+    "bestFor": [
+      "Note-takers",
+      "Researchers",
+      "Writers",
+      "Knowledge workers"
+    ],
+    "pros": [
+      "Local-first storage",
+      "Markdown based",
+      "Powerful linking",
+      "Plugin ecosystem"
+    ],
+    "cons": [
+      "Sync costs extra",
+      "Learning curve",
+      "No web version"
+    ],
+    "replaces": [
+      "notion",
+      "evernote"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -217,19 +380,43 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "WEB"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "WEB"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Privacy-conscious users", "Outliner fans", "Researchers"],
-    "pros": ["Free and open source", "Local-first", "Block-based editing", "Graph view"],
-    "cons": ["Smaller community than Obsidian", "Fewer plugins", "Performance can lag"],
-    "replaces": ["notion", "evernote"],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Outliner fans",
+      "Researchers"
+    ],
+    "pros": [
+      "Free and open source",
+      "Local-first",
+      "Block-based editing",
+      "Graph view"
+    ],
+    "cons": [
+      "Smaller community than Obsidian",
+      "Fewer plugins",
+      "Performance can lag"
+    ],
+    "replaces": [
+      "notion",
+      "evernote"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -243,19 +430,41 @@
     "priceText": "Free with paid sync plans",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "MEDIUM",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Privacy-focused users", "Notion refugees", "Local-first advocates"],
-    "pros": ["Local-first", "End-to-end encrypted", "Notion-like UI", "Cross-platform"],
-    "cons": ["Smaller ecosystem", "Newer product", "Fewer templates"],
-    "replaces": ["notion"],
+    "bestFor": [
+      "Privacy-focused users",
+      "Notion refugees",
+      "Local-first advocates"
+    ],
+    "pros": [
+      "Local-first",
+      "End-to-end encrypted",
+      "Notion-like UI",
+      "Cross-platform"
+    ],
+    "cons": [
+      "Smaller ecosystem",
+      "Newer product",
+      "Fewer templates"
+    ],
+    "replaces": [
+      "notion"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -269,19 +478,42 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Evernote refugees", "Privacy-conscious users", "Markdown fans"],
-    "pros": ["Free and open source", "End-to-end encryption", "Markdown support", "Multiple sync options"],
-    "cons": ["UI less polished", "Fewer features than Notion", "Slower sync"],
-    "replaces": ["evernote", "notion"],
+    "bestFor": [
+      "Evernote refugees",
+      "Privacy-conscious users",
+      "Markdown fans"
+    ],
+    "pros": [
+      "Free and open source",
+      "End-to-end encryption",
+      "Markdown support",
+      "Multiple sync options"
+    ],
+    "cons": [
+      "UI less polished",
+      "Fewer features than Notion",
+      "Slower sync"
+    ],
+    "replaces": [
+      "evernote",
+      "notion"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -295,19 +527,42 @@
     "priceText": "Free basic, $90/year extended",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "WEB"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "WEB"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Privacy advocates", "Minimalists", "Long-term note keepers"],
-    "pros": ["End-to-end encrypted", "Open source", "Simple UI", "100-year durability goal"],
-    "cons": ["Limited free features", "Basic formatting", "Smaller ecosystem"],
-    "replaces": ["evernote"],
+    "bestFor": [
+      "Privacy advocates",
+      "Minimalists",
+      "Long-term note keepers"
+    ],
+    "pros": [
+      "End-to-end encrypted",
+      "Open source",
+      "Simple UI",
+      "100-year durability goal"
+    ],
+    "cons": [
+      "Limited free features",
+      "Basic formatting",
+      "Smaller ecosystem"
+    ],
+    "replaces": [
+      "evernote"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -321,19 +576,44 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "ANDROID", "IOS", "WEB"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "ANDROID",
+      "IOS",
+      "WEB"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Developers", "Time trackers", "Task management enthusiasts"],
-    "pros": ["Free and open source", "Time tracking built-in", "Jira/GitHub integration", "Pomodoro timer"],
-    "cons": ["Dated UI", "Less intuitive for non-devs", "Mobile app limited"],
-    "replaces": ["todoist", "trello", "asana"],
+    "bestFor": [
+      "Developers",
+      "Time trackers",
+      "Task management enthusiasts"
+    ],
+    "pros": [
+      "Free and open source",
+      "Time tracking built-in",
+      "Jira/GitHub integration",
+      "Pomodoro timer"
+    ],
+    "cons": [
+      "Dated UI",
+      "Less intuitive for non-devs",
+      "Mobile app limited"
+    ],
+    "replaces": [
+      "todoist",
+      "trello",
+      "asana"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -347,19 +627,39 @@
     "priceText": "Free basic, $4.99/month premium",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "WEB"],
-    "categories": ["WRITING"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "WEB"
+    ],
+    "categories": [
+      "WRITING"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Writers", "Students", "Privacy-conscious users"],
-    "pros": ["Open source", "Works offline", "Supports many languages", "Browser extension"],
-    "cons": ["Less accurate than Grammarly", "Fewer style suggestions", "Premium features limited"],
-    "replaces": ["grammarly"],
+    "bestFor": [
+      "Writers",
+      "Students",
+      "Privacy-conscious users"
+    ],
+    "pros": [
+      "Open source",
+      "Works offline",
+      "Supports many languages",
+      "Browser extension"
+    ],
+    "cons": [
+      "Less accurate than Grammarly",
+      "Fewer style suggestions",
+      "Premium features limited"
+    ],
+    "replaces": [
+      "grammarly"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -373,19 +673,41 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["PRODUCTIVITY", "WRITING"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "PRODUCTIVITY",
+      "WRITING"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Students", "Budget users", "Linux users", "Open-source advocates"],
-    "pros": ["Free and open source", "Full office suite", "Good compatibility", "Cross-platform"],
-    "cons": ["UI less modern", "Some format compatibility issues", "Slower development"],
-    "replaces": ["microsoft-365"],
+    "bestFor": [
+      "Students",
+      "Budget users",
+      "Linux users",
+      "Open-source advocates"
+    ],
+    "pros": [
+      "Free and open source",
+      "Full office suite",
+      "Good compatibility",
+      "Cross-platform"
+    ],
+    "cons": [
+      "UI less modern",
+      "Some format compatibility issues",
+      "Slower development"
+    ],
+    "replaces": [
+      "microsoft-365"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -399,19 +721,40 @@
     "priceText": "$49 one-time",
     "startingPrice": 49,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "IOS"],
-    "categories": ["WRITING"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "IOS"
+    ],
+    "categories": [
+      "WRITING"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": true,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Novelists", "Screenwriters", "Academic writers"],
-    "pros": ["One-time purchase", "Powerful organization", "Compile to many formats", "Corkboard view"],
-    "cons": ["Steep learning curve", "No real-time collaboration", "Dated UI"],
-    "replaces": ["notion", "evernote"],
+    "bestFor": [
+      "Novelists",
+      "Screenwriters",
+      "Academic writers"
+    ],
+    "pros": [
+      "One-time purchase",
+      "Powerful organization",
+      "Compile to many formats",
+      "Corkboard view"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "No real-time collaboration",
+      "Dated UI"
+    ],
+    "replaces": [
+      "notion",
+      "evernote"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -425,19 +768,39 @@
     "priceText": "$14.99 one-time",
     "startingPrice": 14.99,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["WRITING"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "WRITING"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": true,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Markdown writers", "Bloggers", "Note-takers"],
-    "pros": ["One-time purchase", "Clean UI", "Live preview", "Math and diagrams"],
-    "cons": ["Markdown only", "No collaboration", "Limited features"],
-    "replaces": ["notion"],
+    "bestFor": [
+      "Markdown writers",
+      "Bloggers",
+      "Note-takers"
+    ],
+    "pros": [
+      "One-time purchase",
+      "Clean UI",
+      "Live preview",
+      "Math and diagrams"
+    ],
+    "cons": [
+      "Markdown only",
+      "No collaboration",
+      "Limited features"
+    ],
+    "replaces": [
+      "notion"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -451,19 +814,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["SECURITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "SECURITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Privacy-conscious users", "Open-source advocates", "Local-first users"],
-    "pros": ["Free and open source", "Local storage", "No subscription", "Strong encryption"],
-    "cons": ["No built-in sync", "Manual cloud setup", "Less polished UI"],
-    "replaces": ["1password"],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Open-source advocates",
+      "Local-first users"
+    ],
+    "pros": [
+      "Free and open source",
+      "Local storage",
+      "No subscription",
+      "Strong encryption"
+    ],
+    "cons": [
+      "No built-in sync",
+      "Manual cloud setup",
+      "Less polished UI"
+    ],
+    "replaces": [
+      "1password"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -477,19 +860,42 @@
     "priceText": "Free basic, $19.80/year premium",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "WEB"],
-    "categories": ["SECURITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "WEB"
+    ],
+    "categories": [
+      "SECURITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "MEDIUM",
     "cloudDependency": "MEDIUM",
-
-    "bestFor": ["Cross-platform users", "Families", "Budget-conscious users"],
-    "pros": ["Free tier generous", "Open source", "Cross-platform", "Self-hostable"],
-    "cons": ["Premium features behind paywall", "UI less polished", "Sync requires account"],
-    "replaces": ["1password"],
+    "bestFor": [
+      "Cross-platform users",
+      "Families",
+      "Budget-conscious users"
+    ],
+    "pros": [
+      "Free tier generous",
+      "Open source",
+      "Cross-platform",
+      "Self-hostable"
+    ],
+    "cons": [
+      "Premium features behind paywall",
+      "UI less polished",
+      "Sync requires account"
+    ],
+    "replaces": [
+      "1password"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -503,19 +909,42 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "WEB"],
-    "categories": ["SECURITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "WEB"
+    ],
+    "categories": [
+      "SECURITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "MEDIUM",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Privacy-conscious users", "2FA users", "Cross-platform users"],
-    "pros": ["End-to-end encrypted", "Open source", "Cross-platform", "Backup support"],
-    "cons": ["Newer product", "Premium for advanced features", "Smaller community"],
-    "replaces": ["1password"],
+    "bestFor": [
+      "Privacy-conscious users",
+      "2FA users",
+      "Cross-platform users"
+    ],
+    "pros": [
+      "End-to-end encrypted",
+      "Open source",
+      "Cross-platform",
+      "Backup support"
+    ],
+    "cons": [
+      "Newer product",
+      "Premium for advanced features",
+      "Smaller community"
+    ],
+    "replaces": [
+      "1password"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -529,19 +958,41 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "ANDROID"],
-    "categories": ["STORAGE"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "ANDROID"
+    ],
+    "categories": [
+      "STORAGE"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Local sync users"],
-    "pros": ["Free and open source", "No cloud needed", "Peer-to-peer", "Encrypted"],
-    "cons": ["No web UI for mobile", "Setup complexity", "No collaboration features"],
-    "replaces": ["dropbox", "google-drive"],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Local sync users"
+    ],
+    "pros": [
+      "Free and open source",
+      "No cloud needed",
+      "Peer-to-peer",
+      "Encrypted"
+    ],
+    "cons": [
+      "No web UI for mobile",
+      "Setup complexity",
+      "No collaboration features"
+    ],
+    "replaces": [
+      "dropbox",
+      "google-drive"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -555,19 +1006,44 @@
     "priceText": "Free (self-hosted)",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "SELF_HOSTED"],
-    "categories": ["STORAGE", "PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "STORAGE",
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Self-hosters", "Privacy-conscious teams", "Data sovereignty advocates"],
-    "pros": ["Free and open source", "Full control over data", "Extensible", "Collaboration tools"],
-    "cons": ["Requires server", "Maintenance needed", "Performance depends on hardware"],
-    "replaces": ["dropbox", "google-drive"],
+    "bestFor": [
+      "Self-hosters",
+      "Privacy-conscious teams",
+      "Data sovereignty advocates"
+    ],
+    "pros": [
+      "Free and open source",
+      "Full control over data",
+      "Extensible",
+      "Collaboration tools"
+    ],
+    "cons": [
+      "Requires server",
+      "Maintenance needed",
+      "Performance depends on hardware"
+    ],
+    "replaces": [
+      "dropbox",
+      "google-drive"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -581,19 +1057,42 @@
     "priceText": "$199 one-time for 500GB",
     "startingPrice": 199,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "WEB"],
-    "categories": ["STORAGE"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "WEB"
+    ],
+    "categories": [
+      "STORAGE"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": true,
     "ownershipLevel": "MEDIUM",
     "cloudDependency": "MEDIUM",
-
-    "bestFor": ["Users wanting lifetime cloud storage", "Budget-conscious users"],
-    "pros": ["Lifetime plans available", "Good pricing", "Client-side encryption", "Cross-platform"],
-    "cons": ["Encryption costs extra", "Company could change terms", "No Linux client"],
-    "replaces": ["dropbox", "google-drive"],
+    "bestFor": [
+      "Users wanting lifetime cloud storage",
+      "Budget-conscious users"
+    ],
+    "pros": [
+      "Lifetime plans available",
+      "Good pricing",
+      "Client-side encryption",
+      "Cross-platform"
+    ],
+    "cons": [
+      "Encryption costs extra",
+      "Company could change terms",
+      "No Linux client"
+    ],
+    "replaces": [
+      "dropbox",
+      "google-drive"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -607,19 +1106,42 @@
     "priceText": "Free 20GB, plans from $3.87/month",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "WEB"],
-    "categories": ["STORAGE"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "WEB"
+    ],
+    "categories": [
+      "STORAGE"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "LOW",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Privacy-focused users", "Users needing large free storage"],
-    "pros": ["End-to-end encryption", "Generous free tier", "Cross-platform", "Versioning"],
-    "cons": ["Bandwidth limits", "No lifetime plan", "Closed source"],
-    "replaces": ["dropbox", "google-drive"],
+    "bestFor": [
+      "Privacy-focused users",
+      "Users needing large free storage"
+    ],
+    "pros": [
+      "End-to-end encryption",
+      "Generous free tier",
+      "Cross-platform",
+      "Versioning"
+    ],
+    "cons": [
+      "Bandwidth limits",
+      "No lifetime plan",
+      "Closed source"
+    ],
+    "replaces": [
+      "dropbox",
+      "google-drive"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -633,19 +1155,39 @@
     "priceText": "Free version, $295 Studio version",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["VIDEO_AUDIO"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "VIDEO_AUDIO"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Video editors", "Colorists", "Filmmakers"],
-    "pros": ["Free version powerful", "Industry-standard color grading", "Professional features", "One-time purchase for Studio"],
-    "cons": ["Steep learning curve", "Hardware intensive", "Studio features paid"],
-    "replaces": ["adobe-premiere-pro"],
+    "bestFor": [
+      "Video editors",
+      "Colorists",
+      "Filmmakers"
+    ],
+    "pros": [
+      "Free version powerful",
+      "Industry-standard color grading",
+      "Professional features",
+      "One-time purchase for Studio"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "Hardware intensive",
+      "Studio features paid"
+    ],
+    "replaces": [
+      "adobe-premiere-pro"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -659,19 +1201,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["VIDEO_AUDIO"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "VIDEO_AUDIO"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Open-source advocates", "Linux users", "Budget video editors"],
-    "pros": ["Free and open source", "Multi-track editing", "Good format support", "Active development"],
-    "cons": ["Less stable than commercial options", "Fewer effects", "Slower rendering"],
-    "replaces": ["adobe-premiere-pro"],
+    "bestFor": [
+      "Open-source advocates",
+      "Linux users",
+      "Budget video editors"
+    ],
+    "pros": [
+      "Free and open source",
+      "Multi-track editing",
+      "Good format support",
+      "Active development"
+    ],
+    "cons": [
+      "Less stable than commercial options",
+      "Fewer effects",
+      "Slower rendering"
+    ],
+    "replaces": [
+      "adobe-premiere-pro"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -685,19 +1247,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["VIDEO_AUDIO"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "VIDEO_AUDIO"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Beginners", "Budget editors", "Open-source users"],
-    "pros": ["Free and open source", "Wide format support", "No watermark", "Cross-platform"],
-    "cons": ["UI can be confusing", "Fewer advanced features", "Learning curve"],
-    "replaces": ["adobe-premiere-pro"],
+    "bestFor": [
+      "Beginners",
+      "Budget editors",
+      "Open-source users"
+    ],
+    "pros": [
+      "Free and open source",
+      "Wide format support",
+      "No watermark",
+      "Cross-platform"
+    ],
+    "cons": [
+      "UI can be confusing",
+      "Fewer advanced features",
+      "Learning curve"
+    ],
+    "replaces": [
+      "adobe-premiere-pro"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -711,19 +1293,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["VIDEO_AUDIO"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "VIDEO_AUDIO"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Podcasters", "Musicians", "Audio editors"],
-    "pros": ["Free and open source", "Powerful editing", "Plugin support", "Cross-platform"],
-    "cons": ["Dated UI", "Non-destructive editing limited", "No MIDI support"],
-    "replaces": ["adobe-premiere-pro"],
+    "bestFor": [
+      "Podcasters",
+      "Musicians",
+      "Audio editors"
+    ],
+    "pros": [
+      "Free and open source",
+      "Powerful editing",
+      "Plugin support",
+      "Cross-platform"
+    ],
+    "cons": [
+      "Dated UI",
+      "Non-destructive editing limited",
+      "No MIDI support"
+    ],
+    "replaces": [
+      "adobe-premiere-pro"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -737,19 +1339,39 @@
     "priceText": "$60 personal, $225 commercial",
     "startingPrice": 60,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["VIDEO_AUDIO"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "VIDEO_AUDIO"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": true,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Musicians", "Podcasters", "Audio professionals"],
-    "pros": ["One-time purchase", "Generous trial", "Powerful features", "Lightweight"],
-    "cons": ["Steep learning curve", "Dated UI", "No built-in instruments"],
-    "replaces": ["adobe-premiere-pro"],
+    "bestFor": [
+      "Musicians",
+      "Podcasters",
+      "Audio professionals"
+    ],
+    "pros": [
+      "One-time purchase",
+      "Generous trial",
+      "Powerful features",
+      "Lightweight"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "Dated UI",
+      "No built-in instruments"
+    ],
+    "replaces": [
+      "adobe-premiere-pro"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -763,19 +1385,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["BUSINESS"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "BUSINESS"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Small businesses", "Personal finance users", "Open-source advocates"],
-    "pros": ["Free and open source", "Double-entry accounting", "Reports and graphs", "Cross-platform"],
-    "cons": ["Dated UI", "Steep learning curve", "No cloud sync"],
-    "replaces": ["quickbooks"],
+    "bestFor": [
+      "Small businesses",
+      "Personal finance users",
+      "Open-source advocates"
+    ],
+    "pros": [
+      "Free and open source",
+      "Double-entry accounting",
+      "Reports and graphs",
+      "Cross-platform"
+    ],
+    "cons": [
+      "Dated UI",
+      "Steep learning curve",
+      "No cloud sync"
+    ],
+    "replaces": [
+      "quickbooks"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -789,19 +1431,38 @@
     "priceText": "Free basic, paid apps",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB", "SELF_HOSTED"],
-    "categories": ["BUSINESS"],
+    "platforms": [
+      "WEB",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "BUSINESS"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "MEDIUM",
-
-    "bestFor": ["Small businesses", "Freelancers", "Self-hosters"],
-    "pros": ["Free and open source", "Modern UI", "Self-hostable", "Multi-currency"],
-    "cons": ["Paid add-ons", "Requires hosting", "Fewer features than QuickBooks"],
-    "replaces": ["quickbooks"],
+    "bestFor": [
+      "Small businesses",
+      "Freelancers",
+      "Self-hosters"
+    ],
+    "pros": [
+      "Free and open source",
+      "Modern UI",
+      "Self-hostable",
+      "Multi-currency"
+    ],
+    "cons": [
+      "Paid add-ons",
+      "Requires hosting",
+      "Fewer features than QuickBooks"
+    ],
+    "replaces": [
+      "quickbooks"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -815,19 +1476,38 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB", "SELF_HOSTED"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "WEB",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "MEDIUM",
-
-    "bestFor": ["Open-source advocates", "Design teams", "Budget-conscious designers"],
-    "pros": ["Free and open source", "Real-time collaboration", "Web-based", "Self-hostable"],
-    "cons": ["Fewer features than Figma", "Performance can lag", "Smaller community"],
-    "replaces": ["figma"],
+    "bestFor": [
+      "Open-source advocates",
+      "Design teams",
+      "Budget-conscious designers"
+    ],
+    "pros": [
+      "Free and open source",
+      "Real-time collaboration",
+      "Web-based",
+      "Self-hostable"
+    ],
+    "cons": [
+      "Fewer features than Figma",
+      "Performance can lag",
+      "Smaller community"
+    ],
+    "replaces": [
+      "figma"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -841,19 +1521,39 @@
     "priceText": "Free for 3 projects",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "WEB"],
-    "categories": ["DESIGN"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "WEB"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "LOW",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Individual designers", "Small projects", "Students"],
-    "pros": ["Free tier available", "Industry standard", "Great collaboration", "Plugins"],
-    "cons": ["Cloud-dependent", "Free tier limited", "No offline mode"],
-    "replaces": ["figma"],
+    "bestFor": [
+      "Individual designers",
+      "Small projects",
+      "Students"
+    ],
+    "pros": [
+      "Free tier available",
+      "Industry standard",
+      "Great collaboration",
+      "Plugins"
+    ],
+    "cons": [
+      "Cloud-dependent",
+      "Free tier limited",
+      "No offline mode"
+    ],
+    "replaces": [
+      "figma"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -867,19 +1567,40 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Privacy-conscious users", "Teams needing secure communication"],
-    "pros": ["End-to-end encrypted", "Open source", "Free", "Non-profit"],
-    "cons": ["Smaller user base", "Fewer features than Slack", "Phone number required"],
-    "replaces": ["slack"],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Teams needing secure communication"
+    ],
+    "pros": [
+      "End-to-end encrypted",
+      "Open source",
+      "Free",
+      "Non-profit"
+    ],
+    "cons": [
+      "Smaller user base",
+      "Fewer features than Slack",
+      "Phone number required"
+    ],
+    "replaces": [
+      "slack"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -893,19 +1614,43 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "WEB", "SELF_HOSTED"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "WEB",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Budget teams"],
-    "pros": ["Free and open source", "No account needed", "Self-hostable", "End-to-end encryption"],
-    "cons": ["Quality varies", "Fewer features than Zoom", "Requires good connection"],
-    "replaces": ["zoom"],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Budget teams"
+    ],
+    "pros": [
+      "Free and open source",
+      "No account needed",
+      "Self-hostable",
+      "End-to-end encryption"
+    ],
+    "cons": [
+      "Quality varies",
+      "Fewer features than Zoom",
+      "Requires good connection"
+    ],
+    "replaces": [
+      "zoom"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -919,19 +1664,38 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB", "SELF_HOSTED"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WEB",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "MEDIUM",
-
-    "bestFor": ["Teams needing Kanban", "Self-hosters", "Trello refugees"],
-    "pros": ["Free and open source", "Self-hostable", "Clean UI", "Real-time updates"],
-    "cons": ["Requires hosting", "Fewer features than Trello", "Smaller community"],
-    "replaces": ["trello"],
+    "bestFor": [
+      "Teams needing Kanban",
+      "Self-hosters",
+      "Trello refugees"
+    ],
+    "pros": [
+      "Free and open source",
+      "Self-hostable",
+      "Clean UI",
+      "Real-time updates"
+    ],
+    "cons": [
+      "Requires hosting",
+      "Fewer features than Trello",
+      "Smaller community"
+    ],
+    "replaces": [
+      "trello"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -945,19 +1709,41 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "LINUX", "WEB", "SELF_HOSTED"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "LINUX",
+      "WEB",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Task management enthusiasts"],
-    "pros": ["Free and open source", "Self-hostable", "Multiple views", "API-first"],
-    "cons": ["Newer product", "Fewer integrations", "Mobile app limited"],
-    "replaces": ["todoist", "asana"],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Task management enthusiasts"
+    ],
+    "pros": [
+      "Free and open source",
+      "Self-hostable",
+      "Multiple views",
+      "API-first"
+    ],
+    "cons": [
+      "Newer product",
+      "Fewer integrations",
+      "Mobile app limited"
+    ],
+    "replaces": [
+      "todoist",
+      "asana"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -971,19 +1757,43 @@
     "priceText": "Free basic, $12/user/month teams",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB", "SELF_HOSTED", "WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID"],
-    "categories": ["BUSINESS"],
+    "platforms": [
+      "WEB",
+      "SELF_HOSTED",
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID"
+    ],
+    "categories": [
+      "BUSINESS"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "MEDIUM",
-
-    "bestFor": ["Freelancers", "Sales teams", "Self-hosters"],
-    "pros": ["Free tier", "Open source", "Self-hostable", "Integrations"],
-    "cons": ["Paid features for teams", "Requires hosting for self-host", "Newer product"],
-    "replaces": ["calendly"],
+    "bestFor": [
+      "Freelancers",
+      "Sales teams",
+      "Self-hosters"
+    ],
+    "pros": [
+      "Free tier",
+      "Open source",
+      "Self-hostable",
+      "Integrations"
+    ],
+    "cons": [
+      "Paid features for teams",
+      "Requires hosting for self-host",
+      "Newer product"
+    ],
+    "replaces": [
+      "calendly"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -997,19 +1807,40 @@
     "priceText": "Free for 5 users, $1/user/month",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "IOS", "ANDROID", "WEB"],
-    "categories": ["PRODUCTIVITY"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "IOS",
+      "ANDROID",
+      "WEB"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "LOW",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Small businesses", "Privacy-conscious users"],
-    "pros": ["Free tier", "No ads", "Privacy focused", "Good integration"],
-    "cons": ["Cloud-dependent", "Paid for advanced features", "Less storage"],
-    "replaces": ["microsoft-365"],
+    "bestFor": [
+      "Small businesses",
+      "Privacy-conscious users"
+    ],
+    "pros": [
+      "Free tier",
+      "No ads",
+      "Privacy focused",
+      "Good integration"
+    ],
+    "cons": [
+      "Cloud-dependent",
+      "Paid for advanced features",
+      "Less storage"
+    ],
+    "replaces": [
+      "microsoft-365"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
   },
@@ -1023,19 +1854,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["AI_TOOLS"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "AI_TOOLS"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Privacy-conscious users", "Developers", "AI enthusiasts"],
-    "pros": ["Completely free", "Runs locally", "No data sent to cloud", "Supports many models"],
-    "cons": ["Requires powerful hardware", "Setup can be complex", "No cloud sync"],
-    "replaces": ["chatgpt-plus"],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Developers",
+      "AI enthusiasts"
+    ],
+    "pros": [
+      "Completely free",
+      "Runs locally",
+      "No data sent to cloud",
+      "Supports many models"
+    ],
+    "cons": [
+      "Requires powerful hardware",
+      "Setup can be complex",
+      "No cloud sync"
+    ],
+    "replaces": [
+      "chatgpt-plus"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1049,19 +1900,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["AI_TOOLS"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "AI_TOOLS"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Non-technical users", "Privacy-conscious users", "Offline AI usage"],
-    "pros": ["User-friendly GUI", "Runs offline", "Free to use", "Supports many models"],
-    "cons": ["Not open source", "Requires good hardware", "No mobile app"],
-    "replaces": ["chatgpt-plus"],
+    "bestFor": [
+      "Non-technical users",
+      "Privacy-conscious users",
+      "Offline AI usage"
+    ],
+    "pros": [
+      "User-friendly GUI",
+      "Runs offline",
+      "Free to use",
+      "Supports many models"
+    ],
+    "cons": [
+      "Not open source",
+      "Requires good hardware",
+      "No mobile app"
+    ],
+    "replaces": [
+      "chatgpt-plus"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1075,19 +1946,37 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB"],
-    "categories": ["AI_TOOLS"],
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "AI_TOOLS"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "MEDIUM",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Budget-conscious users", "Open-source advocates", "Casual AI users"],
-    "pros": ["Completely free", "No account required", "Open source models", "Web-based"],
-    "cons": ["Cloud-dependent", "Less powerful than GPT-4", "No API access"],
-    "replaces": ["chatgpt-plus"],
+    "bestFor": [
+      "Budget-conscious users",
+      "Open-source advocates",
+      "Casual AI users"
+    ],
+    "pros": [
+      "Completely free",
+      "No account required",
+      "Open source models",
+      "Web-based"
+    ],
+    "cons": [
+      "Cloud-dependent",
+      "Less powerful than GPT-4",
+      "No API access"
+    ],
+    "replaces": [
+      "chatgpt-plus"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1101,19 +1990,39 @@
     "priceText": "Free, Pro from $20/mo",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["DEVELOPER_TOOLS"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "DEVELOPER_TOOLS"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "MEDIUM",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Individual developers", "Students", "Budget-conscious coders"],
-    "pros": ["Free tier is generous", "Supports many IDEs", "Fast completions", "Chat feature"],
-    "cons": ["Cloud-based", "Requires account", "Less accurate than Copilot sometimes"],
-    "replaces": ["github-copilot"],
+    "bestFor": [
+      "Individual developers",
+      "Students",
+      "Budget-conscious coders"
+    ],
+    "pros": [
+      "Free tier is generous",
+      "Supports many IDEs",
+      "Fast completions",
+      "Chat feature"
+    ],
+    "cons": [
+      "Cloud-based",
+      "Requires account",
+      "Less accurate than Copilot sometimes"
+    ],
+    "replaces": [
+      "github-copilot"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1127,19 +2036,39 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX"],
-    "categories": ["DEVELOPER_TOOLS"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "DEVELOPER_TOOLS"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Open-source developers", "Privacy-conscious coders", "Customizable workflows"],
-    "pros": ["Fully open source", "Works with any LLM", "Local model support", "VS Code & JetBrains"],
-    "cons": ["Requires setup", "Local models need hardware", "Less polished than Copilot"],
-    "replaces": ["github-copilot"],
+    "bestFor": [
+      "Open-source developers",
+      "Privacy-conscious coders",
+      "Customizable workflows"
+    ],
+    "pros": [
+      "Fully open source",
+      "Works with any LLM",
+      "Local model support",
+      "VS Code & JetBrains"
+    ],
+    "cons": [
+      "Requires setup",
+      "Local models need hardware",
+      "Less polished than Copilot"
+    ],
+    "replaces": [
+      "github-copilot"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1153,19 +2082,40 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "SELF_HOSTED"],
-    "categories": ["ENTERTAINMENT"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "ENTERTAINMENT"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Music collectors", "Self-hosters", "Privacy-conscious listeners"],
-    "pros": ["Self-hosted", "Own your music", "Multiple client apps", "Lightweight"],
-    "cons": ["Requires server setup", "No music discovery", "Must provide your own music files"],
-    "replaces": ["spotify-premium"],
+    "bestFor": [
+      "Music collectors",
+      "Self-hosters",
+      "Privacy-conscious listeners"
+    ],
+    "pros": [
+      "Self-hosted",
+      "Own your music",
+      "Multiple client apps",
+      "Lightweight"
+    ],
+    "cons": [
+      "Requires server setup",
+      "No music discovery",
+      "Must provide your own music files"
+    ],
+    "replaces": [
+      "spotify-premium"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1179,19 +2129,42 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "SELF_HOSTED"],
-    "categories": ["ENTERTAINMENT"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "ENTERTAINMENT"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Media collectors", "Self-hosters", "Families"],
-    "pros": ["Completely free", "No ads", "Self-hosted", "Supports many formats"],
-    "cons": ["Requires server setup", "No built-in content", "Must provide your own media"],
-    "replaces": ["netflix"],
+    "bestFor": [
+      "Media collectors",
+      "Self-hosters",
+      "Families"
+    ],
+    "pros": [
+      "Completely free",
+      "No ads",
+      "Self-hosted",
+      "Supports many formats"
+    ],
+    "cons": [
+      "Requires server setup",
+      "No built-in content",
+      "Must provide your own media"
+    ],
+    "replaces": [
+      "netflix"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1205,19 +2178,43 @@
     "priceText": "Free, Plex Pass $4.99/mo",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID", "WEB", "SELF_HOSTED"],
-    "categories": ["ENTERTAINMENT"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID",
+      "WEB",
+      "SELF_HOSTED"
+    ],
+    "categories": [
+      "ENTERTAINMENT"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "MEDIUM",
     "cloudDependency": "MEDIUM",
-
-    "bestFor": ["Media collectors", "Families", "Multi-device users"],
-    "pros": ["Polished UI", "Free tier available", "Wide device support", "Live TV support"],
-    "cons": ["Requires account", "Some features need Plex Pass", "Remote access may need config"],
-    "replaces": ["netflix"],
+    "bestFor": [
+      "Media collectors",
+      "Families",
+      "Multi-device users"
+    ],
+    "pros": [
+      "Polished UI",
+      "Free tier available",
+      "Wide device support",
+      "Live TV support"
+    ],
+    "cons": [
+      "Requires account",
+      "Some features need Plex Pass",
+      "Remote access may need config"
+    ],
+    "replaces": [
+      "netflix"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1231,19 +2228,42 @@
     "priceText": "Free (desktop), $24.99 (iOS)",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WINDOWS", "MACOS", "LINUX", "IOS", "ANDROID"],
-    "categories": ["EDUCATION"],
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "IOS",
+      "ANDROID"
+    ],
+    "categories": [
+      "EDUCATION"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": true,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "LOW",
-
-    "bestFor": ["Students", "Language learners", "Medical students", "Knowledge workers"],
-    "pros": ["Highly effective spaced repetition", "Free on desktop/Android", "Huge addon ecosystem", "Sync across devices"],
-    "cons": ["iOS app is paid", "Learning curve for creating cards", "UI is basic"],
-    "replaces": ["duolingo-super"],
+    "bestFor": [
+      "Students",
+      "Language learners",
+      "Medical students",
+      "Knowledge workers"
+    ],
+    "pros": [
+      "Highly effective spaced repetition",
+      "Free on desktop/Android",
+      "Huge addon ecosystem",
+      "Sync across devices"
+    ],
+    "cons": [
+      "iOS app is paid",
+      "Learning curve for creating cards",
+      "UI is basic"
+    ],
+    "replaces": [
+      "duolingo-super"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1257,19 +2277,40 @@
     "priceText": "Free",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["SELF_HOSTED", "WINDOWS", "MACOS", "LINUX"],
-    "categories": ["BUSINESS"],
+    "platforms": [
+      "SELF_HOSTED",
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "BUSINESS"
+    ],
     "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
     "cloudDependency": "NONE",
-
-    "bestFor": ["Developers", "Self-hosters", "Newsletter creators"],
-    "pros": ["Self-hosted", "No subscriber limits", "Modern UI", "High performance"],
-    "cons": ["Requires server setup", "No built-in templates", "Technical knowledge needed"],
-    "replaces": ["mailchimp"],
+    "bestFor": [
+      "Developers",
+      "Self-hosters",
+      "Newsletter creators"
+    ],
+    "pros": [
+      "Self-hosted",
+      "No subscriber limits",
+      "Modern UI",
+      "High performance"
+    ],
+    "cons": [
+      "Requires server setup",
+      "No built-in templates",
+      "Technical knowledge needed"
+    ],
+    "replaces": [
+      "mailchimp"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1283,19 +2324,37 @@
     "priceText": "Free up to 100 subscribers, add-ons from $9/mo",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB"],
-    "categories": ["BUSINESS"],
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "BUSINESS"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "MEDIUM",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Indie writers", "Small newsletters", "Simplicity lovers"],
-    "pros": ["Clean interface", "Free tier", "Markdown support", "API access"],
-    "cons": ["Cloud-based", "Limited free tier", "Fewer integrations than Mailchimp"],
-    "replaces": ["mailchimp"],
+    "bestFor": [
+      "Indie writers",
+      "Small newsletters",
+      "Simplicity lovers"
+    ],
+    "pros": [
+      "Clean interface",
+      "Free tier",
+      "Markdown support",
+      "API access"
+    ],
+    "cons": [
+      "Cloud-based",
+      "Limited free tier",
+      "Fewer integrations than Mailchimp"
+    ],
+    "replaces": [
+      "mailchimp"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1309,19 +2368,37 @@
     "priceText": "$5 trial credit, then from $5/mo",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB"],
-    "categories": ["DEVELOPER_TOOLS"],
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "DEVELOPER_TOOLS"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "LOW",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Indie developers", "Startups", "Side projects"],
-    "pros": ["Easy deployment", "Free tier", "Git integration", "Usage-based pricing"],
-    "cons": ["Cloud-dependent", "Can get expensive at scale", "Limited free resources"],
-    "replaces": ["heroku"],
+    "bestFor": [
+      "Indie developers",
+      "Startups",
+      "Side projects"
+    ],
+    "pros": [
+      "Easy deployment",
+      "Free tier",
+      "Git integration",
+      "Usage-based pricing"
+    ],
+    "cons": [
+      "Cloud-dependent",
+      "Can get expensive at scale",
+      "Limited free resources"
+    ],
+    "replaces": [
+      "heroku"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1335,19 +2412,37 @@
     "priceText": "Pay-as-you-go, usage-based",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB"],
-    "categories": ["DEVELOPER_TOOLS"],
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "DEVELOPER_TOOLS"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "LOW",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Full-stack developers", "Global apps", "Docker users"],
-    "pros": ["Global edge deployment", "Free tier", "Docker support", "Postgres included"],
-    "cons": ["Complex pricing", "CLI-heavy", "Can be confusing for beginners"],
-    "replaces": ["heroku"],
+    "bestFor": [
+      "Full-stack developers",
+      "Global apps",
+      "Docker users"
+    ],
+    "pros": [
+      "Global edge deployment",
+      "Free tier",
+      "Docker support",
+      "Postgres included"
+    ],
+    "cons": [
+      "Complex pricing",
+      "CLI-heavy",
+      "Can be confusing for beginners"
+    ],
+    "replaces": [
+      "heroku"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
   },
@@ -1361,20 +2456,176 @@
     "priceText": "Free tier, from $7/mo",
     "startingPrice": 0,
     "currency": "USD",
-    "platforms": ["WEB"],
-    "categories": ["DEVELOPER_TOOLS"],
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "DEVELOPER_TOOLS"
+    ],
     "isOpenSource": false,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "LOW",
     "cloudDependency": "HIGH",
-
-    "bestFor": ["Web developers", "Startups", "Side projects"],
-    "pros": ["Easy setup", "Free SSL", "Auto-deploy from Git", "Managed databases"],
-    "cons": ["Cloud-dependent", "Cold starts on free tier", "Limited customization"],
-    "replaces": ["heroku"],
+    "bestFor": [
+      "Web developers",
+      "Startups",
+      "Side projects"
+    ],
+    "pros": [
+      "Easy setup",
+      "Free SSL",
+      "Auto-deploy from Git",
+      "Managed databases"
+    ],
+    "cons": [
+      "Cloud-dependent",
+      "Cold starts on free tier",
+      "Limited customization"
+    ],
+    "replaces": [
+      "heroku"
+    ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-24"
+  },
+  {
+    "id": "darktable",
+    "name": "darktable",
+    "slug": "darktable",
+    "description": "An open-source photography workflow application and RAW developer.",
+    "websiteUrl": "https://www.darktable.org/",
+    "pricingType": "OPEN_SOURCE",
+    "priceText": "Free",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "NONE",
+    "bestFor": [
+      "Photographers",
+      "RAW editing enthusiasts",
+      "Open-source advocates"
+    ],
+    "pros": [
+      "Completely free",
+      "Non-destructive editing",
+      "Excellent RAW processing",
+      "Cross-platform"
+    ],
+    "cons": [
+      "Steeper learning curve than Lightroom",
+      "UI less polished",
+      "Slower on large libraries"
+    ],
+    "replaces": [
+      "adobe-lightroom"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-25"
+  },
+  {
+    "id": "rawtherapee",
+    "name": "RawTherapee",
+    "slug": "rawtherapee",
+    "description": "A powerful open-source RAW photo processing program.",
+    "websiteUrl": "https://rawtherapee.com/",
+    "pricingType": "OPEN_SOURCE",
+    "priceText": "Free",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "NONE",
+    "bestFor": [
+      "Photographers",
+      "Technical users",
+      "Budget-conscious editors"
+    ],
+    "pros": [
+      "Free and open source",
+      "Advanced RAW processing",
+      "Batch processing",
+      "Non-destructive editing"
+    ],
+    "cons": [
+      "No asset management",
+      "UI can be overwhelming",
+      "No mobile app"
+    ],
+    "replaces": [
+      "adobe-lightroom"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-25"
+  },
+  {
+    "id": "lunacy",
+    "name": "Lunacy",
+    "slug": "lunacy",
+    "description": "A free design tool with AI features, built-in assets, and .sketch file support.",
+    "websiteUrl": "https://icons8.com/lunacy",
+    "pricingType": "FREE",
+    "priceText": "Free",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "DESIGN"
+    ],
+    "isOpenSource": false,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "UI/UX designers",
+      "Teams migrating from Sketch",
+      "Budget-conscious designers"
+    ],
+    "pros": [
+      "Completely free",
+      "Opens .sketch files",
+      "Built-in UI kits and icons",
+      "AI-powered features"
+    ],
+    "cons": [
+      "Smaller community than Figma",
+      "Fewer plugins",
+      "Less industry adoption"
+    ],
+    "replaces": [
+      "sketch"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-25"
   }
 ]
