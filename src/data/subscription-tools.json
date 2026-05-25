@@ -122,7 +122,8 @@
       "Web clipping",
       "Document scanning",
       "Task management"
-    ]
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "grammarly",
@@ -193,7 +194,8 @@
       "File sharing",
       "Backup",
       "Collaboration"
-    ]
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "google-drive",
@@ -364,7 +366,7 @@
     "description": "OpenAI's premium AI assistant with GPT-4 access, faster responses, and priority access to new features.",
     "websiteUrl": "https://chat.openai.com/",
     "monthlyPrice": 20,
-    "yearlyPrice": 240,
+    "yearlyPrice": null,
     "currency": "USD",
     "category": "AI_TOOLS",
     "commonUseCases": [
@@ -372,7 +374,8 @@
       "Writing assistance",
       "Code generation",
       "Research"
-    ]
+    ],
+    "lastCheckedAt": "2026-05-25"
   },
   {
     "id": "github-copilot",
