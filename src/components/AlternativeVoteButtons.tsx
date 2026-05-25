@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface AlternativeVoteButtonsProps {
   softwareId: string;
@@ -18,22 +18,69 @@ export default function AlternativeVoteButtons({
 
   const storageKey = `vote-${subscriptionToolId}-${softwareId}`;
 
+  // Fetch shared vote count from API
+  const fetchVotes = useCallback(async () => {
+    try {
+      const res = await fetch(
+        `/api/vote?softwareId=${encodeURIComponent(softwareId)}&subscriptionToolId=${encodeURIComponent(subscriptionToolId)}`
+      );
+      if (res.ok) {
+        const data = await res.json();
+        setVotes(data.votes);
+      }
+    } catch {
+      // Keep initialVotes on failure
+    }
+  }, [softwareId, subscriptionToolId]);
+
   useEffect(() => {
+    // Load user's own vote state from localStorage
     const stored = localStorage.getItem(storageKey);
     if (stored === 'up' || stored === 'down') {
       setUserVote(stored);
     }
-  }, [storageKey]);
+    // Fetch shared vote count
+    fetchVotes();
+  }, [storageKey, fetchVotes]);
 
-  function handleVote(vote: 'up' | 'down') {
+  async function handleVote(vote: 'up' | 'down') {
     if (userVote === vote) return;
 
+    // Calculate optimistic delta
     const delta = vote === 'up' ? 1 : -1;
     const adjustedDelta = userVote ? delta * 2 : delta;
 
+    const prevVote = userVote;
+    const prevVotes = votes;
+
+    // Optimistic update
     setUserVote(vote);
     setVotes((v) => v + adjustedDelta);
     localStorage.setItem(storageKey, vote);
+
+    // Persist to API
+    try {
+      const res = await fetch('/api/vote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ softwareId, subscriptionToolId, vote }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setVotes(data.votes);
+      } else {
+        throw new Error('API error');
+      }
+    } catch {
+      // Rollback on failure
+      setUserVote(prevVote);
+      setVotes(prevVotes);
+      if (prevVote) {
+        localStorage.setItem(storageKey, prevVote);
+      } else {
+        localStorage.removeItem(storageKey);
+      }
+    }
   }
 
   return (

@@ -1,0 +1,6 @@
+name = "escape-subscriptions"
+compatibility_date = "2024-09-23"
+
+[[kv_namespaces]]
+binding = "VOTES_KV"
+id = "444a424e53114a88b2379e98a48dca66"
