@@ -2627,5 +2627,209 @@
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-25"
+  },
+  {
+    "id": "n8n-community",
+    "name": "n8n Community Edition",
+    "slug": "n8n-community",
+    "description": "Free, open-source, self-hosted workflow automation platform. Connect 400+ apps and services with a visual node-based editor. Same core as n8n Cloud but you host it yourself.",
+    "websiteUrl": "https://n8n.io",
+    "githubUrl": "https://github.com/n8n-io/n8n",
+    "pricingType": "FREE",
+    "priceText": "Free (self-hosted)",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "PRODUCTIVITY",
+      "DEVELOPER_TOOLS"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Developers",
+      "DevOps teams",
+      "Privacy-conscious users",
+      "Small businesses wanting to avoid subscriptions"
+    ],
+    "pros": [
+      "Completely free and open source (fair-code license)",
+      "Self-hosted with full data control",
+      "400+ integrations out of the box",
+      "Visual drag-and-drop workflow editor",
+      "Active community and frequent updates",
+      "AI agent capabilities built in"
+    ],
+    "cons": [
+      "Requires server setup and maintenance",
+      "No official support for community edition",
+      "Scaling requires technical knowledge",
+      "Fair-code license has some restrictions vs pure open source"
+    ],
+    "replaces": [
+      "n8n-cloud"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "activepieces",
+    "name": "Activepieces",
+    "slug": "activepieces",
+    "description": "Open-source, self-hosted workflow automation platform with a no-code visual builder. A modern alternative to Zapier and n8n with community-contributed integrations.",
+    "websiteUrl": "https://www.activepieces.com",
+    "githubUrl": "https://github.com/activepieces/activepieces",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free (self-hosted) / Pro from $10/mo",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Non-technical users",
+      "Small teams",
+      "Businesses wanting Zapier-like experience without the cost"
+    ],
+    "pros": [
+      "True open-source license (MIT)",
+      "No-code visual builder, easy to use",
+      "Community-contributed integrations",
+      "Self-hosted with full data ownership",
+      "TypeScript-based, easy to extend"
+    ],
+    "cons": [
+      "Fewer integrations than n8n (growing ecosystem)",
+      "Self-hosting requires some technical setup",
+      "Younger project, less mature than n8n"
+    ],
+    "replaces": [
+      "n8n-cloud"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "node-red",
+    "name": "Node-RED",
+    "slug": "node-red",
+    "description": "Low-code, flow-based programming tool for event-driven applications. Part of the OpenJS Foundation with 5,000+ community-built nodes. Excellent for IoT and home automation.",
+    "websiteUrl": "https://nodered.org",
+    "githubUrl": "https://github.com/node-red/node-red",
+    "pricingType": "FREE",
+    "priceText": "Free",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "PRODUCTIVITY",
+      "DEVELOPER_TOOLS"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "IoT developers",
+      "Home automation enthusiasts",
+      "Edge computing use cases",
+      "Raspberry Pi users"
+    ],
+    "pros": [
+      "Completely free and open source (Apache 2.0)",
+      "Runs on anything from Raspberry Pi to cloud",
+      "5,000+ community nodes and flows",
+      "Part of OpenJS Foundation (stable governance)",
+      "Excellent for IoT and event-driven workflows",
+      "Lightweight and resource-efficient"
+    ],
+    "cons": [
+      "Steeper learning curve than n8n",
+      "UI feels more technical/developer-oriented",
+      "Fewer business app integrations than n8n",
+      "Better suited for IoT than general business automation"
+    ],
+    "replaces": [
+      "n8n-cloud"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "windmill",
+    "name": "Windmill",
+    "slug": "windmill",
+    "description": "Open-source developer platform for building internal tools, workflows, and automations through scripts, flows, and apps. Supports Python, TypeScript, Go, and Bash.",
+    "websiteUrl": "https://www.windmill.dev",
+    "githubUrl": "https://github.com/windmill-labs/windmill",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free (self-hosted) / Enterprise from $120/mo",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "PRODUCTIVITY",
+      "DEVELOPER_TOOLS"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Developer teams",
+      "Internal tool builders",
+      "DevOps engineers",
+      "Companies building custom automations"
+    ],
+    "pros": [
+      "Free and open source (AGPLv3)",
+      "Supports Python, TypeScript, Go, Bash natively",
+      "Visual flow builder with code-first approach",
+      "Built-in app builder for internal tools",
+      "Unlimited executions on free tier",
+      "SOC 2 Type II compliant (Enterprise)"
+    ],
+    "cons": [
+      "More developer-focused than n8n",
+      "Enterprise features are pricey",
+      "Smaller community than n8n",
+      "Less suitable for non-technical users"
+    ],
+    "replaces": [
+      "n8n-cloud"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
   }
 ]

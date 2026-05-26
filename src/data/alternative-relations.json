@@ -7,10 +7,25 @@
     "recommendationLabel": "Best overall one-time purchase alternative",
     "similarityScore": 85,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Lower long-term cost", "Offline access", "No recurring subscription"],
-    "whatYouLose": ["Adobe ecosystem integration", "Some Photoshop-specific plugins", "Industry-standard collaboration workflows"],
-    "bestFor": ["Freelancers", "Photographers", "Designers who do not rely on Adobe plugins"],
-    "notFor": ["Enterprise Adobe users", "Teams deeply tied to Creative Cloud"],
+    "whatYouGain": [
+      "Lower long-term cost",
+      "Offline access",
+      "No recurring subscription"
+    ],
+    "whatYouLose": [
+      "Adobe ecosystem integration",
+      "Some Photoshop-specific plugins",
+      "Industry-standard collaboration workflows"
+    ],
+    "bestFor": [
+      "Freelancers",
+      "Photographers",
+      "Designers who do not rely on Adobe plugins"
+    ],
+    "notFor": [
+      "Enterprise Adobe users",
+      "Teams deeply tied to Creative Cloud"
+    ],
     "notes": "Affinity Photo is a strong alternative for many individual users, but it may not fully replace Photoshop in enterprise workflows."
   },
   {
@@ -21,10 +36,26 @@
     "recommendationLabel": "Best free/open-source alternative",
     "similarityScore": 70,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Completely free", "Open source", "Cross-platform", "Active community"],
-    "whatYouLose": ["Adobe ecosystem", "Some advanced features", "Professional workflow compatibility"],
-    "bestFor": ["Budget-conscious users", "Open-source advocates", "Linux users"],
-    "notFor": ["Professional photographers", "Users needing Adobe compatibility"],
+    "whatYouGain": [
+      "Completely free",
+      "Open source",
+      "Cross-platform",
+      "Active community"
+    ],
+    "whatYouLose": [
+      "Adobe ecosystem",
+      "Some advanced features",
+      "Professional workflow compatibility"
+    ],
+    "bestFor": [
+      "Budget-conscious users",
+      "Open-source advocates",
+      "Linux users"
+    ],
+    "notFor": [
+      "Professional photographers",
+      "Users needing Adobe compatibility"
+    ],
     "notes": "GIMP is powerful but has a steeper learning curve. Great for users who prioritize freedom and cost over professional workflow compatibility."
   },
   {
@@ -35,10 +66,25 @@
     "recommendationLabel": "Best for digital painting",
     "similarityScore": 65,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Excellent brush engine", "Animation support"],
-    "whatYouLose": ["Photo editing tools", "Adobe compatibility", "Professional photo workflow"],
-    "bestFor": ["Digital artists", "Illustrators", "Painters"],
-    "notFor": ["Photo editors", "Users needing Photoshop-specific features"],
+    "whatYouGain": [
+      "Free and open source",
+      "Excellent brush engine",
+      "Animation support"
+    ],
+    "whatYouLose": [
+      "Photo editing tools",
+      "Adobe compatibility",
+      "Professional photo workflow"
+    ],
+    "bestFor": [
+      "Digital artists",
+      "Illustrators",
+      "Painters"
+    ],
+    "notFor": [
+      "Photo editors",
+      "Users needing Photoshop-specific features"
+    ],
     "notes": "Krita excels at digital painting but is less suited for photo editing. Ideal for artists who primarily draw and paint."
   },
   {
@@ -49,10 +95,26 @@
     "recommendationLabel": "Best browser-based alternative",
     "similarityScore": 75,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Works in browser", "Supports PSD files", "No installation", "Free"],
-    "whatYouLose": ["Offline access", "Performance", "Privacy (cloud-based)"],
-    "bestFor": ["Quick edits", "Users who need PSD support", "No-install users"],
-    "notFor": ["Users needing offline access", "Privacy-conscious users"],
+    "whatYouGain": [
+      "Works in browser",
+      "Supports PSD files",
+      "No installation",
+      "Free"
+    ],
+    "whatYouLose": [
+      "Offline access",
+      "Performance",
+      "Privacy (cloud-based)"
+    ],
+    "bestFor": [
+      "Quick edits",
+      "Users who need PSD support",
+      "No-install users"
+    ],
+    "notFor": [
+      "Users needing offline access",
+      "Privacy-conscious users"
+    ],
     "notes": "Photopea is excellent for quick edits and PSD compatibility. Best for users who need occasional access without installing software."
   },
   {
@@ -63,10 +125,26 @@
     "recommendationLabel": "Best for casual Mac users",
     "similarityScore": 70,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["One-time purchase", "Native Mac app", "ML-powered tools", "Clean interface"],
-    "whatYouLose": ["Windows support", "Some advanced features", "Plugin ecosystem"],
-    "bestFor": ["Mac users", "Casual editors", "Budget photographers"],
-    "notFor": ["Windows users", "Professional photographers needing advanced features"],
+    "whatYouGain": [
+      "One-time purchase",
+      "Native Mac app",
+      "ML-powered tools",
+      "Clean interface"
+    ],
+    "whatYouLose": [
+      "Windows support",
+      "Some advanced features",
+      "Plugin ecosystem"
+    ],
+    "bestFor": [
+      "Mac users",
+      "Casual editors",
+      "Budget photographers"
+    ],
+    "notFor": [
+      "Windows users",
+      "Professional photographers needing advanced features"
+    ],
     "notes": "Pixelmator Pro is a great choice for Mac users who want a clean, affordable photo editor without subscription fees."
   },
   {
@@ -77,10 +155,25 @@
     "recommendationLabel": "Best overall one-time purchase alternative",
     "similarityScore": 85,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["One-time purchase", "Professional vector tools", "Good performance"],
-    "whatYouLose": ["Adobe ecosystem", "Some Illustrator-specific features", "Industry-standard workflows"],
-    "bestFor": ["Graphic designers", "Illustrators", "UI designers"],
-    "notFor": ["Enterprise Adobe users", "Teams needing Adobe compatibility"],
+    "whatYouGain": [
+      "One-time purchase",
+      "Professional vector tools",
+      "Good performance"
+    ],
+    "whatYouLose": [
+      "Adobe ecosystem",
+      "Some Illustrator-specific features",
+      "Industry-standard workflows"
+    ],
+    "bestFor": [
+      "Graphic designers",
+      "Illustrators",
+      "UI designers"
+    ],
+    "notFor": [
+      "Enterprise Adobe users",
+      "Teams needing Adobe compatibility"
+    ],
     "notes": "Affinity Designer is a powerful vector editor that can replace Illustrator for most individual users."
   },
   {
@@ -91,10 +184,24 @@
     "recommendationLabel": "Best free/open-source alternative",
     "similarityScore": 65,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Free and open source", "Cross-platform", "Extensible"],
-    "whatYouLose": ["Adobe compatibility", "Some advanced features", "Performance"],
-    "bestFor": ["Open-source advocates", "Budget designers", "Linux users"],
-    "notFor": ["Professional designers needing Adobe compatibility"],
+    "whatYouGain": [
+      "Free and open source",
+      "Cross-platform",
+      "Extensible"
+    ],
+    "whatYouLose": [
+      "Adobe compatibility",
+      "Some advanced features",
+      "Performance"
+    ],
+    "bestFor": [
+      "Open-source advocates",
+      "Budget designers",
+      "Linux users"
+    ],
+    "notFor": [
+      "Professional designers needing Adobe compatibility"
+    ],
     "notes": "Inkscape is a capable vector editor but has a steeper learning curve and fewer advanced features than Illustrator."
   },
   {
@@ -105,10 +212,27 @@
     "recommendationLabel": "Best overall alternative",
     "similarityScore": 75,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Local-first storage", "Markdown files", "Powerful linking", "Offline access"],
-    "whatYouLose": ["Real-time collaboration", "Web access", "Database features"],
-    "bestFor": ["Note-takers", "Researchers", "Writers", "Knowledge workers"],
-    "notFor": ["Teams needing real-time collaboration", "Users who prefer web-based tools"],
+    "whatYouGain": [
+      "Local-first storage",
+      "Markdown files",
+      "Powerful linking",
+      "Offline access"
+    ],
+    "whatYouLose": [
+      "Real-time collaboration",
+      "Web access",
+      "Database features"
+    ],
+    "bestFor": [
+      "Note-takers",
+      "Researchers",
+      "Writers",
+      "Knowledge workers"
+    ],
+    "notFor": [
+      "Teams needing real-time collaboration",
+      "Users who prefer web-based tools"
+    ],
     "notes": "Obsidian is excellent for personal knowledge management. Data stays local and portable."
   },
   {
@@ -119,10 +243,26 @@
     "recommendationLabel": "Best for outliner fans",
     "similarityScore": 70,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Local-first", "Block-based editing", "Graph view"],
-    "whatYouLose": ["Database features", "Web clipper", "Some integrations"],
-    "bestFor": ["Privacy-conscious users", "Outliner fans", "Researchers"],
-    "notFor": ["Users needing database features", "Teams needing collaboration"],
+    "whatYouGain": [
+      "Free and open source",
+      "Local-first",
+      "Block-based editing",
+      "Graph view"
+    ],
+    "whatYouLose": [
+      "Database features",
+      "Web clipper",
+      "Some integrations"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Outliner fans",
+      "Researchers"
+    ],
+    "notFor": [
+      "Users needing database features",
+      "Teams needing collaboration"
+    ],
     "notes": "Logseq is great for users who prefer outliner-style note-taking with strong privacy guarantees."
   },
   {
@@ -133,10 +273,26 @@
     "recommendationLabel": "Best Notion-like alternative",
     "similarityScore": 80,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Local-first", "End-to-end encrypted", "Notion-like UI", "Cross-platform"],
-    "whatYouLose": ["Mature ecosystem", "Templates", "Integrations"],
-    "bestFor": ["Privacy-focused users", "Notion refugees", "Local-first advocates"],
-    "notFor": ["Users needing mature ecosystem", "Teams needing many integrations"],
+    "whatYouGain": [
+      "Local-first",
+      "End-to-end encrypted",
+      "Notion-like UI",
+      "Cross-platform"
+    ],
+    "whatYouLose": [
+      "Mature ecosystem",
+      "Templates",
+      "Integrations"
+    ],
+    "bestFor": [
+      "Privacy-focused users",
+      "Notion refugees",
+      "Local-first advocates"
+    ],
+    "notFor": [
+      "Users needing mature ecosystem",
+      "Teams needing many integrations"
+    ],
     "notes": "Anytype offers a Notion-like experience with local-first storage and end-to-end encryption."
   },
   {
@@ -147,10 +303,26 @@
     "recommendationLabel": "Best for Evernote refugees",
     "similarityScore": 60,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free and open source", "End-to-end encryption", "Markdown support", "Multiple sync options"],
-    "whatYouLose": ["Database features", "Real-time collaboration", "Web clipper quality"],
-    "bestFor": ["Evernote refugees", "Privacy-conscious users", "Markdown fans"],
-    "notFor": ["Users needing database features", "Teams needing real-time collaboration"],
+    "whatYouGain": [
+      "Free and open source",
+      "End-to-end encryption",
+      "Markdown support",
+      "Multiple sync options"
+    ],
+    "whatYouLose": [
+      "Database features",
+      "Real-time collaboration",
+      "Web clipper quality"
+    ],
+    "bestFor": [
+      "Evernote refugees",
+      "Privacy-conscious users",
+      "Markdown fans"
+    ],
+    "notFor": [
+      "Users needing database features",
+      "Teams needing real-time collaboration"
+    ],
     "notes": "Joplin is a solid note-taking app with strong privacy features, but lacks Notion's database capabilities."
   },
   {
@@ -161,10 +333,25 @@
     "recommendationLabel": "Best for long-form writers",
     "similarityScore": 50,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["One-time purchase", "Powerful organization", "Compile to many formats"],
-    "whatYouLose": ["Collaboration", "Database features", "Web access"],
-    "bestFor": ["Novelists", "Screenwriters", "Academic writers"],
-    "notFor": ["Teams needing collaboration", "Users needing database features"],
+    "whatYouGain": [
+      "One-time purchase",
+      "Powerful organization",
+      "Compile to many formats"
+    ],
+    "whatYouLose": [
+      "Collaboration",
+      "Database features",
+      "Web access"
+    ],
+    "bestFor": [
+      "Novelists",
+      "Screenwriters",
+      "Academic writers"
+    ],
+    "notFor": [
+      "Teams needing collaboration",
+      "Users needing database features"
+    ],
     "notes": "Scrivener is specialized for long-form writing and may not replace Notion for general productivity."
   },
   {
@@ -175,10 +362,26 @@
     "recommendationLabel": "Best overall alternative",
     "similarityScore": 70,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Local-first storage", "Markdown files", "Powerful linking", "No subscription"],
-    "whatYouLose": ["Web clipping", "Document scanning", "Mobile app features"],
-    "bestFor": ["Note-takers", "Researchers", "Writers"],
-    "notFor": ["Users heavily using web clipping", "Users needing document scanning"],
+    "whatYouGain": [
+      "Local-first storage",
+      "Markdown files",
+      "Powerful linking",
+      "No subscription"
+    ],
+    "whatYouLose": [
+      "Web clipping",
+      "Document scanning",
+      "Mobile app features"
+    ],
+    "bestFor": [
+      "Note-takers",
+      "Researchers",
+      "Writers"
+    ],
+    "notFor": [
+      "Users heavily using web clipping",
+      "Users needing document scanning"
+    ],
     "notes": "Obsidian is a powerful alternative for note-taking, though web clipping requires third-party tools."
   },
   {
@@ -189,10 +392,26 @@
     "recommendationLabel": "Best free alternative",
     "similarityScore": 75,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free and open source", "End-to-end encryption", "Evernote import", "Multiple sync options"],
-    "whatYouLose": ["Document scanning", "Some formatting options", "Mobile app polish"],
-    "bestFor": ["Evernote refugees", "Privacy-conscious users", "Budget users"],
-    "notFor": ["Users needing document scanning", "Users needing polished mobile app"],
+    "whatYouGain": [
+      "Free and open source",
+      "End-to-end encryption",
+      "Evernote import",
+      "Multiple sync options"
+    ],
+    "whatYouLose": [
+      "Document scanning",
+      "Some formatting options",
+      "Mobile app polish"
+    ],
+    "bestFor": [
+      "Evernote refugees",
+      "Privacy-conscious users",
+      "Budget users"
+    ],
+    "notFor": [
+      "Users needing document scanning",
+      "Users needing polished mobile app"
+    ],
     "notes": "Joplin can import Evernote notes directly, making migration easier."
   },
   {
@@ -203,10 +422,25 @@
     "recommendationLabel": "Best for privacy",
     "similarityScore": 55,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["End-to-end encrypted", "Open source", "100-year durability goal"],
-    "whatYouLose": ["Rich formatting", "Web clipping", "Document scanning"],
-    "bestFor": ["Privacy advocates", "Minimalists", "Long-term note keepers"],
-    "notFor": ["Users needing rich formatting", "Users needing web clipping"],
+    "whatYouGain": [
+      "End-to-end encrypted",
+      "Open source",
+      "100-year durability goal"
+    ],
+    "whatYouLose": [
+      "Rich formatting",
+      "Web clipping",
+      "Document scanning"
+    ],
+    "bestFor": [
+      "Privacy advocates",
+      "Minimalists",
+      "Long-term note keepers"
+    ],
+    "notFor": [
+      "Users needing rich formatting",
+      "Users needing web clipping"
+    ],
     "notes": "Standard Notes prioritizes privacy and longevity over features."
   },
   {
@@ -217,10 +451,26 @@
     "recommendationLabel": "Best overall alternative",
     "similarityScore": 70,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Open source", "Works offline", "Supports many languages", "Browser extension"],
-    "whatYouLose": ["AI-powered suggestions", "Tone detection", "Plagiarism checker"],
-    "bestFor": ["Writers", "Students", "Privacy-conscious users"],
-    "notFor": ["Users needing AI-powered writing suggestions", "Users needing plagiarism checking"],
+    "whatYouGain": [
+      "Open source",
+      "Works offline",
+      "Supports many languages",
+      "Browser extension"
+    ],
+    "whatYouLose": [
+      "AI-powered suggestions",
+      "Tone detection",
+      "Plagiarism checker"
+    ],
+    "bestFor": [
+      "Writers",
+      "Students",
+      "Privacy-conscious users"
+    ],
+    "notFor": [
+      "Users needing AI-powered writing suggestions",
+      "Users needing plagiarism checking"
+    ],
     "notes": "LanguageTool is a solid grammar checker that works offline and supports many languages."
   },
   {
@@ -231,10 +481,26 @@
     "recommendationLabel": "Best free alternative",
     "similarityScore": 65,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Time tracking built-in", "Jira/GitHub integration", "Pomodoro timer"],
-    "whatYouLose": ["Natural language processing", "Mobile app polish", "Collaboration features"],
-    "bestFor": ["Developers", "Time trackers", "Task management enthusiasts"],
-    "notFor": ["Users needing natural language input", "Teams needing collaboration"],
+    "whatYouGain": [
+      "Free and open source",
+      "Time tracking built-in",
+      "Jira/GitHub integration",
+      "Pomodoro timer"
+    ],
+    "whatYouLose": [
+      "Natural language processing",
+      "Mobile app polish",
+      "Collaboration features"
+    ],
+    "bestFor": [
+      "Developers",
+      "Time trackers",
+      "Task management enthusiasts"
+    ],
+    "notFor": [
+      "Users needing natural language input",
+      "Teams needing collaboration"
+    ],
     "notes": "Super Productivity is great for developers who want time tracking and integrations with development tools."
   },
   {
@@ -245,10 +511,26 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 60,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Self-hostable", "Multiple views", "API-first"],
-    "whatYouLose": ["Natural language processing", "Mobile app polish", "Integrations"],
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Task management enthusiasts"],
-    "notFor": ["Users needing natural language input", "Users needing many integrations"],
+    "whatYouGain": [
+      "Free and open source",
+      "Self-hostable",
+      "Multiple views",
+      "API-first"
+    ],
+    "whatYouLose": [
+      "Natural language processing",
+      "Mobile app polish",
+      "Integrations"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Task management enthusiasts"
+    ],
+    "notFor": [
+      "Users needing natural language input",
+      "Users needing many integrations"
+    ],
     "notes": "Vikunja is a good choice for users who want to self-host their task management."
   },
   {
@@ -259,10 +541,26 @@
     "recommendationLabel": "Best for privacy",
     "similarityScore": 70,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Local storage", "No subscription", "Strong encryption"],
-    "whatYouLose": ["Built-in sync", "Browser integration polish", "Mobile app polish"],
-    "bestFor": ["Privacy-conscious users", "Open-source advocates", "Local-first users"],
-    "notFor": ["Users needing seamless sync", "Users needing polished mobile app"],
+    "whatYouGain": [
+      "Free and open source",
+      "Local storage",
+      "No subscription",
+      "Strong encryption"
+    ],
+    "whatYouLose": [
+      "Built-in sync",
+      "Browser integration polish",
+      "Mobile app polish"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Open-source advocates",
+      "Local-first users"
+    ],
+    "notFor": [
+      "Users needing seamless sync",
+      "Users needing polished mobile app"
+    ],
     "notes": "KeePassXC stores passwords locally with strong encryption. Sync requires manual setup."
   },
   {
@@ -273,10 +571,25 @@
     "recommendationLabel": "Best overall alternative",
     "similarityScore": 85,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free tier generous", "Open source", "Cross-platform", "Self-hostable"],
-    "whatYouLose": ["Some premium features", "UI polish", "Family plan features"],
-    "bestFor": ["Cross-platform users", "Families", "Budget-conscious users"],
-    "notFor": ["Users needing 1Password-specific features"],
+    "whatYouGain": [
+      "Free tier generous",
+      "Open source",
+      "Cross-platform",
+      "Self-hostable"
+    ],
+    "whatYouLose": [
+      "Some premium features",
+      "UI polish",
+      "Family plan features"
+    ],
+    "bestFor": [
+      "Cross-platform users",
+      "Families",
+      "Budget-conscious users"
+    ],
+    "notFor": [
+      "Users needing 1Password-specific features"
+    ],
     "notes": "Bitwarden is the most popular 1Password alternative with a generous free tier."
   },
   {
@@ -287,10 +600,25 @@
     "recommendationLabel": "Best for 2FA",
     "similarityScore": 50,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["End-to-end encrypted", "Open source", "Cross-platform", "Backup support"],
-    "whatYouLose": ["Password management", "Document storage", "Browser integration"],
-    "bestFor": ["Privacy-conscious users", "2FA users", "Cross-platform users"],
-    "notFor": ["Users needing full password management"],
+    "whatYouGain": [
+      "End-to-end encrypted",
+      "Open source",
+      "Cross-platform",
+      "Backup support"
+    ],
+    "whatYouLose": [
+      "Password management",
+      "Document storage",
+      "Browser integration"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "2FA users",
+      "Cross-platform users"
+    ],
+    "notFor": [
+      "Users needing full password management"
+    ],
     "notes": "Ente Auth is specialized for 2FA and may not replace 1Password for full password management."
   },
   {
@@ -301,10 +629,26 @@
     "recommendationLabel": "Best for privacy",
     "similarityScore": 60,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Free and open source", "No cloud needed", "Peer-to-peer", "Encrypted"],
-    "whatYouLose": ["Web access", "File sharing links", "Collaboration features"],
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Local sync users"],
-    "notFor": ["Users needing web access", "Users needing file sharing links"],
+    "whatYouGain": [
+      "Free and open source",
+      "No cloud needed",
+      "Peer-to-peer",
+      "Encrypted"
+    ],
+    "whatYouLose": [
+      "Web access",
+      "File sharing links",
+      "Collaboration features"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Local sync users"
+    ],
+    "notFor": [
+      "Users needing web access",
+      "Users needing file sharing links"
+    ],
     "notes": "Syncthing syncs files directly between devices without cloud storage."
   },
   {
@@ -315,10 +659,25 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 75,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Full control over data", "Extensible", "Collaboration tools"],
-    "whatYouLose": ["Ease of use", "Performance", "Mobile app polish"],
-    "bestFor": ["Self-hosters", "Privacy-conscious teams", "Data sovereignty advocates"],
-    "notFor": ["Users wanting zero-setup cloud storage"],
+    "whatYouGain": [
+      "Free and open source",
+      "Full control over data",
+      "Extensible",
+      "Collaboration tools"
+    ],
+    "whatYouLose": [
+      "Ease of use",
+      "Performance",
+      "Mobile app polish"
+    ],
+    "bestFor": [
+      "Self-hosters",
+      "Privacy-conscious teams",
+      "Data sovereignty advocates"
+    ],
+    "notFor": [
+      "Users wanting zero-setup cloud storage"
+    ],
     "notes": "Nextcloud provides a full productivity platform with file sync and collaboration tools."
   },
   {
@@ -329,10 +688,23 @@
     "recommendationLabel": "Best lifetime deal",
     "similarityScore": 80,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Lifetime plans available", "Good pricing", "Client-side encryption", "Cross-platform"],
-    "whatYouLose": ["Encryption costs extra", "Company could change terms"],
-    "bestFor": ["Users wanting lifetime cloud storage", "Budget-conscious users"],
-    "notFor": ["Users needing guaranteed long-term pricing"],
+    "whatYouGain": [
+      "Lifetime plans available",
+      "Good pricing",
+      "Client-side encryption",
+      "Cross-platform"
+    ],
+    "whatYouLose": [
+      "Encryption costs extra",
+      "Company could change terms"
+    ],
+    "bestFor": [
+      "Users wanting lifetime cloud storage",
+      "Budget-conscious users"
+    ],
+    "notFor": [
+      "Users needing guaranteed long-term pricing"
+    ],
     "notes": "pCloud offers lifetime plans which can save money long-term, but company terms could change."
   },
   {
@@ -343,10 +715,25 @@
     "recommendationLabel": "Best for privacy",
     "similarityScore": 55,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Free and open source", "No cloud needed", "Peer-to-peer", "Encrypted"],
-    "whatYouLose": ["Web access", "Google Workspace integration", "Collaboration features"],
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Local sync users"],
-    "notFor": ["Users needing Google Workspace integration"],
+    "whatYouGain": [
+      "Free and open source",
+      "No cloud needed",
+      "Peer-to-peer",
+      "Encrypted"
+    ],
+    "whatYouLose": [
+      "Web access",
+      "Google Workspace integration",
+      "Collaboration features"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Local sync users"
+    ],
+    "notFor": [
+      "Users needing Google Workspace integration"
+    ],
     "notes": "Syncthing is great for local sync but lacks Google Drive's web features and collaboration tools."
   },
   {
@@ -357,10 +744,25 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 70,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Full control over data", "Extensible", "Collaboration tools"],
-    "whatYouLose": ["Google Workspace integration", "Ease of use", "Performance"],
-    "bestFor": ["Self-hosters", "Privacy-conscious teams", "Data sovereignty advocates"],
-    "notFor": ["Users needing Google Workspace integration"],
+    "whatYouGain": [
+      "Free and open source",
+      "Full control over data",
+      "Extensible",
+      "Collaboration tools"
+    ],
+    "whatYouLose": [
+      "Google Workspace integration",
+      "Ease of use",
+      "Performance"
+    ],
+    "bestFor": [
+      "Self-hosters",
+      "Privacy-conscious teams",
+      "Data sovereignty advocates"
+    ],
+    "notFor": [
+      "Users needing Google Workspace integration"
+    ],
     "notes": "Nextcloud provides similar features to Google Drive with full control over your data."
   },
   {
@@ -371,10 +773,25 @@
     "recommendationLabel": "Best one-time purchase alternative",
     "similarityScore": 70,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["One-time purchase", "Professional vector tools", "Offline access"],
-    "whatYouLose": ["Real-time collaboration", "Web-based access", "Plugin ecosystem"],
-    "bestFor": ["Individual designers", "Users wanting offline access", "Budget-conscious designers"],
-    "notFor": ["Teams needing real-time collaboration", "Users needing web-based access"],
+    "whatYouGain": [
+      "One-time purchase",
+      "Professional vector tools",
+      "Offline access"
+    ],
+    "whatYouLose": [
+      "Real-time collaboration",
+      "Web-based access",
+      "Plugin ecosystem"
+    ],
+    "bestFor": [
+      "Individual designers",
+      "Users wanting offline access",
+      "Budget-conscious designers"
+    ],
+    "notFor": [
+      "Teams needing real-time collaboration",
+      "Users needing web-based access"
+    ],
     "notes": "Affinity Designer is a powerful vector editor but lacks Figma's real-time collaboration features."
   },
   {
@@ -385,10 +802,26 @@
     "recommendationLabel": "Best open-source alternative",
     "similarityScore": 65,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Real-time collaboration", "Web-based", "Self-hostable"],
-    "whatYouLose": ["Mature ecosystem", "Plugin ecosystem", "Performance"],
-    "bestFor": ["Open-source advocates", "Design teams", "Budget-conscious designers"],
-    "notFor": ["Users needing mature ecosystem", "Users needing many plugins"],
+    "whatYouGain": [
+      "Free and open source",
+      "Real-time collaboration",
+      "Web-based",
+      "Self-hostable"
+    ],
+    "whatYouLose": [
+      "Mature ecosystem",
+      "Plugin ecosystem",
+      "Performance"
+    ],
+    "bestFor": [
+      "Open-source advocates",
+      "Design teams",
+      "Budget-conscious designers"
+    ],
+    "notFor": [
+      "Users needing mature ecosystem",
+      "Users needing many plugins"
+    ],
     "notes": "Penpot is a promising open-source alternative to Figma with real-time collaboration."
   },
   {
@@ -399,10 +832,27 @@
     "recommendationLabel": "Best free alternative",
     "similarityScore": 60,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Free and open source", "Double-entry accounting", "Reports and graphs", "Cross-platform"],
-    "whatYouLose": ["Cloud access", "Mobile app", "Ease of use", "Integrations"],
-    "bestFor": ["Small businesses", "Personal finance users", "Open-source advocates"],
-    "notFor": ["Users needing cloud access", "Users needing mobile app"],
+    "whatYouGain": [
+      "Free and open source",
+      "Double-entry accounting",
+      "Reports and graphs",
+      "Cross-platform"
+    ],
+    "whatYouLose": [
+      "Cloud access",
+      "Mobile app",
+      "Ease of use",
+      "Integrations"
+    ],
+    "bestFor": [
+      "Small businesses",
+      "Personal finance users",
+      "Open-source advocates"
+    ],
+    "notFor": [
+      "Users needing cloud access",
+      "Users needing mobile app"
+    ],
     "notes": "GnuCash is a capable accounting tool but has a steeper learning curve than QuickBooks."
   },
   {
@@ -413,10 +863,26 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 65,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Modern UI", "Self-hostable", "Multi-currency"],
-    "whatYouLose": ["Ease of use", "Integrations", "Mobile app"],
-    "bestFor": ["Small businesses", "Freelancers", "Self-hosters"],
-    "notFor": ["Users needing many integrations", "Users needing mobile app"],
+    "whatYouGain": [
+      "Free and open source",
+      "Modern UI",
+      "Self-hostable",
+      "Multi-currency"
+    ],
+    "whatYouLose": [
+      "Ease of use",
+      "Integrations",
+      "Mobile app"
+    ],
+    "bestFor": [
+      "Small businesses",
+      "Freelancers",
+      "Self-hosters"
+    ],
+    "notFor": [
+      "Users needing many integrations",
+      "Users needing mobile app"
+    ],
     "notes": "Akaunting provides a modern accounting experience with self-hosting capabilities."
   },
   {
@@ -427,10 +893,27 @@
     "recommendationLabel": "Best free alternative",
     "similarityScore": 75,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Full office suite", "Good compatibility", "Cross-platform"],
-    "whatYouLose": ["Cloud collaboration", "Some format compatibility", "Mobile apps"],
-    "bestFor": ["Students", "Budget users", "Linux users", "Open-source advocates"],
-    "notFor": ["Users needing cloud collaboration", "Users needing perfect Office compatibility"],
+    "whatYouGain": [
+      "Free and open source",
+      "Full office suite",
+      "Good compatibility",
+      "Cross-platform"
+    ],
+    "whatYouLose": [
+      "Cloud collaboration",
+      "Some format compatibility",
+      "Mobile apps"
+    ],
+    "bestFor": [
+      "Students",
+      "Budget users",
+      "Linux users",
+      "Open-source advocates"
+    ],
+    "notFor": [
+      "Users needing cloud collaboration",
+      "Users needing perfect Office compatibility"
+    ],
     "notes": "LibreOffice is a full-featured office suite that can replace Microsoft 365 for most users."
   },
   {
@@ -441,10 +924,26 @@
     "recommendationLabel": "Best for privacy",
     "similarityScore": 50,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["End-to-end encrypted", "Open source", "Free", "Non-profit"],
-    "whatYouLose": ["Channels", "Integrations", "File sharing", "Thread organization"],
-    "bestFor": ["Privacy-conscious users", "Teams needing secure communication"],
-    "notFor": ["Teams needing channels and integrations", "Users needing file sharing"],
+    "whatYouGain": [
+      "End-to-end encrypted",
+      "Open source",
+      "Free",
+      "Non-profit"
+    ],
+    "whatYouLose": [
+      "Channels",
+      "Integrations",
+      "File sharing",
+      "Thread organization"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Teams needing secure communication"
+    ],
+    "notFor": [
+      "Teams needing channels and integrations",
+      "Users needing file sharing"
+    ],
     "notes": "Signal is excellent for secure messaging but lacks Slack's team collaboration features."
   },
   {
@@ -455,10 +954,26 @@
     "recommendationLabel": "Best free alternative",
     "similarityScore": 65,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free and open source", "No account needed", "Self-hostable", "End-to-end encryption"],
-    "whatYouLose": ["Meeting reliability", "Advanced features", "Large meeting support"],
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Budget teams"],
-    "notFor": ["Users needing reliable large meetings", "Users needing advanced features"],
+    "whatYouGain": [
+      "Free and open source",
+      "No account needed",
+      "Self-hostable",
+      "End-to-end encryption"
+    ],
+    "whatYouLose": [
+      "Meeting reliability",
+      "Advanced features",
+      "Large meeting support"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Budget teams"
+    ],
+    "notFor": [
+      "Users needing reliable large meetings",
+      "Users needing advanced features"
+    ],
     "notes": "Jitsi Meet is a solid free alternative for smaller meetings with privacy focus."
   },
   {
@@ -469,10 +984,26 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 70,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Self-hostable", "Clean UI", "Real-time updates"],
-    "whatYouLose": ["Integrations", "Mobile app", "Power-Ups"],
-    "bestFor": ["Teams needing Kanban", "Self-hosters", "Trello refugees"],
-    "notFor": ["Users needing many integrations", "Users needing mobile app"],
+    "whatYouGain": [
+      "Free and open source",
+      "Self-hostable",
+      "Clean UI",
+      "Real-time updates"
+    ],
+    "whatYouLose": [
+      "Integrations",
+      "Mobile app",
+      "Power-Ups"
+    ],
+    "bestFor": [
+      "Teams needing Kanban",
+      "Self-hosters",
+      "Trello refugees"
+    ],
+    "notFor": [
+      "Users needing many integrations",
+      "Users needing mobile app"
+    ],
     "notes": "Planka provides a clean Kanban experience with self-hosting capabilities."
   },
   {
@@ -483,10 +1014,26 @@
     "recommendationLabel": "Best for task management",
     "similarityScore": 60,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Self-hostable", "Multiple views", "API-first"],
-    "whatYouLose": ["Kanban focus", "Integrations", "Mobile app polish"],
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Task management enthusiasts"],
-    "notFor": ["Users needing Kanban focus", "Users needing many integrations"],
+    "whatYouGain": [
+      "Free and open source",
+      "Self-hostable",
+      "Multiple views",
+      "API-first"
+    ],
+    "whatYouLose": [
+      "Kanban focus",
+      "Integrations",
+      "Mobile app polish"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Task management enthusiasts"
+    ],
+    "notFor": [
+      "Users needing Kanban focus",
+      "Users needing many integrations"
+    ],
     "notes": "Vikunja offers multiple views beyond Kanban with strong privacy features."
   },
   {
@@ -497,10 +1044,26 @@
     "recommendationLabel": "Best free alternative",
     "similarityScore": 55,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Time tracking built-in", "Jira/GitHub integration", "Pomodoro timer"],
-    "whatYouLose": ["Team collaboration", "Project views", "Mobile app polish"],
-    "bestFor": ["Developers", "Time trackers", "Task management enthusiasts"],
-    "notFor": ["Teams needing collaboration", "Users needing multiple project views"],
+    "whatYouGain": [
+      "Free and open source",
+      "Time tracking built-in",
+      "Jira/GitHub integration",
+      "Pomodoro timer"
+    ],
+    "whatYouLose": [
+      "Team collaboration",
+      "Project views",
+      "Mobile app polish"
+    ],
+    "bestFor": [
+      "Developers",
+      "Time trackers",
+      "Task management enthusiasts"
+    ],
+    "notFor": [
+      "Teams needing collaboration",
+      "Users needing multiple project views"
+    ],
     "notes": "Super Productivity is great for individual developers but lacks team collaboration features."
   },
   {
@@ -511,10 +1074,26 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 60,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Self-hostable", "Multiple views", "API-first"],
-    "whatYouLose": ["Team collaboration", "Integrations", "Mobile app polish"],
-    "bestFor": ["Privacy-conscious users", "Self-hosters", "Task management enthusiasts"],
-    "notFor": ["Teams needing collaboration", "Users needing many integrations"],
+    "whatYouGain": [
+      "Free and open source",
+      "Self-hostable",
+      "Multiple views",
+      "API-first"
+    ],
+    "whatYouLose": [
+      "Team collaboration",
+      "Integrations",
+      "Mobile app polish"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Self-hosters",
+      "Task management enthusiasts"
+    ],
+    "notFor": [
+      "Teams needing collaboration",
+      "Users needing many integrations"
+    ],
     "notes": "Vikunja provides a good balance of features for self-hosted task management."
   },
   {
@@ -525,10 +1104,26 @@
     "recommendationLabel": "Best open-source alternative",
     "similarityScore": 80,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free tier", "Open source", "Self-hostable", "Integrations"],
-    "whatYouLose": ["Mature ecosystem", "Some advanced features", "Mobile app"],
-    "bestFor": ["Freelancers", "Sales teams", "Self-hosters"],
-    "notFor": ["Users needing mature ecosystem", "Users needing advanced features"],
+    "whatYouGain": [
+      "Free tier",
+      "Open source",
+      "Self-hostable",
+      "Integrations"
+    ],
+    "whatYouLose": [
+      "Mature ecosystem",
+      "Some advanced features",
+      "Mobile app"
+    ],
+    "bestFor": [
+      "Freelancers",
+      "Sales teams",
+      "Self-hosters"
+    ],
+    "notFor": [
+      "Users needing mature ecosystem",
+      "Users needing advanced features"
+    ],
     "notes": "Cal.com is a strong open-source alternative with a generous free tier."
   },
   {
@@ -539,10 +1134,25 @@
     "recommendationLabel": "Best one-time purchase alternative",
     "similarityScore": 60,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["One-time purchase", "Professional vector tools", "Offline access"],
-    "whatYouLose": ["Templates", "Ease of use", "Collaboration features"],
-    "bestFor": ["Graphic designers", "Users wanting offline access", "Budget-conscious designers"],
-    "notFor": ["Users needing templates", "Users needing ease of use"],
+    "whatYouGain": [
+      "One-time purchase",
+      "Professional vector tools",
+      "Offline access"
+    ],
+    "whatYouLose": [
+      "Templates",
+      "Ease of use",
+      "Collaboration features"
+    ],
+    "bestFor": [
+      "Graphic designers",
+      "Users wanting offline access",
+      "Budget-conscious designers"
+    ],
+    "notFor": [
+      "Users needing templates",
+      "Users needing ease of use"
+    ],
     "notes": "Affinity Designer is more professional but has a steeper learning curve than Canva."
   },
   {
@@ -553,10 +1163,26 @@
     "recommendationLabel": "Best open-source alternative",
     "similarityScore": 55,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Real-time collaboration", "Web-based", "Self-hostable"],
-    "whatYouLose": ["Templates", "Ease of use", "Stock assets"],
-    "bestFor": ["Open-source advocates", "Design teams", "Budget-conscious designers"],
-    "notFor": ["Users needing templates", "Users needing ease of use"],
+    "whatYouGain": [
+      "Free and open source",
+      "Real-time collaboration",
+      "Web-based",
+      "Self-hostable"
+    ],
+    "whatYouLose": [
+      "Templates",
+      "Ease of use",
+      "Stock assets"
+    ],
+    "bestFor": [
+      "Open-source advocates",
+      "Design teams",
+      "Budget-conscious designers"
+    ],
+    "notFor": [
+      "Users needing templates",
+      "Users needing ease of use"
+    ],
     "notes": "Penpot is a capable design tool but lacks Canva's template library and ease of use."
   },
   {
@@ -567,10 +1193,26 @@
     "recommendationLabel": "Best free local alternative",
     "similarityScore": 75,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Completely free", "Full privacy", "No data sent to cloud", "Customizable models"],
-    "whatYouLose": ["GPT-4 level quality", "Cloud convenience", "Mobile access"],
-    "bestFor": ["Privacy-conscious users", "Developers", "Users with powerful hardware"],
-    "notFor": ["Non-technical users", "Users needing best-in-class models"],
+    "whatYouGain": [
+      "Completely free",
+      "Full privacy",
+      "No data sent to cloud",
+      "Customizable models"
+    ],
+    "whatYouLose": [
+      "GPT-4 level quality",
+      "Cloud convenience",
+      "Mobile access"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Developers",
+      "Users with powerful hardware"
+    ],
+    "notFor": [
+      "Non-technical users",
+      "Users needing best-in-class models"
+    ],
     "notes": "Ollama runs LLMs locally. Quality depends on the model chosen; some open models approach GPT-4 level."
   },
   {
@@ -581,10 +1223,25 @@
     "recommendationLabel": "Best user-friendly local alternative",
     "similarityScore": 70,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free", "User-friendly GUI", "Offline usage", "No account needed"],
-    "whatYouLose": ["GPT-4 quality", "Cloud sync", "Mobile app"],
-    "bestFor": ["Non-technical users wanting local AI", "Privacy-conscious users"],
-    "notFor": ["Users needing top-tier models", "Mobile users"],
+    "whatYouGain": [
+      "Free",
+      "User-friendly GUI",
+      "Offline usage",
+      "No account needed"
+    ],
+    "whatYouLose": [
+      "GPT-4 quality",
+      "Cloud sync",
+      "Mobile app"
+    ],
+    "bestFor": [
+      "Non-technical users wanting local AI",
+      "Privacy-conscious users"
+    ],
+    "notFor": [
+      "Users needing top-tier models",
+      "Mobile users"
+    ],
     "notes": "LM Studio provides a GUI for running local models. Easier setup than Ollama but same hardware requirements."
   },
   {
@@ -595,10 +1252,25 @@
     "recommendationLabel": "Best free web-based alternative",
     "similarityScore": 65,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Completely free", "No account required", "Open source models"],
-    "whatYouLose": ["GPT-4 quality", "API access", "Advanced features"],
-    "bestFor": ["Casual users", "Budget-conscious users", "Open-source supporters"],
-    "notFor": ["Power users", "Developers needing API"],
+    "whatYouGain": [
+      "Completely free",
+      "No account required",
+      "Open source models"
+    ],
+    "whatYouLose": [
+      "GPT-4 quality",
+      "API access",
+      "Advanced features"
+    ],
+    "bestFor": [
+      "Casual users",
+      "Budget-conscious users",
+      "Open-source supporters"
+    ],
+    "notFor": [
+      "Power users",
+      "Developers needing API"
+    ],
     "notes": "HuggingChat is free and web-based but uses open models that are less capable than GPT-4."
   },
   {
@@ -609,10 +1281,23 @@
     "recommendationLabel": "Best free alternative",
     "similarityScore": 80,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free tier", "Supports 70+ languages", "Built-in editor"],
-    "whatYouLose": ["Slightly less accurate", "GitHub integration depth"],
-    "bestFor": ["Individual developers", "Students", "Budget-conscious coders"],
-    "notFor": ["Enterprise teams deeply integrated with GitHub"],
+    "whatYouGain": [
+      "Free tier",
+      "Supports 70+ languages",
+      "Built-in editor"
+    ],
+    "whatYouLose": [
+      "Slightly less accurate",
+      "GitHub integration depth"
+    ],
+    "bestFor": [
+      "Individual developers",
+      "Students",
+      "Budget-conscious coders"
+    ],
+    "notFor": [
+      "Enterprise teams deeply integrated with GitHub"
+    ],
     "notes": "Codeium offers a generous free tier with comparable code completion quality for most use cases."
   },
   {
@@ -623,10 +1308,25 @@
     "recommendationLabel": "Best open-source alternative",
     "similarityScore": 70,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Fully open source", "Works with any LLM", "Local model support", "Privacy"],
-    "whatYouLose": ["Polish", "Cloud model quality", "Out-of-box experience"],
-    "bestFor": ["Open-source developers", "Privacy-conscious coders", "Customizable workflows"],
-    "notFor": ["Users wanting plug-and-play experience"],
+    "whatYouGain": [
+      "Fully open source",
+      "Works with any LLM",
+      "Local model support",
+      "Privacy"
+    ],
+    "whatYouLose": [
+      "Polish",
+      "Cloud model quality",
+      "Out-of-box experience"
+    ],
+    "bestFor": [
+      "Open-source developers",
+      "Privacy-conscious coders",
+      "Customizable workflows"
+    ],
+    "notFor": [
+      "Users wanting plug-and-play experience"
+    ],
     "notes": "Continue is open source and supports local models. Requires more setup but offers maximum flexibility."
   },
   {
@@ -637,10 +1337,27 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 60,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Own your music", "No recurring fees", "Self-hosted", "Privacy"],
-    "whatYouLose": ["Music discovery", "Curated playlists", "Social features", "Podcast integration"],
-    "bestFor": ["Music collectors", "Self-hosters", "Privacy-conscious listeners"],
-    "notFor": ["Users wanting music discovery", "Non-technical users"],
+    "whatYouGain": [
+      "Own your music",
+      "No recurring fees",
+      "Self-hosted",
+      "Privacy"
+    ],
+    "whatYouLose": [
+      "Music discovery",
+      "Curated playlists",
+      "Social features",
+      "Podcast integration"
+    ],
+    "bestFor": [
+      "Music collectors",
+      "Self-hosters",
+      "Privacy-conscious listeners"
+    ],
+    "notFor": [
+      "Users wanting music discovery",
+      "Non-technical users"
+    ],
     "notes": "Navidrome requires your own music files and server setup. No streaming catalog — you own what you play."
   },
   {
@@ -651,10 +1368,26 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 55,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Completely free", "No ads", "Self-hosted", "Supports many formats"],
-    "whatYouLose": ["Original content", "No built-in catalog", "Requires server setup"],
-    "bestFor": ["Media collectors", "Self-hosters", "Families with large media libraries"],
-    "notFor": ["Users wanting streaming content", "Non-technical users"],
+    "whatYouGain": [
+      "Completely free",
+      "No ads",
+      "Self-hosted",
+      "Supports many formats"
+    ],
+    "whatYouLose": [
+      "Original content",
+      "No built-in catalog",
+      "Requires server setup"
+    ],
+    "bestFor": [
+      "Media collectors",
+      "Self-hosters",
+      "Families with large media libraries"
+    ],
+    "notFor": [
+      "Users wanting streaming content",
+      "Non-technical users"
+    ],
     "notes": "Jellyfin requires your own media files and server. No streaming catalog — you host what you watch."
   },
   {
@@ -665,10 +1398,24 @@
     "recommendationLabel": "Best freemium alternative",
     "similarityScore": 60,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free tier", "Polished UI", "Wide device support", "Live TV"],
-    "whatYouLose": ["Original content", "Some features need Plex Pass"],
-    "bestFor": ["Media collectors", "Families", "Multi-device users"],
-    "notFor": ["Users wanting streaming content catalog"],
+    "whatYouGain": [
+      "Free tier",
+      "Polished UI",
+      "Wide device support",
+      "Live TV"
+    ],
+    "whatYouLose": [
+      "Original content",
+      "Some features need Plex Pass"
+    ],
+    "bestFor": [
+      "Media collectors",
+      "Families",
+      "Multi-device users"
+    ],
+    "notFor": [
+      "Users wanting streaming content catalog"
+    ],
     "notes": "Plex has a free tier with ad-supported content and free media server. Plex Pass adds premium features."
   },
   {
@@ -679,10 +1426,26 @@
     "recommendationLabel": "Best free alternative",
     "similarityScore": 65,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free (desktop)", "Highly effective spaced repetition", "Customizable", "No ads"],
-    "whatYouLose": ["Gamification", "Guided curriculum", "Speaking practice"],
-    "bestFor": ["Serious learners", "Medical/language students", "Self-directed learners"],
-    "notFor": ["Casual learners", "Users wanting guided lessons"],
+    "whatYouGain": [
+      "Free (desktop)",
+      "Highly effective spaced repetition",
+      "Customizable",
+      "No ads"
+    ],
+    "whatYouLose": [
+      "Gamification",
+      "Guided curriculum",
+      "Speaking practice"
+    ],
+    "bestFor": [
+      "Serious learners",
+      "Medical/language students",
+      "Self-directed learners"
+    ],
+    "notFor": [
+      "Casual learners",
+      "Users wanting guided lessons"
+    ],
     "notes": "Anki uses proven spaced repetition. More effective for memorization but requires self-discipline."
   },
   {
@@ -693,10 +1456,26 @@
     "recommendationLabel": "Best offline alternative",
     "similarityScore": 75,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Completely free", "Offline storage", "No cloud dependency", "Open source"],
-    "whatYouLose": ["Cloud sync", "Browser integration ease", "Mobile apps built-in"],
-    "bestFor": ["Privacy-conscious users", "Offline-first users", "Security professionals"],
-    "notFor": ["Users needing seamless cloud sync", "Non-technical users"],
+    "whatYouGain": [
+      "Completely free",
+      "Offline storage",
+      "No cloud dependency",
+      "Open source"
+    ],
+    "whatYouLose": [
+      "Cloud sync",
+      "Browser integration ease",
+      "Mobile apps built-in"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Offline-first users",
+      "Security professionals"
+    ],
+    "notFor": [
+      "Users needing seamless cloud sync",
+      "Non-technical users"
+    ],
     "notes": "KeePassXC stores passwords locally. More secure but requires manual sync setup."
   },
   {
@@ -707,10 +1486,24 @@
     "recommendationLabel": "Best freemium alternative",
     "similarityScore": 85,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free tier", "Cross-platform", "Open source", "Self-hostable"],
-    "whatYouLose": ["Dark web monitoring (free tier)", "Emergency access (free tier)"],
-    "bestFor": ["Budget-conscious users", "Families", "Teams"],
-    "notFor": ["Users needing advanced monitoring features"],
+    "whatYouGain": [
+      "Free tier",
+      "Cross-platform",
+      "Open source",
+      "Self-hostable"
+    ],
+    "whatYouLose": [
+      "Dark web monitoring (free tier)",
+      "Emergency access (free tier)"
+    ],
+    "bestFor": [
+      "Budget-conscious users",
+      "Families",
+      "Teams"
+    ],
+    "notFor": [
+      "Users needing advanced monitoring features"
+    ],
     "notes": "Bitwarden offers most features for free. Premium is only $10/year — much cheaper than LastPass."
   },
   {
@@ -721,10 +1514,26 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 65,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Self-hosted", "No subscriber limits", "Full control", "No recurring fees"],
-    "whatYouLose": ["Templates", "Ease of use", "Support"],
-    "bestFor": ["Developers", "Self-hosters", "Large mailing lists"],
-    "notFor": ["Non-technical users", "Users needing templates"],
+    "whatYouGain": [
+      "Self-hosted",
+      "No subscriber limits",
+      "Full control",
+      "No recurring fees"
+    ],
+    "whatYouLose": [
+      "Templates",
+      "Ease of use",
+      "Support"
+    ],
+    "bestFor": [
+      "Developers",
+      "Self-hosters",
+      "Large mailing lists"
+    ],
+    "notFor": [
+      "Non-technical users",
+      "Users needing templates"
+    ],
     "notes": "Listmonk is powerful but requires server setup and technical knowledge."
   },
   {
@@ -735,10 +1544,24 @@
     "recommendationLabel": "Best indie alternative",
     "similarityScore": 60,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Cleaner interface", "Markdown support", "Indie developer support"],
-    "whatYouLose": ["Advanced automation", "Larger free tier on Mailchimp", "Templates"],
-    "bestFor": ["Indie writers", "Small newsletters", "Simplicity lovers"],
-    "notFor": ["Users needing advanced marketing automation"],
+    "whatYouGain": [
+      "Cleaner interface",
+      "Markdown support",
+      "Indie developer support"
+    ],
+    "whatYouLose": [
+      "Advanced automation",
+      "Larger free tier on Mailchimp",
+      "Templates"
+    ],
+    "bestFor": [
+      "Indie writers",
+      "Small newsletters",
+      "Simplicity lovers"
+    ],
+    "notFor": [
+      "Users needing advanced marketing automation"
+    ],
     "notes": "Buttondown focuses on writing, not marketing. Simpler but less feature-rich than Mailchimp."
   },
   {
@@ -749,10 +1572,24 @@
     "recommendationLabel": "Best modern alternative",
     "similarityScore": 80,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free tier", "Modern UI", "Git integration", "Usage-based pricing"],
-    "whatYouLose": ["Heroku add-on ecosystem", "Enterprise features"],
-    "bestFor": ["Indie developers", "Startups", "Side projects"],
-    "notFor": ["Enterprise teams needing Heroku ecosystem"],
+    "whatYouGain": [
+      "Free tier",
+      "Modern UI",
+      "Git integration",
+      "Usage-based pricing"
+    ],
+    "whatYouLose": [
+      "Heroku add-on ecosystem",
+      "Enterprise features"
+    ],
+    "bestFor": [
+      "Indie developers",
+      "Startups",
+      "Side projects"
+    ],
+    "notFor": [
+      "Enterprise teams needing Heroku ecosystem"
+    ],
     "notes": "Railway is the closest modern equivalent to Heroku with a generous free tier."
   },
   {
@@ -763,10 +1600,25 @@
     "recommendationLabel": "Best for global deployment",
     "similarityScore": 75,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Global edge deployment", "Free tier", "Docker support", "Postgres"],
-    "whatYouLose": ["Simplicity", "Heroku add-on ecosystem"],
-    "bestFor": ["Full-stack developers", "Global apps", "Docker users"],
-    "notFor": ["Beginners", "Users wanting simple deployment"],
+    "whatYouGain": [
+      "Global edge deployment",
+      "Free tier",
+      "Docker support",
+      "Postgres"
+    ],
+    "whatYouLose": [
+      "Simplicity",
+      "Heroku add-on ecosystem"
+    ],
+    "bestFor": [
+      "Full-stack developers",
+      "Global apps",
+      "Docker users"
+    ],
+    "notFor": [
+      "Beginners",
+      "Users wanting simple deployment"
+    ],
     "notes": "Fly.io is more powerful but more complex than Heroku. Best for globally distributed apps."
   },
   {
@@ -777,10 +1629,24 @@
     "recommendationLabel": "Best for simplicity",
     "similarityScore": 78,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free tier", "Easy setup", "Free SSL", "Managed databases"],
-    "whatYouLose": ["Heroku add-on ecosystem", "Advanced customization"],
-    "bestFor": ["Web developers", "Startups", "Side projects"],
-    "notFor": ["Users needing advanced infrastructure"],
+    "whatYouGain": [
+      "Free tier",
+      "Easy setup",
+      "Free SSL",
+      "Managed databases"
+    ],
+    "whatYouLose": [
+      "Heroku add-on ecosystem",
+      "Advanced customization"
+    ],
+    "bestFor": [
+      "Web developers",
+      "Startups",
+      "Side projects"
+    ],
+    "notFor": [
+      "Users needing advanced infrastructure"
+    ],
     "notes": "Render is the simplest Heroku alternative with auto-deploy from Git and free SSL."
   },
   {
@@ -791,10 +1657,26 @@
     "recommendationLabel": "Best overall one-time purchase alternative",
     "similarityScore": 90,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free version available", "Industry-standard color grading", "One-time purchase for Studio", "No subscription"],
-    "whatYouLose": ["Adobe ecosystem integration", "Some Premiere-specific workflows", "Dynamic Link with After Effects"],
-    "bestFor": ["Professional video editors", "Colorists", "Filmmakers on a budget"],
-    "notFor": ["Teams deeply tied to Adobe Creative Cloud", "Users needing After Effects integration"],
+    "whatYouGain": [
+      "Free version available",
+      "Industry-standard color grading",
+      "One-time purchase for Studio",
+      "No subscription"
+    ],
+    "whatYouLose": [
+      "Adobe ecosystem integration",
+      "Some Premiere-specific workflows",
+      "Dynamic Link with After Effects"
+    ],
+    "bestFor": [
+      "Professional video editors",
+      "Colorists",
+      "Filmmakers on a budget"
+    ],
+    "notFor": [
+      "Teams deeply tied to Adobe Creative Cloud",
+      "Users needing After Effects integration"
+    ],
     "notes": "DaVinci Resolve is the strongest Premiere Pro alternative. The free version covers most needs; Studio adds advanced features for a one-time $295."
   },
   {
@@ -805,10 +1687,26 @@
     "recommendationLabel": "Best free open-source alternative",
     "similarityScore": 60,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Completely free", "Open source", "Cross-platform", "Multi-track editing"],
-    "whatYouLose": ["Professional color grading", "Advanced effects", "Industry compatibility"],
-    "bestFor": ["Hobbyists", "Linux users", "Budget-conscious editors"],
-    "notFor": ["Professional editors", "Users needing advanced effects"],
+    "whatYouGain": [
+      "Completely free",
+      "Open source",
+      "Cross-platform",
+      "Multi-track editing"
+    ],
+    "whatYouLose": [
+      "Professional color grading",
+      "Advanced effects",
+      "Industry compatibility"
+    ],
+    "bestFor": [
+      "Hobbyists",
+      "Linux users",
+      "Budget-conscious editors"
+    ],
+    "notFor": [
+      "Professional editors",
+      "Users needing advanced effects"
+    ],
     "notes": "Kdenlive is a solid free option for basic to intermediate video editing. It lacks the polish and advanced features of Premiere Pro."
   },
   {
@@ -819,10 +1717,26 @@
     "recommendationLabel": "Best for simplicity",
     "similarityScore": 55,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Free and open source", "Simple interface", "Wide format support", "Lightweight"],
-    "whatYouLose": ["Advanced editing features", "Professional workflow", "Multi-cam support"],
-    "bestFor": ["Beginners", "Quick edits", "Users with older hardware"],
-    "notFor": ["Professional editors", "Complex projects"],
+    "whatYouGain": [
+      "Free and open source",
+      "Simple interface",
+      "Wide format support",
+      "Lightweight"
+    ],
+    "whatYouLose": [
+      "Advanced editing features",
+      "Professional workflow",
+      "Multi-cam support"
+    ],
+    "bestFor": [
+      "Beginners",
+      "Quick edits",
+      "Users with older hardware"
+    ],
+    "notFor": [
+      "Professional editors",
+      "Complex projects"
+    ],
     "notes": "Shotcut is the easiest to learn but the least powerful. Good for simple edits and users who want something lightweight."
   },
   {
@@ -833,10 +1747,27 @@
     "recommendationLabel": "Best overall free alternative",
     "similarityScore": 80,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Completely free", "No subscription", "Full offline access", "Non-destructive editing"],
-    "whatYouLose": ["Adobe ecosystem", "Cloud sync", "Mobile app", "AI-powered features"],
-    "bestFor": ["Photographers", "RAW editing enthusiasts", "Privacy-conscious users"],
-    "notFor": ["Users needing cloud sync", "Adobe ecosystem users"],
+    "whatYouGain": [
+      "Completely free",
+      "No subscription",
+      "Full offline access",
+      "Non-destructive editing"
+    ],
+    "whatYouLose": [
+      "Adobe ecosystem",
+      "Cloud sync",
+      "Mobile app",
+      "AI-powered features"
+    ],
+    "bestFor": [
+      "Photographers",
+      "RAW editing enthusiasts",
+      "Privacy-conscious users"
+    ],
+    "notFor": [
+      "Users needing cloud sync",
+      "Adobe ecosystem users"
+    ],
     "notes": "darktable is the closest free alternative to Lightroom. It has excellent RAW processing but a steeper learning curve."
   },
   {
@@ -847,10 +1778,27 @@
     "recommendationLabel": "Best for technical RAW processing",
     "similarityScore": 75,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Free and open source", "Advanced RAW processing", "Batch processing", "Full control over edits"],
-    "whatYouLose": ["Asset management", "Cloud sync", "Mobile app", "Simplified workflow"],
-    "bestFor": ["Technical photographers", "Batch processing needs", "Users who want full control"],
-    "notFor": ["Users needing asset management", "Those who want simplified workflow"],
+    "whatYouGain": [
+      "Free and open source",
+      "Advanced RAW processing",
+      "Batch processing",
+      "Full control over edits"
+    ],
+    "whatYouLose": [
+      "Asset management",
+      "Cloud sync",
+      "Mobile app",
+      "Simplified workflow"
+    ],
+    "bestFor": [
+      "Technical photographers",
+      "Batch processing needs",
+      "Users who want full control"
+    ],
+    "notFor": [
+      "Users needing asset management",
+      "Those who want simplified workflow"
+    ],
     "notes": "RawTherapee offers more technical control than darktable but lacks asset management. Best used alongside a separate photo organizer."
   },
   {
@@ -861,10 +1809,26 @@
     "recommendationLabel": "Best lifetime storage option",
     "similarityScore": 75,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Lifetime plans available", "Cross-platform", "No recurring fees", "Strong privacy"],
-    "whatYouLose": ["Apple ecosystem integration", "iCloud Drive seamless sync", "Find My integration"],
-    "bestFor": ["Users wanting to own storage", "Cross-platform users", "Budget-conscious storage needs"],
-    "notFor": ["Deep Apple ecosystem users", "Users needing Find My integration"],
+    "whatYouGain": [
+      "Lifetime plans available",
+      "Cross-platform",
+      "No recurring fees",
+      "Strong privacy"
+    ],
+    "whatYouLose": [
+      "Apple ecosystem integration",
+      "iCloud Drive seamless sync",
+      "Find My integration"
+    ],
+    "bestFor": [
+      "Users wanting to own storage",
+      "Cross-platform users",
+      "Budget-conscious storage needs"
+    ],
+    "notFor": [
+      "Deep Apple ecosystem users",
+      "Users needing Find My integration"
+    ],
     "notes": "pCloud's lifetime plans make it an excellent long-term investment. It works across all platforms, unlike iCloud which is best for Apple-only users."
   },
   {
@@ -875,10 +1839,26 @@
     "recommendationLabel": "Best self-hosted alternative",
     "similarityScore": 70,
     "migrationDifficulty": "HARD",
-    "whatYouGain": ["Full control over data", "Free and open source", "Extensible", "Collaboration tools"],
-    "whatYouLose": ["Apple ecosystem integration", "Requires server setup", "Maintenance overhead"],
-    "bestFor": ["Self-hosters", "Privacy advocates", "Technical users"],
-    "notFor": ["Non-technical users", "Users wanting zero maintenance"],
+    "whatYouGain": [
+      "Full control over data",
+      "Free and open source",
+      "Extensible",
+      "Collaboration tools"
+    ],
+    "whatYouLose": [
+      "Apple ecosystem integration",
+      "Requires server setup",
+      "Maintenance overhead"
+    ],
+    "bestFor": [
+      "Self-hosters",
+      "Privacy advocates",
+      "Technical users"
+    ],
+    "notFor": [
+      "Non-technical users",
+      "Users wanting zero maintenance"
+    ],
     "notes": "Nextcloud gives you complete control but requires technical setup. Best for users who already run their own server."
   },
   {
@@ -889,10 +1869,26 @@
     "recommendationLabel": "Best free tier with encryption",
     "similarityScore": 65,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Generous free tier", "End-to-end encryption", "Cross-platform", "No Apple dependency"],
-    "whatYouLose": ["Apple ecosystem integration", "iCloud Drive sync", "Find My integration"],
-    "bestFor": ["Privacy-conscious users", "Cross-platform users", "Users wanting free storage"],
-    "notFor": ["Deep Apple ecosystem users", "Users needing seamless Apple sync"],
+    "whatYouGain": [
+      "Generous free tier",
+      "End-to-end encryption",
+      "Cross-platform",
+      "No Apple dependency"
+    ],
+    "whatYouLose": [
+      "Apple ecosystem integration",
+      "iCloud Drive sync",
+      "Find My integration"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Cross-platform users",
+      "Users wanting free storage"
+    ],
+    "notFor": [
+      "Deep Apple ecosystem users",
+      "Users needing seamless Apple sync"
+    ],
     "notes": "MEGA offers 20GB free with end-to-end encryption. A good option for users who want privacy without self-hosting."
   },
   {
@@ -903,10 +1899,26 @@
     "recommendationLabel": "Best open-source alternative",
     "similarityScore": 70,
     "migrationDifficulty": "MEDIUM",
-    "whatYouGain": ["Free and open source", "Web-based collaboration", "Self-hostable", "No vendor lock-in"],
-    "whatYouLose": ["Native macOS app", "Sketch plugin ecosystem", "Some advanced features"],
-    "bestFor": ["Open-source advocates", "Cross-platform teams", "Budget-conscious designers"],
-    "notFor": ["Users needing native macOS app", "Teams relying on Sketch plugins"],
+    "whatYouGain": [
+      "Free and open source",
+      "Web-based collaboration",
+      "Self-hostable",
+      "No vendor lock-in"
+    ],
+    "whatYouLose": [
+      "Native macOS app",
+      "Sketch plugin ecosystem",
+      "Some advanced features"
+    ],
+    "bestFor": [
+      "Open-source advocates",
+      "Cross-platform teams",
+      "Budget-conscious designers"
+    ],
+    "notFor": [
+      "Users needing native macOS app",
+      "Teams relying on Sketch plugins"
+    ],
     "notes": "Penpot is the best open-source alternative to Sketch. It's web-based so works on any platform, and can be self-hosted."
   },
   {
@@ -917,10 +1929,27 @@
     "recommendationLabel": "Best free alternative with .sketch support",
     "similarityScore": 80,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Completely free", "Opens .sketch files", "Built-in UI kits", "AI features", "Cross-platform"],
-    "whatYouLose": ["Sketch plugin ecosystem", "macOS-native experience", "Some advanced features"],
-    "bestFor": ["Teams migrating from Sketch", "Budget-conscious designers", "Windows/Linux users"],
-    "notFor": ["Users deeply invested in Sketch plugins", "macOS purists"],
+    "whatYouGain": [
+      "Completely free",
+      "Opens .sketch files",
+      "Built-in UI kits",
+      "AI features",
+      "Cross-platform"
+    ],
+    "whatYouLose": [
+      "Sketch plugin ecosystem",
+      "macOS-native experience",
+      "Some advanced features"
+    ],
+    "bestFor": [
+      "Teams migrating from Sketch",
+      "Budget-conscious designers",
+      "Windows/Linux users"
+    ],
+    "notFor": [
+      "Users deeply invested in Sketch plugins",
+      "macOS purists"
+    ],
     "notes": "Lunacy can open .sketch files directly, making migration painless. It's free and runs on all platforms."
   },
   {
@@ -931,10 +1960,146 @@
     "recommendationLabel": "Best for collaboration",
     "similarityScore": 85,
     "migrationDifficulty": "EASY",
-    "whatYouGain": ["Industry-standard tool", "Real-time collaboration", "Web-based", "Large community"],
-    "whatYouLose": ["Native macOS app", "Unlimited projects on free tier", "Offline access"],
-    "bestFor": ["Teams needing collaboration", "Designers wanting industry-standard tool", "Web-based workflow"],
-    "notFor": ["Users needing unlimited free projects", "Offline-first users"],
+    "whatYouGain": [
+      "Industry-standard tool",
+      "Real-time collaboration",
+      "Web-based",
+      "Large community"
+    ],
+    "whatYouLose": [
+      "Native macOS app",
+      "Unlimited projects on free tier",
+      "Offline access"
+    ],
+    "bestFor": [
+      "Teams needing collaboration",
+      "Designers wanting industry-standard tool",
+      "Web-based workflow"
+    ],
+    "notFor": [
+      "Users needing unlimited free projects",
+      "Offline-first users"
+    ],
     "notes": "Figma's free tier is generous for individuals. It's become the industry standard, making it a safe long-term choice."
+  },
+  {
+    "id": "n8n-n8n-community",
+    "subscriptionToolId": "n8n-cloud",
+    "softwareId": "n8n-community",
+    "recommendationRank": 1,
+    "recommendationLabel": "Best overall alternative — same product, zero cost",
+    "similarityScore": 99,
+    "migrationDifficulty": "LOW",
+    "whatYouGain": [
+      "Free forever",
+      "Full data control",
+      "No execution limits",
+      "Complete privacy"
+    ],
+    "whatYouLose": [
+      "No managed hosting",
+      "Self-maintenance required",
+      "No official support"
+    ],
+    "bestFor": [
+      "Developers",
+      "Teams with server infrastructure",
+      "Privacy-conscious users"
+    ],
+    "notFor": [
+      "Non-technical users",
+      "Teams without DevOps capacity"
+    ],
+    "notes": "The community edition is the same core product as n8n Cloud. You just host it yourself."
+  },
+  {
+    "id": "n8n-activepieces",
+    "subscriptionToolId": "n8n-cloud",
+    "softwareId": "activepieces",
+    "recommendationRank": 2,
+    "recommendationLabel": "Best no-code alternative for non-technical users",
+    "similarityScore": 75,
+    "migrationDifficulty": "MEDIUM",
+    "whatYouGain": [
+      "MIT license (more permissive)",
+      "Simpler no-code interface",
+      "Easier for beginners"
+    ],
+    "whatYouLose": [
+      "Fewer integrations",
+      "Smaller community",
+      "Less mature ecosystem"
+    ],
+    "bestFor": [
+      "Non-technical users",
+      "Small teams",
+      "Those who want simplicity over power"
+    ],
+    "notFor": [
+      "Power users needing advanced workflows",
+      "Teams requiring 400+ integrations"
+    ],
+    "notes": "Activepieces is easier to pick up than n8n but has a smaller integration library."
+  },
+  {
+    "id": "n8n-node-red",
+    "subscriptionToolId": "n8n-cloud",
+    "softwareId": "node-red",
+    "recommendationRank": 3,
+    "recommendationLabel": "Best for IoT and edge computing",
+    "similarityScore": 60,
+    "migrationDifficulty": "HIGH",
+    "whatYouGain": [
+      "Apache 2.0 license",
+      "Runs on Raspberry Pi",
+      "5,000+ community nodes",
+      "Extremely lightweight"
+    ],
+    "whatYouLose": [
+      "Steeper learning curve",
+      "Fewer business app integrations",
+      "Less polished UI"
+    ],
+    "bestFor": [
+      "IoT developers",
+      "Home automation",
+      "Edge computing",
+      "Raspberry Pi users"
+    ],
+    "notFor": [
+      "Business users wanting Zapier-like simplicity",
+      "Teams needing CRM/marketing integrations"
+    ],
+    "notes": "Node-RED excels at IoT and event-driven workflows but is less suited for general business automation."
+  },
+  {
+    "id": "n8n-windmill",
+    "subscriptionToolId": "n8n-cloud",
+    "softwareId": "windmill",
+    "recommendationRank": 4,
+    "recommendationLabel": "Best for developer teams building internal tools",
+    "similarityScore": 55,
+    "migrationDifficulty": "HIGH",
+    "whatYouGain": [
+      "Code-first approach",
+      "Supports Python/Go/TS/Bash",
+      "Built-in app builder",
+      "SOC 2 compliant"
+    ],
+    "whatYouLose": [
+      "More developer-focused",
+      "Smaller community",
+      "Higher learning curve"
+    ],
+    "bestFor": [
+      "Developer teams",
+      "Internal tool builders",
+      "Companies with strong engineering culture"
+    ],
+    "notFor": [
+      "Non-technical users",
+      "Teams wanting drag-and-drop simplicity"
+    ],
+    "notes": "Windmill is more of a developer platform than a simple workflow automation tool. Best for teams who think in code."
   }
 ]

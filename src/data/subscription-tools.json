@@ -538,5 +538,24 @@
       "Backend services"
     ],
     "lastCheckedAt": "2026-05-25"
+  },
+  {
+    "id": "n8n-cloud",
+    "name": "n8n Cloud",
+    "slug": "n8n-cloud",
+    "description": "A hosted workflow automation platform for connecting apps and automating repetitive tasks without managing infrastructure.",
+    "websiteUrl": "https://n8n.io",
+    "monthlyPrice": 22,
+    "yearlyPrice": 240,
+    "currency": "EUR",
+    "category": "PRODUCTIVITY",
+    "commonUseCases": [
+      "Workflow automation",
+      "API integration",
+      "Data synchronization",
+      "Task automation",
+      "Business process automation"
+    ],
+    "lastCheckedAt": "2026-05-26"
   }
 ]
