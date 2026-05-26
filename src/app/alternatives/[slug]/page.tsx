@@ -77,7 +77,6 @@ export default async function AlternativePage({ params }: PageProps) {
   const bestFree = alternatives.find(
     (a) => a.software.pricingType === 'OPEN_SOURCE' || a.software.pricingType === 'FREE'
   );
-  const bestOffline = alternatives.find((a) => a.software.isOfflineSupported);
 
   const lastChecked = alternatives.reduce((latest, a) => {
     return a.software.lastCheckedAt > latest ? a.software.lastCheckedAt : latest;
@@ -147,8 +146,6 @@ export default async function AlternativePage({ params }: PageProps) {
         <QuickRecommendation
           alternatives={alternatives}
           bestOverallId={bestOverall?.software.id}
-          bestFreeId={bestFree?.software.id}
-          bestOfflineId={bestOffline?.software.id}
         />
 
         {/* Savings Calculator */}

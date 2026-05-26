@@ -4,22 +4,18 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface Alternative {
-  software: { id: string; slug: string; name: string; pricingType: string; isOfflineSupported: boolean };
+  software: { id: string; slug: string; name: string };
   relation: { subscriptionToolId: string };
 }
 
 interface QuickRecommendationProps {
   alternatives: Alternative[];
   bestOverallId?: string;
-  bestFreeId?: string;
-  bestOfflineId?: string;
 }
 
 export default function QuickRecommendation({
   alternatives,
   bestOverallId,
-  bestFreeId,
-  bestOfflineId,
 }: QuickRecommendationProps) {
   const [communityPick, setCommunityPick] = useState<{ id: string; name: string; slug: string; votes: number } | null>(null);
 
@@ -53,15 +49,12 @@ export default function QuickRecommendation({
   }, [alternatives]);
 
   const bestOverall = alternatives.find((a) => a.software.id === bestOverallId);
-  const bestFree = alternatives.find((a) => a.software.id === bestFreeId);
-  const bestOffline = alternatives.find((a) => a.software.id === bestOfflineId);
-
   const showCommunityPick = communityPick && communityPick.id !== bestOverallId;
 
   return (
     <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8 animate-fade-in-up">
       <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Quick Recommendation</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className={`grid gap-4 ${showCommunityPick ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'}`}>
         {bestOverall && (
           <Link
             href={`/software/${bestOverall.software.slug}`}
@@ -73,29 +66,7 @@ export default function QuickRecommendation({
             </p>
           </Link>
         )}
-        {bestFree && (
-          <Link
-            href={`/software/${bestFree.software.slug}`}
-            className="group p-5 bg-blue-50 border border-blue-100 rounded-xl hover:border-blue-200 transition-colors"
-          >
-            <p className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Best free/OSS</p>
-            <p className="text-lg font-bold text-blue-900 group-hover:text-blue-700 transition-colors">
-              {bestFree.software.name}
-            </p>
-          </Link>
-        )}
-        {bestOffline && bestOfflineId !== bestOverallId && (
-          <Link
-            href={`/software/${bestOffline.software.slug}`}
-            className="group p-5 bg-slate-100 border border-slate-200 rounded-xl hover:border-slate-300 transition-colors"
-          >
-            <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Best offline</p>
-            <p className="text-lg font-bold text-slate-900 group-hover:text-slate-700 transition-colors">
-              {bestOffline.software.name}
-            </p>
-          </Link>
-        )}
-        {showCommunityPick ? (
+        {showCommunityPick && (
           <Link
             href={`/software/${communityPick.slug}`}
             className="group p-5 bg-amber-50 border border-amber-200 rounded-xl hover:border-amber-300 transition-colors"
@@ -106,8 +77,6 @@ export default function QuickRecommendation({
             </p>
             <p className="text-xs text-amber-500 mt-1">{communityPick.votes} vote{communityPick.votes !== 1 ? 's' : ''}</p>
           </Link>
-        ) : (
-          !bestOffline || bestOfflineId === bestOverallId ? null : <div />
         )}
       </div>
     </div>
