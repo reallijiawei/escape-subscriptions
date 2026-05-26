@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build && cp -r functions out/functions && cp wrangler.toml out/wrangler.toml && node scripts/submit-indexnow.js",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check-freshness": "node scripts/check-freshness.js",
+    "send-notifications": "node scripts/send-notifications.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -22,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "playwright": "^1.60.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

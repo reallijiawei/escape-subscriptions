@@ -5,6 +5,7 @@ import AlternativeComparisonTable from '@/components/AlternativeComparisonTable'
 import AlternativeVoteButtons from '@/components/AlternativeVoteButtons';
 import SubmitRecommendation from '@/components/SubmitRecommendation';
 import FAQSection from '@/components/FAQSection';
+import EmailSubscribe from '@/components/EmailSubscribe';
 import PricingBadge from '@/components/PricingBadge';
 import JsonLd, { faqSchema, breadcrumbSchema } from '@/components/JsonLd';
 import {
@@ -14,7 +15,7 @@ import {
   getVotesForSoftware,
   getSubmissionsForTool,
 } from '@/lib/data';
-import { formatPrice } from '@/lib/utils';
+import { formatPrice, formatDate } from '@/lib/utils';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -79,6 +80,11 @@ export default async function AlternativePage({ params }: PageProps) {
   );
   const bestOffline = alternatives.find((a) => a.software.isOfflineSupported);
 
+  const lastChecked = alternatives.reduce((latest, a) => {
+    return a.software.lastCheckedAt > latest ? a.software.lastCheckedAt : latest;
+  }, alternatives[0]?.software.lastCheckedAt || '');
+
+
   // Compute community pick based on votes
   const alternativesWithVotes = alternatives.map((a) => ({
     ...a,
@@ -137,6 +143,11 @@ export default async function AlternativePage({ params }: PageProps) {
             <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
               {tool.description} But its subscription pricing makes many users look for one-time purchase or open-source alternatives.
             </p>
+            {lastChecked && (
+              <p className="text-xs text-slate-500 mt-4">
+                Last updated: {formatDate(lastChecked)}
+              </p>
+            )}
           </div>
         </div>
         <div className="h-16 bg-gradient-to-t from-slate-50 to-transparent" />
@@ -414,6 +425,15 @@ export default async function AlternativePage({ params }: PageProps) {
             )}
           </div>
         )}
+
+        {/* Email Subscribe */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Stay Updated</h2>
+          <p className="text-sm text-slate-600 mb-4">
+            Get notified when new {tool.name} alternatives are found or prices change. We send a short summary with links — no spam.
+          </p>
+          <EmailSubscribe toolSlug={slug} toolName={tool.name} />
+        </div>
 
         {/* FAQ */}
         <div className="mb-8">
