@@ -595,5 +595,77 @@
       "Multilingual documentation"
     ],
     "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "slug": "heygen",
+    "description": "AI video generation platform for creating professional videos with AI avatars, voice cloning, and video translation in 175+ languages.",
+    "websiteUrl": "https://heygen.com",
+    "monthlyPrice": 29,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "AI_TOOLS",
+    "commonUseCases": [
+      "AI video generation",
+      "Video translation",
+      "AI avatars",
+      "Marketing videos"
+    ],
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "description": "AI image and video generation tool known for high-quality artistic outputs. Accessible via Discord and web.",
+    "websiteUrl": "https://midjourney.com",
+    "monthlyPrice": 30,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "AI_TOOLS",
+    "commonUseCases": [
+      "AI image generation",
+      "Concept art",
+      "Marketing visuals",
+      "Creative design"
+    ],
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "slug": "beautiful-ai",
+    "description": "AI-powered presentation platform with 300+ auto-formatting smart layouts, AI content generation, and brand controls.",
+    "websiteUrl": "https://beautiful.ai",
+    "monthlyPrice": 12,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "PRODUCTIVITY",
+    "commonUseCases": [
+      "Presentations",
+      "Slide decks",
+      "Business pitches",
+      "Team collaboration"
+    ],
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "fotor",
+    "name": "Fotor",
+    "slug": "fotor",
+    "description": "Online photo editor with AI-powered tools including background remover, object remover, AI image generator, and watermark removal.",
+    "websiteUrl": "https://fotor.com",
+    "monthlyPrice": 8.99,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "DESIGN",
+    "commonUseCases": [
+      "Photo editing",
+      "Background removal",
+      "Watermark removal",
+      "AI image generation"
+    ],
+    "lastCheckedAt": "2026-05-26"
   }
 ]

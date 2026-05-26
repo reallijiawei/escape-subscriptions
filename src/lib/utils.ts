@@ -55,6 +55,7 @@ export function formatCategory(category: string): string {
     EDUCATION: 'Education',
     ENTERTAINMENT: 'Entertainment',
     SCREEN_RECORDING: 'Screen Recording & Demos',
+    PRESENTATION: 'Presentation',
   };
   return map[category] || category;
 }

@@ -2298,5 +2298,179 @@
       "Teams needing unlimited free usage"
     ],
     "notes": "Tango is excellent for auto-generating step-by-step screenshot guides, but doesn't do video like Trupeer."
+  },
+  {
+    "id": "deepseek-vs-chatgpt",
+    "softwareId": "deepseek",
+    "subscriptionToolId": "chatgpt-plus",
+    "whatYouGain": [
+      "Completely free to use",
+      "Open source models you can self-host",
+      "Strong reasoning and coding capabilities",
+      "No monthly subscription"
+    ],
+    "whatYouLose": [
+      "Less polished UI",
+      "No plugin ecosystem",
+      "Privacy concerns with Chinese company",
+      "No DALL-E image generation"
+    ],
+    "bestFor": [
+      "Budget-conscious users",
+      "Developers who want open source models",
+      "Users who mainly need text AI"
+    ],
+    "notFor": [
+      "Users who need image generation (DALL-E)",
+      "Enterprise users needing strict compliance",
+      "Users who want the most polished experience"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "airmore-vs-heygen",
+    "softwareId": "airmore",
+    "subscriptionToolId": "heygen",
+    "whatYouGain": [
+      "Free daily credits",
+      "No monthly subscription",
+      "Multiple AI tools beyond video",
+      "Pay-per-use pricing"
+    ],
+    "whatYouLose": [
+      "No AI avatar generation",
+      "Less polished video output",
+      "Fewer customization options",
+      "Credit limits on free tier"
+    ],
+    "bestFor": [
+      "Users who need occasional video translation",
+      "People who want free basic AI video tools",
+      "Budget-conscious content creators"
+    ],
+    "notFor": [
+      "Professional video producers",
+      "Users needing AI avatars",
+      "High-volume video creation"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "airmore-vs-fotor",
+    "softwareId": "airmore",
+    "subscriptionToolId": "fotor",
+    "whatYouGain": [
+      "Free watermark removal",
+      "No subscription required",
+      "Additional AI tools included",
+      "Credit-based pay-per-use"
+    ],
+    "whatYouLose": [
+      "Less advanced photo editing features",
+      "No desktop app",
+      "No batch processing",
+      "Fewer templates and effects"
+    ],
+    "bestFor": [
+      "Users who mainly need watermark removal",
+      "People who want free basic editing",
+      "Those who prefer pay-per-use"
+    ],
+    "notFor": [
+      "Professional photographers",
+      "Users needing advanced editing",
+      "People who work offline frequently"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "ideogram-vs-midjourney",
+    "softwareId": "ideogram",
+    "subscriptionToolId": "midjourney",
+    "whatYouGain": [
+      "Free tier available",
+      "Best-in-class text rendering in images",
+      "Web-based interface (no Discord needed)",
+      "No subscription required for basic use"
+    ],
+    "whatYouLose": [
+      "Slightly less artistic style variety",
+      "No video generation",
+      "Fewer advanced parameters",
+      "Smaller community"
+    ],
+    "bestFor": [
+      "Users who want free AI image generation",
+      "Designers needing text in images",
+      "People who dislike Discord-based tools"
+    ],
+    "notFor": [
+      "Professional artists needing maximum quality",
+      "Users who want video generation",
+      "People who value the Midjourney community"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "slidesai-vs-beautiful-ai",
+    "softwareId": "slidesai",
+    "subscriptionToolId": "beautiful-ai",
+    "whatYouGain": [
+      "Free tier (12 presentations/year)",
+      "Google Slides and PowerPoint integration",
+      "Supports 100+ languages",
+      "No subscription required for basic use"
+    ],
+    "whatYouLose": [
+      "Less design flexibility",
+      "No brand controls on free tier",
+      "Fewer smart layouts",
+      "No viewer analytics"
+    ],
+    "bestFor": [
+      "Users who want free AI presentations",
+      "People already using Google Slides",
+      "Those who prefer text-to-slides workflow"
+    ],
+    "notFor": [
+      "Enterprise teams needing brand controls",
+      "Users who want maximum design polish",
+      "People who need advanced analytics"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "luma-ai-vs-heygen",
+    "softwareId": "luma-ai",
+    "subscriptionToolId": "heygen",
+    "whatYouGain": [
+      "Free tier available",
+      "High quality video generation",
+      "Text-to-video capability",
+      "No monthly subscription"
+    ],
+    "whatYouLose": [
+      "No AI avatar generation",
+      "Less control over video output",
+      "Fewer customization options",
+      "Not focused on talking-head videos"
+    ],
+    "bestFor": [
+      "Users who want free AI video generation",
+      "Content creators on a budget",
+      "Those exploring AI video tools"
+    ],
+    "notFor": [
+      "Professional video producers needing avatars",
+      "Users who need talking-head videos",
+      "High-volume video creation"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
   }
 ]

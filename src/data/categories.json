@@ -82,5 +82,14 @@
     "slug": "screen-recording",
     "icon": "📹",
     "description": "Tools for recording product demos, tutorials, and walkthroughs. Find free and open-source alternatives to expensive AI video generators."
+  },
+  {
+    "id": "presentation",
+    "name": "Presentation",
+    "slug": "presentation",
+    "description": "AI-powered and traditional presentation tools for creating slides, decks, and visual stories.",
+    "icon": "📊",
+    "softwareIds": [],
+    "toolIds": []
   }
 ]

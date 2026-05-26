@@ -29,7 +29,8 @@ export type Category =
   | 'AI_TOOLS'
   | 'EDUCATION'
   | 'ENTERTAINMENT'
-  | 'SCREEN_RECORDING';
+  | 'SCREEN_RECORDING'
+  | 'PRESENTATION';
 
 export type OwnershipLevel = 'HIGH' | 'MEDIUM' | 'LOW';
 export type CloudDependency = 'NONE' | 'LOW' | 'MEDIUM' | 'HIGH';

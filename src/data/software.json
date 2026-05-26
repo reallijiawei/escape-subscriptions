@@ -269,7 +269,8 @@
     ],
     "replaces": [
       "adobe-illustrator",
-      "figma"
+      "figma",
+      "canva"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -414,8 +415,7 @@
       "Performance can lag"
     ],
     "replaces": [
-      "notion",
-      "evernote"
+      "notion"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -511,8 +511,8 @@
       "Slower sync"
     ],
     "replaces": [
-      "evernote",
-      "notion"
+      "notion",
+      "evernote"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -611,7 +611,6 @@
     ],
     "replaces": [
       "todoist",
-      "trello",
       "asana"
     ],
     "affiliateUrl": null,
@@ -752,8 +751,7 @@
       "Dated UI"
     ],
     "replaces": [
-      "notion",
-      "evernote"
+      "notion"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -845,7 +843,8 @@
       "Less polished UI"
     ],
     "replaces": [
-      "1password"
+      "1password",
+      "lastpass-premium"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -894,7 +893,8 @@
       "Sync requires account"
     ],
     "replaces": [
-      "1password"
+      "1password",
+      "lastpass-premium"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -1042,7 +1042,8 @@
     ],
     "replaces": [
       "dropbox",
-      "google-drive"
+      "google-drive",
+      "icloud-plus"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -1091,7 +1092,7 @@
     ],
     "replaces": [
       "dropbox",
-      "google-drive"
+      "icloud-plus"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -1139,8 +1140,7 @@
       "Closed source"
     ],
     "replaces": [
-      "dropbox",
-      "google-drive"
+      "icloud-plus"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -1506,7 +1506,9 @@
       "Smaller community"
     ],
     "replaces": [
-      "figma"
+      "figma",
+      "canva",
+      "sketch"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -1552,7 +1554,7 @@
       "No offline mode"
     ],
     "replaces": [
-      "figma"
+      "sketch"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-22"
@@ -1742,6 +1744,7 @@
     ],
     "replaces": [
       "todoist",
+      "trello",
       "asana"
     ],
     "affiliateUrl": null,
@@ -2934,8 +2937,7 @@
       "Not designed specifically for product demos"
     ],
     "replaces": [
-      "clueso",
-      "trupeer"
+      "clueso"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-26"
@@ -2986,7 +2988,6 @@
       "Not designed for polished product demos"
     ],
     "replaces": [
-      "clueso",
       "trupeer"
     ],
     "affiliateUrl": null,
@@ -3037,8 +3038,7 @@
       "Requires account to use"
     ],
     "replaces": [
-      "clueso",
-      "trupeer"
+      "clueso"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-26"
@@ -3088,8 +3088,233 @@
       "Enterprise features locked behind custom pricing"
     ],
     "replaces": [
-      "clueso",
       "trupeer"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "slug": "deepseek",
+    "description": "Free AI chatbot powered by DeepSeek-V4 models with world-class reasoning. Open source models available on GitHub.",
+    "websiteUrl": "https://deepseek.com",
+    "pricingType": "FREE",
+    "priceText": "Free",
+    "startingPrice": null,
+    "currency": null,
+    "platforms": [
+      "WEB",
+      "IOS",
+      "ANDROID"
+    ],
+    "categories": [
+      "AI_TOOLS"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": false,
+    "requiresAccount": true,
+    "hasFreeTrial": false,
+    "ownershipLevel": "LOW",
+    "cloudDependency": "HIGH",
+    "bestFor": [
+      "Users who want a free ChatGPT alternative",
+      "Developers needing open source AI models",
+      "Budget-conscious users"
+    ],
+    "pros": [
+      "Completely free to use",
+      "Open source models",
+      "Strong reasoning capabilities",
+      "No usage limits on chatbot"
+    ],
+    "cons": [
+      "Cloud-only, no offline mode",
+      "Privacy concerns (Chinese company)",
+      "Less polished UI than ChatGPT"
+    ],
+    "replaces": [
+      "chatgpt-plus"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "airmore",
+    "name": "AirMore",
+    "slug": "airmore",
+    "description": "Free online AI toolkit with watermark remover, video translator, text-to-speech, image enhancer, and more. Credit-based, no subscription.",
+    "websiteUrl": "https://airmore.ai",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free (5 credits/day)",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "AI_TOOLS",
+      "DESIGN"
+    ],
+    "isOpenSource": false,
+    "isOfflineSupported": false,
+    "requiresAccount": true,
+    "hasFreeTrial": false,
+    "ownershipLevel": "LOW",
+    "cloudDependency": "HIGH",
+    "bestFor": [
+      "Users who need occasional watermark removal",
+      "People wanting free AI video translation",
+      "Those who prefer pay-per-use over subscriptions"
+    ],
+    "pros": [
+      "Free daily credits",
+      "No recurring subscription",
+      "Multiple AI tools in one platform",
+      "Easy to use"
+    ],
+    "cons": [
+      "Credit-based system can be limiting",
+      "Cloud-only",
+      "Quality varies by tool"
+    ],
+    "replaces": [
+      "heygen",
+      "fotor"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "ideogram",
+    "name": "Ideogram",
+    "slug": "ideogram",
+    "description": "Freemium AI image generator known for legible text generation in images. Ideogram 3.0 available to all users including free tier.",
+    "websiteUrl": "https://ideogram.ai",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free tier available",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "AI_TOOLS",
+      "DESIGN"
+    ],
+    "isOpenSource": false,
+    "isOfflineSupported": false,
+    "requiresAccount": true,
+    "hasFreeTrial": false,
+    "ownershipLevel": "LOW",
+    "cloudDependency": "HIGH",
+    "bestFor": [
+      "Users who want free AI image generation",
+      "Designers needing text in images",
+      "People looking for Midjourney alternative"
+    ],
+    "pros": [
+      "Free tier with generous usage",
+      "Best-in-class text rendering in images",
+      "High quality outputs",
+      "Easy to use web interface"
+    ],
+    "cons": [
+      "Cloud-only",
+      "Limited free generations per day",
+      "No API on free tier"
+    ],
+    "replaces": [
+      "midjourney"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "slidesai",
+    "name": "SlidesAI",
+    "slug": "slidesai",
+    "description": "AI presentation maker that converts text into professionally designed slides. Integrates with Google Slides and PowerPoint. 14M+ installs.",
+    "websiteUrl": "https://slidesai.io",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free (12 presentations/year)",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
+    "isOpenSource": false,
+    "isOfflineSupported": false,
+    "requiresAccount": true,
+    "hasFreeTrial": false,
+    "ownershipLevel": "LOW",
+    "cloudDependency": "HIGH",
+    "bestFor": [
+      "Users who want free AI presentations",
+      "People already using Google Slides",
+      "Those who prefer text-to-slides workflow"
+    ],
+    "pros": [
+      "Free tier available",
+      "Integrates with Google Slides and PowerPoint",
+      "Supports 100+ languages",
+      "Quick text-to-slides conversion"
+    ],
+    "cons": [
+      "Limited to 12 presentations/year on free tier",
+      "Requires Google Slides or PowerPoint",
+      "Less design flexibility than Beautiful.ai"
+    ],
+    "replaces": [
+      "beautiful-ai"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "luma-ai",
+    "name": "Luma AI (Dream Machine)",
+    "slug": "luma-ai",
+    "description": "Free AI video generation tool that creates high-quality videos from text prompts and images. A free alternative to HeyGen for basic AI video creation.",
+    "websiteUrl": "https://lumalabs.ai",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free tier available",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "WEB"
+    ],
+    "categories": [
+      "AI_TOOLS",
+      "VIDEO_AUDIO"
+    ],
+    "isOpenSource": false,
+    "isOfflineSupported": false,
+    "requiresAccount": true,
+    "hasFreeTrial": false,
+    "ownershipLevel": "LOW",
+    "cloudDependency": "HIGH",
+    "bestFor": [
+      "Users who want free AI video generation",
+      "Content creators on a budget",
+      "Those exploring AI video tools"
+    ],
+    "pros": [
+      "Free tier available",
+      "High quality video output",
+      "Text-to-video and image-to-video",
+      "No subscription required for basic use"
+    ],
+    "cons": [
+      "Limited generations on free tier",
+      "Cloud-only",
+      "Not focused on avatar/talking head like HeyGen"
+    ],
+    "replaces": [
+      "heygen"
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-26"
