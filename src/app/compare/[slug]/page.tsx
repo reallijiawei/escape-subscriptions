@@ -91,7 +91,18 @@ export default async function ComparePage({ params }: PageProps) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
         {/* Quick Verdict */}
         <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8 animate-fade-in-up">
-          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Quick Verdict</h2>
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Quick Verdict</h2>
+          {yearlyCost > 0 && (
+            <p className="text-lg sm:text-xl font-bold text-slate-900 font-display mb-5">
+              Switching to {software.name} saves you{' '}
+              <span className="text-emerald-600">{formatPrice(yearlyCost)}/year</span>
+              {threeYearCost > 0 && (
+                <>
+                  {' '}— <span className="text-amber-600">{formatPrice(threeYearCost)}</span> over 3 years
+                </>
+              )}
+            </p>
+          )}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="p-4 bg-slate-50 rounded-xl">
               <p className="text-xs text-slate-500 mb-1">{subscriptionTool.name} costs</p>
@@ -187,21 +198,32 @@ export default async function ComparePage({ params }: PageProps) {
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href={`/software/${software.slug}`}
-            className="flex-1 p-5 bg-amber-50 border border-amber-200 rounded-xl hover:border-amber-300 transition-colors text-center"
-          >
-            <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Learn more about</p>
-            <p className="text-lg font-bold text-amber-900">{software.name}</p>
-          </Link>
-          <Link
-            href={`/alternatives/${subscriptionTool.slug}`}
-            className="flex-1 p-5 bg-slate-50 border border-slate-200 rounded-xl hover:border-slate-300 transition-colors text-center"
-          >
-            <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">See all alternatives to</p>
-            <p className="text-lg font-bold text-slate-900">{subscriptionTool.name}</p>
-          </Link>
+        <div className="bg-slate-900 rounded-2xl p-6 sm:p-8 text-center grain-bg">
+          <div className="relative z-10">
+            <h2 className="text-lg sm:text-xl font-bold text-white mb-2">
+              Ready to stop renting {subscriptionTool.name}?
+            </h2>
+            <p className="text-sm text-slate-400 mb-6">
+              {software.name} is a {software.pricingType === 'FREE' ? 'free' : software.pricingType === 'FREEMIUM' ? 'free to start' : 'one-time purchase'} alternative that lets you own your tools.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href={software.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold transition-colors"
+              >
+                Try {software.name} free
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg>
+              </a>
+              <Link
+                href={`/alternatives/${subscriptionTool.slug}`}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
+              >
+                See all alternatives to {subscriptionTool.name}
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
