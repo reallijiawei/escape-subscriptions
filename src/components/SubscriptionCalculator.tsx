@@ -211,10 +211,17 @@ export default function SubscriptionCalculator() {
           )}
 
           {totalYearly > 0 && (
-            <div className="mt-4 flex flex-wrap gap-3">
+            <div className="mt-4 flex flex-col sm:flex-row gap-3">
+              <a
+                href="/search"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-amber-300 hover:text-amber-200 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/20 rounded-xl transition-colors"
+              >
+                Find alternatives
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
               <button
                 onClick={handleShare}
-                className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition-colors"
               >
                 {copied ? (
                   <>
@@ -228,13 +235,6 @@ export default function SubscriptionCalculator() {
                   </>
                 )}
               </button>
-              <a
-                href="/search"
-                className="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-amber-300 hover:text-amber-200 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/20 rounded-xl transition-colors"
-              >
-                Find alternatives
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
             </div>
           )}
         </div>
