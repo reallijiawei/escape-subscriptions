@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import AlternativeComparisonTable from '@/components/AlternativeComparisonTable';
+import QuickRecommendation from '@/components/QuickRecommendation';
 import AlternativeCardList from '@/components/AlternativeCardList';
 import SubmitRecommendation from '@/components/SubmitRecommendation';
 import FAQSection from '@/components/FAQSection';
@@ -143,46 +144,12 @@ export default async function AlternativePage({ params }: PageProps) {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
         {/* Quick Recommendation */}
-        {bestOverall && (
-          <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8 animate-fade-in-up">
-            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Quick Recommendation</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {bestOverall && (
-                <Link
-                  href={`/software/${bestOverall.software.slug}`}
-                  className="group p-5 bg-emerald-50 border border-emerald-100 rounded-xl hover:border-emerald-200 transition-colors"
-                >
-                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">Best overall</p>
-                  <p className="text-lg font-bold text-emerald-900 group-hover:text-emerald-700 transition-colors">
-                    {bestOverall.software.name}
-                  </p>
-                </Link>
-              )}
-              {bestFree && (
-                <Link
-                  href={`/software/${bestFree.software.slug}`}
-                  className="group p-5 bg-blue-50 border border-blue-100 rounded-xl hover:border-blue-200 transition-colors"
-                >
-                  <p className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Best free/OSS</p>
-                  <p className="text-lg font-bold text-blue-900 group-hover:text-blue-700 transition-colors">
-                    {bestFree.software.name}
-                  </p>
-                </Link>
-              )}
-              {bestOffline && bestOffline.software.id !== bestOverall?.software.id && (
-                <Link
-                  href={`/software/${bestOffline.software.slug}`}
-                  className="group p-5 bg-slate-100 border border-slate-200 rounded-xl hover:border-slate-300 transition-colors"
-                >
-                  <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Best offline</p>
-                  <p className="text-lg font-bold text-slate-900 group-hover:text-slate-700 transition-colors">
-                    {bestOffline.software.name}
-                  </p>
-                </Link>
-              )}
-            </div>
-          </div>
-        )}
+        <QuickRecommendation
+          alternatives={alternatives}
+          bestOverallId={bestOverall?.software.id}
+          bestFreeId={bestFree?.software.id}
+          bestOfflineId={bestOffline?.software.id}
+        />
 
         {/* Savings Calculator */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
