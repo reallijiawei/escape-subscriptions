@@ -55,7 +55,9 @@ async function getKvSubscriptions(env) {
   const bulkData = await bulkRes.json();
   if (!bulkData.success) throw new Error('Failed to get KV values');
 
-  return Object.values(bulkData.result).filter(Boolean);
+  return Object.values(bulkData.result.values || {}).map((v) => {
+    try { return JSON.parse(v); } catch { return null; }
+  }).filter(Boolean);
 }
 
 function getCloudflareToken() {
