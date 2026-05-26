@@ -1,0 +1,217 @@
+[
+  {
+    "id": "designer",
+    "name": "Designer Stack",
+    "slug": "designer",
+    "description": "Replace Adobe Creative Cloud with one-time purchase and free alternatives. Full creative suite without the monthly bill.",
+    "icon": "🎨",
+    "annualSavings": 659,
+    "items": [
+      {
+        "subscriptionToolId": "adobe-photoshop",
+        "softwareId": "affinity-photo",
+        "note": "Professional photo editing, one-time $69.99"
+      },
+      {
+        "subscriptionToolId": "adobe-illustrator",
+        "softwareId": "affinity-designer",
+        "note": "Vector design, one-time $69.99"
+      },
+      {
+        "subscriptionToolId": "figma",
+        "softwareId": "penpot",
+        "note": "Free and open-source UI design"
+      },
+      {
+        "subscriptionToolId": "canva",
+        "softwareId": "affinity-designer",
+        "note": "Quick graphics and layouts"
+      }
+    ]
+  },
+  {
+    "id": "writer",
+    "name": "Writer Stack",
+    "slug": "writer",
+    "description": "Write, edit, and organize without subscriptions. Tools for authors, bloggers, and content creators.",
+    "icon": "✍️",
+    "annualSavings": 340,
+    "items": [
+      {
+        "subscriptionToolId": "grammarly",
+        "softwareId": "languagetool",
+        "note": "Grammar and style checking, free tier available"
+      },
+      {
+        "subscriptionToolId": "microsoft-365",
+        "softwareId": "libreoffice",
+        "note": "Full office suite, free and open-source"
+      },
+      {
+        "subscriptionToolId": "notion",
+        "softwareId": "obsidian",
+        "note": "Note-taking with local-first storage"
+      },
+      {
+        "subscriptionToolId": "evernote",
+        "softwareId": "joplin",
+        "note": "Cross-platform notes, open-source"
+      }
+    ]
+  },
+  {
+    "id": "productivity",
+    "name": "Productivity Stack",
+    "slug": "productivity",
+    "description": "Manage tasks, notes, and projects without monthly fees. Own your productivity tools.",
+    "icon": "📋",
+    "annualSavings": 280,
+    "items": [
+      {
+        "subscriptionToolId": "notion",
+        "softwareId": "obsidian",
+        "note": "Knowledge base with markdown, local-first"
+      },
+      {
+        "subscriptionToolId": "todoist",
+        "softwareId": "super-productivity",
+        "note": "Task management with time tracking, free"
+      },
+      {
+        "subscriptionToolId": "trello",
+        "softwareId": "planka",
+        "note": "Kanban boards, open-source"
+      },
+      {
+        "subscriptionToolId": "slack",
+        "softwareId": "signal",
+        "note": "Secure messaging, free and open-source"
+      }
+    ]
+  },
+  {
+    "id": "developer",
+    "name": "Developer Stack",
+    "slug": "developer",
+    "description": "Code, deploy, and ship without subscription fatigue. Tools that respect developers.",
+    "icon": "💻",
+    "annualSavings": 500,
+    "items": [
+      {
+        "subscriptionToolId": "github-copilot",
+        "softwareId": "continue",
+        "note": "Open-source AI code assistant"
+      },
+      {
+        "subscriptionToolId": "heroku",
+        "softwareId": "railway",
+        "note": "Deploy with predictable pricing"
+      },
+      {
+        "subscriptionToolId": "chatgpt-plus",
+        "softwareId": "ollama",
+        "note": "Run AI models locally, free"
+      }
+    ]
+  },
+  {
+    "id": "privacy",
+    "name": "Privacy Stack",
+    "slug": "privacy",
+    "description": "Take back control of your data. Cloud-independent tools that work offline.",
+    "icon": "🔒",
+    "annualSavings": 200,
+    "items": [
+      {
+        "subscriptionToolId": "1password",
+        "softwareId": "bitwarden",
+        "note": "Password manager, free tier or $10/yr premium"
+      },
+      {
+        "subscriptionToolId": "dropbox",
+        "softwareId": "syncthing",
+        "note": "Peer-to-peer file sync, no cloud needed"
+      },
+      {
+        "subscriptionToolId": "google-drive",
+        "softwareId": "nextcloud",
+        "note": "Self-hosted cloud storage"
+      },
+      {
+        "subscriptionToolId": "lastpass-premium",
+        "softwareId": "keepassxc",
+        "note": "Offline password manager, open-source"
+      }
+    ]
+  },
+  {
+    "id": "student",
+    "name": "Student Stack",
+    "slug": "student",
+    "description": "Everything a student needs — for free or one-time purchase. No recurring costs on a student budget.",
+    "icon": "🎓",
+    "annualSavings": 450,
+    "items": [
+      {
+        "subscriptionToolId": "microsoft-365",
+        "softwareId": "libreoffice",
+        "note": "Documents, spreadsheets, presentations — free"
+      },
+      {
+        "subscriptionToolId": "notion",
+        "softwareId": "obsidian",
+        "note": "Notes and knowledge management — free"
+      },
+      {
+        "subscriptionToolId": "grammarly",
+        "softwareId": "languagetool",
+        "note": "Writing assistance — free tier"
+      },
+      {
+        "subscriptionToolId": "1password",
+        "softwareId": "bitwarden",
+        "note": "Password management — free"
+      },
+      {
+        "subscriptionToolId": "todoist",
+        "softwareId": "super-productivity",
+        "note": "Task management — free"
+      }
+    ]
+  },
+  {
+    "id": "small-business",
+    "name": "Small Business Stack",
+    "slug": "small-business",
+    "description": "Run your business without subscription overhead. Accounting, communication, and marketing tools you can own.",
+    "icon": "🏢",
+    "annualSavings": 800,
+    "items": [
+      {
+        "subscriptionToolId": "quickbooks",
+        "softwareId": "gnucash",
+        "note": "Double-entry accounting, free and open-source"
+      },
+      {
+        "subscriptionToolId": "slack",
+        "softwareId": "signal",
+        "note": "Team communication, free"
+      },
+      {
+        "subscriptionToolId": "zoom",
+        "softwareId": "jitsi-meet",
+        "note": "Video meetings, free and open-source"
+      },
+      {
+        "subscriptionToolId": "mailchimp",
+        "softwareId": "listmonk",
+        "note": "Email marketing, self-hosted and free"
+      },
+      {
+        "subscriptionToolId": "calendly",
+        "softwareId": "calcom",
+        "note": "Scheduling, open-source"
+      }
+    ]
+  }
+]

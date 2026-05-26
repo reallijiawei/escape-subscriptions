@@ -5,7 +5,7 @@ import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
 import JsonLd, { softwareApplicationSchema, breadcrumbSchema } from '@/components/JsonLd';
 import { software, getSubscriptionToolBySlug } from '@/lib/data';
-import { formatCategory, formatPlatform } from '@/lib/utils';
+import { formatCategory, formatPlatform, formatDate } from '@/lib/utils';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -104,7 +104,7 @@ export default async function SoftwarePage({ params }: PageProps) {
               { label: 'Offline Support', value: sw.isOfflineSupported ? 'Yes' : 'No' },
               { label: 'Account Required', value: sw.requiresAccount ? 'Yes' : 'No' },
               { label: 'Free Trial', value: sw.hasFreeTrial ? 'Yes' : 'No' },
-              { label: 'Last Checked', value: sw.lastCheckedAt },
+              { label: 'Last Checked', value: formatDate(sw.lastCheckedAt) },
             ].map((item) => (
               <div key={item.label} className="flex items-center justify-between py-2.5 border-b border-slate-100 last:border-0">
                 <span className="text-sm text-slate-500">{item.label}</span>
@@ -121,7 +121,7 @@ export default async function SoftwarePage({ params }: PageProps) {
             {[
               { label: 'Ownership', value: sw.ownershipLevel, color: sw.ownershipLevel === 'HIGH' ? 'emerald' : sw.ownershipLevel === 'MEDIUM' ? 'amber' : 'red' },
               { label: 'Cloud Dependency', value: sw.cloudDependency, color: sw.cloudDependency === 'NONE' || sw.cloudDependency === 'LOW' ? 'emerald' : sw.cloudDependency === 'MEDIUM' ? 'amber' : 'red' },
-              { label: 'Last Checked', value: sw.lastCheckedAt, color: 'slate' },
+              { label: 'Last Checked', value: formatDate(sw.lastCheckedAt), color: 'slate' },
             ].map((item) => (
               <div key={item.label} className={`p-4 rounded-xl ${item.color === 'emerald' ? 'bg-emerald-50' : item.color === 'amber' ? 'bg-amber-50' : item.color === 'red' ? 'bg-red-50' : 'bg-slate-50'}`}>
                 <p className="text-xs text-slate-500 mb-1">{item.label}</p>

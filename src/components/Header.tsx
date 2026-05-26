@@ -43,6 +43,12 @@ export default function Header() {
               Categories
             </Link>
             <Link
+              href="/stacks"
+              className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+            >
+              Stacks
+            </Link>
+            <Link
               href="/about"
               className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
             >
@@ -74,6 +80,7 @@ export default function Header() {
                 { href: '/search', label: 'Browse Alternatives' },
                 { href: '/calculator', label: 'Calculator' },
                 { href: '/categories/design', label: 'Categories' },
+                { href: '/stacks', label: 'Stacks' },
                 { href: '/about', label: 'About' },
               ].map((link) => (
                 <Link

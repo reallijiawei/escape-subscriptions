@@ -4,6 +4,7 @@ import alternativeRelationsData from '@/data/alternative-relations.json';
 import categoriesData from '@/data/categories.json';
 import userVotesData from '@/data/user-votes.json';
 import userSubmissionsData from '@/data/user-submissions.json';
+import stacksData from '@/data/stacks.json';
 import type { Software, SubscriptionTool, AlternativeRelation, UserVote, UserSubmission } from '@/types/software';
 
 export const software: Software[] = softwareData as Software[];
@@ -12,6 +13,28 @@ export const alternativeRelations: AlternativeRelation[] = alternativeRelationsD
 export const categories = categoriesData;
 export const userVotes: UserVote[] = userVotesData as UserVote[];
 export const userSubmissions: UserSubmission[] = userSubmissionsData as UserSubmission[];
+
+export interface StackItem {
+  subscriptionToolId: string;
+  softwareId: string;
+  note: string;
+}
+
+export interface Stack {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  icon: string;
+  annualSavings: number;
+  items: StackItem[];
+}
+
+export const stacks: Stack[] = stacksData as Stack[];
+
+export function getStackBySlug(slug: string): Stack | undefined {
+  return stacks.find((s) => s.slug === slug);
+}
 
 export function getSoftwareBySlug(slug: string): Software | undefined {
   return software.find((s) => s.slug === slug);

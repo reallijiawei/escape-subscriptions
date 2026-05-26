@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { software, subscriptionTools, categories, getAllComparisons } from '@/lib/data';
+import { software, subscriptionTools, categories, getAllComparisons, stacks } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/search`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/calculator`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/badge`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
   ];
 
   const alternativePages: MetadataRoute.Sitemap = subscriptionTools.map((tool) => ({
@@ -41,5 +42,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages, ...comparisonPages];
+  const stackPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/stacks`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    ...stacks.map((s) => ({
+      url: `${baseUrl}/stacks/${s.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+  ];
+
+  return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages, ...comparisonPages, ...stackPages];
 }
