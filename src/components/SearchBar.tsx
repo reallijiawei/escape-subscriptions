@@ -72,11 +72,12 @@ export default function SearchBar({
           />
           <button
             type="submit"
-            className={`bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-all hover:shadow-lg ${
-              size === 'large' ? 'px-8 py-3.5' : 'px-6 py-3'
+            className={`shrink-0 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-all hover:shadow-lg ${
+              size === 'large' ? 'px-4 sm:px-8 py-3.5 text-sm sm:text-base' : 'px-3 sm:px-6 py-3 text-sm sm:text-base'
             }`}
           >
-            Find Alternatives
+            <span className="hidden sm:inline">Find Alternatives</span>
+            <span className="sm:hidden">Find</span>
           </button>
         </div>
       </form>
