@@ -5,7 +5,8 @@ import categoriesData from '@/data/categories.json';
 import userVotesData from '@/data/user-votes.json';
 import userSubmissionsData from '@/data/user-submissions.json';
 import stacksData from '@/data/stacks.json';
-import type { Software, SubscriptionTool, AlternativeRelation, UserVote, UserSubmission } from '@/types/software';
+import useCasesData from '@/data/use-cases.json';
+import type { Software, SubscriptionTool, AlternativeRelation, UserVote, UserSubmission, UseCase } from '@/types/software';
 
 export const software: Software[] = softwareData as Software[];
 export const subscriptionTools: SubscriptionTool[] = subscriptionToolsData as SubscriptionTool[];
@@ -130,4 +131,10 @@ export function getComparisonBySlug(slug: string): Comparison | undefined {
   if (!relation) return undefined;
 
   return { software: sw, subscriptionTool: tool, relation, slug };
+}
+
+export const useCases: UseCase[] = useCasesData as UseCase[];
+
+export function getUseCaseBySlug(slug: string): UseCase | undefined {
+  return useCases.find((u) => u.slug === slug);
 }

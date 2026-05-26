@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { software, subscriptionTools, categories, getAllComparisons, stacks } from '@/lib/data';
+import { software, subscriptionTools, categories, getAllComparisons, stacks, useCases } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
@@ -52,5 +52,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages, ...comparisonPages, ...stackPages];
+  const useCasePages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/use-cases`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    ...useCases.map((u) => ({
+      url: `${baseUrl}/use-cases/${u.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+  ];
+
+  return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages, ...comparisonPages, ...stackPages, ...useCasePages];
 }

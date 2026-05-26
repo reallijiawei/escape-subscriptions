@@ -154,13 +154,15 @@ html {
   animation: strikethrough 0.8s ease-out 0.5s forwards;
 }
 
-/* Subtle hover lift */
+/* Subtle hover lift — only on devices that support hover */
 .hover-lift {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.hover-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -5px rgba(0, 0, 0, 0.04);
+@media (hover: hover) {
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 10px -5px rgba(0, 0, 0, 0.04);
+  }
 }
 
 /* Diagonal accent line */

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "freelancers",
+    "slug": "freelancers",
+    "title": "Best Subscription-Free Tools for Freelancers",
+    "description": "Stop eating into your freelance profits with monthly software fees. These one-time purchase and free alternatives cover design, writing, project management, and more.",
+    "icon": "🎯",
+    "persona": "Freelancers",
+    "softwareIds": ["affinity-photo", "affinity-designer", "gimp", "obs-studio", "screenity", "bitwarden", "joplin", "nextcloud", "libreoffice", "audacity"],
+    "toolIds": ["adobe-photoshop", "adobe-illustrator", "notion", "grammarly", "dropbox", "1password", "microsoft-365"]
+  },
+  {
+    "id": "students",
+    "slug": "students",
+    "title": "Best Free Software for Students (No Subscription Needed)",
+    "description": "You're already paying for tuition. These free and open-source tools handle note-taking, writing, design, and productivity without adding monthly costs.",
+    "icon": "📚",
+    "persona": "Students",
+    "softwareIds": ["joplin", "obsidian", "libreoffice", "gimp", "photopea", "bitwarden", "obs-studio", "anki"],
+    "toolIds": ["notion", "evernote", "grammarly", "adobe-photoshop", "microsoft-365", "todoist"]
+  },
+  {
+    "id": "developers",
+    "slug": "developers",
+    "title": "Best Open-Source Tools for Developers",
+    "description": "Self-host, own your data, and stop paying monthly for dev tools. From code editors to password managers, these alternatives give you full control.",
+    "icon": "💻",
+    "persona": "Developers",
+    "softwareIds": ["bitwarden", "nextcloud", "n8n-community", "windmill", "obsidian", "windsurf", "sharex", "screenity"],
+    "toolIds": ["github-copilot", "1password", "dropbox", "notion", "slack", "heroku"]
+  },
+  {
+    "id": "small-business",
+    "slug": "small-business",
+    "title": "Subscription-Free Software for Small Businesses",
+    "description": "Cut your monthly software overhead without sacrificing quality. These alternatives help small businesses save thousands per year on tools.",
+    "icon": "🏢",
+    "persona": "Small Business Owners",
+    "softwareIds": ["libreoffice", "nextcloud", "bitwarden", "gimp", "audacity", "n8n-community", "activepieces"],
+    "toolIds": ["microsoft-365", "dropbox", "1password", "adobe-photoshop", "quickbooks", "mailchimp", "slack"]
+  },
+  {
+    "id": "privacy-conscious",
+    "slug": "privacy-conscious",
+    "title": "Privacy-First Software: Own Your Data",
+    "description": "If you don't want your notes, files, and passwords on someone else's server, these self-hosted and offline alternatives keep your data under your control.",
+    "icon": "🔒",
+    "persona": "Privacy-Conscious Users",
+    "softwareIds": ["bitwarden", "joplin", "nextcloud", "n8n-community", "standard-notes", "keepassxc", "ente-auth", "signal"],
+    "toolIds": ["1password", "notion", "dropbox", "google-drive", "lastpass-premium", "evernote"]
+  },
+  {
+    "id": "designers",
+    "slug": "designers",
+    "title": "Best No-Subscription Design Tools",
+    "description": "You don't need Adobe's monthly fee to do professional design work. These alternatives cover photo editing, vector design, UI/UX, and more.",
+    "icon": "🎨",
+    "persona": "Designers",
+    "softwareIds": ["affinity-photo", "affinity-designer", "gimp", "krita", "inkscape", "lunacy", "penpot"],
+    "toolIds": ["adobe-photoshop", "adobe-illustrator", "figma", "canva", "sketch"]
+  }
+]

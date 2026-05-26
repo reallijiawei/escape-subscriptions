@@ -29,7 +29,6 @@ function groupAlternatives(alternatives: AlternativeComparisonTableProps['altern
     }
   }
 
-  // Catch any uncategorized
   const categorizedIds = new Set(pricingGroups.flatMap((g) => g.types));
   const remaining = alternatives.filter((a) => !categorizedIds.has(a.software.pricingType));
   if (remaining.length > 0) {
@@ -49,7 +48,9 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
           <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3 px-1">
             {group.label}
           </h3>
-          <div className="overflow-x-auto -mx-6">
+
+          {/* Desktop table */}
+          <div className="hidden md:block overflow-x-auto -mx-6">
             <table className="w-full min-w-[700px]">
               <thead>
                 <tr className="border-b-2 border-slate-200">
@@ -63,7 +64,7 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
                 </tr>
               </thead>
               <tbody>
-                {group.items.map(({ relation, software }, index) => (
+                {group.items.map(({ relation, software }) => (
                   <tr
                     key={software.id}
                     className="border-b border-slate-100 hover:bg-amber-50/30 transition-colors"
@@ -123,6 +124,70 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile cards */}
+          <div className="md:hidden space-y-3">
+            {group.items.map(({ relation, software }) => (
+              <div key={software.id} className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <Link
+                      href={`/software/${software.slug}`}
+                      className="font-bold text-slate-900 hover:text-amber-600 transition-colors"
+                    >
+                      {software.name}
+                    </Link>
+                    <p className="text-xs text-slate-400 mt-0.5">{relation.recommendationLabel}</p>
+                  </div>
+                  <AlternativeVoteButtons
+                    softwareId={software.id}
+                    subscriptionToolId={relation.subscriptionToolId}
+                    initialVotes={(relation.votes || 0) + getVotesForSoftware(software.id, relation.subscriptionToolId)}
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                  <div>
+                    <span className="text-xs text-slate-400 block">Pricing</span>
+                    <PricingBadge type={software.pricingType} priceText={software.priceText} />
+                  </div>
+                  <div>
+                    <span className="text-xs text-slate-400 block">Migration</span>
+                    <span
+                      className={`inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold ${
+                        relation.migrationDifficulty === 'EASY'
+                          ? 'bg-emerald-50 text-emerald-700'
+                          : relation.migrationDifficulty === 'MEDIUM'
+                          ? 'bg-amber-50 text-amber-700'
+                          : 'bg-red-50 text-red-700'
+                      }`}
+                    >
+                      {formatMigrationDifficulty(relation.migrationDifficulty)}
+                    </span>
+                  </div>
+                  <div className="col-span-2">
+                    <span className="text-xs text-slate-400 block mb-1">Platform</span>
+                    <PlatformBadges platforms={software.platforms} />
+                  </div>
+                </div>
+
+                <div className="flex gap-3 mt-3 pt-3 border-t border-slate-100">
+                  {software.isOfflineSupported && (
+                    <span className="inline-flex items-center gap-1 text-xs text-emerald-600">
+                      <span className="w-4 h-4 rounded-full bg-emerald-100 flex items-center justify-center text-[10px]">✓</span>
+                      Offline
+                    </span>
+                  )}
+                  {software.isOpenSource && (
+                    <span className="inline-flex items-center gap-1 text-xs text-blue-600">
+                      <span className="w-4 h-4 rounded-full bg-blue-100 flex items-center justify-center text-[10px]">✓</span>
+                      Open Source
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       ))}

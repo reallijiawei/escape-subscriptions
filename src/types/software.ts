@@ -106,3 +106,14 @@ export interface UserSubmission {
   reason: string;
   createdAt: string;
 }
+
+export interface UseCase {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  icon: string;
+  persona: string;
+  softwareIds: string[];
+  toolIds: string[];
+}

@@ -10,7 +10,7 @@ interface SoftwareCardProps {
 
 export default function SoftwareCard({ software, showReplaces = false }: SoftwareCardProps) {
   return (
-    <div className="group bg-white rounded-2xl border border-slate-200/80 p-6 hover-lift transition-all">
+    <div className="group bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-6 hover-lift transition-all">
       <div className="mb-3">
         <h3 className="text-lg font-bold text-slate-900 tracking-tight">
           <Link
