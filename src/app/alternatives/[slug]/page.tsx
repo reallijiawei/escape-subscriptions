@@ -2,17 +2,15 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import AlternativeComparisonTable from '@/components/AlternativeComparisonTable';
-import AlternativeVoteButtons from '@/components/AlternativeVoteButtons';
+import AlternativeCardList from '@/components/AlternativeCardList';
 import SubmitRecommendation from '@/components/SubmitRecommendation';
 import FAQSection from '@/components/FAQSection';
 import EmailSubscribe from '@/components/EmailSubscribe';
-import PricingBadge from '@/components/PricingBadge';
 import JsonLd, { faqSchema, breadcrumbSchema } from '@/components/JsonLd';
 import {
   subscriptionTools,
   getAlternativesForTool,
   getSoftwareForAlternative,
-  getVotesForSoftware,
   getSubmissionsForTool,
 } from '@/lib/data';
 import { formatPrice, formatDate } from '@/lib/utils';
@@ -83,16 +81,6 @@ export default async function AlternativePage({ params }: PageProps) {
   const lastChecked = alternatives.reduce((latest, a) => {
     return a.software.lastCheckedAt > latest ? a.software.lastCheckedAt : latest;
   }, alternatives[0]?.software.lastCheckedAt || '');
-
-
-  // Compute community pick based on votes
-  const alternativesWithVotes = alternatives.map((a) => ({
-    ...a,
-    totalVotes: (a.relation.votes || 0) + getVotesForSoftware(a.software.id, a.relation.subscriptionToolId),
-  }));
-  const communityPick = alternativesWithVotes
-    .filter((a) => a.totalVotes > 0)
-    .sort((a, b) => b.totalVotes - a.totalVotes)[0];
 
   const submissions = getSubmissionsForTool(tool.id);
 
@@ -192,18 +180,6 @@ export default async function AlternativePage({ params }: PageProps) {
                   </p>
                 </Link>
               )}
-              {communityPick && communityPick.software.id !== bestOverall?.software.id && (
-                <Link
-                  href={`/software/${communityPick.software.slug}`}
-                  className="group p-5 bg-amber-50 border border-amber-200 rounded-xl hover:border-amber-300 transition-colors"
-                >
-                  <p className="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">Community pick</p>
-                  <p className="text-lg font-bold text-amber-900 group-hover:text-amber-700 transition-colors">
-                    {communityPick.software.name}
-                  </p>
-                  <p className="text-xs text-amber-500 mt-1">{communityPick.totalVotes} vote{communityPick.totalVotes !== 1 ? 's' : ''}</p>
-                </Link>
-              )}
             </div>
           </div>
         )}
@@ -244,105 +220,12 @@ export default async function AlternativePage({ params }: PageProps) {
         {/* Alternative Cards */}
         <div className="mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Detailed Alternatives</h2>
-          <div className="space-y-4">
-            {alternativesWithVotes.map(({ relation, software, totalVotes }, index) => (
-              <div
-                key={software.id}
-                className={`bg-white rounded-2xl border p-6 sm:p-8 hover-lift ${
-                  communityPick?.software.id === software.id ? 'border-amber-300 ring-1 ring-amber-200' : 'border-slate-200'
-                }`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <div className="flex items-center gap-3 mb-1 flex-wrap">
-                      <h3 className="text-lg font-bold text-slate-900">
-                        <Link
-                          href={`/software/${software.slug}`}
-                          className="hover:text-amber-600 transition-colors"
-                        >
-                          {software.name}
-                        </Link>
-                      </h3>
-                      {index === 0 && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-100 text-amber-700 uppercase tracking-wider">
-                          Top Pick
-                        </span>
-                      )}
-                      {communityPick?.software.id === software.id && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-100 text-emerald-700 uppercase tracking-wider">
-                          Community Pick
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm text-amber-600 font-medium">{relation.recommendationLabel}</p>
-                  </div>
-                  <AlternativeVoteButtons
-                    softwareId={software.id}
-                    subscriptionToolId={relation.subscriptionToolId}
-                    initialVotes={totalVotes}
-                  />
-                </div>
-
-                <p className="text-slate-600 mb-6 leading-relaxed">{software.description}</p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <p className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-3">What you gain</p>
-                    <ul className="space-y-2">
-                      {relation.whatYouGain.map((item: string, i: number) => (
-                        <li key={i} className="flex items-start text-sm text-slate-600">
-                          <span className="text-emerald-500 mr-2 mt-0.5">+</span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-red-500 uppercase tracking-wider mb-3">What you lose</p>
-                    <ul className="space-y-2">
-                      {relation.whatYouLose.map((item: string, i: number) => (
-                        <li key={i} className="flex items-start text-sm text-slate-600">
-                          <span className="text-red-400 mr-2 mt-0.5">−</span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-5 border-t border-slate-100">
-                  <div className="flex items-center gap-3 flex-wrap">
-                    <PricingBadge type={software.pricingType} priceText={software.priceText} />
-                    <span className="text-xs text-slate-400">
-                      Migration: <span className="font-medium text-slate-600">{relation.migrationDifficulty}</span>
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <Link
-                      href={`/compare/${software.slug}-vs-${tool.slug}`}
-                      className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-amber-600 font-semibold transition-colors"
-                    >
-                      Compare
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
-                      </svg>
-                    </Link>
-                    <a
-                      href={software.websiteUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm text-amber-600 hover:text-amber-700 font-semibold transition-colors"
-                    >
-                      Visit Website
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <AlternativeCardList
+            alternatives={alternatives}
+            toolSlug={tool.slug}
+            toolName={tool.name}
+            bestOverallId={bestOverall?.software.id}
+          />
         </div>
 
         {/* Who Should Switch */}
