@@ -86,7 +86,7 @@ export default async function CategoryPage({ params }: PageProps) {
         {/* Subscription Tools in Category */}
         {categoryTools.length > 0 && (
           <div className="mb-14">
-            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">
+            <h2 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-5">
               Popular {category.name} Subscriptions to Replace
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -117,7 +117,7 @@ export default async function CategoryPage({ params }: PageProps) {
 
         {/* Alternative Software */}
         <div>
-          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">
+          <h2 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-5">
             {category.name} Alternatives
           </h2>
           {categorySoftware.length > 0 ? (
@@ -135,7 +135,7 @@ export default async function CategoryPage({ params }: PageProps) {
 
         {/* Related Categories */}
         <div className="mt-14 bg-slate-100 rounded-2xl p-6 sm:p-8">
-          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Other Categories</h2>
+          <h2 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-5">Other Categories</h2>
           <div className="flex flex-wrap gap-2">
             {categories
               .filter((c) => c.id !== category.id)
