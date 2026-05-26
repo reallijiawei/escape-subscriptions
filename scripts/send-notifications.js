@@ -22,15 +22,10 @@ function loadEnv() {
 
 // --- Cloudflare KV helpers ---
 async function getKvSubscriptions(env) {
-  const token = getCloudflareToken();
-  if (!token) throw new Error('Cloudflare token not found');
-
-  const accountRes = await fetch('https://api.cloudflare.com/client/v4/accounts', {
-    headers: { 'Authorization': `Bearer ${token}` },
-  });
-  const accountData = await accountRes.json();
-  const accountId = accountData.result[0].id;
-  const kvId = '8596576f18ac4c1980f16a278cb0c663';
+  const token = env.CLOUDFLARE_API_TOKEN;
+  const accountId = env.CLOUDFLARE_ACCOUNT_ID;
+  const kvId = env.CLOUDFLARE_KV_EMAIL_ID;
+  if (!token || !accountId || !kvId) throw new Error('CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, and CLOUDFLARE_KV_EMAIL_ID required in .env');
 
   // List all keys with "sub:" prefix
   const listRes = await fetch(
@@ -38,7 +33,10 @@ async function getKvSubscriptions(env) {
     { headers: { 'Authorization': `Bearer ${token}` } }
   );
   const listData = await listRes.json();
-  if (!listData.success) throw new Error('Failed to list KV keys');
+  if (!listData.success) {
+    console.error('[Cloudflare Error] List keys:', JSON.stringify(listData.errors));
+    throw new Error('Failed to list KV keys');
+  }
 
   // Get values
   const keys = listData.result.map((k) => k.name);
@@ -53,26 +51,14 @@ async function getKvSubscriptions(env) {
     }
   );
   const bulkData = await bulkRes.json();
-  if (!bulkData.success) throw new Error('Failed to get KV values');
+  if (!bulkData.success) {
+    console.error('[Cloudflare Error] Bulk get:', JSON.stringify(bulkData.errors));
+    throw new Error('Failed to get KV values');
+  }
 
   return Object.values(bulkData.result.values || {}).map((v) => {
     try { return JSON.parse(v); } catch { return null; }
   }).filter(Boolean);
-}
-
-function getCloudflareToken() {
-  const paths = [
-    path.join(process.env.HOME || process.env.USERPROFILE, 'AppData', 'Roaming', 'xdg.config', '.wrangler', 'config', 'default.toml'),
-    path.join(process.env.HOME || process.env.USERPROFILE, '.wrangler', 'config', 'default.toml'),
-  ];
-  for (const p of paths) {
-    if (fs.existsSync(p)) {
-      const content = fs.readFileSync(p, 'utf-8');
-      const m = content.match(/oauth_token\s*=\s*"([^"]+)"/);
-      if (m) return m[1];
-    }
-  }
-  return null;
 }
 
 // --- Resend email sending ---
