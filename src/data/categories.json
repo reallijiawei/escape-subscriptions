@@ -75,5 +75,12 @@
     "slug": "entertainment",
     "description": "Find one-time purchase, open-source, and offline entertainment tools that can replace expensive subscription software.",
     "icon": "🎵"
+  },
+  {
+    "id": "screen-recording",
+    "name": "Screen Recording & Demos",
+    "slug": "screen-recording",
+    "icon": "📹",
+    "description": "Tools for recording product demos, tutorials, and walkthroughs. Find free and open-source alternatives to expensive AI video generators."
   }
 ]

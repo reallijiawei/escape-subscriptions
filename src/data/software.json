@@ -2831,5 +2831,267 @@
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "screenity",
+    "name": "Screenity",
+    "slug": "screenity",
+    "description": "Free, open-source screen recorder for Chrome. Unlimited recordings with no watermarks, built-in annotation tools, trim/crop editing, and auto-zoom on click. Can be self-hosted.",
+    "websiteUrl": "https://screenity.io",
+    "githubUrl": "https://github.com/alyssaxuu/screenity",
+    "pricingType": "FREE",
+    "priceText": "Free (Pro optional for cloud storage)",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "SCREEN_RECORDING"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Product demo creators",
+      "Tutorial makers",
+      "Privacy-conscious users",
+      "Teams wanting self-hosted recording"
+    ],
+    "pros": [
+      "Completely free with no recording limits",
+      "Open source and self-hostable",
+      "Draw and annotate on any webpage while recording",
+      "Built-in trim, crop, and audio editing",
+      "Auto-zoom on click for product demos",
+      "No account required",
+      "4.4/5 stars from 250K+ users"
+    ],
+    "cons": [
+      "Chrome extension only (no Firefox/Safari)",
+      "Advanced editing requires Pro tier",
+      "No AI voiceover generation",
+      "Desktop recording requires Chrome-based browser"
+    ],
+    "replaces": [
+      "clueso",
+      "trupeer"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "obs-studio",
+    "name": "OBS Studio",
+    "slug": "obs-studio",
+    "description": "Free, open-source software for video recording and live streaming. Professional-grade screen capture with scene mixing, audio filters, and plugin support. Used by millions of creators worldwide.",
+    "websiteUrl": "https://obsproject.com",
+    "githubUrl": "https://github.com/obsproject/obs-studio",
+    "pricingType": "FREE",
+    "priceText": "Free",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "SCREEN_RECORDING",
+      "VIDEO_AUDIO"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Professional content creators",
+      "Developers recording tutorials",
+      "Streamers",
+      "Users needing maximum control over recording"
+    ],
+    "pros": [
+      "Completely free and open source",
+      "Professional-grade recording quality",
+      "Unlimited scenes with custom transitions",
+      "Audio mixer with noise suppression and VST support",
+      "Extensive plugin ecosystem",
+      "Cross-platform (Windows, Mac, Linux)",
+      "No watermarks, no time limits"
+    ],
+    "cons": [
+      "No built-in video editing",
+      "Steeper learning curve",
+      "No AI features (voiceover, zoom, captions)",
+      "Need separate editing software for polished demos",
+      "Not designed specifically for product demos"
+    ],
+    "replaces": [
+      "clueso",
+      "trupeer"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "sharex",
+    "name": "ShareX",
+    "slug": "sharex",
+    "description": "Free, open-source screen capture and productivity tool for Windows. Screen recording (video + GIF), screenshot capture with region selection, annotation tools, and 80+ upload destinations.",
+    "websiteUrl": "https://getsharex.com",
+    "githubUrl": "https://github.com/ShareX/ShareX",
+    "pricingType": "FREE",
+    "priceText": "Free",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS"
+    ],
+    "categories": [
+      "SCREEN_RECORDING"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Windows users",
+      "Quick screen captures and GIFs",
+      "Bug reporting and documentation",
+      "Users who need annotation tools"
+    ],
+    "pros": [
+      "Completely free and open source (18+ years of development)",
+      "Screen recording to MP4 and GIF",
+      "Region capture with annotation (arrows, text, blur, pixelate)",
+      "Scrolling capture for long pages",
+      "80+ upload destinations built in",
+      "Color picker, ruler, OCR, QR tools included",
+      "No watermarks, no ads, lightweight"
+    ],
+    "cons": [
+      "Windows only",
+      "No AI features",
+      "No built-in video editing",
+      "UI can be overwhelming for beginners",
+      "Not designed for polished product demos"
+    ],
+    "replaces": [
+      "clueso",
+      "trupeer"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "guidde",
+    "name": "Guidde",
+    "slug": "guidde",
+    "description": "AI-powered video documentation platform. Capture workflows via browser extension and automatically generate step-by-step tutorials with AI voiceovers. Free tier includes 25 videos.",
+    "websiteUrl": "https://www.guidde.com",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free (25 videos) / Pro from $19/mo",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS"
+    ],
+    "categories": [
+      "SCREEN_RECORDING"
+    ],
+    "isOpenSource": false,
+    "isOfflineSupported": false,
+    "requiresAccount": true,
+    "hasFreeTrial": true,
+    "ownershipLevel": "LOW",
+    "cloudDependency": "HIGH",
+    "bestFor": [
+      "Non-technical users",
+      "Customer success teams",
+      "HR and onboarding teams",
+      "Users wanting closest Clueso-like experience for free"
+    ],
+    "pros": [
+      "Free tier with 25 videos (no credit card needed)",
+      "AI-powered capture and voiceover (Magic Mic)",
+      "Drag-and-drop editor with transitions and music",
+      "Export to MP4, GIF, PPT, PDF, SCORM",
+      "Integrations with Slack, Zendesk, Salesforce",
+      "Viewer analytics and engagement insights"
+    ],
+    "cons": [
+      "Not open source",
+      "Cloud-only, no self-hosting",
+      "Free tier limited to 25 videos",
+      "Advanced features require paid plan",
+      "Requires account to use"
+    ],
+    "replaces": [
+      "clueso",
+      "trupeer"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "tango",
+    "name": "Tango",
+    "slug": "tango",
+    "description": "Automatically captures screenshots as you walk through a process and generates step-by-step how-to guides. Free tier includes 5 workflows. Browser and desktop capture on paid plans.",
+    "websiteUrl": "https://www.tango.ai",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free (5 workflows) / Pro from $15/mo",
+    "startingPrice": 0,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS"
+    ],
+    "categories": [
+      "SCREEN_RECORDING"
+    ],
+    "isOpenSource": false,
+    "isOfflineSupported": false,
+    "requiresAccount": true,
+    "hasFreeTrial": true,
+    "ownershipLevel": "LOW",
+    "cloudDependency": "HIGH",
+    "bestFor": [
+      "Teams creating SOPs and documentation",
+      "IT and Ops teams",
+      "Employee onboarding",
+      "Quick step-by-step guide creation"
+    ],
+    "pros": [
+      "Free tier with 5 shared workflows",
+      "Auto-captures screenshots as you work",
+      "Export to PDF, Markdown, HTML",
+      "Voice transcription on Pro",
+      "Desktop + browser capture",
+      "Branded exports with watermark removal"
+    ],
+    "cons": [
+      "Not open source",
+      "Cloud-only, no self-hosting",
+      "Free tier very limited (5 workflows)",
+      "No video recording (screenshots only)",
+      "Enterprise features locked behind custom pricing"
+    ],
+    "replaces": [
+      "clueso",
+      "trupeer"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-26"
   }
 ]

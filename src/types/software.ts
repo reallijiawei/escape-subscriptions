@@ -28,7 +28,8 @@ export type Category =
   | 'STORAGE'
   | 'AI_TOOLS'
   | 'EDUCATION'
-  | 'ENTERTAINMENT';
+  | 'ENTERTAINMENT'
+  | 'SCREEN_RECORDING';
 
 export type OwnershipLevel = 'HIGH' | 'MEDIUM' | 'LOW';
 export type CloudDependency = 'NONE' | 'LOW' | 'MEDIUM' | 'HIGH';

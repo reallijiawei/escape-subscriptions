@@ -557,5 +557,43 @@
       "Business process automation"
     ],
     "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "clueso",
+    "name": "Clueso",
+    "slug": "clueso",
+    "description": "An AI-powered platform that transforms raw screen recordings into polished product videos and step-by-step documentation with auto-zoom, AI voiceovers, and branded templates.",
+    "websiteUrl": "https://www.clueso.io",
+    "monthlyPrice": 120,
+    "yearlyPrice": 1440,
+    "currency": "USD",
+    "category": "SCREEN_RECORDING",
+    "commonUseCases": [
+      "Product demo videos",
+      "Customer onboarding",
+      "Knowledge base articles",
+      "Internal training",
+      "Marketing walkthroughs"
+    ],
+    "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "trupeer",
+    "name": "Trupeer",
+    "slug": "trupeer",
+    "description": "An AI platform that creates product videos and step-by-step documentation from screen recordings, with AI avatars, voiceovers, and translation in 30+ languages.",
+    "websiteUrl": "https://www.trupeer.ai",
+    "monthlyPrice": 40,
+    "yearlyPrice": 480,
+    "currency": "USD",
+    "category": "SCREEN_RECORDING",
+    "commonUseCases": [
+      "Product demo videos",
+      "Step-by-step guides",
+      "Employee onboarding",
+      "Customer support docs",
+      "Multilingual documentation"
+    ],
+    "lastCheckedAt": "2026-05-26"
   }
 ]

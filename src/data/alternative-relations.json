@@ -2101,5 +2101,202 @@
       "Teams wanting drag-and-drop simplicity"
     ],
     "notes": "Windmill is more of a developer platform than a simple workflow automation tool. Best for teams who think in code."
+  },
+  {
+    "id": "clueso-screenity",
+    "subscriptionToolId": "clueso",
+    "softwareId": "screenity",
+    "recommendationRank": 1,
+    "recommendationLabel": "Best free alternative — open source with demo features",
+    "similarityScore": 80,
+    "migrationDifficulty": "LOW",
+    "whatYouGain": [
+      "Completely free",
+      "Open source and self-hostable",
+      "No recording limits or watermarks",
+      "Privacy-first (no cloud dependency)",
+      "Annotation tools while recording"
+    ],
+    "whatYouLose": [
+      "No AI voiceover generation",
+      "No auto-generated documentation",
+      "Chrome extension only",
+      "Less polished AI editing"
+    ],
+    "bestFor": [
+      "Budget-conscious creators",
+      "Privacy-focused teams",
+      "Developers",
+      "Users who want self-hosted tools"
+    ],
+    "notFor": [
+      "Users needing AI voiceovers",
+      "Teams wanting auto-generated docs",
+      "Non-Chrome users"
+    ],
+    "notes": "Screenity is the closest free, open-source match to Clueso's recording + annotation workflow, but lacks the AI documentation generation."
+  },
+  {
+    "id": "clueso-guidde",
+    "subscriptionToolId": "clueso",
+    "softwareId": "guidde",
+    "recommendationRank": 2,
+    "recommendationLabel": "Best freemium alternative with AI features",
+    "similarityScore": 75,
+    "migrationDifficulty": "LOW",
+    "whatYouGain": [
+      "Free tier with 25 videos",
+      "AI voiceover (Magic Mic)",
+      "Export to PPT, PDF, SCORM",
+      "Slack/Zendesk/Salesforce integrations"
+    ],
+    "whatYouLose": [
+      "Cloud-only (no self-hosting)",
+      "25 video limit on free tier",
+      "Less advanced AI editing",
+      "Requires account"
+    ],
+    "bestFor": [
+      "Non-technical users",
+      "Customer success teams",
+      "Users wanting AI features for free"
+    ],
+    "notFor": [
+      "Users needing unlimited free videos",
+      "Privacy-conscious teams",
+      "Self-hosting enthusiasts"
+    ],
+    "notes": "Guidde is the most Clueso-like experience available for free, with AI voiceover and step-by-step generation."
+  },
+  {
+    "id": "clueso-obs-studio",
+    "subscriptionToolId": "clueso",
+    "softwareId": "obs-studio",
+    "recommendationRank": 3,
+    "recommendationLabel": "Best for professional-quality raw recording",
+    "similarityScore": 50,
+    "migrationDifficulty": "HIGH",
+    "whatYouGain": [
+      "Completely free",
+      "Professional recording quality",
+      "Unlimited scenes and transitions",
+      "Audio filters and VST support",
+      "Massive plugin ecosystem"
+    ],
+    "whatYouLose": [
+      "No AI features at all",
+      "No built-in editing",
+      "Steeper learning curve",
+      "Need separate editor for polished demos"
+    ],
+    "bestFor": [
+      "Content creators who edit in separate software",
+      "Streamers",
+      "Users needing maximum recording control"
+    ],
+    "notFor": [
+      "Users wanting all-in-one solution",
+      "Non-technical users",
+      "Quick demo creators"
+    ],
+    "notes": "OBS gives you the best raw recording quality, but you'll need a video editor to match Clueso's polished output."
+  },
+  {
+    "id": "trupeer-screenity",
+    "subscriptionToolId": "trupeer",
+    "softwareId": "screenity",
+    "recommendationRank": 1,
+    "recommendationLabel": "Best free alternative — open source, no limits",
+    "similarityScore": 75,
+    "migrationDifficulty": "LOW",
+    "whatYouGain": [
+      "Completely free",
+      "Open source and self-hostable",
+      "No recording limits",
+      "Annotation and auto-zoom",
+      "Privacy-first"
+    ],
+    "whatYouLose": [
+      "No AI avatars or voiceovers",
+      "No auto-documentation",
+      "No 30+ language translation",
+      "Chrome-only"
+    ],
+    "bestFor": [
+      "Budget-conscious users",
+      "Privacy-focused teams",
+      "Self-hosting enthusiasts"
+    ],
+    "notFor": [
+      "Users needing AI avatars",
+      "Multilingual documentation needs",
+      "Non-Chrome users"
+    ],
+    "notes": "Screenity covers the recording and annotation side of Trupeer for free, but lacks AI voiceover and translation."
+  },
+  {
+    "id": "trupeer-sharex",
+    "subscriptionToolId": "trupeer",
+    "softwareId": "sharex",
+    "recommendationRank": 2,
+    "recommendationLabel": "Best for Windows users who need capture + annotation",
+    "similarityScore": 55,
+    "migrationDifficulty": "MEDIUM",
+    "whatYouGain": [
+      "Completely free",
+      "Video + GIF recording",
+      "80+ upload destinations",
+      "Scrolling capture",
+      "OCR and QR tools"
+    ],
+    "whatYouLose": [
+      "Windows only",
+      "No AI features",
+      "No video editing",
+      "Not designed for polished demos"
+    ],
+    "bestFor": [
+      "Windows power users",
+      "Quick documentation",
+      "Bug reporting"
+    ],
+    "notFor": [
+      "Mac/Linux users",
+      "Users needing polished demos",
+      "Non-technical users"
+    ],
+    "notes": "ShareX is a Swiss Army knife for Windows screen capture, great for quick documentation but not for polished product demos."
+  },
+  {
+    "id": "trupeer-tango",
+    "subscriptionToolId": "trupeer",
+    "softwareId": "tango",
+    "recommendationRank": 3,
+    "recommendationLabel": "Best for auto-generated step-by-step guides",
+    "similarityScore": 70,
+    "migrationDifficulty": "LOW",
+    "whatYouGain": [
+      "Free tier with 5 workflows",
+      "Auto-capture screenshots",
+      "PDF/Markdown/HTML export",
+      "Voice transcription"
+    ],
+    "whatYouLose": [
+      "5 workflow limit on free",
+      "No video recording (screenshots only)",
+      "Cloud-only",
+      "No AI avatars"
+    ],
+    "bestFor": [
+      "SOP and documentation creators",
+      "IT/Ops teams",
+      "Quick guide generation"
+    ],
+    "notFor": [
+      "Users needing video output",
+      "Self-hosting enthusiasts",
+      "Teams needing unlimited free usage"
+    ],
+    "notes": "Tango is excellent for auto-generating step-by-step screenshot guides, but doesn't do video like Trupeer."
   }
 ]

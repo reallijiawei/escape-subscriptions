@@ -54,6 +54,7 @@ export function formatCategory(category: string): string {
     AI_TOOLS: 'AI Tools',
     EDUCATION: 'Education',
     ENTERTAINMENT: 'Entertainment',
+    SCREEN_RECORDING: 'Screen Recording & Demos',
   };
   return map[category] || category;
 }
