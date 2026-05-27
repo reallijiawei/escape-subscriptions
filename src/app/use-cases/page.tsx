@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Subscription-Free Software by Use Case',
   description: 'Find the best free, open-source, and one-time purchase software for your specific needs. Stop renting your tools.',
   alternates: { canonical: '/use-cases' },
+  twitter: { card: 'summary_large_image', title: 'Subscription-Free Software by Use Case', description: 'Find the best free, open-source, and one-time purchase software for your specific needs.' },
 };
 
 export default function UseCasesPage() {

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import ComparisonTable from '@/components/ComparisonTable';
 import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
-import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import { getAllComparisons, getComparisonBySlug } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -64,6 +64,22 @@ export default async function ComparePage({ params }: PageProps) {
           { name: 'Home', url: '/' },
           { name: 'Compare', url: '/search' },
           { name: `${software.name} vs ${subscriptionTool.name}`, url: `/compare/${slug}` },
+        ])}
+      />
+      <JsonLd
+        data={faqSchema([
+          {
+            question: `Is ${software.name} a good alternative to ${subscriptionTool.name}?`,
+            answer: `Yes, ${software.name} is a solid alternative to ${subscriptionTool.name}. It offers ${software.pricingType === 'FREE' ? 'free access' : software.pricingType === 'FREEMIUM' ? 'a free tier' : 'a one-time purchase'} with ${software.isOpenSource ? 'open source code' : 'professional features'}, making it a great choice for users looking to escape subscriptions.`,
+          },
+          {
+            question: `How much can I save by switching from ${subscriptionTool.name} to ${software.name}?`,
+            answer: `Switching from ${subscriptionTool.name} (${formatPrice(yearlyCost)}/year) to ${software.name} (${software.priceText || 'free'}) can save you approximately ${formatPrice(yearlyCost)} per year, or ${formatPrice(threeYearCost)} over three years.`,
+          },
+          {
+            question: `What do I lose by switching from ${subscriptionTool.name} to ${software.name}?`,
+            answer: `The main trade-offs include: ${relation.whatYouLose.slice(0, 3).join(', ')}. However, ${software.name} still covers the core functionality most users need.`,
+          },
         ])}
       />
 

@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tool = subscriptionTools.find((t) => t.slug === slug);
   if (!tool) return {};
 
-  const title = `Best ${tool.name} Alternatives Without Subscription in 2026`;
+  const title = `Best ${tool.name} Alternatives Without Subscription`;
   const description = `Looking for a no-subscription alternative to ${tool.name}? Compare one-time purchase, open-source, offline, and lifetime alternatives with pricing, pros, cons, and migration tips.`;
 
   return {
