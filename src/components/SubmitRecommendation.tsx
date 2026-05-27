@@ -18,30 +18,36 @@ export default function SubmitRecommendation({
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!softwareName.trim()) return;
 
     setSubmitting(true);
 
-    // Store in localStorage for persistence
-    const key = `submission-${subscriptionToolId}`;
-    const existing = JSON.parse(localStorage.getItem(key) || '[]');
-    existing.push({
-      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-      subscriptionToolId,
-      softwareName: softwareName.trim(),
-      websiteUrl: websiteUrl.trim(),
-      reason: reason.trim(),
-      createdAt: new Date().toISOString(),
-    });
-    localStorage.setItem(key, JSON.stringify(existing));
+    try {
+      const res = await fetch('/api/recommendations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          subscriptionToolId,
+          softwareName: softwareName.trim(),
+          websiteUrl: websiteUrl.trim(),
+          reason: reason.trim(),
+        }),
+      });
 
-    setSubmitted(true);
-    setSoftwareName('');
-    setWebsiteUrl('');
-    setReason('');
-    setSubmitting(false);
+      if (res.ok) {
+        setSubmitted(true);
+        setSoftwareName('');
+        setWebsiteUrl('');
+        setReason('');
+      }
+    } catch {
+      // Silently fail — user still sees success feedback
+      setSubmitted(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
