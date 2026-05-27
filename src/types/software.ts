@@ -30,7 +30,12 @@ export type Category =
   | 'EDUCATION'
   | 'ENTERTAINMENT'
   | 'SCREEN_RECORDING'
-  | 'PRESENTATION';
+  | 'PRESENTATION'
+  | 'VPN'
+  | 'CRM'
+  | 'E_COMMERCE'
+  | 'FORMS'
+  | 'CAD';
 
 export type OwnershipLevel = 'HIGH' | 'MEDIUM' | 'LOW';
 export type CloudDependency = 'NONE' | 'LOW' | 'MEDIUM' | 'HIGH';

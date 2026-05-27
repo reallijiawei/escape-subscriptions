@@ -667,5 +667,365 @@
       "AI image generation"
     ],
     "lastCheckedAt": "2026-05-26"
+  },
+  {
+    "id": "adobe-acrobat",
+    "name": "Adobe Acrobat DC",
+    "slug": "adobe-acrobat",
+    "description": "PDF editing, signing, and document management with cloud storage.",
+    "websiteUrl": "https://acrobat.adobe.com",
+    "monthlyPrice": 19.99,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "PRODUCTIVITY",
+    "commonUseCases": [
+      "PDF editing",
+      "E-signatures",
+      "Document management",
+      "Form creation"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "adobe-after-effects",
+    "name": "Adobe After Effects",
+    "slug": "adobe-after-effects",
+    "description": "Industry-standard motion graphics and visual effects compositing software.",
+    "websiteUrl": "https://www.adobe.com/products/aftereffects.html",
+    "monthlyPrice": 22.99,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "VIDEO_AUDIO",
+    "commonUseCases": [
+      "Motion graphics",
+      "Visual effects",
+      "Video compositing",
+      "Animation"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "autocad",
+    "name": "AutoCAD",
+    "slug": "autocad",
+    "description": "Industry-standard 2D and 3D CAD drafting software for architecture and engineering.",
+    "websiteUrl": "https://www.autodesk.com/products/autocad",
+    "monthlyPrice": 250,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "DESIGN",
+    "commonUseCases": [
+      "CAD drafting",
+      "2D drawings",
+      "3D modeling",
+      "Architecture"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "capcut",
+    "name": "CapCut",
+    "slug": "capcut",
+    "description": "Popular video editor for social media content with AI-powered editing features.",
+    "websiteUrl": "https://www.capcut.com",
+    "monthlyPrice": 8,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "VIDEO_AUDIO",
+    "commonUseCases": [
+      "Video editing",
+      "Social media content",
+      "Short-form video",
+      "TikTok editing"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "salesforce",
+    "name": "Salesforce",
+    "slug": "salesforce",
+    "description": "Cloud CRM platform for sales, service, marketing, and analytics.",
+    "websiteUrl": "https://www.salesforce.com",
+    "monthlyPrice": 25,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "BUSINESS",
+    "commonUseCases": [
+      "CRM",
+      "Sales automation",
+      "Customer management",
+      "Analytics"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "youtube-premium",
+    "name": "YouTube Premium",
+    "slug": "youtube-premium",
+    "description": "Ad-free YouTube with background play, downloads, and YouTube Music.",
+    "websiteUrl": "https://www.youtube.com/premium",
+    "monthlyPrice": 14,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "ENTERTAINMENT",
+    "commonUseCases": [
+      "Ad-free video",
+      "Background play",
+      "Video downloads",
+      "Music streaming"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "nordvpn",
+    "name": "NordVPN",
+    "slug": "nordvpn",
+    "description": "Popular VPN service for privacy, security, and geo-unblocking content.",
+    "websiteUrl": "https://nordvpn.com",
+    "monthlyPrice": 5,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "SECURITY",
+    "commonUseCases": [
+      "VPN",
+      "Privacy protection",
+      "Geo-unblocking",
+      "Public WiFi security"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "jira",
+    "name": "Jira",
+    "slug": "jira",
+    "description": "Issue tracking and agile project management for software development teams.",
+    "websiteUrl": "https://www.atlassian.com/software/jira",
+    "monthlyPrice": 8,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "DEVELOPER_TOOLS",
+    "commonUseCases": [
+      "Issue tracking",
+      "Agile project management",
+      "Sprint planning",
+      "Bug tracking"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "postman",
+    "name": "Postman",
+    "slug": "postman",
+    "description": "API development and testing platform for designing, testing, and documenting APIs.",
+    "websiteUrl": "https://www.postman.com",
+    "monthlyPrice": 14,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "DEVELOPER_TOOLS",
+    "commonUseCases": [
+      "API testing",
+      "API design",
+      "API documentation",
+      "HTTP client"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "shopify",
+    "name": "Shopify",
+    "slug": "shopify",
+    "description": "E-commerce platform for creating online stores, managing products, and processing payments.",
+    "websiteUrl": "https://www.shopify.com",
+    "monthlyPrice": 39,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "BUSINESS",
+    "commonUseCases": [
+      "E-commerce",
+      "Online store",
+      "Payment processing",
+      "Inventory management"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "zendesk",
+    "name": "Zendesk",
+    "slug": "zendesk",
+    "description": "Customer service and helpdesk platform with ticketing, chat, and knowledge base.",
+    "websiteUrl": "https://www.zendesk.com",
+    "monthlyPrice": 19,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "BUSINESS",
+    "commonUseCases": [
+      "Helpdesk",
+      "Customer support",
+      "Ticketing",
+      "Live chat"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "typeform",
+    "name": "Typeform",
+    "slug": "typeform",
+    "description": "Interactive form and survey builder with conversational UI and logic jumps.",
+    "websiteUrl": "https://www.typeform.com",
+    "monthlyPrice": 25,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "BUSINESS",
+    "commonUseCases": [
+      "Forms",
+      "Surveys",
+      "Lead generation",
+      "Quizzes"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "airtable",
+    "name": "Airtable",
+    "slug": "airtable",
+    "description": "Spreadsheet-database hybrid for organizing, tracking, and collaborating on data.",
+    "websiteUrl": "https://www.airtable.com",
+    "monthlyPrice": 10,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "PRODUCTIVITY",
+    "commonUseCases": [
+      "Database",
+      "Spreadsheet",
+      "Project tracking",
+      "Content calendar"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "docusign",
+    "name": "DocuSign",
+    "slug": "docusign",
+    "description": "Electronic signature and agreement cloud for signing, sending, and managing documents.",
+    "websiteUrl": "https://www.docusign.com",
+    "monthlyPrice": 10,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "BUSINESS",
+    "commonUseCases": [
+      "E-signatures",
+      "Document signing",
+      "Contract management",
+      "Agreements"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "hootsuite",
+    "name": "Hootsuite",
+    "slug": "hootsuite",
+    "description": "Social media management platform for scheduling, analytics, and team collaboration.",
+    "websiteUrl": "https://www.hootsuite.com",
+    "monthlyPrice": 99,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "BUSINESS",
+    "commonUseCases": [
+      "Social media scheduling",
+      "Social analytics",
+      "Content planning",
+      "Multi-platform posting"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "slug": "zapier",
+    "description": "No-code workflow automation connecting 5000+ apps with triggers and actions.",
+    "websiteUrl": "https://zapier.com",
+    "monthlyPrice": 20,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "PRODUCTIVITY",
+    "commonUseCases": [
+      "Workflow automation",
+      "App integration",
+      "No-code automation",
+      "Data sync"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "teamviewer",
+    "name": "TeamViewer",
+    "slug": "teamviewer",
+    "description": "Remote desktop access and support software for connecting to computers remotely.",
+    "websiteUrl": "https://www.teamviewer.com",
+    "monthlyPrice": 24,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "DEVELOPER_TOOLS",
+    "commonUseCases": [
+      "Remote desktop",
+      "Remote support",
+      "File transfer",
+      "Screen sharing"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "dashlane",
+    "name": "Dashlane",
+    "slug": "dashlane",
+    "description": "Password manager and digital wallet with dark web monitoring and VPN.",
+    "websiteUrl": "https://www.dashlane.com",
+    "monthlyPrice": 5,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "SECURITY",
+    "commonUseCases": [
+      "Password management",
+      "Digital wallet",
+      "Dark web monitoring",
+      "Auto-fill"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "expressvpn",
+    "name": "ExpressVPN",
+    "slug": "expressvpn",
+    "description": "High-speed VPN service for privacy, security, and accessing geo-restricted content.",
+    "websiteUrl": "https://www.expressvpn.com",
+    "monthlyPrice": 13,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "SECURITY",
+    "commonUseCases": [
+      "VPN",
+      "Privacy",
+      "Geo-unblocking",
+      "Streaming"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "surveymonkey",
+    "name": "SurveyMonkey",
+    "slug": "surveymonkey",
+    "description": "Online survey creation and analysis platform for market research and feedback.",
+    "websiteUrl": "https://www.surveymonkey.com",
+    "monthlyPrice": 25,
+    "yearlyPrice": null,
+    "currency": "USD",
+    "category": "BUSINESS",
+    "commonUseCases": [
+      "Surveys",
+      "Market research",
+      "Feedback collection",
+      "Data analysis"
+    ],
+    "lastCheckedAt": "2026-05-27"
   }
 ]

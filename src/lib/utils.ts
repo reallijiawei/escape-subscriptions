@@ -56,6 +56,11 @@ export function formatCategory(category: string): string {
     ENTERTAINMENT: 'Entertainment',
     SCREEN_RECORDING: 'Screen Recording & Demos',
     PRESENTATION: 'Presentation',
+    VPN: 'VPN & Privacy',
+    CRM: 'CRM',
+    E_COMMERCE: 'E-Commerce',
+    FORMS: 'Forms & Surveys',
+    CAD: 'CAD & 3D Modeling',
   };
   return map[category] || category;
 }

@@ -91,5 +91,40 @@
     "icon": "📊",
     "softwareIds": [],
     "toolIds": []
+  },
+  {
+    "id": "vpn",
+    "name": "VPN & Privacy",
+    "slug": "vpn",
+    "description": "VPN services and privacy tools that protect your online activity.",
+    "icon": "🔒"
+  },
+  {
+    "id": "crm",
+    "name": "CRM",
+    "slug": "crm",
+    "description": "Customer relationship management tools for sales and support teams.",
+    "icon": "🤝"
+  },
+  {
+    "id": "e-commerce",
+    "name": "E-Commerce",
+    "slug": "e-commerce",
+    "description": "Online store platforms and e-commerce solutions.",
+    "icon": "🛒"
+  },
+  {
+    "id": "forms",
+    "name": "Forms & Surveys",
+    "slug": "forms",
+    "description": "Form builders and survey tools for collecting data and feedback.",
+    "icon": "📋"
+  },
+  {
+    "id": "cad",
+    "name": "CAD & 3D Modeling",
+    "slug": "cad",
+    "description": "Computer-aided design and 3D modeling software.",
+    "icon": "✏️"
   }
 ]

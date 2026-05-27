@@ -2472,5 +2472,551 @@
     ],
     "migrationDifficulty": "EASY",
     "alternatives": []
+  },
+  {
+    "id": "stirling-pdf-vs-adobe-acrobat",
+    "softwareId": "stirling-pdf",
+    "subscriptionToolId": "adobe-acrobat",
+    "whatYouGain": [
+      "50+ PDF tools",
+      "Self-hosted and private",
+      "No subscription",
+      "No account needed"
+    ],
+    "whatYouLose": [
+      "Requires self-hosting",
+      "No mobile app",
+      "No cloud sync"
+    ],
+    "bestFor": [
+      "Self-hosters",
+      "Privacy-conscious users",
+      "Users who need PDF tools without subscriptions"
+    ],
+    "notFor": [
+      "Users who need cloud sync",
+      "Non-technical users",
+      "Users who need mobile PDF editing"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "blender-vs-adobe-after-effects",
+    "softwareId": "blender",
+    "subscriptionToolId": "adobe-after-effects",
+    "whatYouGain": [
+      "Full 3D suite",
+      "Motion graphics",
+      "Compositing",
+      "No subscription"
+    ],
+    "whatYouLose": [
+      "Steeper learning curve",
+      "Different workflow",
+      "Heavier resource usage"
+    ],
+    "bestFor": [
+      "3D artists",
+      "Motion designers who also need 3D",
+      "Budget-conscious creators"
+    ],
+    "notFor": [
+      "Users who only need 2D motion graphics",
+      "Teams locked into Adobe workflow"
+    ],
+    "migrationDifficulty": "MEDIUM",
+    "alternatives": []
+  },
+  {
+    "id": "freecad-vs-autocad",
+    "softwareId": "freecad",
+    "subscriptionToolId": "autocad",
+    "whatYouGain": [
+      "Parametric 3D modeling",
+      "Free forever",
+      "Cross-platform",
+      "Active community"
+    ],
+    "whatYouLose": [
+      "Different interface",
+      "Fewer industry-specific tools",
+      "DWG support is limited"
+    ],
+    "bestFor": [
+      "Mechanical engineers",
+      "Product designers",
+      "Students",
+      "Makers"
+    ],
+    "notFor": [
+      "Architecture firms needing AutoCAD compatibility",
+      "Users with existing DWG workflows"
+    ],
+    "migrationDifficulty": "MEDIUM",
+    "alternatives": []
+  },
+  {
+    "id": "davinci-resolve-vs-capcut",
+    "softwareId": "davinci-resolve",
+    "subscriptionToolId": "capcut",
+    "whatYouGain": [
+      "Professional-grade editor",
+      "Color grading",
+      "VFX tools",
+      "No subscription"
+    ],
+    "whatYouLose": [
+      "Steeper learning curve",
+      "Heavier system requirements",
+      "No mobile-first workflow"
+    ],
+    "bestFor": [
+      "Serious video editors",
+      "Users who want professional tools",
+      "Color grading enthusiasts"
+    ],
+    "notFor": [
+      "Quick social media edits",
+      "Mobile-first users",
+      "TikTok creators"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "twenty-crm-vs-salesforce",
+    "softwareId": "twenty-crm",
+    "subscriptionToolId": "salesforce",
+    "whatYouGain": [
+      "Modern UI",
+      "Self-hostable",
+      "No per-seat pricing",
+      "Open source"
+    ],
+    "whatYouLose": [
+      "Fewer integrations",
+      "Smaller ecosystem",
+      "Less enterprise features"
+    ],
+    "bestFor": [
+      "Startups",
+      "Small teams",
+      "Users who want a modern CRM"
+    ],
+    "notFor": [
+      "Enterprise teams needing extensive integrations",
+      "Salesforce ecosystem users"
+    ],
+    "migrationDifficulty": "MEDIUM",
+    "alternatives": []
+  },
+  {
+    "id": "newpipe-vs-youtube-premium",
+    "softwareId": "newpipe",
+    "subscriptionToolId": "youtube-premium",
+    "whatYouGain": [
+      "No ads",
+      "Background play",
+      "Downloads",
+      "No subscription"
+    ],
+    "whatYouLose": [
+      "Android only",
+      "No YouTube Music",
+      "Can break with YouTube changes",
+      "No comments"
+    ],
+    "bestFor": [
+      "Android users",
+      "Users who mainly watch YouTube",
+      "Budget-conscious users"
+    ],
+    "notFor": [
+      "iOS users",
+      "Users who want YouTube Music",
+      "Users who want to support creators"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "wireguard-vs-nordvpn",
+    "softwareId": "wireguard",
+    "subscriptionToolId": "nordvpn",
+    "whatYouGain": [
+      "Fastest VPN protocol",
+      "Self-hostable",
+      "No subscription",
+      "Full control"
+    ],
+    "whatYouLose": [
+      "Requires server setup",
+      "No GUI by default",
+      "Need technical knowledge"
+    ],
+    "bestFor": [
+      "Technical users",
+      "Self-hosters",
+      "Users who want maximum speed"
+    ],
+    "notFor": [
+      "Non-technical users",
+      "Users who want one-click VPN",
+      "Users without a server"
+    ],
+    "migrationDifficulty": "HARD",
+    "alternatives": []
+  },
+  {
+    "id": "plane-vs-jira",
+    "softwareId": "plane",
+    "subscriptionToolId": "jira",
+    "whatYouGain": [
+      "Modern UI",
+      "Self-hostable",
+      "No per-seat pricing",
+      "Active development"
+    ],
+    "whatYouLose": [
+      "Fewer integrations",
+      "Newer product",
+      "Less enterprise features"
+    ],
+    "bestFor": [
+      "Software teams",
+      "Startups",
+      "Users who want a modern PM tool"
+    ],
+    "notFor": [
+      "Enterprise teams needing extensive integrations",
+      "Atlassian ecosystem users"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "hoppscotch-vs-postman",
+    "softwareId": "hoppscotch",
+    "subscriptionToolId": "postman",
+    "whatYouGain": [
+      "Lightweight and fast",
+      "Free forever",
+      "Self-hostable",
+      "No account needed"
+    ],
+    "whatYouLose": [
+      "Fewer features",
+      "No mock servers",
+      "Smaller ecosystem"
+    ],
+    "bestFor": [
+      "Frontend developers",
+      "Users who want a lightweight API client",
+      "Privacy-conscious developers"
+    ],
+    "notFor": [
+      "Teams needing extensive API management",
+      "Users who rely on Postman ecosystem"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "woocommerce-vs-shopify",
+    "softwareId": "woocommerce",
+    "subscriptionToolId": "shopify",
+    "whatYouGain": [
+      "Free core",
+      "Full control",
+      "Huge extension ecosystem",
+      "WordPress integration"
+    ],
+    "whatYouLose": [
+      "Requires WordPress",
+      "Hosting costs",
+      "More setup required"
+    ],
+    "bestFor": [
+      "WordPress users",
+      "Users who want full control",
+      "Budget-conscious store owners"
+    ],
+    "notFor": [
+      "Users who want zero maintenance",
+      "Non-technical users"
+    ],
+    "migrationDifficulty": "MEDIUM",
+    "alternatives": []
+  },
+  {
+    "id": "zammad-vs-zendesk",
+    "softwareId": "zammad",
+    "subscriptionToolId": "zendesk",
+    "whatYouGain": [
+      "Ticketing, chat, knowledge base",
+      "Self-hostable",
+      "No per-agent pricing",
+      "Telephony integration"
+    ],
+    "whatYouLose": [
+      "Requires self-hosting",
+      "Smaller ecosystem",
+      "Fewer integrations"
+    ],
+    "bestFor": [
+      "Support teams",
+      "Self-hosters",
+      "Budget-conscious teams"
+    ],
+    "notFor": [
+      "Teams needing extensive integrations",
+      "Users who want zero maintenance"
+    ],
+    "migrationDifficulty": "MEDIUM",
+    "alternatives": []
+  },
+  {
+    "id": "formbricks-vs-typeform",
+    "softwareId": "formbricks",
+    "subscriptionToolId": "typeform",
+    "whatYouGain": [
+      "In-product surveys",
+      "Self-hostable",
+      "No response limits",
+      "Open source"
+    ],
+    "whatYouLose": [
+      "Fewer templates",
+      "Newer product",
+      "Less polished UI"
+    ],
+    "bestFor": [
+      "Product teams",
+      "UX researchers",
+      "Users who want in-product surveys"
+    ],
+    "notFor": [
+      "Users who want polished templates",
+      "Non-technical users"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "nocodb-vs-airtable",
+    "softwareId": "nocodb",
+    "subscriptionToolId": "airtable",
+    "whatYouGain": [
+      "Connects to existing databases",
+      "Self-hostable",
+      "No row limits",
+      "REST API"
+    ],
+    "whatYouLose": [
+      "Fewer templates",
+      "Requires self-hosting",
+      "Less polished UI"
+    ],
+    "bestFor": [
+      "Database users",
+      "Self-hosters",
+      "Teams who want Airtable alternative"
+    ],
+    "notFor": [
+      "Users who want zero setup",
+      "Non-technical users"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "documenso-vs-docusign",
+    "softwareId": "documenso",
+    "subscriptionToolId": "docusign",
+    "whatYouGain": [
+      "Free e-signatures",
+      "Self-hostable",
+      "Audit trails",
+      "Open source"
+    ],
+    "whatYouLose": [
+      "Newer product",
+      "Fewer integrations",
+      "Less brand recognition"
+    ],
+    "bestFor": [
+      "Small businesses",
+      "Privacy-conscious users",
+      "Users who want free e-signatures"
+    ],
+    "notFor": [
+      "Enterprise teams needing extensive integrations",
+      "Users who need brand trust"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "postiz-vs-hootsuite",
+    "softwareId": "postiz",
+    "subscriptionToolId": "hootsuite",
+    "whatYouGain": [
+      "Multi-platform scheduling",
+      "AI agent",
+      "Self-hostable",
+      "No per-seat pricing"
+    ],
+    "whatYouLose": [
+      "Newer product",
+      "Fewer integrations",
+      "Less analytics"
+    ],
+    "bestFor": [
+      "Social media managers",
+      "Content creators",
+      "Budget-conscious teams"
+    ],
+    "notFor": [
+      "Enterprise teams needing advanced analytics",
+      "Agencies managing many clients"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "rustdesk-vs-teamviewer",
+    "softwareId": "rustdesk",
+    "subscriptionToolId": "teamviewer",
+    "whatYouGain": [
+      "Self-hostable",
+      "No limits",
+      "File transfer",
+      "Encrypted"
+    ],
+    "whatYouLose": [
+      "Requires self-hosting",
+      "Smaller community",
+      "NAT traversal can be tricky"
+    ],
+    "bestFor": [
+      "IT support",
+      "Self-hosters",
+      "Users who want free remote desktop"
+    ],
+    "notFor": [
+      "Non-technical users",
+      "Users who want zero setup"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "keepass-vs-dashlane",
+    "softwareId": "keepass",
+    "subscriptionToolId": "dashlane",
+    "whatYouGain": [
+      "Fully offline",
+      "Plugin ecosystem",
+      "Auto-type",
+      "No subscription"
+    ],
+    "whatYouLose": [
+      "Dated UI",
+      "Manual sync",
+      "No built-in VPN"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Power users",
+      "Users who want local-only passwords"
+    ],
+    "notFor": [
+      "Users who want cloud sync",
+      "Non-technical users"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "protonvpn-vs-expressvpn",
+    "softwareId": "protonvpn",
+    "subscriptionToolId": "expressvpn",
+    "whatYouGain": [
+      "Free tier available",
+      "No ads",
+      "Swiss privacy laws",
+      "Open source"
+    ],
+    "whatYouLose": [
+      "Free tier is slower",
+      "Fewer server locations on free",
+      "No router support on free"
+    ],
+    "bestFor": [
+      "Privacy-conscious users",
+      "Budget-conscious users",
+      "Proton ecosystem users"
+    ],
+    "notFor": [
+      "Users who need maximum speed",
+      "Users who need many server locations"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
+  },
+  {
+    "id": "limesurvey-vs-surveymonkey",
+    "softwareId": "limesurvey",
+    "subscriptionToolId": "surveymonkey",
+    "whatYouGain": [
+      "25+ question types",
+      "Self-hostable",
+      "No response limits",
+      "Branching logic"
+    ],
+    "whatYouLose": [
+      "Dated UI",
+      "Complex setup",
+      "Steeper learning curve"
+    ],
+    "bestFor": [
+      "Researchers",
+      "Enterprise surveys",
+      "Users who need advanced features"
+    ],
+    "notFor": [
+      "Users who want quick simple surveys",
+      "Non-technical users"
+    ],
+    "migrationDifficulty": "MEDIUM",
+    "alternatives": []
+  },
+  {
+    "id": "n8n-vs-zapier",
+    "softwareId": "n8n",
+    "subscriptionToolId": "zapier",
+    "whatYouGain": [
+      "Self-hostable",
+      "400+ integrations",
+      "Native AI",
+      "No per-task pricing"
+    ],
+    "whatYouLose": [
+      "Requires self-hosting",
+      "Smaller community",
+      "Fewer pre-built templates"
+    ],
+    "bestFor": [
+      "Technical users",
+      "Self-hosters",
+      "Users who want workflow automation without per-task pricing"
+    ],
+    "notFor": [
+      "Non-technical users",
+      "Users who want zero setup"
+    ],
+    "migrationDifficulty": "EASY",
+    "alternatives": []
   }
 ]
