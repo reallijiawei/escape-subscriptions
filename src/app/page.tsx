@@ -56,12 +56,12 @@ export default function HomePage() {
             </div>
 
             <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl text-white mb-6 animate-fade-in-up delay-100">
-              Stop renting.<br />
-              <span className="text-amber-400">Own your tools.</span>
+              Tired of software<br />
+              <span className="text-amber-400">subscriptions?</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-              Find one-time purchase, open-source, offline, and lifetime alternatives to the software subscriptions draining your wallet.
+              Find free, open-source, and one-time purchase alternatives to the tools you&apos;re paying for every month.
             </p>
 
             <div className="max-w-2xl mx-auto animate-fade-in-up delay-300">
@@ -89,11 +89,11 @@ export default function HomePage() {
           <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8">
             <div className="grid grid-cols-3 gap-6 sm:gap-8">
               <div className="text-center">
-                <p className="text-2xl sm:text-3xl font-bold text-slate-900 font-display">20+</p>
+                <p className="text-2xl sm:text-3xl font-bold text-slate-900 font-display">35+</p>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">Subscriptions to replace</p>
               </div>
               <div className="text-center border-x border-slate-200">
-                <p className="text-2xl sm:text-3xl font-bold text-amber-600 font-display">50+</p>
+                <p className="text-2xl sm:text-3xl font-bold text-amber-600 font-display">70+</p>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">Alternative tools</p>
               </div>
               <div className="text-center">

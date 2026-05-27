@@ -9,24 +9,24 @@ const FONT_URL =
 export const metadata: Metadata = {
   metadataBase: new URL('https://escapesubscriptions.online'),
   title: {
-    default: 'Escape Subscriptions — Own Your Software Again',
+    default: 'Escape Subscriptions — Tired of Software Subscriptions?',
     template: '%s | Escape Subscriptions',
   },
   description:
-    'Find one-time payment, open-source, offline, and lifetime alternatives to expensive software subscriptions.',
+    'A site for people tired of software subscriptions. Find free, open-source, and one-time purchase alternatives to the tools draining your wallet.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     siteName: 'Escape Subscriptions',
-    title: 'Escape Subscriptions — Own Your Software Again',
+    title: 'Escape Subscriptions — Tired of Software Subscriptions?',
     description:
-      'Find one-time payment, open-source, offline, and lifetime alternatives to expensive software subscriptions.',
+      'A site for people tired of software subscriptions. Find free, open-source, and one-time purchase alternatives to the tools draining your wallet.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Escape Subscriptions — Own Your Software Again',
+    title: 'Escape Subscriptions — Tired of Software Subscriptions?',
     description:
-      'Find one-time payment, open-source, offline, and lifetime alternatives to expensive software subscriptions.',
+      'A site for people tired of software subscriptions. Find free, open-source, and one-time purchase alternatives to the tools draining your wallet.',
   },
   icons: {
     icon: '/favicon.svg',

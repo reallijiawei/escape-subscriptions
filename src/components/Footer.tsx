@@ -17,7 +17,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-slate-400 max-w-xs">
-              Stop renting your tools. Find one-time purchase, open-source, and lifetime alternatives to expensive software subscriptions.
+              A site for people tired of software subscriptions. Find free, open-source, and one-time purchase alternatives to the tools draining your wallet.
             </p>
           </div>
 
