@@ -11,6 +11,8 @@ import JsonLd, { faqSchema, breadcrumbSchema } from '@/components/JsonLd';
 import {
   subscriptionTools,
   getAlternativesForTool,
+  getFreeAlternativesForTool,
+  getOpenSourceAlternativesForTool,
   getSoftwareForAlternative,
   getSubmissionsForTool,
 } from '@/lib/data';
@@ -82,6 +84,12 @@ export default async function AlternativePage({ params }: PageProps) {
     return a.software.lastCheckedAt > latest ? a.software.lastCheckedAt : latest;
   }, alternatives[0]?.software.lastCheckedAt || '');
 
+  const allBestFor = [...new Set(alternatives.flatMap((a) => a.relation.bestFor))];
+  const allNotFor = [...new Set(alternatives.flatMap((a) => a.relation.notFor))];
+
+  const freeAlts = getFreeAlternativesForTool(tool.id);
+  const ossAlts = getOpenSourceAlternativesForTool(tool.id);
+
   const submissions = getSubmissionsForTool(tool.id);
 
   const faqItems = [
@@ -142,6 +150,29 @@ export default async function AlternativePage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        {/* Why People Look for Alternatives */}
+        {tool.commonUseCases && tool.commonUseCases.length > 0 && (
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">
+              Why People Look for {tool.name} Alternatives
+            </h2>
+            <p className="text-slate-600 mb-4 leading-relaxed">
+              Paying {formatPrice(tool.monthlyPrice || 0)}/month for {tool.name} adds up to{' '}
+              <span className="font-semibold text-amber-700">{formatPrice(yearlyCost)}/year</span> and{' '}
+              <span className="font-semibold text-red-600">{formatPrice(threeYearCost)}</span> over three years.
+              Many users search for alternatives because:
+            </p>
+            <ul className="space-y-2">
+              {tool.commonUseCases.map((useCase: string, i: number) => (
+                <li key={i} className="flex items-start text-sm text-slate-600">
+                  <span className="text-amber-500 mr-2 mt-0.5 font-bold">-</span>
+                  {useCase}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {/* Quick Recommendation */}
         <QuickRecommendation
           alternatives={alternatives}
@@ -150,7 +181,12 @@ export default async function AlternativePage({ params }: PageProps) {
 
         {/* Savings Calculator */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
-          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Cost Comparison</h2>
+          <div className="flex items-center justify-between mb-5">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Cost Comparison</h2>
+            <a href={tool.websiteUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-amber-600 transition-colors">
+              Visit {tool.name} website
+            </a>
+          </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="p-4 bg-slate-50 rounded-xl">
               <p className="text-xs text-slate-500 mb-1">Monthly</p>
@@ -173,6 +209,48 @@ export default async function AlternativePage({ params }: PageProps) {
               </p>
             </div>
           </div>
+          {/* Cost Over Time Visual */}
+          {threeYearCost > 0 && (
+            <div className="mt-6 pt-6 border-t border-slate-100">
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Cost Over Time</p>
+              <div className="space-y-3">
+                <div>
+                  <div className="flex justify-between text-xs mb-1">
+                    <span className="text-slate-600">{tool.name} (3 years)</span>
+                    <span className="font-bold text-slate-900">{formatPrice(threeYearCost)}</span>
+                  </div>
+                  <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-full bg-red-400 rounded-full" style={{ width: '100%' }} />
+                  </div>
+                </div>
+                {bestOverall?.software.startingPrice != null && bestOverall.software.startingPrice > 0 && (
+                  <div>
+                    <div className="flex justify-between text-xs mb-1">
+                      <span className="text-slate-600">{bestOverall.software.name} (one-time)</span>
+                      <span className="font-bold text-emerald-700">{formatPrice(bestOverall.software.startingPrice)}</span>
+                    </div>
+                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-emerald-500 rounded-full"
+                        style={{ width: `${Math.min(100, (bestOverall.software.startingPrice / threeYearCost) * 100)}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
+                {bestOverall?.software.startingPrice == null && (
+                  <div>
+                    <div className="flex justify-between text-xs mb-1">
+                      <span className="text-slate-600">{bestOverall?.software.name || 'Best alternative'} (free)</span>
+                      <span className="font-bold text-emerald-700">$0</span>
+                    </div>
+                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
+                      <div className="h-full bg-emerald-500 rounded-full" style={{ width: '2%' }} />
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Comparison Table */}
@@ -197,32 +275,30 @@ export default async function AlternativePage({ params }: PageProps) {
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-6">Who Should Switch?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-sm font-bold text-emerald-700 mb-3 flex items-center gap-2">
+              <h3 className="text-sm font-bold text-emerald-700 mb-4 flex items-center gap-2">
                 <span className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-xs">✓</span>
-                Good candidates
+                Good candidates for switching
               </h3>
-              <ul className="space-y-2.5">
-                {alternatives[0]?.relation.bestFor.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start text-sm text-slate-600">
-                    <span className="text-emerald-400 mr-2 mt-0.5">+</span>
+              <div className="flex flex-wrap gap-2">
+                {allBestFor.map((item: string, i: number) => (
+                  <span key={i} className="inline-flex items-center px-3 py-1.5 rounded-lg text-sm font-medium bg-emerald-50 text-emerald-700 border border-emerald-100">
                     {item}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold text-slate-500 mb-3 flex items-center gap-2">
+              <h3 className="text-sm font-bold text-slate-500 mb-4 flex items-center gap-2">
                 <span className="w-5 h-5 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 text-xs">✗</span>
                 Should keep using {tool.name}
               </h3>
-              <ul className="space-y-2.5">
-                {alternatives[0]?.relation.notFor.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start text-sm text-slate-600">
-                    <span className="text-slate-400 mr-2 mt-0.5">−</span>
+              <div className="flex flex-wrap gap-2">
+                {allNotFor.map((item: string, i: number) => (
+                  <span key={i} className="inline-flex items-center px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-50 text-slate-600 border border-slate-200">
                     {item}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -287,6 +363,31 @@ export default async function AlternativePage({ params }: PageProps) {
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
           <FAQSection items={faqItems} />
         </div>
+
+        {/* Explore by Type */}
+        {(freeAlts.length > 0 || ossAlts.length > 0) && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Explore by Type</h2>
+            <div className="flex flex-wrap gap-3">
+              {freeAlts.length > 0 && (
+                <Link
+                  href={`/free-alternatives-to/${slug}`}
+                  className="px-4 py-2 bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-xl text-sm font-medium hover:bg-emerald-100 transition-colors"
+                >
+                  Free alternatives to {tool.name}
+                </Link>
+              )}
+              {ossAlts.length > 0 && (
+                <Link
+                  href={`/open-source-alternatives-to/${slug}`}
+                  className="px-4 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-xl text-sm font-medium hover:bg-blue-100 transition-colors"
+                >
+                  Open source alternatives to {tool.name}
+                </Link>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Related Pages */}
         <div className="bg-slate-100 rounded-2xl p-6 sm:p-8">

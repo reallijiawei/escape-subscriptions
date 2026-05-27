@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
 import JsonLd, { softwareApplicationSchema, breadcrumbSchema } from '@/components/JsonLd';
-import { software, getSubscriptionToolBySlug } from '@/lib/data';
+import { software, getSubscriptionToolBySlug, getFreeAlternativesForTool } from '@/lib/data';
 import { formatCategory, formatPlatform, formatDate } from '@/lib/utils';
 
 interface PageProps {
@@ -167,6 +167,36 @@ export default async function SoftwarePage({ params }: PageProps) {
                   </span>
                 </Link>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* See All Alternatives */}
+        {replacesTools.length > 0 && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">See All Alternatives</h2>
+            <div className="space-y-3">
+              {replacesTools.map((tool) => {
+                const freeAlts = getFreeAlternativesForTool(tool!.id);
+                return (
+                  <div key={tool!.id} className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                    <Link
+                      href={`/alternatives/${tool!.slug}`}
+                      className="text-sm text-amber-600 hover:text-amber-700 font-semibold transition-colors"
+                    >
+                      All alternatives to {tool!.name}
+                    </Link>
+                    {freeAlts.length > 0 && (
+                      <Link
+                        href={`/free-alternatives-to/${tool!.slug}`}
+                        className="text-sm text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
+                      >
+                        Free alternatives to {tool!.name}
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}

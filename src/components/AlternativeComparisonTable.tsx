@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PricingBadge from './PricingBadge';
 import PlatformBadges from './PlatformBadges';
 import AlternativeVoteButtons from './AlternativeVoteButtons';
-import { formatMigrationDifficulty } from '@/lib/utils';
+import { formatMigrationDifficulty, formatOwnershipLevel } from '@/lib/utils';
 import { getVotesForSoftware } from '@/lib/data';
 import type { Software, AlternativeRelation, PricingType } from '@/types/software';
 
@@ -51,14 +51,16 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
 
           {/* Desktop table */}
           <div className="hidden md:block overflow-x-auto -mx-6">
-            <table className="w-full min-w-[700px]">
+            <table className="w-full min-w-[800px]">
               <thead>
                 <tr className="border-b-2 border-slate-200">
                   <th className="px-6 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Tool</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Match</th>
                   <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Pricing</th>
                   <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Platform</th>
                   <th className="px-4 py-3 text-center text-xs font-bold text-slate-400 uppercase tracking-wider">Offline</th>
                   <th className="px-4 py-3 text-center text-xs font-bold text-slate-400 uppercase tracking-wider">OSS</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Ownership</th>
                   <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Migration</th>
                   <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Vote</th>
                 </tr>
@@ -81,6 +83,13 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
                       </div>
                     </td>
                     <td className="px-4 py-4">
+                      {relation.similarityScore != null && (
+                        <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700">
+                          {relation.similarityScore}%
+                        </span>
+                      )}
+                    </td>
+                    <td className="px-4 py-4">
                       <PricingBadge type={software.pricingType} priceText={software.priceText} />
                     </td>
                     <td className="px-4 py-4">
@@ -99,6 +108,19 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
                       ) : (
                         <span className="text-slate-300">—</span>
                       )}
+                    </td>
+                    <td className="px-4 py-4">
+                      <span
+                        className={`text-xs font-medium ${
+                          software.ownershipLevel === 'HIGH'
+                            ? 'text-emerald-700'
+                            : software.ownershipLevel === 'MEDIUM'
+                            ? 'text-amber-700'
+                            : 'text-red-600'
+                        }`}
+                      >
+                        {formatOwnershipLevel(software.ownershipLevel)}
+                      </span>
                     </td>
                     <td className="px-4 py-4">
                       <span
@@ -132,12 +154,19 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
               <div key={software.id} className="bg-slate-50 rounded-xl p-4 border border-slate-100">
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <Link
-                      href={`/software/${software.slug}`}
-                      className="font-bold text-slate-900 hover:text-amber-600 transition-colors"
-                    >
-                      {software.name}
-                    </Link>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <Link
+                        href={`/software/${software.slug}`}
+                        className="font-bold text-slate-900 hover:text-amber-600 transition-colors"
+                      >
+                        {software.name}
+                      </Link>
+                      {relation.similarityScore != null && (
+                        <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700">
+                          {relation.similarityScore}%
+                        </span>
+                      )}
+                    </div>
                     <p className="text-xs text-slate-400 mt-0.5">{relation.recommendationLabel}</p>
                   </div>
                   <AlternativeVoteButtons
@@ -166,8 +195,22 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
                       {formatMigrationDifficulty(relation.migrationDifficulty)}
                     </span>
                   </div>
-                  <div className="col-span-2">
-                    <span className="text-xs text-slate-400 block mb-1">Platform</span>
+                  <div>
+                    <span className="text-xs text-slate-400 block">Ownership</span>
+                    <span
+                      className={`text-xs font-medium ${
+                        software.ownershipLevel === 'HIGH'
+                          ? 'text-emerald-700'
+                          : software.ownershipLevel === 'MEDIUM'
+                          ? 'text-amber-700'
+                          : 'text-red-600'
+                      }`}
+                    >
+                      {formatOwnershipLevel(software.ownershipLevel)}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-xs text-slate-400 block">Platform</span>
                     <PlatformBadges platforms={software.platforms} />
                   </div>
                 </div>
@@ -183,6 +226,11 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
                     <span className="inline-flex items-center gap-1 text-xs text-blue-600">
                       <span className="w-4 h-4 rounded-full bg-blue-100 flex items-center justify-center text-[10px]">✓</span>
                       Open Source
+                    </span>
+                  )}
+                  {software.requiresAccount && (
+                    <span className="inline-flex items-center gap-1 text-xs text-slate-500">
+                      Account required
                     </span>
                   )}
                 </div>

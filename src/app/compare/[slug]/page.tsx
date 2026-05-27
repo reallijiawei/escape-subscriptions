@@ -238,6 +238,12 @@ export default async function ComparePage({ params }: PageProps) {
               >
                 See all alternatives to {subscriptionTool.name}
               </Link>
+              <Link
+                href={`/free-alternatives-to/${subscriptionTool.slug}`}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/30 rounded-xl font-semibold transition-colors"
+              >
+                Free alternatives
+              </Link>
             </div>
           </div>
         </div>

@@ -51,6 +51,26 @@ export function getAlternativesForTool(toolId: string): AlternativeRelation[] {
     .sort((a, b) => a.recommendationRank - b.recommendationRank);
 }
 
+export function getFreeAlternativesForTool(toolId: string): AlternativeRelation[] {
+  return alternativeRelations
+    .filter((r) => {
+      if (r.subscriptionToolId !== toolId) return false;
+      const sw = software.find((s) => s.id === r.softwareId);
+      return sw && (sw.pricingType === 'FREE' || sw.pricingType === 'OPEN_SOURCE');
+    })
+    .sort((a, b) => a.recommendationRank - b.recommendationRank);
+}
+
+export function getOpenSourceAlternativesForTool(toolId: string): AlternativeRelation[] {
+  return alternativeRelations
+    .filter((r) => {
+      if (r.subscriptionToolId !== toolId) return false;
+      const sw = software.find((s) => s.id === r.softwareId);
+      return sw && sw.isOpenSource === true;
+    })
+    .sort((a, b) => a.recommendationRank - b.recommendationRank);
+}
+
 export function getSoftwareForAlternative(relation: AlternativeRelation): Software | undefined {
   return software.find((s) => s.id === relation.softwareId);
 }

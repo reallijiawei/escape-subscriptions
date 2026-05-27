@@ -87,6 +87,11 @@ export default function AlternativeCardList({
                       Community Pick
                     </span>
                   )}
+                  {relation.similarityScore != null && (
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-100 text-blue-700 uppercase tracking-wider">
+                      {relation.similarityScore}% Match
+                    </span>
+                  )}
                 </div>
                 <p className="text-sm text-amber-600 font-medium">{relation.recommendationLabel}</p>
               </div>
@@ -97,6 +102,13 @@ export default function AlternativeCardList({
             </div>
 
             <p className="text-slate-600 mb-6 leading-relaxed">{software.description}</p>
+
+            {relation.notes && (
+              <div className="mb-6 p-4 bg-amber-50 border border-amber-100 rounded-xl">
+                <p className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-1">Editor&apos;s Note</p>
+                <p className="text-sm text-amber-800 leading-relaxed">{relation.notes}</p>
+              </div>
+            )}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
               <div>
@@ -129,6 +141,12 @@ export default function AlternativeCardList({
                 <span className="text-xs text-slate-400">
                   Migration: <span className="font-medium text-slate-600">{relation.migrationDifficulty}</span>
                 </span>
+                {software.requiresAccount && (
+                  <span className="text-xs text-slate-400">Requires account</span>
+                )}
+                {software.hasFreeTrial && (
+                  <span className="text-xs text-emerald-500 font-medium">Free trial</span>
+                )}
               </div>
               <div className="flex items-center gap-4">
                 <Link

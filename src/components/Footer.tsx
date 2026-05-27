@@ -47,6 +47,8 @@ export default function Footer() {
                 { href: '/alternatives/notion', label: 'Notion Alternatives' },
                 { href: '/alternatives/canva', label: 'Canva Alternatives' },
                 { href: '/alternatives/grammarly', label: 'Grammarly Alternatives' },
+                { href: '/free-alternatives-to/adobe-photoshop', label: 'Free Photoshop Alternatives' },
+                { href: '/free-alternatives-to/notion', label: 'Free Notion Alternatives' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-slate-400 hover:text-amber-400 transition-colors">

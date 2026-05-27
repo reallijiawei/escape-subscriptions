@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { software, subscriptionTools, categories, getAllComparisons, stacks, useCases } from '@/lib/data';
+import { software, subscriptionTools, categories, getAllComparisons, stacks, useCases, getFreeAlternativesForTool, getOpenSourceAlternativesForTool } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
@@ -65,5 +65,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages, ...comparisonPages, ...stackPages, ...useCasePages];
+  const freeAlternativePages: MetadataRoute.Sitemap = subscriptionTools
+    .filter((tool) => getFreeAlternativesForTool(tool.id).length > 0)
+    .map((tool) => ({
+      url: `${baseUrl}/free-alternatives-to/${tool.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    }));
+
+  const openSourceAlternativePages: MetadataRoute.Sitemap = subscriptionTools
+    .filter((tool) => getOpenSourceAlternativesForTool(tool.id).length > 0)
+    .map((tool) => ({
+      url: `${baseUrl}/open-source-alternatives-to/${tool.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    }));
+
+  return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages, ...comparisonPages, ...stackPages, ...useCasePages, ...freeAlternativePages, ...openSourceAlternativePages];
 }
