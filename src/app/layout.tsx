@@ -30,11 +30,6 @@ export const metadata: Metadata = {
       'A site for people tired of software subscriptions. Find free, open-source, and one-time purchase alternatives to the tools draining your wallet.',
     images: ['/og-image.svg'],
   },
-  verification: {
-    // TODO: Replace with your actual Google Search Console verification code
-    // Get it from: https://search.google.com/search-console → Add property → HTML tag method
-    google: 'your-google-verification-code',
-  },
   icons: {
     icon: '/favicon.svg',
   },
