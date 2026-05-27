@@ -27,7 +27,7 @@ export default function Footer() {
               {[
                 { href: '/search', label: 'Browse' },
                 { href: '/calculator', label: 'Calculator' },
-                { href: '/categories/design', label: 'Categories' },
+                { href: '/categories', label: 'Categories' },
                 { href: '/about', label: 'About' },
               ].map((link) => (
                 <li key={link.href}>
@@ -64,9 +64,9 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Escape Subscriptions. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-xs text-slate-500">Privacy</span>
-            <span className="text-xs text-slate-500">Terms</span>
-            <span className="text-xs text-slate-500">Contact</span>
+            <Link href="/about" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">About</Link>
+            <Link href="/use-cases" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Use Cases</Link>
+            <Link href="mailto:hello@escapesubscriptions.online" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Contact</Link>
           </div>
         </div>
       </div>

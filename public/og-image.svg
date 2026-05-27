@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grain effect overlay -->
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feBlend mode="overlay" in2="SourceGraphic" result="blend"/>
+    <feComponentTransfer>
+      <feFuncA type="linear" slope="0.08"/>
+    </feComponentTransfer>
+  </filter>
+  <rect width="1200" height="630" filter="url(#grain)" opacity="0.4"/>
+
+  <!-- Subtle geometric accent -->
+  <circle cx="950" cy="315" r="200" fill="none" stroke="white" stroke-width="0.5" opacity="0.04"/>
+  <circle cx="950" cy="315" r="150" fill="none" stroke="white" stroke-width="0.5" opacity="0.04"/>
+  <circle cx="950" cy="315" r="100" fill="none" stroke="white" stroke-width="0.5" opacity="0.04"/>
+
+  <!-- Amber accent line -->
+  <rect x="80" y="180" width="60" height="4" rx="2" fill="url(#amber)"/>
+
+  <!-- Tagline above -->
+  <text x="80" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#94a3b8" letter-spacing="3" text-transform="uppercase">
+    A SITE FOR PEOPLE TIRED OF
+  </text>
+
+  <!-- Main headline -->
+  <text x="80" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="white" letter-spacing="-1">
+    Software
+  </text>
+  <text x="80" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="#f59e0b" letter-spacing="-1">
+    Subscriptions
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="445" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#64748b">
+    Find free, open-source, and one-time purchase
+  </text>
+  <text x="80" y="475" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#64748b">
+    alternatives to the tools draining your wallet.
+  </text>
+
+  <!-- URL -->
+  <text x="80" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#475569">
+    escapesubscriptions.online
+  </text>
+
+  <!-- Amber dot accent -->
+  <circle cx="60" cy="556" r="6" fill="#f59e0b"/>
+</svg>

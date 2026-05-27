@@ -28,12 +28,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({
-    url: `${baseUrl}/categories/${cat.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }));
+  const categoryPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/categories`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    ...categories.map((cat) => ({
+      url: `${baseUrl}/categories/${cat.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+  ];
 
   const comparisonPages: MetadataRoute.Sitemap = getAllComparisons().map((c) => ({
     url: `${baseUrl}/compare/${c.slug}`,

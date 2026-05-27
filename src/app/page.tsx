@@ -1,8 +1,13 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import SearchBar from '@/components/SearchBar';
 import SoftwareCard from '@/components/SoftwareCard';
 import JsonLd, { websiteSchema, organizationSchema } from '@/components/JsonLd';
 import { subscriptionTools, software } from '@/lib/data';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 const popularSearches = [
   'Photoshop alternatives no subscription',
