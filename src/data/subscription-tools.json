@@ -1027,5 +1027,43 @@
       "Data analysis"
     ],
     "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "microsoft-outlook",
+    "name": "Microsoft Outlook",
+    "slug": "microsoft-outlook",
+    "description": "Microsoft's email and calendar client, part of Microsoft 365. Widely used in corporate environments for email, scheduling, and contacts management.",
+    "websiteUrl": "https://www.microsoft.com/en-us/microsoft-365/outlook/",
+    "monthlyPrice": 6.0,
+    "yearlyPrice": 72.0,
+    "currency": "USD",
+    "category": "PRODUCTIVITY",
+    "commonUseCases": [
+      "Corporate email management",
+      "Calendar and scheduling",
+      "Contact management",
+      "Task management integrated with email",
+      "Shared mailboxes and delegation"
+    ],
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "loom",
+    "name": "Loom",
+    "slug": "loom",
+    "description": "Video messaging tool for async communication. Record your screen, camera, and microphone to share with teammates.",
+    "websiteUrl": "https://www.loom.com/",
+    "monthlyPrice": 12.5,
+    "yearlyPrice": 150.0,
+    "currency": "USD",
+    "category": "VIDEO_AUDIO",
+    "commonUseCases": [
+      "Async video updates for remote teams",
+      "Screen recording for tutorials",
+      "Bug reporting with screen capture",
+      "Product demos and walkthroughs",
+      "Meeting recordings and summaries"
+    ],
+    "lastCheckedAt": "2026-05-27"
   }
 ]

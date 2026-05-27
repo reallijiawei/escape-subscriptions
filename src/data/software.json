@@ -5474,5 +5474,291 @@
     ],
     "affiliateUrl": null,
     "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "onlyoffice",
+    "name": "ONLYOFFICE",
+    "slug": "onlyoffice",
+    "description": "Open-source office suite with word processing, spreadsheets, and presentations. Compatible with MS Office formats and available as self-hosted or cloud.",
+    "websiteUrl": "https://www.onlyoffice.com/",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free (self-hosted) / Cloud from $5/user/mo",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX",
+      "WEB",
+      "SELF_HOSTED",
+      "ANDROID",
+      "IOS"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": true,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Teams needing MS Office compatibility",
+      "Self-hosted document editing",
+      "Collaborative editing"
+    ],
+    "pros": [
+      "Full MS Office format compatibility",
+      "Can be self-hosted",
+      "Real-time collaboration",
+      "Free for self-hosted use"
+    ],
+    "cons": [
+      "Cloud version has usage limits on free tier",
+      "Smaller ecosystem than MS Office",
+      "Some advanced Excel features missing"
+    ],
+    "replaces": [
+      "microsoft-365"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "google-docs",
+    "name": "Google Docs",
+    "slug": "google-docs",
+    "description": "Free web-based office suite by Google including Docs, Sheets, and Slides. Real-time collaboration with cloud storage.",
+    "websiteUrl": "https://docs.google.com/",
+    "pricingType": "FREE",
+    "priceText": "Free (15GB storage)",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "WEB",
+      "ANDROID",
+      "IOS"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
+    "isOpenSource": false,
+    "isOfflineSupported": true,
+    "requiresAccount": true,
+    "hasFreeTrial": false,
+    "ownershipLevel": "LOW",
+    "cloudDependency": "HIGH",
+    "bestFor": [
+      "Casual document editing",
+      "Real-time collaboration",
+      "Students and educators"
+    ],
+    "pros": [
+      "Completely free",
+      "Excellent real-time collaboration",
+      "Works in any browser",
+      "Automatic saving"
+    ],
+    "cons": [
+      "Requires Google account",
+      "Cloud-only (limited offline)",
+      "Less powerful than desktop office suites",
+      "Data stored on Google servers"
+    ],
+    "replaces": [
+      "microsoft-365"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "thunderbird",
+    "name": "Thunderbird",
+    "slug": "thunderbird",
+    "description": "Free, open-source email client by Mozilla. Supports multiple accounts, RSS, chat, and extensive add-ons for customization.",
+    "websiteUrl": "https://www.thunderbird.net/",
+    "pricingType": "FREE",
+    "priceText": "Free",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "NONE",
+    "bestFor": [
+      "Users who want a desktop email client",
+      "Privacy-conscious users",
+      "Managing multiple email accounts"
+    ],
+    "pros": [
+      "Completely free and open source",
+      "Works offline",
+      "Supports all major email protocols",
+      "Extensive add-on ecosystem",
+      "No data collection"
+    ],
+    "cons": [
+      "Interface feels dated",
+      "No built-in calendar (needs add-on)",
+      "Slower development pace",
+      "No mobile app"
+    ],
+    "replaces": [
+      "microsoft-outlook"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "evolution",
+    "name": "GNOME Evolution",
+    "slug": "evolution",
+    "description": "Open-source personal information management application for Linux. Combines email, calendar, address book, and task management.",
+    "websiteUrl": "https://wiki.gnome.org/Apps/Evolution",
+    "pricingType": "FREE",
+    "priceText": "Free",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "LINUX"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "NONE",
+    "bestFor": [
+      "Linux users",
+      "Exchange/M365 email on Linux",
+      "All-in-one PIM on GNOME"
+    ],
+    "pros": [
+      "Full Outlook-like PIM on Linux",
+      "Exchange/OWA support",
+      "Integrated calendar and contacts",
+      "Part of GNOME ecosystem"
+    ],
+    "cons": [
+      "Linux only",
+      "Interface not as polished as Outlook",
+      "Exchange support can be finicky",
+      "Smaller community than Thunderbird"
+    ],
+    "replaces": [
+      "microsoft-outlook"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "wekan",
+    "name": "WeKan",
+    "slug": "wekan",
+    "description": "Open-source kanban board built with Meteor. Self-hosted Trello alternative with swimlanes, card templates, and team collaboration.",
+    "websiteUrl": "https://wekan.github.io/",
+    "pricingType": "OPEN_SOURCE",
+    "priceText": "Free (self-hosted)",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "SELF_HOSTED",
+      "WEB"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": false,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Teams wanting self-hosted kanban",
+      "Privacy-focused project management",
+      "Trello users who want full control"
+    ],
+    "pros": [
+      "Fully self-hosted",
+      "Trello-like interface",
+      "Swimlanes and card templates",
+      "Active development",
+      "Docker deployment"
+    ],
+    "cons": [
+      "Requires server to host",
+      "No cloud offering",
+      "Smaller community than Trello",
+      "Mobile experience limited"
+    ],
+    "replaces": [
+      "trello"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-27"
+  },
+  {
+    "id": "focalboard",
+    "name": "Focalboard",
+    "slug": "focalboard",
+    "description": "Open-source project management by Mattermost. Self-hosted alternative to Trello, Notion, and Asana with kanban, table, and calendar views.",
+    "websiteUrl": "https://www.focalboard.com/",
+    "pricingType": "OPEN_SOURCE",
+    "priceText": "Free (self-hosted)",
+    "startingPrice": null,
+    "currency": "USD",
+    "platforms": [
+      "SELF_HOSTED",
+      "WEB",
+      "WINDOWS",
+      "MACOS",
+      "LINUX"
+    ],
+    "categories": [
+      "PRODUCTIVITY"
+    ],
+    "isOpenSource": true,
+    "isOfflineSupported": true,
+    "requiresAccount": false,
+    "hasFreeTrial": false,
+    "ownershipLevel": "HIGH",
+    "cloudDependency": "LOW",
+    "bestFor": [
+      "Teams already using Mattermost",
+      "Self-hosted project management",
+      "Multi-view project tracking"
+    ],
+    "pros": [
+      "Multiple views (kanban, table, calendar)",
+      "Integrates with Mattermost",
+      "Desktop apps available",
+      "Self-hosted with full control"
+    ],
+    "cons": [
+      "Development has slowed",
+      "Smaller community",
+      "Limited integrations vs Trello",
+      "Requires self-hosting setup"
+    ],
+    "replaces": [
+      "trello"
+    ],
+    "affiliateUrl": null,
+    "lastCheckedAt": "2026-05-27"
   }
 ]
