@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import PricingBadge from '@/components/PricingBadge';
-import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
+import FAQSection from '@/components/FAQSection';
+import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import { stacks, getStackBySlug, getSubscriptionToolBySlug, software } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -62,6 +63,28 @@ export default async function StackPage({ params }: PageProps) {
   const totalMonthly = items.reduce((sum, item) => sum + (item.tool.monthlyPrice || 0), 0);
   const totalYearly = totalMonthly * 12;
 
+  const toolNames = items.map((i) => i.tool.name).join(', ');
+  const altNames = items.map((i) => i.alt.name).join(', ');
+
+  const faqItems = [
+    {
+      question: `What is the ${stack.name} stack?`,
+      answer: `The ${stack.name} stack is a curated set of ${items.length} free and open-source tools that replace subscription software. It replaces ${toolNames} — saving approximately ${formatPrice(stack.annualSavings)}/year in subscription fees.`,
+    },
+    {
+      question: `How much does the ${stack.name} stack save?`,
+      answer: `The subscription tools in this stack cost ${formatPrice(totalMonthly)}/month (${formatPrice(totalYearly)}/year). The free alternatives cost $0, saving you ${formatPrice(stack.annualSavings)} annually. Over three years, that's ${formatPrice(stack.annualSavings * 3)}.`,
+    },
+    {
+      question: `Can I use just some of the tools in the ${stack.name} stack?`,
+      answer: `Absolutely. Each tool in the stack is independent — you can replace one subscription at a time. Start with the tool you use most, get comfortable with the alternative, then move to the next one.`,
+    },
+    {
+      question: `Are the alternatives in the ${stack.name} stack really free?`,
+      answer: `Yes. All ${items.length} alternatives (${altNames}) are free or open-source. There are no hidden costs, no premium tiers, and no feature restrictions for the core functionality listed here.`,
+    },
+  ];
+
   return (
     <div>
       <JsonLd
@@ -71,6 +94,7 @@ export default async function StackPage({ params }: PageProps) {
           { name: stack.name, url: `/stacks/${slug}` },
         ])}
       />
+      <JsonLd data={faqSchema(faqItems)} />
 
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
@@ -91,6 +115,13 @@ export default async function StackPage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        {/* SEO Intro */}
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+          <p className="text-slate-700 leading-relaxed text-base">
+            The {stack.name} stack replaces {items.length} subscription tools ({toolNames}) with free and open-source alternatives ({altNames}). Together, these subscriptions cost {formatPrice(totalMonthly)}/month — {formatPrice(totalYearly)}/year that stays in your pocket after switching. Each tool in this stack has been selected for reliability, active development, and feature parity with its subscription counterpart.
+          </p>
+        </div>
+
         {/* Savings Summary */}
         <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8 animate-fade-in-up">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Cost Comparison</h2>
@@ -169,6 +200,12 @@ export default async function StackPage({ params }: PageProps) {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* FAQ */}
+        <div className="mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
+          <FAQSection items={faqItems} />
         </div>
 
         {/* CTA */}
