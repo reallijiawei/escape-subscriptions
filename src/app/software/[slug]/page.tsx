@@ -3,8 +3,10 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
-import JsonLd, { softwareApplicationSchema, breadcrumbSchema } from '@/components/JsonLd';
+import FAQSection from '@/components/FAQSection';
+import JsonLd, { softwareApplicationSchema, breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import { software, getSubscriptionToolBySlug, getFreeAlternativesForTool } from '@/lib/data';
+import { getSoftwareSeoContent } from '@/lib/seo-software';
 import { formatCategory, formatPlatform, formatDate } from '@/lib/utils';
 
 interface PageProps {
@@ -57,6 +59,8 @@ export default async function SoftwarePage({ params }: PageProps) {
     .map((replaceSlug) => getSubscriptionToolBySlug(replaceSlug))
     .filter(Boolean);
 
+  const seoContent = getSoftwareSeoContent(sw.id);
+
   return (
     <div>
       <JsonLd
@@ -76,6 +80,7 @@ export default async function SoftwarePage({ params }: PageProps) {
           { name: sw.name, url: `/software/${slug}` },
         ])}
       />
+      {seoContent && <JsonLd data={faqSchema(seoContent.faq)} />}
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -92,6 +97,28 @@ export default async function SoftwarePage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        {/* SEO Intro */}
+        {seoContent && (
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+            <p className="text-slate-700 leading-relaxed text-base">
+              {seoContent.detailedIntro}
+            </p>
+            {seoContent.whyChoose.length > 0 && (
+              <div className="mt-6 pt-6 border-t border-slate-100">
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Why Choose {sw.name}?</h3>
+                <ul className="space-y-2">
+                  {seoContent.whyChoose.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
+                      <span className="text-emerald-500 mt-0.5 font-bold">+</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Basic Info */}
         <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Basic Info</h2>
@@ -226,6 +253,14 @@ export default async function SoftwarePage({ params }: PageProps) {
             </ul>
           </div>
         </div>
+
+        {/* FAQ */}
+        {seoContent && (
+          <div className="mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
+            <FAQSection items={seoContent.faq} />
+          </div>
+        )}
 
         {/* CTA */}
         <div className="text-center">

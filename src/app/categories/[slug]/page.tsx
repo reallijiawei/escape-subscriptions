@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import SoftwareCard from '@/components/SoftwareCard';
 import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
 import { categories, software, subscriptionTools } from '@/lib/data';
+import { getCategorySeoContent } from '@/lib/seo-categories';
+import FAQSection from '@/components/FAQSection';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -52,11 +54,13 @@ export default async function CategoryPage({ params }: PageProps) {
   }
 
   const categorySoftware = software.filter((s) =>
-    s.categories.some((c) => c.toLowerCase().replace('_', '-') === slug)
+    s.categories.some((c) => c.toLowerCase().replace(/_/g, '-') === slug)
   );
   const categoryTools = subscriptionTools.filter(
-    (t) => t.category.toLowerCase().replace('_', '-') === slug
+    (t) => t.category.toLowerCase().replace(/_/g, '-') === slug
   );
+
+  const seoContent = getCategorySeoContent(slug);
 
   return (
     <div>
@@ -83,6 +87,26 @@ export default async function CategoryPage({ params }: PageProps) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        {/* SEO Intro */}
+        {seoContent && (
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+            <p className="text-slate-700 leading-relaxed text-base">
+              {seoContent.detailedIntro}
+            </p>
+            <div className="mt-6 pt-6 border-t border-slate-100">
+              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Why Choose Non-Subscription {category.name} Software?</h3>
+              <ul className="space-y-2">
+                {seoContent.whySwitch.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
+                    <span className="text-emerald-500 mt-0.5 font-bold">+</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
         {/* Subscription Tools in Category */}
         {categoryTools.length > 0 && (
           <div className="mb-14">
@@ -132,6 +156,14 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
           )}
         </div>
+
+        {/* FAQ */}
+        {seoContent && (
+          <div className="mt-14">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
+            <FAQSection items={seoContent.faq} />
+          </div>
+        )}
 
         {/* Related Categories */}
         <div className="mt-14 bg-slate-100 rounded-2xl p-6 sm:p-8">
