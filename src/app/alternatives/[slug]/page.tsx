@@ -16,6 +16,7 @@ import {
   getSoftwareForAlternative,
   getSubmissionsForTool,
 } from '@/lib/data';
+import { getSeoContent } from '@/lib/seo-content';
 import { formatPrice, formatDate } from '@/lib/utils';
 
 interface PageProps {
@@ -92,7 +93,11 @@ export default async function AlternativePage({ params }: PageProps) {
 
   const submissions = getSubmissionsForTool(tool.id);
 
-  const faqItems = [
+  const seoContent = getSeoContent(tool.id);
+
+  const faqItems = seoContent
+    ? seoContent.extendedFaq
+    : [
     {
       question: `Is there a one-time purchase alternative to ${tool.name}?`,
       answer: `Yes, there are several one-time purchase alternatives to ${tool.name}. ${bestOverall?.software.name || 'Affinity Photo'} is a popular choice that offers professional features without a subscription.`,
@@ -150,6 +155,15 @@ export default async function AlternativePage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        {/* Detailed Intro — SEO content for enriched tools */}
+        {seoContent && (
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+            <p className="text-slate-700 leading-relaxed text-base">
+              {seoContent.detailedIntro}
+            </p>
+          </div>
+        )}
+
         {/* Why People Look for Alternatives */}
         {tool.commonUseCases && tool.commonUseCases.length > 0 && (
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
@@ -259,6 +273,25 @@ export default async function AlternativePage({ params }: PageProps) {
           <AlternativeComparisonTable alternatives={alternatives} />
         </div>
 
+        {/* Key Features to Compare */}
+        {seoContent && (
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">
+              Key Features to Compare When Choosing a {tool.name} Alternative
+            </h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {seoContent.keyFeatures.map((feature, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                  <span className="mt-0.5 w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 text-xs font-bold flex-shrink-0">
+                    {i + 1}
+                  </span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {/* Alternative Cards */}
         <div className="mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Detailed Alternatives</h2>
@@ -302,6 +335,32 @@ export default async function AlternativePage({ params }: PageProps) {
             </div>
           </div>
         </div>
+
+        {/* Migration Guide */}
+        {seoContent && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">
+              How to Switch from {tool.name}: Step-by-Step Guide
+            </h2>
+            <ol className="space-y-4">
+              {seoContent.migrationSteps.map((step, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-amber-100 text-amber-700 text-sm font-bold flex items-center justify-center">
+                    {i + 1}
+                  </span>
+                  <span className="text-sm text-slate-700 leading-relaxed pt-0.5">{step}</span>
+                </li>
+              ))}
+            </ol>
+            {seoContent.switchingNarrative && (
+              <div className="mt-6 pt-6 border-t border-slate-100">
+                <p className="text-sm text-slate-600 leading-relaxed italic">
+                  {seoContent.switchingNarrative}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Submit Recommendation */}
         <div className="mb-8">
