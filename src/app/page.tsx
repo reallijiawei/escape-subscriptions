@@ -94,11 +94,11 @@ export default function HomePage() {
           <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8">
             <div className="grid grid-cols-3 gap-6 sm:gap-8">
               <div className="text-center">
-                <p className="text-2xl sm:text-3xl font-bold text-slate-900 font-display">35+</p>
+                <p className="text-2xl sm:text-3xl font-bold text-slate-900 font-display">59+</p>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">Subscriptions to replace</p>
               </div>
               <div className="text-center border-x border-slate-200">
-                <p className="text-2xl sm:text-3xl font-bold text-amber-600 font-display">70+</p>
+                <p className="text-2xl sm:text-3xl font-bold text-amber-600 font-display">123+</p>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">Alternative tools</p>
               </div>
               <div className="text-center">
@@ -220,6 +220,45 @@ export default function HomePage() {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Best Alternatives — SEO internal links */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Best alternatives without subscription</h2>
+            <p className="text-slate-500">Our most popular guides to replacing subscription software.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { tool: 'Adobe Photoshop', slug: 'adobe-photoshop', savings: '$22/mo' },
+              { tool: 'Adobe Acrobat', slug: 'adobe-acrobat', savings: '$13/mo' },
+              { tool: 'Notion', slug: 'notion', savings: '$10/mo' },
+              { tool: 'Canva', slug: 'canva', savings: '$13/mo' },
+              { tool: 'Grammarly', slug: 'grammarly', savings: '$12/mo' },
+              { tool: '1Password', slug: '1password', savings: '$3/mo' },
+              { tool: 'Dropbox', slug: 'dropbox', savings: '$10/mo' },
+              { tool: 'Zoom', slug: 'zoom', savings: '$13/mo' },
+              { tool: 'Figma', slug: 'figma', savings: '$15/mo' },
+              { tool: 'Adobe Premiere Pro', slug: 'adobe-premiere-pro', savings: '$23/mo' },
+              { tool: 'ChatGPT Plus', slug: 'chatgpt-plus', savings: '$20/mo' },
+              { tool: 'AutoCAD', slug: 'autocad', savings: '$235/mo' },
+            ].map((item) => (
+              <Link
+                key={item.slug}
+                href={`/alternatives/${item.slug}`}
+                className="group flex items-center justify-between p-4 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50/30 rounded-xl transition-all"
+              >
+                <span className="text-sm font-semibold text-slate-900 group-hover:text-amber-700 transition-colors">
+                  {item.tool} alternatives
+                </span>
+                <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
+                  Save {item.savings}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
