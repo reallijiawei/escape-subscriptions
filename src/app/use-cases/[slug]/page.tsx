@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import SoftwareCard from '@/components/SoftwareCard';
-import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
+import FAQSection from '@/components/FAQSection';
+import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import { useCases, software, subscriptionTools, getUseCaseBySlug } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -38,6 +39,28 @@ export default async function UseCasePage({ params }: PageProps) {
   const yearlyCost = ucTools.reduce((sum, t) => sum + (t!.monthlyPrice || 0) * 12, 0);
   const threeYearCost = yearlyCost * 3;
 
+  const toolNames = ucTools.map((t) => t!.name).join(', ');
+  const altNames = ucSoftware.slice(0, 3).map((s) => s!.name).join(', ');
+
+  const faqItems = [
+    {
+      question: `What software should ${uc.persona.toLowerCase()} use?`,
+      answer: `${uc.persona} typically need ${toolNames || 'various productivity tools'}. Free and open-source alternatives like ${altNames || 'various tools'} cover the same needs without subscription costs, saving approximately ${formatPrice(yearlyCost)}/year.`,
+    },
+    {
+      question: `Can free software really replace paid subscriptions for ${uc.persona.toLowerCase()}?`,
+      answer: `Yes. The free alternatives listed above are used by millions of ${uc.persona.toLowerCase()} worldwide. They handle the core workflows — ${uc.description.toLowerCase().slice(0, 100)} — without the recurring costs.`,
+    },
+    {
+      question: `How much can ${uc.persona.toLowerCase()} save by switching?`,
+      answer: `By replacing subscription tools with free alternatives, ${uc.persona.toLowerCase()} can save approximately ${formatPrice(yearlyCost)}/year, or ${formatPrice(threeYearCost)} over three years. The savings start immediately with zero upfront cost.`,
+    },
+    {
+      question: `Is it hard to switch from paid to free tools?`,
+      answer: `Most free alternatives support standard file formats and have similar workflows to their paid counterparts. The switch typically takes a few days of adjustment, but most ${uc.persona.toLowerCase()} adapt quickly and prefer the free tools for their simplicity and speed.`,
+    },
+  ];
+
   return (
     <div>
       <JsonLd
@@ -47,6 +70,7 @@ export default async function UseCasePage({ params }: PageProps) {
           { name: uc.persona, url: `/use-cases/${slug}` },
         ])}
       />
+      <JsonLd data={faqSchema(faqItems)} />
 
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
@@ -63,6 +87,13 @@ export default async function UseCasePage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        {/* SEO Intro */}
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+          <p className="text-slate-700 leading-relaxed text-base">
+            {uc.persona} often rely on {toolNames || 'various subscription tools'} for their daily workflow — paying a combined {formatPrice(yearlyCost)}/year in subscription fees. But the open-source and one-time-purchase software ecosystem has matured to the point where free alternatives cover the same functionality. {altNames ? `Tools like ${altNames} provide professional-grade features at zero cost.` : 'Multiple free alternatives exist for each tool.'} This guide shows exactly which subscriptions to replace and what you get with each alternative.
+          </p>
+        </div>
+
         {/* Savings Summary */}
         {yearlyCost > 0 && (
           <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8 animate-fade-in-up">
@@ -129,6 +160,12 @@ export default async function UseCasePage({ params }: PageProps) {
               <SoftwareCard key={sw!.id} software={sw!} showReplaces />
             ))}
           </div>
+        </div>
+
+        {/* FAQ */}
+        <div className="mb-10">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
+          <FAQSection items={faqItems} />
         </div>
 
         {/* CTA */}
