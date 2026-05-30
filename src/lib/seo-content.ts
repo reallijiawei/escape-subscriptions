@@ -12,6 +12,305 @@ export interface SeoContent {
   switchingNarrative: string;
 }
 
+// ── Category-specific content templates ──────────────────────────────
+
+const categoryIntro: Record<string, (name: string, price: number, alts: string, useCases: string) => string> = {
+  DESIGN: (name, price, alts, uc) =>
+    `${name} is a widely used design tool for ${uc}, but at $${price}/month, the subscription cost adds up to $${(price * 12).toFixed(0)}/year and $${(price * 36).toFixed(0)} over three years. ${alts} The design software market has evolved significantly — professional-grade tools are now available as one-time purchases or open-source projects, offering comparable features without the ongoing financial commitment. Whether you need vector editing, raster graphics, UI design, or photo retouching, there is likely a non-subscription alternative that covers your workflow.`,
+  VIDEO_AUDIO: (name, price, alts, uc) =>
+    `${name} is a popular choice for ${uc}, but its $${price}/month subscription totals $${(price * 12).toFixed(0)}/year. ${alts} The video and audio editing space has seen remarkable progress in free and one-time-purchase tools. DaVinci Resolve in particular has become a Hollywood-grade editor available for free, while open-source tools like Audacity and Kdenlive handle most production needs. For content creators and hobbyists, paying monthly for editing software is increasingly hard to justify.`,
+  PRODUCTIVITY: (name, price, alts, uc) =>
+    `${name} helps with ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), many users question whether they need to keep paying. ${alts} Productivity tools are among the most commonly replaced subscription software because the core features — task management, note-taking, organization — have been commoditized. Open-source and local-first alternatives often provide better privacy, faster performance, and no recurring costs.`,
+  WRITING: (name, price, alts, uc) =>
+    `${name} is used for ${uc}, but the $${price}/month subscription may not be justified for everyone. ${alts} Writing tools have matured to the point where free alternatives handle grammar checking, style suggestions, and document editing competently. The key question is whether you need the premium features or if the free tier of an alternative covers your daily writing needs.`,
+  SECURITY: (name, price, alts, uc) =>
+    `${name} provides ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), it competes with free and open-source alternatives that offer the same AES-256 encryption and security standards. ${alts} Security tools follow well-established cryptographic standards — the encryption used by free tools is mathematically identical to what paid tools offer. What you pay for is UX polish and convenience features, not better security.`,
+  STORAGE: (name, price, alts, uc) =>
+    `${name} offers ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), cheaper and more integrated alternatives exist. ${alts} Cloud storage has become a commodity — Google, Microsoft, and Apple all offer generous free tiers, while self-hosted options like Nextcloud provide unlimited storage at the cost of your own hardware.`,
+  BUSINESS: (name, price, alts, uc) =>
+    `${name} is used for ${uc}, but the $${price}/month subscription adds up to $${(price * 12).toFixed(0)}/year per user. ${alts} Business software has traditionally been subscription-heavy, but the open-source ecosystem has matured significantly. Self-hosted alternatives give you full control over your data while eliminating recurring license fees.`,
+  AI_TOOLS: (name, price, alts, uc) =>
+    `${name} helps with ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), the costs add up quickly. ${alts} The AI tools landscape is evolving rapidly — local and open-source models are catching up to cloud-based services, and self-hosted options give you privacy and cost control. For many tasks, running a local model is free and produces comparable results.`,
+  DEVELOPER_TOOLS: (name, price, alts, uc) =>
+    `${name} is used for ${uc}, but the $${price}/month subscription may not be necessary. ${alts} The developer tools ecosystem has a strong tradition of open-source alternatives. Many developers find that free tools cover their needs, and self-hosted options provide better integration with existing workflows.`,
+  EDUCATION: (name, price, alts, uc) =>
+    `${name} is popular for ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), free alternatives can deliver similar results. ${alts} Education tools have seen significant growth in open-source offerings, with many providing the same core features at no cost.`,
+  ENTERTAINMENT: (name, price, alts, uc) =>
+    `${name} is used for ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), the costs add up. ${alts} The entertainment software space has seen a proliferation of free and self-hosted alternatives that give you more control over your media and data.`,
+  PRESENTATION: (name, price, alts, uc) =>
+    `${name} helps with ${uc}, but the $${price}/month subscription adds up. ${alts} Presentation tools have been commoditized — Google Slides, LibreOffice Impress, and open-source alternatives handle the same use cases for free. The main differentiator is template libraries, which are available from many free sources.`,
+  SCREEN_RECORDING: (name, price, alts, uc) =>
+    `${name} is used for ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), free alternatives like OBS Studio and Screenity handle the same tasks. ${alts} Screen recording technology is mature and well-served by open-source tools that offer professional-grade features at no cost.`,
+  VPN: (name, price, alts, uc) =>
+    `${name} provides ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), open-source VPN solutions offer the same encryption standards. ${alts} VPN technology is based on well-established protocols (WireGuard, OpenVPN) that are free and open-source. Self-hosted VPN servers give you maximum privacy at minimal cost.`,
+  CRM: (name, price, alts, uc) =>
+    `${name} is used for ${uc}, but at $${price}/month per user, costs scale quickly with team size. ${alts} Open-source CRM platforms have matured significantly, offering comparable features with self-hosting options that eliminate per-user pricing.`,
+  E_COMMERCE: (name, price, alts, uc) =>
+    `${name} powers ${uc}, but at $${price}/month plus transaction fees, the costs eat into margins. ${alts} Open-source e-commerce platforms like WooCommerce give you full control over your store with no monthly fees beyond hosting.`,
+  FORMS: (name, price, alts, uc) =>
+    `${name} is used for ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year), open-source form builders offer the same functionality. ${alts} Form builders have become commoditized — the core features (conditional logic, integrations, analytics) are available in free and self-hosted alternatives.`,
+  CAD: (name, price, alts, uc) =>
+    `${name} is used for ${uc}, but at $${price}/month ($${(price * 12).toFixed(0)}/year — one of the most expensive subscriptions in software), free CAD alternatives have improved dramatically. ${alts} FreeCAD and other open-source CAD tools now handle most 2D drafting and 3D modeling tasks that professionals need.`,
+};
+
+const categoryFeatures: Record<string, string[]> = {
+  DESIGN: ['Layer-based editing', 'Vector and raster support', 'Color management (CMYK, RGB)', 'Export formats (PNG, SVG, PDF)', 'Template library', 'Plugin or extension support', 'Batch processing', 'Cloud sync and collaboration'],
+  VIDEO_AUDIO: ['Multi-track timeline editing', 'Color grading tools', 'Audio mixing and effects', 'Export presets and formats', 'Motion graphics support', 'Multi-cam editing', 'Proxy workflow', 'Plugin support'],
+  PRODUCTIVITY: ['Task and project management', 'Note-taking and documentation', 'Calendar integration', 'Collaboration features', 'Mobile app availability', 'Offline access', 'API and integrations', 'Data export and portability'],
+  WRITING: ['Grammar and spelling check', 'Style and tone suggestions', 'Plagiarism detection', 'Browser extension', 'Document format support', 'Offline mode', 'Team collaboration', 'Multi-language support'],
+  SECURITY: ['AES-256 encryption', 'Zero-knowledge architecture', 'Two-factor authentication', 'Cross-platform sync', 'Browser autofill', 'Secure sharing', 'Password generation', 'Audit logging'],
+  STORAGE: ['File sync across devices', 'File sharing and permissions', 'Version history', 'Selective sync', 'Offline access', 'End-to-end encryption', 'Third-party integrations', 'Mobile apps'],
+  BUSINESS: ['Contact and lead management', 'Pipeline tracking', 'Reporting and analytics', 'Email integration', 'Automation workflows', 'API access', 'Mobile app', 'Team collaboration'],
+  AI_TOOLS: ['Response quality', 'Context window size', 'Local/offline processing', 'API access', 'Custom model support', 'Privacy and data handling', 'Integration options', 'Cost per query'],
+  DEVELOPER_TOOLS: ['Code completion accuracy', 'Language support', 'IDE integration', 'API access', 'Self-hosting options', 'Privacy and data handling', 'Performance', 'Extension ecosystem'],
+  EDUCATION: ['Spaced repetition', 'Progress tracking', 'Content library', 'Offline access', 'Mobile app', 'Custom content creation', 'Community features', 'Multi-language support'],
+  ENTERTAINMENT: ['Content library', 'Streaming quality', 'Offline access', 'Device support', 'Recommendation engine', 'Parental controls', 'Ad-free experience', 'Multi-user support'],
+  PRESENTATION: ['Template library', 'Animation and transitions', 'Collaboration features', 'Export formats', 'Speaker notes', 'Embed support', 'Mobile presenting', 'Offline access'],
+  SCREEN_RECORDING: ['Screen capture quality', 'Audio recording', 'Annotation tools', 'Export formats', 'Editing capabilities', 'Sharing options', 'Webcam overlay', 'Scheduled recording'],
+  VPN: ['Encryption protocol', 'Server locations', 'No-log policy', 'Speed and performance', 'Device support', 'Kill switch', 'Split tunneling', 'Simultaneous connections'],
+  CRM: ['Contact management', 'Deal pipeline', 'Email integration', 'Reporting', 'Automation', 'API access', 'Mobile app', 'Customization'],
+  E_COMMERCE: ['Product management', 'Payment processing', 'Shipping integration', 'Theme customization', 'SEO tools', 'Analytics', 'App marketplace', 'Multi-channel selling'],
+  FORMS: ['Conditional logic', 'Response validation', 'Integration options', 'Analytics', 'Custom branding', 'File uploads', 'Payment collection', 'Multi-page forms'],
+  CAD: ['2D drafting tools', '3D modeling', 'File format support', 'Parametric design', 'Assembly management', 'Rendering', 'Simulation tools', 'Plugin support'],
+};
+
+const categoryMigration: Record<string, (name: string) => string[]> = {
+  DESIGN: (name) => [
+    `Export your ${name} projects — save as SVG, PSD, or PDF depending on the alternative's import support`,
+    `Identify your core workflows — list the design tasks you do most and verify your alternative supports them`,
+    `Try the free alternative first — test with a real project to find compatibility gaps early`,
+    `Migrate brushes and assets — most tools support importing custom brushes, fonts, and color palettes`,
+    `Rebuild templates — recreate your most-used templates in the new tool for ongoing work`,
+    `Test export quality — compare output files at different resolutions and formats`,
+  ],
+  VIDEO_AUDIO: (name) => [
+    `Export your ${name} project files — check if the alternative can import them or if you need to re-edit`,
+    `Test with a short project first — edit a 2-3 minute video to learn the new timeline and tools`,
+    `Recreate export presets — set up your preferred resolution, codec, and quality settings`,
+    `Migrate media assets — organize and transfer your stock footage, music, and sound effects`,
+    `Learn the color grading tools — this is often the biggest workflow change when switching video editors`,
+    `Check GPU requirements — some alternatives (like DaVinci Resolve) are more GPU-intensive`,
+  ],
+  PRODUCTIVITY: (name) => [
+    `Export your ${name} data — most tools support CSV or Markdown export from settings`,
+    `Choose your migration target — pick based on your primary use case (notes, tasks, or project management)`,
+    `Import your data — most alternatives support direct import from ${name} or standard formats`,
+    `Rebuild your organizational structure — recreate folders, tags, and categories in the new tool`,
+    `Set up integrations — reconnect calendar, email, and other tools you use daily`,
+    `Test for a full workweek — use only the new tool to discover workflow gaps`,
+  ],
+  WRITING: (name) => [
+    `Test the free tier of your chosen alternative — most grammar tools have generous free plans`,
+    `Install the browser extension — verify it works in your email client, docs tool, and CMS`,
+    `Compare suggestions on a real document — run the same text through both tools to compare quality`,
+    `Check language support — if you write in multiple languages, verify the alternative supports them`,
+    `Migrate custom dictionaries — export your personal dictionary and import it into the new tool`,
+  ],
+  SECURITY: (name) => [
+    `Export your ${name} vault — use the CSV export feature from settings`,
+    `Import into your new password manager — most tools support direct CSV import`,
+    `Verify all entries transferred — check that passwords, notes, and TOTP codes imported correctly`,
+    `Install the new browser extension — set up autofill for your most-visited sites`,
+    `Test login flow on key sites — verify autofill works on your most important accounts`,
+    `Delete the export file — CSV files contain plain text passwords and should be securely deleted`,
+  ],
+  STORAGE: (name) => [
+    `Choose your destination — Google Drive (free 15GB), OneDrive (1TB with M365), or self-hosted (Nextcloud)`,
+    `Use a migration tool — rclone or Multcloud can transfer files between cloud services`,
+    `Start with active projects — don't try to move everything at once; prioritize what you use daily`,
+    `Update shared links — set up sharing workflows in the new service`,
+    `Configure selective sync — choose which folders sync to each device`,
+    `Update app integrations — reconfigure any apps that connect to ${name}`,
+  ],
+  BUSINESS: (name) => [
+    `Export your ${name} data — contacts, deals, and activity logs in CSV format`,
+    `Choose an alternative that matches your team size — some tools scale better than others`,
+    `Import your data — most CRM alternatives support direct import from ${name}`,
+    `Recreate your pipeline stages — set up deal stages and automation rules`,
+    `Train your team — schedule a walkthrough of the new tool before fully switching`,
+    `Run parallel for 2 weeks — keep both tools active during the transition to catch issues`,
+  ],
+  AI_TOOLS: (name) => [
+    `Identify your primary use cases — chat, coding, writing, or research?`,
+    `Try local models first — Ollama and similar tools let you run AI models for free on your hardware`,
+    `Compare output quality — test the same prompts across alternatives to find the best fit`,
+    `Check API availability — if you use AI in your workflow, verify the alternative has an API`,
+    `Evaluate privacy implications — local models keep your data on your machine`,
+  ],
+  DEVELOPER_TOOLS: (name) => [
+    `Test the alternative in your actual development workflow — don't just try demo features`,
+    `Check IDE integration — verify the tool works with your editor (VS Code, JetBrains, etc.)`,
+    `Compare accuracy on your codebase — test with your real code, not sample snippets`,
+    `Evaluate self-hosting options — for privacy-sensitive code, local processing matters`,
+    `Check language support — verify your primary programming languages are well-supported`,
+  ],
+  EDUCATION: (name) => [
+    `Export your ${name} data — decks, progress, and custom content`,
+    `Import into the alternative — most tools support Anki deck format as a standard`,
+    `Test the spaced repetition algorithm — different tools use different scheduling approaches`,
+    `Rebuild your study routine — give yourself 2 weeks to adjust to the new interface`,
+  ],
+  ENTERTAINMENT: (name) => [
+    `Identify what you actually watch — most people use a fraction of their streaming library`,
+    `Try free alternatives first — many have ad-supported free tiers`,
+    `Check device support — verify the alternative works on your TV, phone, and tablet`,
+    `Consider self-hosting — Jellyfin and Plex give you a Netflix-like experience with your own media`,
+  ],
+  PRESENTATION: (name) => [
+    `Export your ${name} presentations — save as PPTX or PDF for maximum compatibility`,
+    `Try Google Slides first — it's free and handles most presentation needs`,
+    `Rebuild your master slides — set up your brand colors, fonts, and layouts in the new tool`,
+    `Test presenter mode — verify speaker notes and timer work correctly`,
+  ],
+  SCREEN_RECORDING: (name) => [
+    `Install OBS Studio (free) — it's the industry standard for screen recording`,
+    `Test recording quality — record a sample at your preferred resolution and frame rate`,
+    `Set up scenes and sources — configure your webcam overlay, screen capture, and audio inputs`,
+    `Learn the editing basics — trim, cut, and add annotations in the built-in editor`,
+  ],
+  VPN: (name) => [
+    `Choose your alternative — WireGuard (self-hosted) or Proton VPN (free tier) are top options`,
+    `Test connection speed — compare download/upload speeds between your current and new VPN`,
+    `Verify no-log policy — if privacy matters, check the alternative's audit history`,
+    `Set up on all devices — install the client on your phone, laptop, and router if needed`,
+  ],
+  CRM: (name) => [
+    `Export your ${name} data — contacts, deals, and notes in CSV format`,
+    `Import into the new CRM — most alternatives support direct import`,
+    `Recreate your pipeline — set up deal stages and automation rules`,
+    `Train your team — schedule a walkthrough before switching`,
+  ],
+  E_COMMERCE: (name) => [
+    `Export your product catalog — images, descriptions, and pricing in CSV`,
+    `Set up the new platform — install WooCommerce or similar on your hosting`,
+    `Import products — use the import tool to bulk-add your catalog`,
+    `Configure payment processing — set up Stripe, PayPal, or your preferred gateway`,
+    `Test the checkout flow — place test orders to verify everything works`,
+    `Redirect old URLs — set up 301 redirects to preserve SEO`,
+  ],
+  FORMS: (name) => [
+    `Recreate your forms — rebuild the most important forms in the new tool`,
+    `Test conditional logic — verify complex form flows work correctly`,
+    `Update embed codes — replace ${name} embeds on your website`,
+    `Set up integrations — reconnect email, Slack, and spreadsheet integrations`,
+  ],
+  CAD: (name) => [
+    `Install FreeCAD or LibreCAD — both are free and handle most drafting tasks`,
+    `Import your existing files — check DXF/DWG import quality`,
+    `Test parametric modeling — verify the alternative handles your design patterns`,
+    `Learn the new shortcuts — CAD tools rely heavily on keyboard shortcuts`,
+    `Check file format compatibility — verify you can export to formats your collaborators use`,
+  ],
+};
+
+// ── Generator function ──────────────────────────────────────────────
+
+import { subscriptionTools, software, alternativeRelations } from '@/lib/data';
+
+function generateSeoContent(toolId: string): SeoContent | undefined {
+  const tool = subscriptionTools.find((t) => t.id === toolId);
+  if (!tool) return undefined;
+
+  const rels = alternativeRelations
+    .filter((r) => r.subscriptionToolId === toolId)
+    .sort((a, b) => a.recommendationRank - b.recommendationRank);
+
+  if (rels.length === 0) return undefined;
+
+  const altsWithSoftware = rels
+    .map((r) => {
+      const sw = software.find((s) => s.id === r.softwareId);
+      return sw ? { relation: r, software: sw } : null;
+    })
+    .filter(Boolean) as { relation: any; software: any }[];
+
+  if (altsWithSoftware.length === 0) return undefined;
+
+  const price = tool.monthlyPrice || 0;
+  const yearlyCost = price * 12;
+  const threeYearCost = price * 36;
+  const category = tool.category;
+
+  // Build alt names string
+  const topAlts = altsWithSoftware.slice(0, 3);
+  const altNames = topAlts.map((a) => a.software.name);
+  const altString =
+    altNames.length === 1
+      ? `${altNames[0]} is a strong alternative that handles most of the same tasks.`
+      : altNames.length === 2
+        ? `${altNames[0]} and ${altNames[1]} are strong alternatives that handle most of the same tasks.`
+        : `${altNames[0]}, ${altNames[1]}, and ${altNames[2]} are all strong alternatives that handle most of the same tasks.`;
+
+  const useCases = tool.commonUseCases?.join(', ').toLowerCase() || 'similar tasks';
+
+  // Intro
+  const introFn = categoryIntro[category] || categoryIntro['PRODUCTIVITY'];
+  const detailedIntro = introFn(tool.name, price, altString, useCases);
+
+  // Migration steps
+  const migFn = categoryMigration[category] || categoryMigration['PRODUCTIVITY'];
+  const migrationSteps = migFn(tool.name);
+
+  // Key features
+  const keyFeatures = categoryFeatures[category] || categoryFeatures['PRODUCTIVITY'];
+
+  // FAQ
+  const bestAlt = altsWithSoftware[0];
+  const freeAlt = altsWithSoftware.find(
+    (a) => a.software.pricingType === 'FREE' || a.software.pricingType === 'OPEN_SOURCE'
+  );
+  const paidAlt = altsWithSoftware.find((a) => a.software.startingPrice && a.software.startingPrice > 0);
+
+  const extendedFaq = [
+    {
+      question: `What is the best free alternative to ${tool.name}?`,
+      answer: freeAlt
+        ? `${freeAlt.software.name} is the best free alternative. It's ${freeAlt.software.isOpenSource ? 'open-source and ' : ''}available on ${freeAlt.software.platforms.slice(0, 3).join(', ')} and handles most of what ${tool.name} does.`
+        : `While most alternatives to ${tool.name} have a cost, some offer generous free tiers. ${bestAlt.software.name} is the top recommended alternative overall.`,
+    },
+    {
+      question: `What is the best one-time purchase alternative to ${tool.name}?`,
+      answer: paidAlt
+        ? `${paidAlt.software.name} is a popular one-time purchase alternative at around $${paidAlt.software.startingPrice}. You pay once and own it forever — no monthly fees.`
+        : `Several alternatives to ${tool.name} offer one-time purchase options. Check our comparison table above for current pricing details.`,
+    },
+    {
+      question: `Can I switch from ${tool.name} without losing my data?`,
+      answer: `Yes. Most ${tool.name} data can be exported in standard formats (CSV, PDF, or native format) and imported into the alternative. The migration difficulty varies — some switches are seamless while others require manual reorganization. See our step-by-step migration guide above.`,
+    },
+    {
+      question: `How much money can I save by switching from ${tool.name}?`,
+      answer: `${tool.name} costs $${price}/month, which is $${yearlyCost.toFixed(0)}/year and $${threeYearCost.toFixed(0)} over three years. ${bestAlt?.software.startingPrice ? `${bestAlt.software.name} costs $${bestAlt.software.startingPrice} one-time — saving you over $${(threeYearCost - bestAlt.software.startingPrice).toFixed(0)} in three years.` : `${bestAlt.software.name} is free, saving you the full $${threeYearCost.toFixed(0)}.`}`,
+    },
+    {
+      question: `Is ${tool.name} worth the subscription?`,
+      answer: `It depends on your usage. If you use ${tool.name} daily for professional work and rely on features no alternative offers, the subscription may be justified. But most users find that ${topAlts.length > 0 ? altNames[0] : 'free alternatives'} covers 80-90% of their needs at a fraction of the cost — or for free.`,
+    },
+    {
+      question: `What are the downsides of switching from ${tool.name}?`,
+      answer: `The main challenges are: learning a new interface, potential feature gaps for niche workflows, and migrating existing projects. However, most users adapt within 1-2 weeks, and the cost savings typically outweigh the transition effort.`,
+    },
+    {
+      question: `Are there open-source alternatives to ${tool.name}?`,
+      answer: freeAlt?.software.isOpenSource
+        ? `Yes. ${freeAlt.software.name} is a popular open-source alternative. Being open-source means the code is publicly auditable, community-driven, and free to use. You can self-host it for maximum control over your data.`
+        : `Some alternatives have open-source components. Check our comparison table above for details on each tool's licensing model.`,
+    },
+  ];
+
+  // Switching narrative
+  const switchingNarrative = `The biggest barrier to switching from ${tool.name} is habit, not capability. Most users find that ${bestAlt.software.name} handles their daily workflow after a short adjustment period. The financial benefit is immediate: you stop paying $${price}/month from day one.`;
+
+  return {
+    toolId,
+    detailedIntro,
+    migrationSteps,
+    extendedFaq,
+    keyFeatures,
+    switchingNarrative,
+  };
+}
+
 const seoContentMap: Record<string, SeoContent> = {
   'adobe-photoshop': {
     toolId: 'adobe-photoshop',
@@ -508,11 +807,11 @@ const seoContentMap: Record<string, SeoContent> = {
 
 /**
  * Get SEO content for a specific tool.
- * Returns undefined if no enriched content exists (non-top-10 tools).
+ * Returns hand-written content for top 10 tools, or auto-generated content for all others.
  */
 export function getSeoContent(toolId: string): SeoContent | undefined {
-  return seoContentMap[toolId];
+  return seoContentMap[toolId] || generateSeoContent(toolId);
 }
 
-/** All tool IDs that have enriched SEO content */
+/** All tool IDs that have enriched SEO content (hand-written) */
 export const enrichedToolIds = Object.keys(seoContentMap);
