@@ -10,6 +10,7 @@ import {
   getOpenSourceAlternativesForTool,
   getSoftwareForAlternative,
 } from '@/lib/data';
+import { getSeoContent } from '@/lib/seo-content';
 import { formatPrice, formatDate } from '@/lib/utils';
 
 interface PageProps {
@@ -68,6 +69,8 @@ export default async function OpenSourceAlternativesPage({ params }: PageProps) 
   const lastChecked = alternatives.reduce((latest, a) => {
     return a.software.lastCheckedAt > latest ? a.software.lastCheckedAt : latest;
   }, alternatives[0]?.software.lastCheckedAt || '');
+
+  const seoContent = getSeoContent(tool.id);
 
   const faqItems = [
     {
@@ -138,6 +141,18 @@ export default async function OpenSourceAlternativesPage({ params }: PageProps) 
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        {/* SEO Intro */}
+        {seoContent && (
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+            <p className="text-slate-700 leading-relaxed text-base">
+              {seoContent.detailedIntro}
+            </p>
+            <p className="mt-4 text-sm text-slate-600">
+              Open-source alternatives give you something subscription software never can: the ability to inspect, modify, and self-host the code. This means full transparency, no vendor lock-in, and the freedom to run the software on your own terms. The following open-source alternatives have been evaluated for features, community health, and long-term viability.
+            </p>
+          </div>
+        )}
+
         {/* Savings Highlight */}
         <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8 animate-fade-in-up">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Why Open Source?</h2>
