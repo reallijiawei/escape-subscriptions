@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import ComparisonTable from '@/components/ComparisonTable';
 import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
+import FAQSection from '@/components/FAQSection';
 import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import { getAllComparisons, getComparisonBySlug } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
@@ -57,6 +58,38 @@ export default async function ComparePage({ params }: PageProps) {
   const yearlyCost = (subscriptionTool.monthlyPrice || 0) * 12;
   const threeYearCost = yearlyCost * 3;
 
+  const isFree = software.pricingType === 'FREE' || software.pricingType === 'OPEN_SOURCE';
+  const isOss = software.isOpenSource;
+
+  const faqItems = [
+    {
+      question: `Is ${software.name} a good alternative to ${subscriptionTool.name}?`,
+      answer: `Yes, ${software.name} is a solid alternative to ${subscriptionTool.name}. It offers ${isFree ? 'free access' : software.pricingType === 'FREEMIUM' ? 'a free tier' : 'a one-time purchase'} with ${isOss ? 'open source code' : 'professional features'}, making it a great choice for users looking to escape subscriptions. ${software.name} handles the core functionality that most ${subscriptionTool.name} users rely on daily.`,
+    },
+    {
+      question: `How much can I save by switching from ${subscriptionTool.name} to ${software.name}?`,
+      answer: `Switching from ${subscriptionTool.name} (${formatPrice(yearlyCost)}/year) to ${software.name} (${software.priceText || 'free'}) can save you approximately ${formatPrice(yearlyCost)} per year, or ${formatPrice(threeYearCost)} over three years. ${software.startingPrice ? `After the one-time $${software.startingPrice} purchase, all savings are pure profit.` : 'The savings start immediately with zero upfront cost.'}`,
+    },
+    {
+      question: `What do I lose by switching from ${subscriptionTool.name} to ${software.name}?`,
+      answer: `The main trade-offs include: ${relation.whatYouLose.slice(0, 3).join(', ')}. However, ${software.name} still covers the core functionality most users need. The gaps are typically in advanced features and ecosystem integrations, not daily-use capabilities.`,
+    },
+    {
+      question: `Can I migrate my data from ${subscriptionTool.name} to ${software.name}?`,
+      answer: `Yes. Most ${subscriptionTool.name} data can be exported in standard formats (CSV, PDF, or native format) and imported into ${software.name}. The migration difficulty is rated as ${relation.migrationDifficulty.toLowerCase()}, so ${relation.migrationDifficulty === 'EASY' ? 'it should be straightforward' : relation.migrationDifficulty === 'MEDIUM' ? 'it may take some effort' : 'plan for a more involved transition'}.`,
+    },
+    {
+      question: `Is ${software.name} ${isFree ? 'really free' : 'a one-time purchase'}?`,
+      answer: isFree
+        ? `Yes, ${software.name} is completely free to use${isOss ? ' and open-source' : ''}. There are no hidden costs, no premium tiers, and no feature restrictions for core functionality.`
+        : `Yes, ${software.name} costs ${software.priceText || 'a one-time fee'}. You pay once and own it forever — no monthly or annual subscription fees.`,
+    },
+    {
+      question: `Does ${software.name} work on the same platforms as ${subscriptionTool.name}?`,
+      answer: `${software.name} is available on ${software.platforms.join(', ').replace(/_/g, ' ').toLowerCase()}. ${software.platforms.length >= 3 ? 'This covers all major platforms, so you can use it on all your devices.' : 'Check the official website for the most up-to-date platform support.'}`,
+    },
+  ];
+
   return (
     <div>
       <JsonLd
@@ -66,22 +99,7 @@ export default async function ComparePage({ params }: PageProps) {
           { name: `${software.name} vs ${subscriptionTool.name}`, url: `/compare/${slug}` },
         ])}
       />
-      <JsonLd
-        data={faqSchema([
-          {
-            question: `Is ${software.name} a good alternative to ${subscriptionTool.name}?`,
-            answer: `Yes, ${software.name} is a solid alternative to ${subscriptionTool.name}. It offers ${software.pricingType === 'FREE' ? 'free access' : software.pricingType === 'FREEMIUM' ? 'a free tier' : 'a one-time purchase'} with ${software.isOpenSource ? 'open source code' : 'professional features'}, making it a great choice for users looking to escape subscriptions.`,
-          },
-          {
-            question: `How much can I save by switching from ${subscriptionTool.name} to ${software.name}?`,
-            answer: `Switching from ${subscriptionTool.name} (${formatPrice(yearlyCost)}/year) to ${software.name} (${software.priceText || 'free'}) can save you approximately ${formatPrice(yearlyCost)} per year, or ${formatPrice(threeYearCost)} over three years.`,
-          },
-          {
-            question: `What do I lose by switching from ${subscriptionTool.name} to ${software.name}?`,
-            answer: `The main trade-offs include: ${relation.whatYouLose.slice(0, 3).join(', ')}. However, ${software.name} still covers the core functionality most users need.`,
-          },
-        ])}
-      />
+      <JsonLd data={faqSchema(faqItems)} />
 
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
@@ -105,6 +123,13 @@ export default async function ComparePage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        {/* Detailed Comparison Intro */}
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+          <p className="text-slate-700 leading-relaxed text-base">
+            {software.name} and {subscriptionTool.name} both serve {subscriptionTool.commonUseCases?.slice(0, 2).join(' and ').toLowerCase() || 'similar purposes'}, but they differ fundamentally in pricing and ownership. {subscriptionTool.name} costs {formatPrice(subscriptionTool.monthlyPrice || 0)}/month ({formatPrice(yearlyCost)}/year), while {software.name} is {isFree ? 'completely free' : `available for ${software.priceText || 'a one-time purchase'}`}. {isOss ? `As an open-source tool, ${software.name}'s code is publicly auditable and community-driven.` : `${software.name} offers professional features without ongoing fees.`} This comparison breaks down exactly what you gain, what you lose, and whether switching makes sense for your workflow.
+          </p>
+        </div>
+
         {/* Quick Verdict */}
         <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8 animate-fade-in-up">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Quick Verdict</h2>
@@ -211,6 +236,12 @@ export default async function ComparePage({ params }: PageProps) {
               </ul>
             </div>
           </div>
+        </div>
+
+        {/* FAQ */}
+        <div className="mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
+          <FAQSection items={faqItems} />
         </div>
 
         {/* CTA */}
