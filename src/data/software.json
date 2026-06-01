@@ -5,9 +5,9 @@
     "slug": "affinity-photo",
     "description": "A professional photo editing tool, now free under Canva ownership. Previously a one-time purchase.",
     "websiteUrl": "https://affinity.serif.com/photo/",
-    "pricingType": "FREE",
-    "priceText": "Free",
-    "startingPrice": 0,
+    "pricingType": "ONE_TIME_PURCHASE",
+    "priceText": "One-time purchase, typically $54.99",
+    "startingPrice": 54.99,
     "currency": "USD",
     "platforms": [
       "WINDOWS",
@@ -43,7 +43,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "gimp",
@@ -89,7 +89,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "krita",
@@ -136,7 +136,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "photopea",
@@ -180,7 +180,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "pixelmator-pro",
@@ -225,7 +225,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "affinity-designer",
@@ -273,7 +273,7 @@
       "canva"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "inkscape",
@@ -319,7 +319,7 @@
       "adobe-illustrator"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "obsidian",
@@ -369,7 +369,7 @@
       "evernote"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "logseq",
@@ -418,7 +418,7 @@
       "notion"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "anytype",
@@ -427,7 +427,7 @@
     "description": "A local-first, peer-to-peer knowledge graph and note-taking app.",
     "websiteUrl": "https://anytype.io/",
     "pricingType": "FREEMIUM",
-    "priceText": "Free with paid sync plans",
+    "priceText": "Free to start",
     "startingPrice": 0,
     "currency": "USD",
     "platforms": [
@@ -466,7 +466,7 @@
       "notion"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "joplin",
@@ -515,7 +515,7 @@
       "evernote"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "standard-notes",
@@ -564,7 +564,7 @@
       "evernote"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "super-productivity",
@@ -614,7 +614,7 @@
       "asana"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "languagetool",
@@ -660,7 +660,7 @@
       "grammarly"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "libreoffice",
@@ -708,7 +708,7 @@
       "microsoft-365"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "scrivener",
@@ -754,7 +754,7 @@
       "notion"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "typora",
@@ -800,7 +800,7 @@
       "notion"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "keepassxc",
@@ -847,7 +847,7 @@
       "lastpass-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "bitwarden",
@@ -897,7 +897,7 @@
       "lastpass-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "ente-auth",
@@ -946,7 +946,7 @@
       "1password"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "syncthing",
@@ -994,7 +994,7 @@
       "google-drive"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "nextcloud",
@@ -1046,7 +1046,7 @@
       "icloud-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "pcloud",
@@ -1095,7 +1095,7 @@
       "icloud-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "mega",
@@ -1143,7 +1143,7 @@
       "icloud-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "davinci-resolve",
@@ -1189,7 +1189,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "kdenlive",
@@ -1235,7 +1235,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "shotcut",
@@ -1281,7 +1281,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "audacity",
@@ -1327,7 +1327,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "reaper",
@@ -1373,7 +1373,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "gnucash",
@@ -1419,7 +1419,7 @@
       "quickbooks"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "akaunting",
@@ -1464,7 +1464,7 @@
       "quickbooks"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "penpot",
@@ -1511,7 +1511,7 @@
       "sketch"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "figma-alternative",
@@ -1520,7 +1520,7 @@
     "description": "Figma's free tier with limited projects but full design features.",
     "websiteUrl": "https://www.figma.com/",
     "pricingType": "FREEMIUM",
-    "priceText": "Free for 3 projects",
+    "priceText": "Free for up to 3 collaborative files",
     "startingPrice": 0,
     "currency": "USD",
     "platforms": [
@@ -1557,7 +1557,7 @@
       "sketch"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "signal",
@@ -1604,7 +1604,7 @@
       "slack"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "jitsi-meet",
@@ -1654,7 +1654,7 @@
       "zoom"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "planka",
@@ -1699,7 +1699,7 @@
       "trello"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "vikunja",
@@ -1748,7 +1748,7 @@
       "asana"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "calendso",
@@ -1798,7 +1798,7 @@
       "calendly"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "zoho-mail",
@@ -1845,7 +1845,7 @@
       "microsoft-365"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-22"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "ollama",
@@ -1853,8 +1853,8 @@
     "slug": "ollama",
     "description": "Run large language models locally on your own machine. Free, open-source, and privacy-focused.",
     "websiteUrl": "https://ollama.com/",
-    "pricingType": "OPEN_SOURCE",
-    "priceText": "Free",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free local, cloud subscriptions from $20/month",
     "startingPrice": 0,
     "currency": "USD",
     "platforms": [
@@ -1891,7 +1891,7 @@
       "chatgpt-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "lm-studio",
@@ -1937,7 +1937,7 @@
       "chatgpt-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "huggingchat",
@@ -1981,7 +1981,7 @@
       "chatgpt-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "windsurf",
@@ -2027,7 +2027,7 @@
       "github-copilot"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "continue",
@@ -2035,9 +2035,9 @@
     "slug": "continue",
     "description": "An open-source AI code assistant that works with any LLM, running locally or in the cloud.",
     "websiteUrl": "https://continue.dev/",
-    "pricingType": "OPEN_SOURCE",
-    "priceText": "Free",
-    "startingPrice": 0,
+    "pricingType": "SUBSCRIPTION",
+    "priceText": "Subscription",
+    "startingPrice": null,
     "currency": "USD",
     "platforms": [
       "WINDOWS",
@@ -2047,8 +2047,8 @@
     "categories": [
       "DEVELOPER_TOOLS"
     ],
-    "isOpenSource": true,
-    "isOfflineSupported": true,
+    "isOpenSource": false,
+    "isOfflineSupported": false,
     "requiresAccount": false,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
@@ -2073,7 +2073,7 @@
       "github-copilot"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "navidrome",
@@ -2120,7 +2120,7 @@
       "spotify-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "jellyfin",
@@ -2169,7 +2169,7 @@
       "netflix"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "plex",
@@ -2219,7 +2219,7 @@
       "netflix"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "anki",
@@ -2268,7 +2268,7 @@
       "duolingo-super"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "listmonk",
@@ -2315,7 +2315,7 @@
       "mailchimp"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "buttondown",
@@ -2359,7 +2359,7 @@
       "mailchimp"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "railway",
@@ -2403,7 +2403,7 @@
       "heroku"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "fly-io",
@@ -2447,7 +2447,7 @@
       "heroku"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "render",
@@ -2491,7 +2491,7 @@
       "heroku"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-24"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "darktable",
@@ -2537,7 +2537,7 @@
       "adobe-lightroom"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-25"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "rawtherapee",
@@ -2583,7 +2583,7 @@
       "adobe-lightroom"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-25"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "lunacy",
@@ -2629,7 +2629,7 @@
       "sketch"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-25"
+    "lastCheckedAt": "2026-06-01"
   },
   {
     "id": "n8n-community",
