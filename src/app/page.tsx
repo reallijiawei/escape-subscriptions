@@ -137,11 +137,11 @@ export default function HomePage() {
           <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8">
             <div className="grid grid-cols-3 gap-6 sm:gap-8">
               <div className="text-center">
-                <p className="text-2xl sm:text-3xl font-bold text-slate-900 font-display">59+</p>
+                <p className="text-2xl sm:text-3xl font-bold text-slate-900 font-display">{subscriptionTools.length}+</p>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">Subscriptions to replace</p>
               </div>
               <div className="text-center border-x border-slate-200">
-                <p className="text-2xl sm:text-3xl font-bold text-amber-600 font-display">123+</p>
+                <p className="text-2xl sm:text-3xl font-bold text-amber-600 font-display">{software.length}+</p>
                 <p className="text-xs sm:text-sm text-slate-500 mt-1">Alternative tools</p>
               </div>
               <div className="text-center">
@@ -165,7 +165,7 @@ export default function HomePage() {
               {
                 step: '1',
                 title: 'Find your subscription',
-                desc: 'Search for the tool you\'re paying for — Photoshop, Notion, 1Password, or any of 59+ subscription tools.',
+                desc: `Search for the tool you're paying for — Photoshop, Notion, 1Password, or any of ${subscriptionTools.length}+ subscription tools.`,
                 icon: '🔍',
               },
               {
@@ -208,14 +208,14 @@ export default function HomePage() {
                 desc: 'The typical user spends $500+ per year on software subscriptions they could replace with one-time purchases.',
               },
               {
-                stat: '59+',
+                stat: `${subscriptionTools.length}+`,
                 title: 'Subscription tools tracked',
-                desc: 'We monitor pricing and features for 59+ popular subscription tools and find the best alternatives for each.',
+                desc: `We monitor pricing and features for ${subscriptionTools.length}+ popular subscription tools and find the best alternatives for each.`,
               },
               {
-                stat: '123+',
+                stat: `${software.length}+`,
                 title: 'Alternatives available',
-                desc: 'Free, open-source, and one-time purchase alternatives that cover the same functionality as subscription tools.',
+                desc: `Free, open-source, and one-time purchase alternatives that cover the same functionality as subscription tools.`,
               },
             ].map((item) => (
               <div key={item.title} className="text-center p-6 bg-white rounded-2xl border border-slate-200">

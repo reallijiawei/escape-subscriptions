@@ -278,7 +278,7 @@ export default async function SoftwarePage({ params }: PageProps) {
             <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">How to Switch to {sw.name}</h2>
             <ol className="space-y-4">
               {[
-                { step: '1', title: 'Export your data', desc: `Export your data from ${replacesTools.map((t) => t!.name).join(' or ')} in CSV, PDF, or native format.` },
+                { step: '1', title: 'Export your data', desc: `Export your data from your current tool in CSV, PDF, or native format.` },
                 { step: '2', title: `Install ${sw.name}`, desc: `Download ${sw.name} from the official website. ${sw.hasFreeTrial ? 'It offers a free trial.' : sw.pricingType === 'FREE' || sw.pricingType === 'OPEN_SOURCE' ? 'It\'s completely free.' : `It costs ${sw.priceText} — a one-time purchase.`}` },
                 { step: '3', title: 'Import and configure', desc: `Import your data into ${sw.name} and customize the settings to match your workflow.` },
                 { step: '4', title: 'Cancel your subscription', desc: `Once you're comfortable with ${sw.name}, cancel your subscription and start saving.` },
@@ -294,6 +294,18 @@ export default async function SoftwarePage({ params }: PageProps) {
                 </li>
               ))}
             </ol>
+            <div className="mt-4 pt-4 border-t border-slate-100">
+              <p className="text-xs text-slate-500">
+                Replacing: {replacesTools.map((t, i) => (
+                  <span key={t!.id}>
+                    {i > 0 && ' or '}
+                    <Link href={`/alternatives/${t!.slug}`} className="text-amber-600 hover:text-amber-700 font-medium transition-colors">
+                      {t!.name}
+                    </Link>
+                  </span>
+                ))}
+              </p>
+            </div>
           </div>
         )}
 

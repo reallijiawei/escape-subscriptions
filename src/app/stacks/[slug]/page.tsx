@@ -147,6 +147,21 @@ export default async function StackPage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* Calculator CTA */}
+        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 sm:p-8 mb-8 text-center">
+          <h2 className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">Calculate Your Savings</h2>
+          <p className="text-sm text-amber-600 mb-4">
+            See how much you could save by replacing your entire subscription stack with these alternatives.
+          </p>
+          <Link
+            href="/calculator"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold transition-colors"
+          >
+            Open Calculator
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </Link>
+        </div>
+
         {/* Stack Items */}
         <div className="space-y-4 mb-8">
           {items.map((item, index) => (
@@ -217,7 +232,7 @@ export default async function StackPage({ params }: PageProps) {
         {/* CTA */}
         <div className="bg-slate-100 rounded-2xl p-6 sm:p-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">More Stacks</h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-4">
             {stacks
               .filter((s) => s.slug !== slug)
               .map((s) => (
@@ -229,6 +244,14 @@ export default async function StackPage({ params }: PageProps) {
                   {s.icon} {s.name}
                 </Link>
               ))}
+          </div>
+          <div className="flex flex-wrap gap-3 pt-3 border-t border-slate-200">
+            <Link href="/categories" className="text-sm text-amber-600 hover:text-amber-700 font-semibold transition-colors">
+              Browse by category →
+            </Link>
+            <Link href="/use-cases" className="text-sm text-slate-500 hover:text-slate-700 font-medium transition-colors">
+              Browse by use case →
+            </Link>
           </div>
         </div>
       </div>

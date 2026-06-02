@@ -30,6 +30,7 @@ export default function Footer() {
                 { href: '/categories', label: 'Categories' },
                 { href: '/stacks', label: 'Stacks' },
                 { href: '/use-cases', label: 'Use Cases' },
+                { href: '/badge', label: 'Badge' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-slate-400 hover:text-amber-400 transition-colors">

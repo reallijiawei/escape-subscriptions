@@ -363,15 +363,18 @@ export default async function ComparePage({ params }: PageProps) {
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Related Comparisons</h2>
           <div className="flex flex-wrap gap-2">
             {getAllComparisons()
-              .filter((c) => c.subscriptionTool.id === subscriptionTool.id && c.software.id !== software.id)
-              .slice(0, 4)
+              .filter((c) =>
+                (c.subscriptionTool.id === subscriptionTool.id && c.software.id !== software.id) ||
+                (c.software.id === software.id && c.subscriptionTool.id !== subscriptionTool.id)
+              )
+              .slice(0, 6)
               .map((c) => (
                 <Link
                   key={c.slug}
                   href={`/compare/${c.slug}`}
                   className="px-4 py-2 bg-slate-50 border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
                 >
-                  {c.software.name} vs {subscriptionTool.name}
+                  {c.software.name} vs {c.subscriptionTool.name}
                 </Link>
               ))}
           </div>

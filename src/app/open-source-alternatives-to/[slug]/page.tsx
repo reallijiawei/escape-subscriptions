@@ -129,12 +129,18 @@ export default async function OpenSourceAlternativesPage({ params }: PageProps) 
               Replace {tool.name} with open-source software you can inspect, modify, and self-host.
               No vendor lock-in, no hidden costs, full control over your data.
             </p>
-            <div className="mt-4">
+            <div className="mt-4 flex flex-wrap gap-3">
               <Link
                 href={`/alternatives/${slug}`}
                 className="text-amber-400 hover:text-amber-300 underline text-sm transition-colors"
               >
                 See all {tool.name} alternatives (including paid)
+              </Link>
+              <Link
+                href={`/free-alternatives-to/${slug}`}
+                className="text-emerald-400 hover:text-emerald-300 underline text-sm transition-colors"
+              >
+                Free alternatives to {tool.name}
               </Link>
             </div>
             {lastChecked && (
@@ -226,6 +232,12 @@ export default async function OpenSourceAlternativesPage({ params }: PageProps) 
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
               >
                 See all alternatives to {tool.name}
+              </Link>
+              <Link
+                href="/calculator"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
+              >
+                Calculate savings
               </Link>
             </div>
           </div>

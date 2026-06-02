@@ -129,12 +129,18 @@ export default async function FreeAlternativesPage({ params }: PageProps) {
               Stop paying {formatPrice(tool.monthlyPrice || 0)}/month for {tool.name}.
               These free and open-source alternatives give you the core features without the subscription.
             </p>
-            <div className="mt-4">
+            <div className="mt-4 flex flex-wrap gap-3">
               <Link
                 href={`/alternatives/${slug}`}
                 className="text-amber-400 hover:text-amber-300 underline text-sm transition-colors"
               >
                 See all {tool.name} alternatives (including paid)
+              </Link>
+              <Link
+                href={`/open-source-alternatives-to/${slug}`}
+                className="text-blue-400 hover:text-blue-300 underline text-sm transition-colors"
+              >
+                Open source alternatives to {tool.name}
               </Link>
             </div>
             {lastChecked && (
@@ -235,6 +241,12 @@ export default async function FreeAlternativesPage({ params }: PageProps) {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
               >
                 See all alternatives to {tool.name}
+              </Link>
+              <Link
+                href="/calculator"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
+              >
+                Calculate savings
               </Link>
             </div>
           </div>

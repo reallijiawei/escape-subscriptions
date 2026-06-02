@@ -195,7 +195,7 @@ export default async function UseCasePage({ params }: PageProps) {
         {/* Other use cases */}
         <div className="mt-10">
           <h2 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-5">Other use cases</h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-4">
             {useCases
               .filter((u) => u.id !== uc.id)
               .map((u) => (
@@ -207,6 +207,14 @@ export default async function UseCasePage({ params }: PageProps) {
                   {u.icon} {u.persona}
                 </Link>
               ))}
+          </div>
+          <div className="flex flex-wrap gap-3 pt-3 border-t border-slate-200">
+            <Link href="/categories" className="text-sm text-amber-600 hover:text-amber-700 font-semibold transition-colors">
+              Browse by category →
+            </Link>
+            <Link href="/stacks" className="text-sm text-slate-500 hover:text-slate-700 font-medium transition-colors">
+              Browse stacks →
+            </Link>
           </div>
         </div>
       </div>
