@@ -140,7 +140,7 @@ export default function SubscriptionCalculator() {
               </div>
               <button
                 onClick={() => removeItem(item.id)}
-                className="p-2.5 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-colors shrink-0"
+                className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-colors shrink-0"
                 disabled={items.length === 1}
                 aria-label="Remove"
               >

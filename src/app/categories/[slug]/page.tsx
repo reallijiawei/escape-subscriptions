@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import SoftwareCard from '@/components/SoftwareCard';
-import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema, itemListSchema } from '@/components/JsonLd';
 import { categories, software, subscriptionTools } from '@/lib/data';
 import { getCategorySeoContent } from '@/lib/seo-categories';
 import FAQSection from '@/components/FAQSection';
@@ -79,6 +79,13 @@ export default async function CategoryPage({ params }: PageProps) {
         ])}
       />
       {seoContent && <JsonLd data={faqSchema(seoContent.faq)} />}
+      {categorySoftware.length > 0 && (
+        <JsonLd
+          data={itemListSchema(
+            categorySoftware.map((sw, i) => ({ name: sw.name, url: `/software/${sw.slug}`, position: i + 1 }))
+          )}
+        />
+      )}
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

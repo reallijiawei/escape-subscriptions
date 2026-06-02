@@ -180,6 +180,19 @@ html {
   transform: skewX(-20deg);
 }
 
+/* FAQ details/summary styling */
+.faq-item[open] .faq-icon {
+  border-color: #f59e0b;
+  background-color: #f59e0b;
+  color: white;
+}
+.faq-item[open] .faq-plus-v {
+  display: none;
+}
+.faq-item summary:hover .faq-icon {
+  border-color: #f59e0b;
+}
+
 /* Print styles */
 @media print {
   body {

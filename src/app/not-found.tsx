@@ -31,7 +31,7 @@ export default function NotFound() {
         <p className="text-slate-500 mb-8 leading-relaxed">
           The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
           <Link
             href="/"
             className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold rounded-xl transition-colors"
@@ -44,6 +44,20 @@ export default function NotFound() {
           >
             Browse software
           </Link>
+        </div>
+        <div className="border-t border-slate-200 pt-6">
+          <p className="text-xs text-slate-400 mb-3">Popular pages:</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            <Link href="/calculator" className="text-xs text-slate-500 hover:text-amber-600 transition-colors">Calculator</Link>
+            <span className="text-slate-300">·</span>
+            <Link href="/categories" className="text-xs text-slate-500 hover:text-amber-600 transition-colors">Categories</Link>
+            <span className="text-slate-300">·</span>
+            <Link href="/stacks" className="text-xs text-slate-500 hover:text-amber-600 transition-colors">Stacks</Link>
+            <span className="text-slate-300">·</span>
+            <Link href="/use-cases" className="text-xs text-slate-500 hover:text-amber-600 transition-colors">Use Cases</Link>
+            <span className="text-slate-300">·</span>
+            <Link href="/about" className="text-xs text-slate-500 hover:text-amber-600 transition-colors">About</Link>
+          </div>
         </div>
       </div>
     </div>

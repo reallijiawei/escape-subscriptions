@@ -44,8 +44,8 @@ export default function Footer() {
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">By Type</h4>
             <ul className="space-y-3">
               {[
-                { href: '/free-alternatives-to/adobe-photoshop', label: 'Free Alternatives' },
-                { href: '/open-source-alternatives-to/adobe-photoshop', label: 'Open Source' },
+                { href: '/free-alternatives-to/1password', label: 'Free Alternatives' },
+                { href: '/open-source-alternatives-to/notion', label: 'Open Source' },
                 { href: '/compare/gimp-vs-adobe-photoshop', label: 'Comparisons' },
               ].map((link) => (
                 <li key={link.href}>
