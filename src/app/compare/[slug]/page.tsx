@@ -5,7 +5,7 @@ import ComparisonTable from '@/components/ComparisonTable';
 import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
 import FAQSection from '@/components/FAQSection';
-import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema, softwareApplicationSchema } from '@/components/JsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadge from '@/components/TrustBadge';
 import ShareButtons from '@/components/ShareButtons';
@@ -109,6 +109,16 @@ export default async function ComparePage({ params }: PageProps) {
         ])}
       />
       <JsonLd data={faqSchema(faqItems)} />
+      <JsonLd
+        data={softwareApplicationSchema({
+          name: software.name,
+          description: software.description,
+          url: `https://escapesubscriptions.online/software/${software.slug}`,
+          pricingType: software.pricingType,
+          priceText: software.priceText,
+          platforms: software.platforms,
+        })}
+      />
 
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
@@ -390,13 +400,13 @@ export default async function ComparePage({ params }: PageProps) {
                 href={`/alternatives/${subscriptionTool.slug}`}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
               >
-                See all alternatives to {subscriptionTool.name}
+                See all alternatives
               </Link>
               <Link
-                href={`/free-alternatives-to/${subscriptionTool.slug}`}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/30 rounded-xl font-semibold transition-colors"
+                href="/calculator"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
               >
-                Free alternatives
+                Calculate savings
               </Link>
             </div>
           </div>

@@ -2,11 +2,24 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import SearchBar from '@/components/SearchBar';
 import SoftwareCard from '@/components/SoftwareCard';
-import JsonLd, { websiteSchema, organizationSchema } from '@/components/JsonLd';
+import JsonLd, { websiteSchema, organizationSchema, faqSchema } from '@/components/JsonLd';
 import { subscriptionTools, software, categories } from '@/lib/data';
 
 export const metadata: Metadata = {
+  title: 'Buy Software Once — One-Time Purchase Alternatives to Subscriptions',
+  description: 'Stop renting your software. Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription tools. Save $500+/year.',
   alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Buy Software Once — One-Time Purchase Alternatives to Subscriptions',
+    description: 'Stop renting your software. Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription tools. Save $500+/year.',
+    url: '/',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Buy Software Once — One-Time Purchase Alternatives to Subscriptions',
+    description: 'Stop renting your software. Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription tools. Save $500+/year.',
+  },
 };
 
 const popularSearches = [
@@ -34,10 +47,34 @@ export default function HomePage() {
 
   const featuredSoftware = software.slice(0, 6);
 
+  const homepageFaq = [
+    {
+      question: 'Are these alternatives really free?',
+      answer: 'Yes. Many alternatives listed here are completely free and open-source. Others are one-time purchases — you pay once and own them forever. No hidden costs, no recurring charges.',
+    },
+    {
+      question: 'How do you choose which alternatives to recommend?',
+      answer: 'We test every tool before listing it. We evaluate features, performance, ease of use, community support, and update frequency. We don\'t accept payment for rankings.',
+    },
+    {
+      question: 'Can free tools really replace professional subscription software?',
+      answer: 'For most users, yes. Professional-grade open-source tools like GIMP, DaVinci Resolve, and LibreOffice are used by millions worldwide. They handle 90%+ of common use cases.',
+    },
+    {
+      question: 'How much money can I save?',
+      answer: 'Most users save $300–$800/year by switching to alternatives. Over 3 years, savings often exceed $2,000. Use our calculator to see your specific savings.',
+    },
+    {
+      question: 'Is it hard to switch from paid to free tools?',
+      answer: 'Most free alternatives support standard file formats and have similar workflows. The switch typically takes a few days of adjustment, but most users adapt quickly.',
+    },
+  ];
+
   return (
     <div>
       <JsonLd data={websiteSchema()} />
       <JsonLd data={organizationSchema()} />
+      <JsonLd data={faqSchema(homepageFaq)} />
       {/* Hero */}
       <section className="relative bg-slate-900 overflow-hidden grain-bg">
         {/* Geometric accent */}

@@ -40,6 +40,23 @@ export default function Footer() {
             </ul>
           </div>
 
+          <div className="md:col-span-2">
+            <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">By Type</h4>
+            <ul className="space-y-3">
+              {[
+                { href: '/free-alternatives-to/adobe-photoshop', label: 'Free Alternatives' },
+                { href: '/open-source-alternatives-to/adobe-photoshop', label: 'Open Source' },
+                { href: '/compare/gimp-vs-adobe-photoshop', label: 'Comparisons' },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-slate-400 hover:text-amber-400 transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="md:col-span-3">
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Categories</h4>
             <ul className="space-y-3">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
 import { stacks, getSoftwareForAlternative, getSubscriptionToolBySlug, software } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -22,6 +23,12 @@ export const metadata: Metadata = {
 export default function StacksPage() {
   return (
     <div>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Stacks', url: '/stacks' },
+        ])}
+      />
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

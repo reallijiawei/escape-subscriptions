@@ -20,7 +20,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
                 {item.name}
               </Link>
             ) : (
-              <span className="text-slate-600 font-medium">{item.name}</span>
+              <span className="text-slate-600 font-medium" aria-current="page">{item.name}</span>
             )}
           </li>
         ))}

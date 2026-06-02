@@ -103,14 +103,14 @@ export default function ComparisonTable({ software, subscriptionTool, relation }
         <table className="w-full min-w-[600px]">
           <thead>
             <tr className="border-b-2 border-slate-200">
-              <th className="px-6 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">
+              <th scope="col" className="px-6 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">
                 Feature
               </th>
-              <th className="px-6 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">
+              <th scope="col" className="px-6 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">
                 {subscriptionTool.name}
                 <span className="block text-[10px] font-normal text-slate-300 mt-0.5">Subscription</span>
               </th>
-              <th className="px-6 py-3 text-left text-xs font-bold text-amber-500 uppercase tracking-wider w-1/3">
+              <th scope="col" className="px-6 py-3 text-left text-xs font-bold text-amber-500 uppercase tracking-wider w-1/3">
                 {software.name}
                 <span className="block text-[10px] font-normal text-amber-400 mt-0.5">Alternative</span>
               </th>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
 import { useCases, software, subscriptionTools } from '@/lib/data';
 
 export const metadata: Metadata = {
@@ -12,6 +13,12 @@ export const metadata: Metadata = {
 export default function UseCasesPage() {
   return (
     <div>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Use Cases', url: '/use-cases' },
+        ])}
+      />
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="animate-fade-in-up">
