@@ -1,8 +1,23 @@
 import Link from 'next/link';
+import JsonLd from '@/components/JsonLd';
 
 export default function NotFound() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Page Not Found — Escape Subscriptions',
+          description: 'The page you requested does not exist. Browse our collection of one-time purchase and open-source alternatives to subscription software.',
+          url: 'https://escapesubscriptions.online/',
+          isPartOf: {
+            '@type': 'WebSite',
+            name: 'Escape Subscriptions',
+            url: 'https://escapesubscriptions.online',
+          },
+        }}
+      />
       <div className="text-center max-w-md">
         <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600">

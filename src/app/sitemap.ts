@@ -16,12 +16,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/badge`, lastModified: buildDate, changeFrequency: 'monthly', priority: 0.3 },
   ];
 
-  const alternativePages: MetadataRoute.Sitemap = subscriptionTools.map((tool) => ({
-    url: `${baseUrl}/alternatives/${tool.slug}`,
-    lastModified: buildDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.9,
-  }));
+  const alternativePages: MetadataRoute.Sitemap = subscriptionTools.map((tool) => {
+    // Use the most recent lastCheckedAt from software that replaces this tool
+    const relatedSoftware = software.filter((sw) => sw.replaces.includes(tool.id));
+    const latestCheck = relatedSoftware
+      .map((sw) => sw.lastCheckedAt ? new Date(sw.lastCheckedAt).getTime() : 0)
+      .sort((a, b) => b - a)[0];
+    return {
+      url: `${baseUrl}/alternatives/${tool.slug}`,
+      lastModified: latestCheck ? new Date(latestCheck) : buildDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    };
+  });
 
   // Use actual lastCheckedAt for software pages when available
   const softwarePages: MetadataRoute.Sitemap = software.map((sw) => ({
@@ -43,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const comparisonPages: MetadataRoute.Sitemap = getAllComparisons().map((c) => ({
     url: `${baseUrl}/compare/${c.slug}`,
-    lastModified: buildDate,
+    lastModified: c.software.lastCheckedAt ? new Date(c.software.lastCheckedAt) : buildDate,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
@@ -70,21 +77,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const freeAlternativePages: MetadataRoute.Sitemap = subscriptionTools
     .filter((tool) => getFreeAlternativesForTool(tool.id).length > 0)
-    .map((tool) => ({
-      url: `${baseUrl}/free-alternatives-to/${tool.slug}`,
-      lastModified: buildDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    }));
+    .map((tool) => {
+      const freeAlts = getFreeAlternativesForTool(tool.id);
+      const latestCheck = freeAlts
+        .map((r) => { const sw = software.find((s) => s.id === r.softwareId); return sw?.lastCheckedAt ? new Date(sw.lastCheckedAt).getTime() : 0; })
+        .sort((a, b) => b - a)[0];
+      return {
+        url: `${baseUrl}/free-alternatives-to/${tool.slug}`,
+        lastModified: latestCheck ? new Date(latestCheck) : buildDate,
+        changeFrequency: 'weekly' as const,
+        priority: 0.85,
+      };
+    });
 
   const openSourceAlternativePages: MetadataRoute.Sitemap = subscriptionTools
     .filter((tool) => getOpenSourceAlternativesForTool(tool.id).length > 0)
-    .map((tool) => ({
-      url: `${baseUrl}/open-source-alternatives-to/${tool.slug}`,
-      lastModified: buildDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    }));
+    .map((tool) => {
+      const ossAlts = getOpenSourceAlternativesForTool(tool.id);
+      const latestCheck = ossAlts
+        .map((r) => { const sw = software.find((s) => s.id === r.softwareId); return sw?.lastCheckedAt ? new Date(sw.lastCheckedAt).getTime() : 0; })
+        .sort((a, b) => b - a)[0];
+      return {
+        url: `${baseUrl}/open-source-alternatives-to/${tool.slug}`,
+        lastModified: latestCheck ? new Date(latestCheck) : buildDate,
+        changeFrequency: 'weekly' as const,
+        priority: 0.85,
+      };
+    });
 
   return [...staticPages, ...alternativePages, ...softwarePages, ...categoryPages, ...comparisonPages, ...stackPages, ...useCasePages, ...freeAlternativePages, ...openSourceAlternativePages];
 }

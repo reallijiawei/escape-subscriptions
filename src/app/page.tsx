@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import SearchBar from '@/components/SearchBar';
 import SoftwareCard from '@/components/SoftwareCard';
+import FAQSection from '@/components/FAQSection';
 import JsonLd, { websiteSchema, organizationSchema, faqSchema } from '@/components/JsonLd';
 import { subscriptionTools, software, categories } from '@/lib/data';
 
@@ -505,35 +506,7 @@ export default function HomePage() {
             <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Frequently asked questions</h2>
             <p className="text-slate-500">Common questions about escaping subscriptions.</p>
           </div>
-          <div className="space-y-4">
-            {[
-              {
-                q: 'Are these alternatives really free?',
-                a: 'Yes. Many alternatives listed here are completely free and open-source. Others are one-time purchases — you pay once and own them forever. No hidden costs, no recurring charges.',
-              },
-              {
-                q: 'How do you choose which alternatives to recommend?',
-                a: 'We test every tool before listing it. We evaluate features, performance, ease of use, community support, and update frequency. We don\'t accept payment for rankings.',
-              },
-              {
-                q: 'Can free tools really replace professional subscription software?',
-                a: 'For most users, yes. Professional-grade open-source tools like GIMP, DaVinci Resolve, and LibreOffice are used by millions worldwide. They handle 90%+ of common use cases.',
-              },
-              {
-                q: 'How much money can I save?',
-                a: 'Most users save $300–$800/year by switching to alternatives. Over 3 years, savings often exceed $2,000. Use our calculator to see your specific savings.',
-              },
-              {
-                q: 'Is it hard to switch from paid to free tools?',
-                a: 'Most free alternatives support standard file formats and have similar workflows. The switch typically takes a few days of adjustment, but most users adapt quickly.',
-              },
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-50 rounded-xl border border-slate-200 p-5">
-                <h3 className="font-bold text-slate-900 mb-2">{item.q}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{item.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQSection items={homepageFaq} />
         </div>
       </section>
 
