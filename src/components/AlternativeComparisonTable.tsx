@@ -97,16 +97,16 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
                     </td>
                     <td className="px-4 py-4 text-center">
                       {software.isOfflineSupported ? (
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 text-xs">✓</span>
+                        <span aria-label="Yes" className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 text-xs">✓</span>
                       ) : (
-                        <span className="text-slate-300">—</span>
+                        <span aria-label="No" className="text-slate-300">—</span>
                       )}
                     </td>
                     <td className="px-4 py-4 text-center">
                       {software.isOpenSource ? (
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs">✓</span>
+                        <span aria-label="Yes" className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs">✓</span>
                       ) : (
-                        <span className="text-slate-300">—</span>
+                        <span aria-label="No" className="text-slate-300">—</span>
                       )}
                     </td>
                     <td className="px-4 py-4">

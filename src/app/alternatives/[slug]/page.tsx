@@ -185,12 +185,12 @@ export default async function AlternativePage({ params }: PageProps) {
         <Breadcrumb items={[{ name: 'Alternatives', href: '/search' }, { name: tool.name }]} />
 
         {/* Quick Navigation */}
-        <div className="bg-white rounded-xl border border-slate-200 px-4 py-3 mb-6 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+        <nav aria-label="Page sections" className="bg-white rounded-xl border border-slate-200 px-4 py-3 mb-6 flex flex-wrap gap-x-4 gap-y-1 text-xs">
           <a href="#comparison" className="text-slate-500 hover:text-amber-600 transition-colors">Comparison</a>
           <a href="#features" className="text-slate-500 hover:text-amber-600 transition-colors">Features</a>
           <a href="#migration" className="text-slate-500 hover:text-amber-600 transition-colors">Migration Guide</a>
           <a href="#faq" className="text-slate-500 hover:text-amber-600 transition-colors">FAQ</a>
-        </div>
+        </nav>
 
         {/* Detailed Intro — SEO content for enriched tools */}
         {seoContent && (

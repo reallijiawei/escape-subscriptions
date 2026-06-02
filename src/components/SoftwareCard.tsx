@@ -76,6 +76,15 @@ export default function SoftwareCard({ software, showReplaces = false }: Softwar
               </Link>
             ))}
           </div>
+          {software.replaces.length === 1 && (
+            <Link
+              href={`/alternatives/${software.replaces[0]}`}
+              className="inline-flex items-center gap-1 mt-2 text-xs text-slate-500 hover:text-amber-600 font-medium transition-colors"
+            >
+              See all alternatives
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </Link>
+          )}
         </div>
       )}
     </div>

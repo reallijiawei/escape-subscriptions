@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema, webPageSchema } from '@/components/JsonLd';
 import FAQSection from '@/components/FAQSection';
 
 export const metadata: Metadata = {
@@ -53,6 +53,14 @@ export default function AboutPage() {
           { name: 'Home', url: '/' },
           { name: 'About', url: '/about' },
         ])}
+      />
+      <JsonLd
+        data={webPageSchema({
+          name: 'About — How We Find Subscription-Free Software Alternatives',
+          description: 'Learn how Escape Subscriptions evaluates and recommends one-time purchase and open-source alternatives.',
+          url: '/about',
+          type: 'AboutPage',
+        })}
       />
       <JsonLd data={faqSchema(faqItems)} />
 
@@ -122,18 +130,18 @@ export default function AboutPage() {
             <h2 className="heading-editorial text-2xl text-slate-900 mb-4 diagonal-accent">What We Offer</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { icon: '🔍', title: 'Comprehensive Database', desc: '50+ subscription tools and 100+ alternatives, all in one place.' },
-                { icon: '📊', title: 'Honest Comparisons', desc: 'Pricing, features, migration difficulty, and risk analysis — no marketing BS.' },
-                { icon: '🧮', title: 'Cost Calculator', desc: 'See exactly how much you can save by switching to alternatives.' },
-                { icon: '📋', title: 'Migration Guides', desc: 'Step-by-step help to make the switch painless.' },
-                { icon: '📦', title: 'Software Stacks', desc: 'Curated bundles of tools that work well together.' },
-                { icon: '👤', title: 'Use Case Guides', desc: 'Recommendations tailored to freelancers, students, developers, and more.' },
+                { icon: '🔍', title: 'Comprehensive Database', desc: '50+ subscription tools and 100+ alternatives, all in one place.', href: '/search' },
+                { icon: '📊', title: 'Honest Comparisons', desc: 'Pricing, features, migration difficulty, and risk analysis — no marketing BS.', href: '/compare/gimp-vs-adobe-photoshop' },
+                { icon: '🧮', title: 'Cost Calculator', desc: 'See exactly how much you can save by switching to alternatives.', href: '/calculator' },
+                { icon: '📋', title: 'Migration Guides', desc: 'Step-by-step help to make the switch painless.', href: '/software/gimp' },
+                { icon: '📦', title: 'Software Stacks', desc: 'Curated bundles of tools that work well together.', href: '/stacks' },
+                { icon: '👤', title: 'Use Case Guides', desc: 'Recommendations tailored to freelancers, students, developers, and more.', href: '/use-cases' },
               ].map((item) => (
-                <div key={item.title} className="p-4 bg-slate-50 rounded-xl">
+                <Link key={item.title} href={item.href} className="p-4 bg-slate-50 hover:bg-amber-50 rounded-xl transition-colors group">
                   <span className="text-2xl mb-2 block">{item.icon}</span>
-                  <h3 className="font-bold text-slate-900 text-sm mb-1">{item.title}</h3>
+                  <h3 className="font-bold text-slate-900 text-sm mb-1 group-hover:text-amber-700 transition-colors">{item.title}</h3>
                   <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

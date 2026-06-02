@@ -3,6 +3,8 @@ import Link from 'next/link';
 import SubscriptionCalculator from '@/components/SubscriptionCalculator';
 import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import { subscriptionTools } from '@/lib/data';
+import { formatPrice } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Software Subscription Cost Calculator — See How Much You Overspend',
@@ -112,28 +114,26 @@ export default function CalculatorPage() {
         <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Most Expensive Subscriptions</h2>
           <div className="space-y-3">
-            {[
-              { name: 'Adobe Creative Cloud', price: '$55/mo', yearly: '$660/yr', slug: 'adobe-creative-cloud' },
-              { name: 'Notion', price: '$10/mo', yearly: '$120/yr', slug: 'notion' },
-              { name: 'Grammarly', price: '$12/mo', yearly: '$144/yr', slug: 'grammarly' },
-              { name: '1Password', price: '$5/mo', yearly: '$60/yr', slug: '1password' },
-              { name: 'Canva', price: '$13/mo', yearly: '$156/yr', slug: 'canva' },
-            ].map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/alternatives/${tool.slug}`}
-                className="flex items-center justify-between p-4 bg-slate-50 hover:bg-amber-50 rounded-xl transition-colors group"
-              >
-                <div>
-                  <p className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">{tool.name}</p>
-                  <p className="text-sm text-slate-500">{tool.price} ({tool.yearly})</p>
-                </div>
-                <span className="text-sm text-amber-600 font-semibold flex items-center gap-1.5">
-                  Find alternatives
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                </span>
-              </Link>
-            ))}
+            {subscriptionTools
+              .filter((t) => t.monthlyPrice && t.monthlyPrice > 0)
+              .sort((a, b) => (b.monthlyPrice || 0) - (a.monthlyPrice || 0))
+              .slice(0, 5)
+              .map((tool) => (
+                <Link
+                  key={tool.slug}
+                  href={`/alternatives/${tool.slug}`}
+                  className="flex items-center justify-between p-4 bg-slate-50 hover:bg-amber-50 rounded-xl transition-colors group"
+                >
+                  <div>
+                    <p className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">{tool.name}</p>
+                    <p className="text-sm text-slate-500">{formatPrice(tool.monthlyPrice || 0)}/mo ({formatPrice((tool.monthlyPrice || 0) * 12)}/yr)</p>
+                  </div>
+                  <span className="text-sm text-amber-600 font-semibold flex items-center gap-1.5">
+                    Find alternatives
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  </span>
+                </Link>
+              ))}
           </div>
         </div>
 
@@ -159,13 +159,21 @@ export default function CalculatorPage() {
             <p className="text-sm text-slate-400 mb-6">
               Browse our database of one-time purchase and free alternatives to popular subscription software.
             </p>
-            <Link
-              href="/search"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold transition-colors"
-            >
-              Browse Alternatives
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/search"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold transition-colors"
+              >
+                Browse Alternatives
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
+              >
+                How we collect data
+              </Link>
+            </div>
           </div>
         </div>
       </div>

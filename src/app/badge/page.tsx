@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import FAQSection from '@/components/FAQSection';
 
 export const metadata: Metadata = {
-  title: 'Embed Badge',
+  title: 'Embed Badge | Escape Subscriptions',
   description: 'Embed the Escape Subscriptions badge on your website to show visitors your software is listed as a trusted subscription-free alternative. Free badge code for HTML, Markdown, and React.',
   alternates: {
     canonical: '/badge',
@@ -21,6 +22,25 @@ export const metadata: Metadata = {
     description: 'Embed the Escape Subscriptions badge on your website to show visitors your software is listed as a trusted subscription-free alternative.',
   },
 };
+
+const badgeFaq = [
+  {
+    question: 'Who can use the Escape Subscriptions badge?',
+    answer: 'Any software listed on Escape Subscriptions can display the badge. If your tool is a free, open-source, or one-time purchase alternative to a subscription service, and it appears in our database, you are welcome to use the badge.',
+  },
+  {
+    question: 'What size should the badge be?',
+    answer: 'The badge SVG is designed to display at 220×36 pixels, but it scales cleanly to any size. We recommend keeping it at least 160px wide for readability.',
+  },
+  {
+    question: 'Does the badge affect my site\'s SEO?',
+    answer: 'The badge links to Escape Subscriptions with a standard follow link. It can help your SEO by providing a relevant backlink from a directory in your niche. We do not use nofollow or sponsored attributes.',
+  },
+  {
+    question: 'How do I get my software listed?',
+    answer: 'Use the recommendation form on any alternatives page to suggest your tool. We review submissions based on features, pricing model, and community health. Most reviews are completed within a week.',
+  },
+];
 
 const SITE = 'https://escapesubscriptions.online';
 
@@ -43,6 +63,7 @@ export default function BadgePage() {
           { name: 'Embed Badge', url: '/badge' },
         ])}
       />
+      <JsonLd data={faqSchema(badgeFaq)} />
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="animate-fade-in-up">
@@ -92,6 +113,23 @@ export default function BadgePage() {
           <pre className="bg-slate-900 text-slate-300 rounded-xl p-4 overflow-x-auto text-sm leading-relaxed">
             <code>{reactCode}</code>
           </pre>
+        </div>
+
+        {/* Why Use the Badge */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Why Use the Badge?</h2>
+          <p className="text-sm text-slate-600 leading-relaxed mb-4">
+            The Escape Subscriptions badge signals to your visitors that your software has been reviewed and listed as a subscription-free alternative. It builds trust with users who are actively looking for tools they can own rather than rent.
+          </p>
+          <p className="text-sm text-slate-600 leading-relaxed">
+            Displaying the badge on your website or GitHub README helps users discover your tool through our directory, and provides a relevant backlink that can improve your search engine rankings. The badge is free to use for any listed software.
+          </p>
+        </div>
+
+        {/* FAQ */}
+        <div className="mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
+          <FAQSection items={badgeFaq} />
         </div>
 
         {/* Learn More */}

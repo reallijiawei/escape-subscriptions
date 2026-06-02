@@ -115,3 +115,23 @@ export function itemListSchema(items: { name: string; url: string; position: num
     })),
   };
 }
+
+export function webPageSchema({
+  name,
+  description,
+  url,
+  type = 'WebPage',
+}: {
+  name: string;
+  description: string;
+  url: string;
+  type?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': type,
+    name,
+    description,
+    url: `https://escapesubscriptions.online${url}`,
+  };
+}

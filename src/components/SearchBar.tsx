@@ -47,31 +47,38 @@ export default function SearchBar({
 
   return (
     <div className="relative w-full">
-      <form onSubmit={handleSearch}>
+      <form onSubmit={handleSearch} role="search" aria-label="Search for software alternatives">
         <div
           className={`flex items-center bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 overflow-hidden transition-all focus-within:border-amber-400 focus-within:shadow-amber-500/10 ${
             size === 'large' ? 'p-2' : 'p-1.5'
           }`}
         >
-          <div className="pl-4 text-slate-400">
+          <div className="pl-4 text-slate-400" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8" />
               <path d="m21 21-4.3-4.3" />
             </svg>
           </div>
+          <label htmlFor="search-input" className="sr-only">Search software</label>
           <input
+            id="search-input"
             type="text"
             value={query}
             onChange={handleInputChange}
             onFocus={() => suggestions.length > 0 && setShowSuggestions(true)}
             onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
             placeholder={placeholder}
+            role="combobox"
+            aria-expanded={showSuggestions && suggestions.length > 0}
+            aria-controls="search-suggestions"
+            aria-autocomplete="list"
             className={`flex-1 px-3 py-3 text-slate-900 placeholder-slate-400 focus:outline-none bg-transparent ${
               size === 'large' ? 'text-lg' : 'text-base'
             }`}
           />
           <button
             type="submit"
+            aria-label="Search for alternatives"
             className={`shrink-0 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-all hover:shadow-lg ${
               size === 'large' ? 'px-4 sm:px-8 py-3.5 text-sm sm:text-base' : 'px-3 sm:px-6 py-3 text-sm sm:text-base'
             }`}
@@ -83,10 +90,12 @@ export default function SearchBar({
       </form>
 
       {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute z-10 w-full mt-2 bg-white rounded-xl shadow-xl shadow-slate-900/10 border border-slate-200 overflow-hidden animate-fade-in max-h-60 overflow-y-auto">
+        <div id="search-suggestions" role="listbox" aria-label="Search suggestions" className="absolute z-10 w-full mt-2 bg-white rounded-xl shadow-xl shadow-slate-900/10 border border-slate-200 overflow-hidden animate-fade-in max-h-60 overflow-y-auto">
           {suggestions.map((suggestion, index) => (
             <button
               key={index}
+              role="option"
+              aria-selected={false}
               className="w-full px-5 py-3.5 text-left text-slate-700 hover:bg-amber-50 hover:text-slate-900 transition-colors flex items-center gap-3"
               onMouseDown={() => handleSuggestionClick(suggestion)}
             >
@@ -101,10 +110,11 @@ export default function SearchBar({
       )}
 
       {popularSuggestions.length > 0 && (
-        <div className="mt-5 flex flex-wrap justify-center gap-2">
+        <div className="mt-5 flex flex-wrap justify-center gap-2" role="group" aria-label="Popular searches">
           {popularSuggestions.map((suggestion, index) => (
             <button
               key={index}
+              aria-label={`Search for ${suggestion}`}
               onClick={() => {
                 setQuery(suggestion);
                 window.location.href = `/search?q=${encodeURIComponent(suggestion)}`;

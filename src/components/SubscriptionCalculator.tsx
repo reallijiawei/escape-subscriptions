@@ -104,6 +104,7 @@ export default function SubscriptionCalculator() {
             <button
               key={preset.label}
               onClick={() => loadPreset(preset)}
+              aria-label={`Load ${preset.label} preset with ${preset.items.length} subscriptions`}
               className="px-4 py-2 text-sm font-medium text-slate-600 bg-slate-100 hover:bg-amber-50 hover:text-amber-700 hover:border-amber-300 border border-slate-200 rounded-xl transition-all"
             >
               {preset.label} stack
