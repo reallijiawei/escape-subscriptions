@@ -529,6 +529,12 @@ export default async function AlternativePage({ params }: PageProps) {
               >
                 See full comparison
               </Link>
+              <Link
+                href="/calculator"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
+              >
+                Calculate savings
+              </Link>
             </div>
           </div>
         </div>

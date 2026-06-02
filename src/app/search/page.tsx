@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import SearchBar from '@/components/SearchBar';
 import SoftwareCard from '@/components/SoftwareCard';
-import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, itemListSchema } from '@/components/JsonLd';
 import { subscriptionTools, software, categories } from '@/lib/data';
 import SearchResults from './SearchResults';
 
@@ -12,6 +12,17 @@ export const metadata: Metadata = {
   description:
     'Search free, open-source, and one-time-purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription software. Find your perfect replacement.',
   alternates: { canonical: '/search' },
+  openGraph: {
+    title: 'Browse All Software Alternatives — Search 50+ Tools',
+    description: 'Search free, open-source, and one-time-purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription software.',
+    url: '/search',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Browse All Software Alternatives — Search 50+ Tools',
+    description: 'Search free, open-source, and one-time-purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription software.',
+  },
 };
 
 export default function SearchPage() {
@@ -22,6 +33,11 @@ export default function SearchPage() {
           { name: 'Home', url: '/' },
           { name: 'Search', url: '/search' },
         ])}
+      />
+      <JsonLd
+        data={itemListSchema(
+          software.slice(0, 20).map((sw, i) => ({ name: sw.name, url: `/software/${sw.slug}`, position: i + 1 }))
+        )}
       />
       <div className="mb-10">
         <SearchBar placeholder="Search for software alternatives..." />

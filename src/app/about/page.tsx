@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import FAQSection from '@/components/FAQSection';
 
 export const metadata: Metadata = {
   title: 'About — How We Find Subscription-Free Software Alternatives',
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
       'Learn how Escape Subscriptions evaluates and recommends one-time purchase and open-source alternatives. Our methodology, data sources, and editorial process.',
     url: '/about',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About — How We Find Subscription-Free Software Alternatives',
+    description: 'Learn how Escape Subscriptions evaluates and recommends one-time purchase and open-source alternatives. Our methodology, data sources, and editorial process.',
   },
 };
 
@@ -189,16 +195,9 @@ export default function AboutPage() {
           </div>
 
           {/* FAQ */}
-          <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 mb-8">
+          <div className="mb-8">
             <h2 className="heading-editorial text-2xl text-slate-900 mb-6 diagonal-accent">Frequently Asked Questions</h2>
-            <div className="space-y-6">
-              {faqItems.map((item, i) => (
-                <div key={i}>
-                  <h3 className="font-bold text-slate-900 mb-2">{item.question}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">{item.answer}</p>
-                </div>
-              ))}
-            </div>
+            <FAQSection items={faqItems} />
           </div>
 
           {/* CTA */}

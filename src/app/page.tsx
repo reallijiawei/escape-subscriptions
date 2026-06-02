@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import SearchBar from '@/components/SearchBar';
 import SoftwareCard from '@/components/SoftwareCard';
 import FAQSection from '@/components/FAQSection';
-import JsonLd, { websiteSchema, organizationSchema, faqSchema } from '@/components/JsonLd';
+import JsonLd, { websiteSchema, organizationSchema, faqSchema, itemListSchema } from '@/components/JsonLd';
 import { subscriptionTools, software, categories } from '@/lib/data';
 
 export const metadata: Metadata = {
@@ -76,6 +76,11 @@ export default function HomePage() {
       <JsonLd data={websiteSchema()} />
       <JsonLd data={organizationSchema()} />
       <JsonLd data={faqSchema(homepageFaq)} />
+      <JsonLd
+        data={itemListSchema(
+          featuredSoftware.map((sw, i) => ({ name: sw.name, url: `/software/${sw.slug}`, position: i + 1 }))
+        )}
+      />
       {/* Hero */}
       <section className="relative bg-slate-900 overflow-hidden grain-bg">
         {/* Geometric accent */}
@@ -180,6 +185,41 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-amber-50 border border-amber-200 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">{item.icon}</span>
                 </div>
+                <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Switch */}
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Why switch from subscriptions?</h2>
+            <p className="text-slate-500">The hidden costs of renting your software.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                stat: '$500+',
+                title: 'Average yearly cost',
+                desc: 'The typical user spends $500+ per year on software subscriptions they could replace with one-time purchases.',
+              },
+              {
+                stat: '59+',
+                title: 'Subscription tools tracked',
+                desc: 'We monitor pricing and features for 59+ popular subscription tools and find the best alternatives for each.',
+              },
+              {
+                stat: '123+',
+                title: 'Alternatives available',
+                desc: 'Free, open-source, and one-time purchase alternatives that cover the same functionality as subscription tools.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="text-center p-6 bg-white rounded-2xl border border-slate-200">
+                <p className="text-3xl font-bold text-amber-600 font-display mb-2">{item.stat}</p>
                 <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
               </div>

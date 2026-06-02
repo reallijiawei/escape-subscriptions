@@ -42,6 +42,14 @@ const faqItems = [
     question: 'How much can I realistically save?',
     answer: 'Most users save $300–$800/year by switching to one-time purchase or free alternatives. Over 3 years, savings often exceed $2,000. The exact amount depends on which tools you use and which alternatives you choose.',
   },
+  {
+    question: 'Are one-time purchases really forever?',
+    answer: 'Yes. When you buy software with a one-time payment, you own that version forever. You may choose to pay for major upgrades later, but your current version keeps working. No subscription, no recurring charges, no sudden price increases.',
+  },
+  {
+    question: 'What about cloud features that require a subscription?',
+    answer: 'Some subscription tools include cloud sync, collaboration, and online storage. Many one-time purchase alternatives offer local storage, self-hosted sync, or integrate with free cloud services like Dropbox or Google Drive. Check each alternative\'s features to see what works for you.',
+  },
 ];
 
 export default function CalculatorPage() {

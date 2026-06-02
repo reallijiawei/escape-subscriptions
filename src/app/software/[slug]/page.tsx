@@ -272,6 +272,31 @@ export default async function SoftwarePage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* How to Switch */}
+        {replacesTools.length > 0 && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">How to Switch to {sw.name}</h2>
+            <ol className="space-y-4">
+              {[
+                { step: '1', title: 'Export your data', desc: `Export your data from ${replacesTools.map((t) => t!.name).join(' or ')} in CSV, PDF, or native format.` },
+                { step: '2', title: `Install ${sw.name}`, desc: `Download ${sw.name} from the official website. ${sw.hasFreeTrial ? 'It offers a free trial.' : sw.pricingType === 'FREE' || sw.pricingType === 'OPEN_SOURCE' ? 'It\'s completely free.' : `It costs ${sw.priceText} — a one-time purchase.`}` },
+                { step: '3', title: 'Import and configure', desc: `Import your data into ${sw.name} and customize the settings to match your workflow.` },
+                { step: '4', title: 'Cancel your subscription', desc: `Once you're comfortable with ${sw.name}, cancel your subscription and start saving.` },
+              ].map((item) => (
+                <li key={item.step} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-amber-100 text-amber-700 text-sm font-bold flex items-center justify-center">
+                    {item.step}
+                  </span>
+                  <div>
+                    <p className="font-semibold text-slate-900 text-sm">{item.title}</p>
+                    <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
         {/* FAQ */}
         {seoContent && (
           <div className="mb-8">

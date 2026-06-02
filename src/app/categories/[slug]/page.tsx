@@ -220,6 +220,23 @@ export default async function CategoryPage({ params }: PageProps) {
           )}
         </div>
 
+        {/* Calculator CTA */}
+        {categoryTools.length > 0 && (
+          <div className="mt-14 bg-amber-50 border border-amber-200 rounded-2xl p-6 sm:p-8 text-center">
+            <h2 className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">Calculate Your Savings</h2>
+            <p className="text-sm text-amber-600 mb-4">
+              See how much you could save by replacing your {category.name.toLowerCase()} subscriptions with one-time purchase alternatives.
+            </p>
+            <Link
+              href="/calculator"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold transition-colors"
+            >
+              Open Calculator
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </Link>
+          </div>
+        )}
+
         {/* FAQ */}
         {seoContent && (
           <div className="mt-14">
