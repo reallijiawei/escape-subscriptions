@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import SearchBar from '@/components/SearchBar';
 import SoftwareCard from '@/components/SoftwareCard';
 import JsonLd, { websiteSchema, organizationSchema } from '@/components/JsonLd';
-import { subscriptionTools, software } from '@/lib/data';
+import { subscriptionTools, software, categories } from '@/lib/data';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -259,6 +259,67 @@ export default function HomePage() {
                 </span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Browse by Category — SEO internal links */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Browse by category</h2>
+            <p className="text-slate-500">Find alternatives organized by what you need.</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((cat) => (
+              <Link
+                key={cat.id}
+                href={`/categories/${cat.slug}`}
+                className="px-5 py-2.5 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-700 hover:text-slate-900 font-medium transition-all hover-lift"
+              >
+                {cat.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Trust Us — E-E-A-T */}
+      <section className="py-20 bg-white border-y border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Why trust us?</h2>
+            <p className="text-slate-500">Independent, honest, and hands-on recommendations.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                icon: '🔬',
+                title: 'Hands-on testing',
+                desc: 'Every alternative is installed and tested before being listed. We don\'t recommend tools we haven\'t used.',
+              },
+              {
+                icon: '🚫',
+                title: 'No paid placements',
+                desc: 'We don\'t accept money for rankings. Our recommendations are based purely on quality and value.',
+              },
+              {
+                icon: '🔄',
+                title: 'Weekly updates',
+                desc: 'Pricing and features are checked weekly. Each page shows when it was last verified.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                <span className="text-3xl mb-3 block">{item.icon}</span>
+                <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/about" className="text-sm font-semibold text-amber-600 hover:text-amber-700 transition-colors">
+              Learn about our methodology →
+            </Link>
           </div>
         </div>
       </section>

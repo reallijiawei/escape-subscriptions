@@ -7,6 +7,8 @@ import FAQSection from '@/components/FAQSection';
 import JsonLd, { softwareApplicationSchema, breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import { software, subscriptionTools, getSubscriptionToolBySlug, getFreeAlternativesForTool } from '@/lib/data';
 import { getSoftwareSeoContent } from '@/lib/seo-software';
+import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadge from '@/components/TrustBadge';
 import { formatCategory, formatPlatform, formatDate } from '@/lib/utils';
 
 interface PageProps {
@@ -103,12 +105,16 @@ export default async function SoftwarePage({ params }: PageProps) {
             <h1 className="heading-editorial text-4xl sm:text-5xl text-white mb-5">{sw.name}</h1>
             <p className="text-lg text-slate-400 max-w-2xl leading-relaxed mb-6">{sw.description}</p>
             <PlatformBadges platforms={sw.platforms} />
+            <div className="mt-4">
+              <TrustBadge lastChecked={sw.lastCheckedAt} />
+            </div>
           </div>
         </div>
         <div className="h-16 bg-gradient-to-t from-slate-50 to-transparent" />
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        <Breadcrumb items={[{ name: 'Software', href: '/search' }, { name: sw.name }]} />
         {/* SEO Intro */}
         {seoContent && (
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
@@ -271,6 +277,26 @@ export default async function SoftwarePage({ params }: PageProps) {
           <div className="mb-8">
             <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
             <FAQSection items={seoContent.faq} />
+          </div>
+        )}
+
+        {/* See Also — links to alternatives pages */}
+        {replacesTools.length > 0 && (
+          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
+              {sw.name} replaces these subscriptions
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {replacesTools.map((t) => (
+                <Link
+                  key={t!.id}
+                  href={`/alternatives/${t!.slug}`}
+                  className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+                >
+                  Alternatives to {t!.name}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
 

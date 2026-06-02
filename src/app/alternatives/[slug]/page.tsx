@@ -7,7 +7,9 @@ import AlternativeCardList from '@/components/AlternativeCardList';
 import SubmitRecommendation from '@/components/SubmitRecommendation';
 import FAQSection from '@/components/FAQSection';
 import EmailSubscribe from '@/components/EmailSubscribe';
-import JsonLd, { faqSchema, breadcrumbSchema } from '@/components/JsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadge from '@/components/TrustBadge';
+import JsonLd, { faqSchema, breadcrumbSchema, itemListSchema } from '@/components/JsonLd';
 import {
   subscriptionTools,
   getAlternativesForTool,
@@ -146,6 +148,15 @@ export default async function AlternativePage({ params }: PageProps) {
           { name: `${tool.name} Alternatives`, url: `/alternatives/${slug}` },
         ])}
       />
+      <JsonLd
+        data={itemListSchema(
+          alternatives.map((a, i) => ({
+            name: a.software.name,
+            url: `/software/${a.software.slug}`,
+            position: i + 1,
+          }))
+        )}
+      />
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -161,9 +172,9 @@ export default async function AlternativePage({ params }: PageProps) {
               {tool.description} But its subscription pricing makes many users look for one-time purchase or open-source alternatives.
             </p>
             {lastChecked && (
-              <p className="text-xs text-slate-500 mt-4">
-                Last updated: {formatDate(lastChecked)}
-              </p>
+              <div className="mt-4">
+                <TrustBadge lastChecked={lastChecked} />
+              </div>
             )}
           </div>
         </div>
@@ -171,6 +182,7 @@ export default async function AlternativePage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        <Breadcrumb items={[{ name: 'Alternatives', href: '/search' }, { name: tool.name }]} />
         {/* Detailed Intro — SEO content for enriched tools */}
         {seoContent && (
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
@@ -464,23 +476,43 @@ export default async function AlternativePage({ params }: PageProps) {
           </div>
         )}
 
-        {/* Related Pages */}
+        {/* Related Pages — same category first, then others */}
         <div className="bg-slate-100 rounded-2xl p-6 sm:p-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Related Alternatives</h2>
           <div className="flex flex-wrap gap-2">
-            {subscriptionTools
-              .filter((t) => t.id !== tool.id)
-              .slice(0, 6)
-              .map((t) => (
+            {(() => {
+              const sameCategory = subscriptionTools.filter(
+                (t) => t.id !== tool.id && t.category === tool.category
+              );
+              const others = subscriptionTools.filter(
+                (t) => t.id !== tool.id && t.category !== tool.category
+              );
+              const related = [...sameCategory, ...others].slice(0, 8);
+              return related.map((t) => (
                 <Link
                   key={t.id}
                   href={`/alternatives/${t.slug}`}
                   className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
                 >
-                  {t.name}
+                  {t.name} alternatives
                 </Link>
-              ))}
+              ));
+            })()}
           </div>
+          <p className="text-xs text-slate-400 mt-4">
+            Also in {tool.category?.replace(/_/g, ' ').toLowerCase()}:{' '}
+            {subscriptionTools
+              .filter((t) => t.id !== tool.id && t.category === tool.category)
+              .slice(0, 3)
+              .map((t, i, arr) => (
+                <span key={t.id}>
+                  <Link href={`/alternatives/${t.slug}`} className="text-amber-600 hover:text-amber-700">
+                    {t.name}
+                  </Link>
+                  {i < arr.length - 1 ? ', ' : ''}
+                </span>
+              ))}
+          </p>
         </div>
       </div>
     </div>

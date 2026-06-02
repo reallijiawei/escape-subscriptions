@@ -6,6 +6,7 @@ import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
 import { categories, software, subscriptionTools } from '@/lib/data';
 import { getCategorySeoContent } from '@/lib/seo-categories';
 import FAQSection from '@/components/FAQSection';
+import Breadcrumb from '@/components/Breadcrumb';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -93,6 +94,7 @@ export default async function CategoryPage({ params }: PageProps) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        <Breadcrumb items={[{ name: 'Categories', href: '/categories/design' }, { name: category.name }]} />
         {/* SEO Intro */}
         {seoContent && (
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
@@ -109,6 +111,35 @@ export default async function CategoryPage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        )}
+
+        {/* Quick Stats */}
+        {categoryTools.length > 0 && (
+          <div className="bg-white rounded-2xl shadow-xl shadow-slate-900/5 border border-slate-200 p-6 sm:p-8 mb-8 animate-fade-in-up">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">{category.name} at a Glance</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="p-4 bg-slate-50 rounded-xl">
+                <p className="text-xs text-slate-500 mb-1">Subscription tools</p>
+                <p className="text-xl font-bold text-slate-900 font-display">{categoryTools.length}</p>
+              </div>
+              <div className="p-4 bg-slate-50 rounded-xl">
+                <p className="text-xs text-slate-500 mb-1">Alternatives found</p>
+                <p className="text-xl font-bold text-slate-900 font-display">{categorySoftware.length}</p>
+              </div>
+              <div className="p-4 bg-amber-50 border border-amber-100 rounded-xl">
+                <p className="text-xs text-amber-600 mb-1">Avg monthly cost</p>
+                <p className="text-xl font-bold text-amber-700 font-display">
+                  ${Math.round(categoryTools.reduce((s, t) => s + (t.monthlyPrice || 0), 0) / categoryTools.length)}
+                </p>
+              </div>
+              <div className="p-4 bg-emerald-50 border border-emerald-100 rounded-xl">
+                <p className="text-xs text-emerald-600 mb-1">Potential yearly savings</p>
+                <p className="text-xl font-bold text-emerald-700 font-display">
+                  ${categoryTools.reduce((s, t) => s + (t.monthlyPrice || 0) * 12, 0).toLocaleString()}
+                </p>
+              </div>
             </div>
           </div>
         )}

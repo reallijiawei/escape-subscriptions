@@ -6,6 +6,7 @@ import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
 import FAQSection from '@/components/FAQSection';
 import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
 import { getAllComparisons, getComparisonBySlug } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -129,6 +130,7 @@ export default async function ComparePage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        <Breadcrumb items={[{ name: 'Compare', href: '/search' }, { name: `${software.name} vs ${subscriptionTool.name}` }]} />
         {/* Detailed Comparison Intro */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
           <p className="text-slate-700 leading-relaxed text-base">
@@ -248,6 +250,34 @@ export default async function ComparePage({ params }: PageProps) {
         <div className="mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
           <FAQSection items={faqItems} />
+        </div>
+
+        {/* Other Alternatives */}
+        <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Other Alternatives to {subscriptionTool.name}</h2>
+          <p className="text-sm text-slate-600 mb-4">
+            {software.name} isn&apos;t the only option. See all alternatives to {subscriptionTool.name}:
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <Link
+              href={`/alternatives/${subscriptionTool.slug}`}
+              className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+            >
+              All {subscriptionTool.name} alternatives
+            </Link>
+            <Link
+              href={`/free-alternatives-to/${subscriptionTool.slug}`}
+              className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+            >
+              Free alternatives
+            </Link>
+            <Link
+              href={`/open-source-alternatives-to/${subscriptionTool.slug}`}
+              className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+            >
+              Open source alternatives
+            </Link>
+          </div>
         </div>
 
         {/* CTA */}
