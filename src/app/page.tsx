@@ -61,12 +61,12 @@ export default function HomePage() {
             </div>
 
             <h1 className="heading-editorial text-4xl sm:text-5xl md:text-6xl text-white mb-6 animate-fade-in-up delay-100">
-              Tired of software<br />
-              <span className="text-amber-400">subscriptions?</span>
+              Stop renting.<br />
+              <span className="text-amber-400">Own your software.</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-              Find free, open-source, and one-time purchase alternatives to the tools you&apos;re paying for every month.
+              Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription tools. Save $500+/year.
             </p>
 
             <div className="max-w-2xl mx-auto animate-fade-in-up delay-300">

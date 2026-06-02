@@ -170,6 +170,32 @@ export default async function ComparePage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* Quick Summary */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
+            <h3 className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2">Best for</h3>
+            <ul className="space-y-1.5">
+              {relation.bestFor.slice(0, 3).map((item: string, i: number) => (
+                <li key={i} className="flex items-start text-sm text-emerald-800">
+                  <span className="text-emerald-500 mr-2 mt-0.5">+</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+            <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Not ideal for</h3>
+            <ul className="space-y-1.5">
+              {relation.notFor.slice(0, 3).map((item: string, i: number) => (
+                <li key={i} className="flex items-start text-sm text-slate-600">
+                  <span className="text-slate-400 mr-2 mt-0.5">−</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         {/* Comparison Table */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8 overflow-hidden">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Feature Comparison</h2>

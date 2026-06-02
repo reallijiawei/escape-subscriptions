@@ -183,6 +183,15 @@ export default async function AlternativePage({ params }: PageProps) {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
         <Breadcrumb items={[{ name: 'Alternatives', href: '/search' }, { name: tool.name }]} />
+
+        {/* Quick Navigation */}
+        <div className="bg-white rounded-xl border border-slate-200 px-4 py-3 mb-6 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+          <a href="#comparison" className="text-slate-500 hover:text-amber-600 transition-colors">Comparison</a>
+          <a href="#features" className="text-slate-500 hover:text-amber-600 transition-colors">Features</a>
+          <a href="#migration" className="text-slate-500 hover:text-amber-600 transition-colors">Migration Guide</a>
+          <a href="#faq" className="text-slate-500 hover:text-amber-600 transition-colors">FAQ</a>
+        </div>
+
         {/* Detailed Intro — SEO content for enriched tools */}
         {seoContent && (
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
@@ -296,14 +305,14 @@ export default async function AlternativePage({ params }: PageProps) {
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8 overflow-hidden">
+        <div id="comparison" className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8 overflow-hidden">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Comparison Table</h2>
           <AlternativeComparisonTable alternatives={alternatives} />
         </div>
 
         {/* Key Features to Compare */}
         {seoContent && (
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+          <div id="features" className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
             <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">
               Key Features to Compare When Choosing a {tool.name} Alternative
             </h2>
@@ -366,7 +375,7 @@ export default async function AlternativePage({ params }: PageProps) {
 
         {/* Migration Guide */}
         {seoContent && (
-          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <div id="migration" className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
             <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">
               How to Switch from {tool.name}: Step-by-Step Guide
             </h2>
@@ -446,7 +455,7 @@ export default async function AlternativePage({ params }: PageProps) {
         </div>
 
         {/* FAQ */}
-        <div className="mb-8">
+        <div id="faq" className="mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
           <FAQSection items={faqItems} />
         </div>
@@ -475,6 +484,35 @@ export default async function AlternativePage({ params }: PageProps) {
             </div>
           </div>
         )}
+
+        {/* CTA */}
+        <div className="bg-slate-900 rounded-2xl p-6 sm:p-8 mb-8 text-center grain-bg">
+          <div className="relative z-10">
+            <h2 className="text-lg sm:text-xl font-bold text-white mb-2">
+              Ready to stop paying for {tool.name}?
+            </h2>
+            <p className="text-sm text-slate-400 mb-6">
+              {bestOverall?.software.name || 'The top alternative'} is {bestOverall?.software.startingPrice ? `just $${bestOverall.software.startingPrice} one-time` : 'completely free'}. No subscription, no recurring charges.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href={bestOverall?.software.websiteUrl || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold transition-colors"
+              >
+                Try {bestOverall?.software.name || 'the best alternative'} free
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" /></svg>
+              </a>
+              <Link
+                href={`/compare/${bestOverall?.software.slug}-vs-${tool.slug}`}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl font-semibold transition-colors"
+              >
+                See full comparison
+              </Link>
+            </div>
+          </div>
+        </div>
 
         {/* Related Pages — same category first, then others */}
         <div className="bg-slate-100 rounded-2xl p-6 sm:p-8">

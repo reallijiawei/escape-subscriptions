@@ -280,6 +280,26 @@ export default async function SoftwarePage({ params }: PageProps) {
           </div>
         )}
 
+        {/* Compare with */}
+        {replacesTools.length > 0 && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
+              Compare {sw.name} with alternatives
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {replacesTools.map((t) => (
+                <Link
+                  key={t!.id}
+                  href={`/compare/${sw.slug}-vs-${t!.slug}`}
+                  className="px-4 py-2 bg-amber-50 border border-amber-200 hover:bg-amber-100 rounded-xl text-sm text-amber-700 font-medium transition-all"
+                >
+                  {sw.name} vs {t!.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* See Also — links to alternatives pages */}
         {replacesTools.length > 0 && (
           <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">

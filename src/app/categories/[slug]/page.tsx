@@ -144,6 +144,24 @@ export default async function CategoryPage({ params }: PageProps) {
           </div>
         )}
 
+        {/* Common Use Cases */}
+        {categoryTools.length > 0 && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Common {category.name} Use Cases</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {categoryTools.slice(0, 4).map((tool) => (
+                <div key={tool.id} className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl">
+                  <span className="text-amber-500 mt-0.5">→</span>
+                  <div>
+                    <p className="text-sm font-medium text-slate-900">{tool.name}</p>
+                    <p className="text-xs text-slate-500">{tool.commonUseCases?.slice(0, 2).join(', ') || tool.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Subscription Tools in Category */}
         {categoryTools.length > 0 && (
           <div className="mb-14">

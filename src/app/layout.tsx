@@ -48,7 +48,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href={FONT_URL} rel="stylesheet" />
-        {/* Google tag (gtag.js) */}
+        {/* Preload critical assets */}
+        <link rel="preload" href="/og-image.png" as="image" type="image/png" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        {/* Google tag (gtag.js) — deferred for performance */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-M11EGLMP1M" />
         <script
           dangerouslySetInnerHTML={{

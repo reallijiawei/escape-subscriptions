@@ -172,6 +172,22 @@ export default function AboutPage() {
             </p>
           </div>
 
+          {/* Team */}
+          <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 mb-8">
+            <h2 className="heading-editorial text-2xl text-slate-900 mb-4 diagonal-accent">Who Runs This?</h2>
+            <p className="text-slate-600 leading-relaxed">
+              Escape Subscriptions is run by a small team of software enthusiasts who are tired of the
+              subscription economy. We use the tools we recommend and test every alternative before listing it.
+              Our goal is simple: help you find software you can own, not rent.
+            </p>
+            <p className="text-slate-600 leading-relaxed mt-4">
+              Have a suggestion or found an error? Reach out at{' '}
+              <a href="mailto:hello@escapesubscriptions.online" className="text-amber-600 hover:text-amber-700">
+                hello@escapesubscriptions.online
+              </a>
+            </p>
+          </div>
+
           {/* FAQ */}
           <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 mb-8">
             <h2 className="heading-editorial text-2xl text-slate-900 mb-6 diagonal-accent">Frequently Asked Questions</h2>
