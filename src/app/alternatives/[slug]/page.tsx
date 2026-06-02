@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -402,7 +403,9 @@ export default async function AlternativePage({ params }: PageProps) {
         {/* Submit Recommendation */}
         <div className="mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Community Recommendations</h2>
-          <SubmitRecommendation subscriptionToolId={tool.id} toolName={tool.name} />
+          <Suspense fallback={<div className="h-48 bg-white rounded-2xl border border-slate-200 animate-pulse" />}>
+            <SubmitRecommendation subscriptionToolId={tool.id} toolName={tool.name} />
+          </Suspense>
         </div>
 
         {/* User-Submitted Recommendations */}
@@ -451,7 +454,9 @@ export default async function AlternativePage({ params }: PageProps) {
           <p className="text-sm text-slate-600 mb-4">
             Get notified when new {tool.name} alternatives are found or prices change. We send a short summary with links — no spam.
           </p>
-          <EmailSubscribe toolSlug={slug} toolName={tool.name} />
+          <Suspense fallback={<div className="h-16 bg-slate-50 rounded-xl animate-pulse" />}>
+            <EmailSubscribe toolSlug={slug} toolName={tool.name} />
+          </Suspense>
         </div>
 
         {/* FAQ */}

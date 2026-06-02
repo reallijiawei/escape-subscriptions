@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import SubscriptionCalculator from '@/components/SubscriptionCalculator';
@@ -99,7 +100,9 @@ export default function CalculatorPage() {
 
         {/* Calculator */}
         <div className="mb-12">
-          <SubscriptionCalculator />
+          <Suspense fallback={<div className="h-96 bg-white rounded-2xl border border-slate-200 animate-pulse" />}>
+            <SubscriptionCalculator />
+          </Suspense>
         </div>
 
         {/* Why Switch */}
