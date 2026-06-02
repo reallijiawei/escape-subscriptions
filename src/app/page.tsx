@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 };
 
 const popularSearches = [
-  'Photoshop alternatives no subscription',
-  'Notion alternatives no subscription',
-  'Canva alternatives one-time payment',
-  'Grammarly alternatives lifetime deal',
-  'Todoist alternatives pay once',
-  'Dropbox alternatives open source',
+  { label: 'Photoshop alternatives no subscription', href: '/alternatives/adobe-photoshop' },
+  { label: 'Notion alternatives no subscription', href: '/alternatives/notion' },
+  { label: 'Canva alternatives one-time payment', href: '/alternatives/canva' },
+  { label: 'Grammarly alternatives lifetime deal', href: '/alternatives/grammarly' },
+  { label: 'Todoist alternatives pay once', href: '/alternatives/todoist' },
+  { label: 'Dropbox alternatives open source', href: '/alternatives/dropbox' },
 ];
 
 const featuredAlternatives = [
@@ -120,12 +120,12 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-3">
             {popularSearches.map((search, index) => (
               <Link
-                key={search}
-                href={`/search?q=${encodeURIComponent(search)}`}
+                key={search.href}
+                href={search.href}
                 className="px-5 py-2.5 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-700 hover:text-slate-900 font-medium transition-all hover-lift"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                {search}
+                {search.label}
               </Link>
             ))}
           </div>
