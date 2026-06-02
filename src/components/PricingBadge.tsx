@@ -22,7 +22,7 @@ export default function PricingBadge({ type, priceText }: PricingBadgeProps) {
     <span
       className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold ${style.bg} ${style.text}`}
     >
-      <span className={`w-1.5 h-1.5 rounded-full ${style.dot}`} />
+      <span aria-hidden="true" className={`w-1.5 h-1.5 rounded-full ${style.dot}`} />
       {formatPricingType(type)}
       {priceText && type !== 'FREE' && type !== 'OPEN_SOURCE' && (
         <span className="opacity-60 ml-0.5">· {priceText}</span>
