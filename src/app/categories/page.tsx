@@ -7,18 +7,18 @@ import { categories, software, subscriptionTools } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Browse by Category',
-  description: 'Find subscription-free alternatives organized by category — design, developer tools, productivity, AI, security, and more. 120+ one-time purchase and open-source tools across 15+ categories.',
+  description: `Find subscription-free alternatives organized by category — design, developer tools, productivity, AI, security, and more. ${software.length}+ one-time purchase and open-source tools across ${categories.length}+ categories.`,
   alternates: { canonical: '/categories' },
   openGraph: {
     title: 'Browse by Category | Escape Subscriptions',
-    description: 'Find subscription-free alternatives organized by category. 120+ one-time purchase and open-source tools across 15+ categories.',
+    description: `Find subscription-free alternatives organized by category. ${software.length}+ one-time purchase and open-source tools across ${categories.length}+ categories.`,
     url: '/categories',
     type: 'website',
   },
   twitter: {
     card: 'summary',
     title: 'Browse by Category | Escape Subscriptions',
-    description: 'Find subscription-free alternatives organized by category. 120+ one-time purchase and open-source tools across 15+ categories.',
+    description: `Find subscription-free alternatives organized by category. ${software.length}+ one-time purchase and open-source tools across ${categories.length}+ categories.`,
   },
 };
 

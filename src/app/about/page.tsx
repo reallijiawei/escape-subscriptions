@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd, { breadcrumbSchema, faqSchema, webPageSchema } from '@/components/JsonLd';
 import FAQSection from '@/components/FAQSection';
+import { subscriptionTools, software } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'About — How We Find Subscription-Free Software Alternatives',
@@ -92,7 +93,7 @@ export default function AboutPage() {
               one-time purchase, open-source, offline, and lifetime alternatives to subscription software.
             </p>
             <p className="text-slate-600 leading-relaxed mt-4">
-              We track {`50+`} subscription tools and {`100+`} alternatives across design, development,
+              We track {subscriptionTools.length}+ subscription tools and {software.length}+ alternatives across design, development,
               productivity, security, and more. Every listing includes honest pros and cons, migration difficulty
               ratings, and real pricing data — not marketing fluff.
             </p>
@@ -130,7 +131,7 @@ export default function AboutPage() {
             <h2 className="heading-editorial text-2xl text-slate-900 mb-4 diagonal-accent">What We Offer</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { icon: '🔍', title: 'Comprehensive Database', desc: '50+ subscription tools and 100+ alternatives, all in one place.', href: '/search' },
+                { icon: '🔍', title: 'Comprehensive Database', desc: `${subscriptionTools.length}+ subscription tools and ${software.length}+ alternatives, all in one place.`, href: '/search' },
                 { icon: '📊', title: 'Honest Comparisons', desc: 'Pricing, features, migration difficulty, and risk analysis — no marketing BS.', href: '/compare/gimp-vs-adobe-photoshop' },
                 { icon: '🧮', title: 'Cost Calculator', desc: 'See exactly how much you can save by switching to alternatives.', href: '/calculator' },
                 { icon: '📋', title: 'Migration Guides', desc: 'Step-by-step help to make the switch painless.', href: '/software/gimp' },

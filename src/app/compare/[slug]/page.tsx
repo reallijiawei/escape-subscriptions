@@ -380,6 +380,37 @@ export default async function ComparePage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* See Also */}
+        <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Explore more</h2>
+          <div className="flex flex-wrap gap-2">
+            <Link
+              href={`/alternatives/${subscriptionTool.slug}`}
+              className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+            >
+              All {subscriptionTool.name} alternatives
+            </Link>
+            <Link
+              href={`/software/${software.slug}`}
+              className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+            >
+              {software.name} details
+            </Link>
+            <Link
+              href="/use-cases"
+              className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+            >
+              Browse by use case
+            </Link>
+            <Link
+              href="/stacks"
+              className="px-4 py-2 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+            >
+              Browse stacks
+            </Link>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="bg-slate-900 rounded-2xl p-6 sm:p-8 text-center grain-bg">
           <div className="relative z-10">

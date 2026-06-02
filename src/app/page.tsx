@@ -109,7 +109,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-              Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription tools. Save $500+/year.
+              Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and {subscriptionTools.length}+ subscription tools. Save $500+/year.
             </p>
 
             <div className="max-w-2xl mx-auto animate-fade-in-up delay-300">
