@@ -11,6 +11,7 @@ import TrustBadge from '@/components/TrustBadge';
 import ShareButtons from '@/components/ShareButtons';
 import { getAllComparisons, getComparisonBySlug } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
+import { SITE_URL } from '@/lib/constants';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -113,7 +114,7 @@ export default async function ComparePage({ params }: PageProps) {
         data={softwareApplicationSchema({
           name: software.name,
           description: software.description,
-          url: `https://escapesubscriptions.online/software/${software.slug}`,
+          url: `${SITE_URL}/software/${software.slug}`,
           pricingType: software.pricingType,
           priceText: software.priceText,
           platforms: software.platforms,

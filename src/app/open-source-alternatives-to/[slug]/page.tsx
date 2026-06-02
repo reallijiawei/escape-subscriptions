@@ -4,14 +4,16 @@ import type { Metadata } from 'next';
 import AlternativeComparisonTable from '@/components/AlternativeComparisonTable';
 import AlternativeCardList from '@/components/AlternativeCardList';
 import FAQSection from '@/components/FAQSection';
-import JsonLd, { faqSchema, breadcrumbSchema } from '@/components/JsonLd';
+import JsonLd, { faqSchema, breadcrumbSchema, itemListSchema } from '@/components/JsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadge from '@/components/TrustBadge';
 import {
   subscriptionTools,
   getOpenSourceAlternativesForTool,
   getSoftwareForAlternative,
 } from '@/lib/data';
 import { getSeoContent } from '@/lib/seo-content';
-import { formatPrice, formatDate } from '@/lib/utils';
+import { formatPrice } from '@/lib/utils';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -112,6 +114,15 @@ export default async function OpenSourceAlternativesPage({ params }: PageProps) 
           { name: `Open Source ${tool.name} Alternatives`, url: `/open-source-alternatives-to/${slug}` },
         ])}
       />
+      <JsonLd
+        data={itemListSchema(
+          alternatives.map((a, i) => ({
+            name: a.software.name,
+            url: `/software/${a.software.slug}`,
+            position: i + 1,
+          }))
+        )}
+      />
 
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
@@ -143,17 +154,14 @@ export default async function OpenSourceAlternativesPage({ params }: PageProps) 
                 Free alternatives to {tool.name}
               </Link>
             </div>
-            {lastChecked && (
-              <p className="text-xs text-slate-500 mt-4">
-                Last updated: {formatDate(lastChecked)}
-              </p>
-            )}
           </div>
         </div>
         <div className="h-16 bg-gradient-to-t from-slate-50 to-transparent" />
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        <Breadcrumb items={[{ name: 'Alternatives', href: '/search' }, { name: `Open Source ${tool.name} Alternatives` }]} />
+        {lastChecked && <div className="mb-6"><TrustBadge lastChecked={lastChecked} /></div>}
         {/* SEO Intro */}
         {seoContent && (
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">

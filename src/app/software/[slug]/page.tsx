@@ -4,12 +4,13 @@ import type { Metadata } from 'next';
 import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
 import FAQSection from '@/components/FAQSection';
-import JsonLd, { softwareApplicationSchema, breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import JsonLd, { softwareApplicationSchema, breadcrumbSchema, faqSchema, itemListSchema } from '@/components/JsonLd';
 import { software, subscriptionTools, getSubscriptionToolBySlug, getFreeAlternativesForTool } from '@/lib/data';
 import { getSoftwareSeoContent } from '@/lib/seo-software';
 import Breadcrumb from '@/components/Breadcrumb';
 import TrustBadge from '@/components/TrustBadge';
 import { formatCategory, formatPlatform, formatDate } from '@/lib/utils';
+import { SITE_URL } from '@/lib/constants';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -81,7 +82,7 @@ export default async function SoftwarePage({ params }: PageProps) {
         data={softwareApplicationSchema({
           name: sw.name,
           description: sw.description,
-          url: `https://escapesubscriptions.online/software/${slug}`,
+          url: `${SITE_URL}/software/${slug}`,
           pricingType: sw.pricingType,
           priceText: sw.priceText,
           platforms: sw.platforms,
@@ -95,6 +96,16 @@ export default async function SoftwarePage({ params }: PageProps) {
         ])}
       />
       {seoContent && <JsonLd data={faqSchema(seoContent.faq)} />}
+      {sw.categories.length > 0 && (
+        <JsonLd
+          data={itemListSchema(
+            software
+              .filter((s) => s.id !== sw.id && s.categories.some((c) => sw.categories.includes(c)))
+              .slice(0, 6)
+              .map((s, i) => ({ name: s.name, url: `/software/${s.slug}`, position: i + 1 }))
+          )}
+        />
+      )}
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">

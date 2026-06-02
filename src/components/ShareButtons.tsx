@@ -1,12 +1,14 @@
 'use client';
 
+import { SITE_URL } from '@/lib/constants';
+
 interface ShareButtonsProps {
   title: string;
   url: string;
 }
 
 export default function ShareButtons({ title, url }: ShareButtonsProps) {
-  const fullUrl = `https://escapesubscriptions.online${url}`;
+  const fullUrl = `${SITE_URL}${url}`;
   const encodedUrl = encodeURIComponent(fullUrl);
   const encodedTitle = encodeURIComponent(title);
 

@@ -101,6 +101,7 @@ export default function ComparisonTable({ software, subscriptionTool, relation }
       {/* Desktop table */}
       <div className="hidden md:block overflow-x-auto -mx-6">
         <table className="w-full min-w-[600px]">
+          <caption className="sr-only">{software.name} vs {subscriptionTool.name} comparison</caption>
           <thead>
             <tr className="border-b-2 border-slate-200">
               <th scope="col" className="px-6 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">

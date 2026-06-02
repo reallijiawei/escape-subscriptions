@@ -23,7 +23,7 @@ export default function PlatformBadges({ platforms }: PlatformBadgesProps) {
           key={platform}
           className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200/50"
         >
-          <span className="text-[10px] opacity-60">{platformIcons[platform] || '○'}</span>
+          <span aria-hidden="true" className="text-[10px] opacity-60">{platformIcons[platform] || '○'}</span>
           {formatPlatform(platform)}
         </span>
       ))}

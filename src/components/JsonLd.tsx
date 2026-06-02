@@ -1,3 +1,5 @@
+import { SITE_URL } from '@/lib/constants';
+
 interface JsonLdProps {
   data: Record<string, any>;
 }
@@ -16,14 +18,14 @@ export function websiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Escape Subscriptions',
-    url: 'https://escapesubscriptions.online',
+    url: SITE_URL,
     description:
       'Find one-time payment, open-source, offline, and lifetime alternatives to expensive software subscriptions.',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://escapesubscriptions.online/search?q={search_term_string}',
+        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },
@@ -35,8 +37,8 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Escape Subscriptions',
-    url: 'https://escapesubscriptions.online',
-    logo: 'https://escapesubscriptions.online/favicon.svg',
+    url: SITE_URL,
+    logo: `${SITE_URL}/favicon.svg`,
   };
 }
 
@@ -48,7 +50,7 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://escapesubscriptions.online${item.url}`,
+      item: `${SITE_URL}${item.url}`,
     })),
   };
 }
@@ -111,7 +113,7 @@ export function itemListSchema(items: { name: string; url: string; position: num
       '@type': 'ListItem',
       position: item.position,
       name: item.name,
-      url: `https://escapesubscriptions.online${item.url}`,
+      url: `${SITE_URL}${item.url}`,
     })),
   };
 }
@@ -132,6 +134,6 @@ export function webPageSchema({
     '@type': type,
     name,
     description,
-    url: `https://escapesubscriptions.online${url}`,
+    url: `${SITE_URL}${url}`,
   };
 }
