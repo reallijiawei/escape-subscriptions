@@ -32,7 +32,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav aria-label="Main navigation" className="hidden md:flex items-center gap-1">
             <Link
               href="/search"
               className="px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
@@ -98,7 +98,7 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(false)}
           />
           <div className="fixed top-16 left-0 right-0 bg-white border-b border-slate-200 shadow-lg z-50 md:hidden animate-fade-in">
-            <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+            <nav aria-label="Mobile navigation" className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {[
                 { href: '/search', label: 'Browse Alternatives' },
                 { href: '/calculator', label: 'Calculator' },

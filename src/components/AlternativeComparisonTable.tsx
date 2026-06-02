@@ -54,15 +54,15 @@ export default function AlternativeComparisonTable({ alternatives }: Alternative
             <table className="w-full min-w-[800px]">
               <thead>
                 <tr className="border-b-2 border-slate-200">
-                  <th className="px-6 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Tool</th>
-                  <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Match</th>
-                  <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Pricing</th>
-                  <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Platform</th>
-                  <th className="px-4 py-3 text-center text-xs font-bold text-slate-400 uppercase tracking-wider">Offline</th>
-                  <th className="px-4 py-3 text-center text-xs font-bold text-slate-400 uppercase tracking-wider">OSS</th>
-                  <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Ownership</th>
-                  <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Migration</th>
-                  <th className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Vote</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Tool</th>
+                  <th scope="col" className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Match</th>
+                  <th scope="col" className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Pricing</th>
+                  <th scope="col" className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Platform</th>
+                  <th scope="col" className="px-4 py-3 text-center text-xs font-bold text-slate-400 uppercase tracking-wider">Offline</th>
+                  <th scope="col" className="px-4 py-3 text-center text-xs font-bold text-slate-400 uppercase tracking-wider">OSS</th>
+                  <th scope="col" className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Ownership</th>
+                  <th scope="col" className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Migration</th>
+                  <th scope="col" className="px-4 py-3 text-left text-xs font-bold text-slate-400 uppercase tracking-wider">Vote</th>
                 </tr>
               </thead>
               <tbody>

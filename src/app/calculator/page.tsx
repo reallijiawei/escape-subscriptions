@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import SubscriptionCalculator from '@/components/SubscriptionCalculator';
-import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema, itemListSchema } from '@/components/JsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import FAQSection from '@/components/FAQSection';
 import { subscriptionTools } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -64,6 +65,15 @@ export default function CalculatorPage() {
         ])}
       />
       <JsonLd data={faqSchema(faqItems)} />
+      <JsonLd
+        data={itemListSchema(
+          subscriptionTools
+            .filter((t) => t.monthlyPrice && t.monthlyPrice > 0)
+            .sort((a, b) => (b.monthlyPrice || 0) - (a.monthlyPrice || 0))
+            .slice(0, 5)
+            .map((t, i) => ({ name: t.name, url: `/alternatives/${t.slug}`, position: i + 1 }))
+        )}
+      />
 
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
@@ -140,14 +150,7 @@ export default function CalculatorPage() {
         {/* FAQ */}
         <div className="mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            {faqItems.map((item, i) => (
-              <div key={i} className="bg-white rounded-xl border border-slate-200 p-5">
-                <h3 className="font-bold text-slate-900 mb-2">{item.question}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{item.answer}</p>
-              </div>
-            ))}
-          </div>
+          <FAQSection items={faqItems} />
         </div>
 
         {/* CTA */}

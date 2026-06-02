@@ -21,7 +21,8 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-2">
+          <nav aria-label="Footer navigation" className="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Browse</h4>
             <ul className="space-y-3">
               {[
@@ -41,7 +42,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-2">
+          <div>
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">By Type</h4>
             <ul className="space-y-3">
               {[
@@ -58,7 +59,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div>
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Categories</h4>
             <ul className="space-y-3">
               {[
@@ -78,7 +79,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div>
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Popular</h4>
             <ul className="space-y-3">
               {[
@@ -97,6 +98,7 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+          </nav>
 
         </div>
 

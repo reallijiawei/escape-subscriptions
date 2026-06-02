@@ -41,6 +41,10 @@ const featuredAlternatives = [
   'dropbox',
 ];
 
+const avgYearlyCost = Math.round(
+  subscriptionTools.reduce((sum, t) => sum + (t.monthlyPrice || 0), 0) / subscriptionTools.filter((t) => t.monthlyPrice).length * 12
+);
+
 export default function HomePage() {
   const featuredTools = subscriptionTools.filter((t) =>
     featuredAlternatives.includes(t.id)
@@ -109,7 +113,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
-              Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and {subscriptionTools.length}+ subscription tools. Save $500+/year.
+              Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and {subscriptionTools.length}+ subscription tools. Save ${avgYearlyCost}+/year.
             </p>
 
             <div className="max-w-2xl mx-auto animate-fade-in-up delay-300">
@@ -203,9 +207,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               {
-                stat: '$500+',
+                stat: `$${avgYearlyCost}+`,
                 title: 'Average yearly cost',
-                desc: 'The typical user spends $500+ per year on software subscriptions they could replace with one-time purchases.',
+                desc: `The typical user spends $${avgYearlyCost}+ per year on software subscriptions they could replace with one-time purchases.`,
               },
               {
                 stat: `${subscriptionTools.length}+`,

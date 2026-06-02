@@ -48,7 +48,9 @@ export default function EmailSubscribe({ toolSlug, toolName }: Props) {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+      <label htmlFor="email-subscribe" className="sr-only">Email address</label>
       <input
+        id="email-subscribe"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}

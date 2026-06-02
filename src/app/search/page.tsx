@@ -36,7 +36,7 @@ export default function SearchPage() {
       />
       <JsonLd
         data={itemListSchema(
-          software.slice(0, 20).map((sw, i) => ({ name: sw.name, url: `/software/${sw.slug}`, position: i + 1 }))
+          software.map((sw, i) => ({ name: sw.name, url: `/software/${sw.slug}`, position: i + 1 }))
         )}
       />
       <div className="mb-10">
