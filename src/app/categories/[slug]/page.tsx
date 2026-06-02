@@ -22,8 +22,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const category = categories.find((c) => c.slug === slug);
   if (!category) return {};
 
-  const title = `Best No-Subscription ${category.name} Software`;
-  const description = category.description;
+  // Get top tools in this category for the description
+  const catTools = subscriptionTools.filter((t) => t.category === category.id);
+  const catSoftware = software.filter((s) => s.categories?.includes(category.id as any));
+  const toolNames = catTools.slice(0, 3).map((t) => t.name).join(', ');
+  const altNames = catSoftware.slice(0, 3).map((s) => s.name).join(', ');
+
+  const title = `${category.name} Software — One-Time Purchase & Free Alternatives`;
+  const description = `Stop paying subscriptions for ${category.name.toLowerCase()} tools. Free and one-time-purchase alternatives to ${toolNames || 'popular subscription software'}: ${altNames || 'and more'}.`;
 
   return {
     title,

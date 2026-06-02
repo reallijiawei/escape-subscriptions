@@ -5,7 +5,7 @@ import PricingBadge from '@/components/PricingBadge';
 import PlatformBadges from '@/components/PlatformBadges';
 import FAQSection from '@/components/FAQSection';
 import JsonLd, { softwareApplicationSchema, breadcrumbSchema, faqSchema } from '@/components/JsonLd';
-import { software, getSubscriptionToolBySlug, getFreeAlternativesForTool } from '@/lib/data';
+import { software, subscriptionTools, getSubscriptionToolBySlug, getFreeAlternativesForTool } from '@/lib/data';
 import { getSoftwareSeoContent } from '@/lib/seo-software';
 import { formatCategory, formatPlatform, formatDate } from '@/lib/utils';
 
@@ -24,8 +24,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const sw = software.find((s) => s.slug === slug);
   if (!sw) return {};
 
-  const title = `${sw.name} — One-Time Purchase Alternative`;
-  const description = sw.description;
+  const replacesNames = sw.replaces
+    .map((r) => subscriptionTools.find((t) => t.slug === r)?.name)
+    .filter(Boolean);
+  const replacesStr = replacesNames.length > 0 ? replacesNames.slice(0, 2).join(' & ') : '';
+  const isFree = sw.pricingType === 'FREE' || sw.pricingType === 'OPEN_SOURCE';
+  const price = sw.startingPrice ? `$${sw.startingPrice} one-time` : isFree ? 'Free' : sw.priceText;
+
+  const title = replacesStr
+    ? `${sw.name} — ${price} ${replacesStr} Alternative`
+    : `${sw.name} — ${price} ${isFree ? 'Open Source' : 'One-Time Purchase'} Software`;
+
+  const description = replacesStr
+    ? `${sw.name} is a ${price} alternative to ${replacesNames.join(', ')}. ${isFree ? 'No subscription, open source, self-hostable.' : 'Pay once, own forever.'} ${sw.description}`
+    : `${sw.name}: ${price} software. ${sw.description}`;
 
   return {
     title,

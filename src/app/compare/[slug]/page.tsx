@@ -23,8 +23,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!comparison) return {};
 
   const { software, subscriptionTool } = comparison;
-  const title = `${software.name} vs ${subscriptionTool.name} — Which Is Better?`;
-  const description = `Compare ${software.name} and ${subscriptionTool.name}: pricing, features, platforms, and whether switching from a subscription is worth it.`;
+  const yearlyCost = (subscriptionTool.monthlyPrice || 0) * 12;
+  const isFree = software.pricingType === 'FREE' || software.pricingType === 'OPEN_SOURCE';
+  const priceStr = software.startingPrice ? `$${software.startingPrice}` : isFree ? 'Free' : software.priceText;
+
+  const title = `${software.name} vs ${subscriptionTool.name} — ${priceStr} Alternative?`;
+  const description = yearlyCost > 0
+    ? `${subscriptionTool.name} costs $${subscriptionTool.monthlyPrice}/mo ($${yearlyCost}/yr). ${software.name} is ${priceStr}. Honest comparison: what you gain, what you lose, and whether switching is worth it.`
+    : `Compare ${software.name} and ${subscriptionTool.name} — pricing, features, platforms, and migration guide. Is the switch worth it?`;
 
   return {
     title,

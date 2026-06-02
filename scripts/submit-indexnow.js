@@ -30,7 +30,7 @@ async function submitIndexNow(urls) {
         host: 'escapesubscriptions.online',
         key: API_KEY,
         keyLocation: `${SITE_URL}/${API_KEY}.txt`,
-        urlList: batch.map((url) => ({ url })),
+        urlList: batch,
       }),
     });
 

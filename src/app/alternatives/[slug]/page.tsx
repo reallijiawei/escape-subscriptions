@@ -34,8 +34,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tool = subscriptionTools.find((t) => t.slug === slug);
   if (!tool) return {};
 
-  const title = `Best ${tool.name} Alternatives Without Subscription`;
-  const description = `Looking for a no-subscription alternative to ${tool.name}? Compare one-time purchase, open-source, offline, and lifetime alternatives with pricing, pros, cons, and migration tips.`;
+  const relations = getAlternativesForTool(tool.id);
+  const alts = relations
+    .map((r) => getSoftwareForAlternative(r))
+    .filter(Boolean) as { name: string; pricingType: string }[];
+  const topAlt = alts[0]?.name || 'free alternatives';
+  const freeAlt = alts.find((a) => a.pricingType === 'FREE' || a.pricingType === 'OPEN_SOURCE');
+  const yearlyCost = (tool.monthlyPrice || 0) * 12;
+
+  // Title includes top alternative name for better CTR
+  const title = freeAlt
+    ? `${freeAlt.name}: Free ${tool.name} Alternative (Save $${yearlyCost}/yr)`
+    : `${topAlt} vs ${tool.name} — One-Time Purchase, No Subscription`;
+
+  // Description includes specific savings and alternative names
+  const altNames = alts.slice(0, 3).map((a) => a.name).join(', ');
+  const description = tool.monthlyPrice
+    ? `Stop paying $${tool.monthlyPrice}/mo for ${tool.name}. Try ${altNames} instead — free or one-time purchase. Save $${yearlyCost}/year. Honest pros, cons, and migration guide.`
+    : `Ditch ${tool.name} subscription for ${altNames}. One-time purchase and open-source alternatives with no recurring fees. Compare features, pricing, and migration tips.`;
 
   return {
     title,

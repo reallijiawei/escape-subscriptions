@@ -28,8 +28,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tool = subscriptionTools.find((t) => t.slug === slug);
   if (!tool) return {};
 
-  const title = `Free Alternatives to ${tool.name} — No Subscription Needed`;
-  const description = `Discover free and open-source alternatives to ${tool.name}. Compare features, save money, and break free from subscription costs.`;
+  const relations = getFreeAlternativesForTool(tool.id);
+  const alts = relations
+    .map((r) => getSoftwareForAlternative(r))
+    .filter(Boolean) as { name: string }[];
+  const altNames = alts.slice(0, 3).map((a) => a.name).join(', ');
+  const yearlyCost = (tool.monthlyPrice || 0) * 12;
+
+  const title = `Free ${tool.name} Alternatives — ${altNames.split(',')[0]} & More (Save $${yearlyCost}/yr)`;
+  const description = `Best free alternatives to ${tool.name}: ${altNames}. No subscription, no credit card. Save $${yearlyCost}/year. Feature comparison and migration guide included.`;
 
   return {
     title,

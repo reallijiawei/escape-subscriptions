@@ -20,8 +20,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const stack = getStackBySlug(slug);
   if (!stack) return {};
 
-  const title = `${stack.name} — No-Subscription Software Bundle`;
-  const description = stack.description;
+  const toolNames = stack.items
+    .map((item) => getSubscriptionToolBySlug(item.subscriptionToolId)?.name)
+    .filter(Boolean)
+    .slice(0, 3)
+    .join(', ');
+
+  const title = `${stack.name} Stack — Replace ${toolNames} & Save $${stack.annualSavings}/yr`;
+  const description = `The ${stack.name} stack replaces ${toolNames} with free alternatives. Save $${stack.annualSavings}/year. ${stack.description}`;
 
   return {
     title,

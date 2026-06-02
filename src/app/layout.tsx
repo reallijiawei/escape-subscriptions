@@ -9,26 +9,26 @@ const FONT_URL =
 export const metadata: Metadata = {
   metadataBase: new URL('https://escapesubscriptions.online'),
   title: {
-    default: 'Escape Subscriptions — Tired of Software Subscriptions?',
+    default: 'Buy Software Once — One-Time Purchase Alternatives to Subscriptions',
     template: '%s | Escape Subscriptions',
   },
   description:
-    'A site for people tired of software subscriptions. Find free, open-source, and one-time purchase alternatives to the tools draining your wallet.',
+    'Stop renting your software. Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription tools. Save $500+/year.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     siteName: 'Escape Subscriptions',
-    title: 'Escape Subscriptions — Tired of Software Subscriptions?',
+    title: 'Buy Software Once — One-Time Purchase Alternatives to Subscriptions',
     description:
-      'A site for people tired of software subscriptions. Find free, open-source, and one-time purchase alternatives to the tools draining your wallet.',
-    images: [{ url: '/og-image.svg', width: 1200, height: 630, alt: 'Escape Subscriptions' }],
+      'Stop renting your software. Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription tools. Save $500+/year.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Escape Subscriptions' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Escape Subscriptions — Tired of Software Subscriptions?',
+    title: 'Buy Software Once — One-Time Purchase Alternatives to Subscriptions',
     description:
-      'A site for people tired of software subscriptions. Find free, open-source, and one-time purchase alternatives to the tools draining your wallet.',
-    images: ['/og-image.svg'],
+      'Stop renting your software. Find free, open-source, and one-time purchase alternatives to Adobe, Notion, 1Password, and 50+ subscription tools. Save $500+/year.',
+    images: ['/og-image.png'],
   },
   icons: {
     icon: '/favicon.svg',
