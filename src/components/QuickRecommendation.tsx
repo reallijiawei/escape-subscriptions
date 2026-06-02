@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import PricingBadge from './PricingBadge';
+import { formatMigrationDifficulty } from '@/lib/utils';
+import type { Software, AlternativeRelation } from '@/types/software';
 
 interface Alternative {
-  software: { id: string; slug: string; name: string };
-  relation: { subscriptionToolId: string };
+  software: Software;
+  relation: AlternativeRelation;
 }
 
 interface QuickRecommendationProps {
@@ -64,6 +67,23 @@ export default function QuickRecommendation({
             <p className="text-lg font-bold text-emerald-900 group-hover:text-emerald-700 transition-colors">
               {bestOverall.software.name}
             </p>
+            <div className="mt-2 flex flex-wrap items-center gap-2">
+              <PricingBadge type={bestOverall.software.pricingType} priceText={bestOverall.software.priceText} />
+              <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold ${
+                bestOverall.relation.migrationDifficulty === 'EASY'
+                  ? 'bg-emerald-100 text-emerald-700'
+                  : bestOverall.relation.migrationDifficulty === 'MEDIUM'
+                  ? 'bg-amber-100 text-amber-700'
+                  : 'bg-red-100 text-red-700'
+              }`}>
+                {formatMigrationDifficulty(bestOverall.relation.migrationDifficulty)} migration
+              </span>
+            </div>
+            {bestOverall.relation.bestFor.length > 0 && (
+              <p className="mt-2 text-xs text-emerald-700">
+                Best for: {bestOverall.relation.bestFor[0]}
+              </p>
+            )}
           </Link>
         )}
         {showCommunityPick && (

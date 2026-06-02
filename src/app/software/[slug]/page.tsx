@@ -320,6 +320,29 @@ export default async function SoftwarePage({ params }: PageProps) {
           </div>
         )}
 
+        {/* Related Software */}
+        {sw.categories.length > 0 && (
+          <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
+              Related Software
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {software
+                .filter((s) => s.id !== sw.id && s.categories.some((c) => sw.categories.includes(c)))
+                .slice(0, 6)
+                .map((s) => (
+                  <Link
+                    key={s.id}
+                    href={`/software/${s.slug}`}
+                    className="px-4 py-2 bg-slate-50 border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+                  >
+                    {s.name}
+                  </Link>
+                ))}
+            </div>
+          </div>
+        )}
+
         {/* CTA */}
         <div className="text-center">
           <a

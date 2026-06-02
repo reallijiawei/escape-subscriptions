@@ -47,6 +47,21 @@ export default function SoftwareCard({ software, showReplaces = false }: Softwar
         )}
       </div>
 
+      {software.bestFor.length > 0 && (
+        <div className="mt-3">
+          <div className="flex flex-wrap gap-1.5">
+            {software.bestFor.slice(0, 2).map((item, i) => (
+              <span
+                key={i}
+                className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-100"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
       {showReplaces && software.replaces.length > 0 && (
         <div className="mt-4 pt-4 border-t border-slate-100">
           <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1.5">Replaces</p>

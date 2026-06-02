@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import SoftwareCard from '@/components/SoftwareCard';
-import JsonLd, { breadcrumbSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import { categories, software, subscriptionTools } from '@/lib/data';
 import { getCategorySeoContent } from '@/lib/seo-categories';
 import FAQSection from '@/components/FAQSection';
@@ -74,10 +74,11 @@ export default async function CategoryPage({ params }: PageProps) {
       <JsonLd
         data={breadcrumbSchema([
           { name: 'Home', url: '/' },
-          { name: 'Categories', url: '/categories/design' },
+          { name: 'Categories', url: '/categories' },
           { name: category.name, url: `/categories/${slug}` },
         ])}
       />
+      {seoContent && <JsonLd data={faqSchema(seoContent.faq)} />}
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
@@ -94,7 +95,7 @@ export default async function CategoryPage({ params }: PageProps) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
-        <Breadcrumb items={[{ name: 'Categories', href: '/categories/design' }, { name: category.name }]} />
+        <Breadcrumb items={[{ name: 'Categories', href: '/categories' }, { name: category.name }]} />
         {/* SEO Intro */}
         {seoContent && (
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">

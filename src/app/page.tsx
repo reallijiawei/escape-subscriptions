@@ -110,8 +110,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Popular Searches */}
+      {/* How It Works */}
       <section className="py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">How it works</h2>
+            <p className="text-slate-500">Three steps to escape subscription fatigue.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {[
+              {
+                step: '1',
+                title: 'Find your subscription',
+                desc: 'Search for the tool you\'re paying for — Photoshop, Notion, 1Password, or any of 59+ subscription tools.',
+                icon: '🔍',
+              },
+              {
+                step: '2',
+                title: 'Compare alternatives',
+                desc: 'See one-time purchase and free alternatives side-by-side. Compare pricing, features, and migration difficulty.',
+                icon: '⚖️',
+              },
+              {
+                step: '3',
+                title: 'Switch and save',
+                desc: 'Migrate your data, cancel your subscription, and start owning your software. Save $300–$800/year.',
+                icon: '💰',
+              },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="w-12 h-12 bg-amber-50 border border-amber-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Searches */}
+      <section className="py-20 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="heading-editorial text-3xl text-slate-900 mb-3">What are you paying for?</h2>
@@ -224,8 +264,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Best Alternatives — SEO internal links */}
+      {/* Recently Updated */}
       <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Recently verified</h2>
+            <p className="text-slate-500">Alternatives we&apos;ve checked and confirmed this week.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {software
+              .sort((a, b) => new Date(b.lastCheckedAt).getTime() - new Date(a.lastCheckedAt).getTime())
+              .slice(0, 8)
+              .map((sw) => (
+                <Link
+                  key={sw.id}
+                  href={`/software/${sw.slug}`}
+                  className="group p-4 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50/30 rounded-xl transition-all"
+                >
+                  <h3 className="font-bold text-sm text-slate-900 group-hover:text-amber-700 transition-colors mb-1">
+                    {sw.name}
+                  </h3>
+                  <p className="text-xs text-slate-500">{sw.priceText}</p>
+                </Link>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Best Alternatives — SEO internal links */}
+      <section className="py-20 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Best alternatives without subscription</h2>
@@ -278,6 +345,39 @@ export default function HomePage() {
                 className="px-5 py-2.5 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-700 hover:text-slate-900 font-medium transition-all hover-lift"
               >
                 {cat.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Comparisons — SEO internal links */}
+      <section className="py-20 bg-white border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Popular comparisons</h2>
+            <p className="text-slate-500">Side-by-side comparisons of subscriptions vs alternatives.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { alt: 'GIMP', tool: 'Photoshop', slug: 'gimp-vs-adobe-photoshop' },
+              { alt: 'Affinity Photo', tool: 'Photoshop', slug: 'affinity-photo-vs-adobe-photoshop' },
+              { alt: 'Obsidian', tool: 'Notion', slug: 'obsidian-vs-notion' },
+              { alt: 'Bitwarden', tool: '1Password', slug: 'bitwarden-vs-1password' },
+              { alt: 'DaVinci Resolve', tool: 'Premiere Pro', slug: 'davinci-resolve-vs-adobe-premiere-pro' },
+              { alt: 'Inkscape', tool: 'Illustrator', slug: 'inkscape-vs-adobe-illustrator' },
+            ].map((item) => (
+              <Link
+                key={item.slug}
+                href={`/compare/${item.slug}`}
+                className="group flex items-center justify-between p-4 bg-slate-50 border border-slate-200 hover:border-amber-300 hover:bg-amber-50/30 rounded-xl transition-all"
+              >
+                <span className="text-sm font-semibold text-slate-900 group-hover:text-amber-700 transition-colors">
+                  {item.alt} vs {item.tool}
+                </span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-slate-400 group-hover:text-amber-500 transition-colors">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </Link>
             ))}
           </div>

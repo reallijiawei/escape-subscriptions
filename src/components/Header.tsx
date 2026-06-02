@@ -102,7 +102,7 @@ export default function Header() {
               {[
                 { href: '/search', label: 'Browse Alternatives' },
                 { href: '/calculator', label: 'Calculator' },
-                { href: '/categories/design', label: 'Categories' },
+                { href: '/categories', label: 'Categories' },
                 { href: '/stacks', label: 'Stacks' },
                 { href: '/use-cases', label: 'Use Cases' },
                 { href: '/about', label: 'About' },

@@ -20,12 +20,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const uc = getUseCaseBySlug(slug);
   if (!uc) return {};
 
+  const toolNames = uc.toolIds
+    .map((id) => subscriptionTools.find((t) => t.id === id)?.name)
+    .filter(Boolean)
+    .slice(0, 3)
+    .join(', ');
+
+  const title = `${uc.persona} Software — Free Alternatives to ${toolNames || 'Subscription Tools'}`;
+  const description = `Best free and open-source software for ${uc.persona.toLowerCase()}. Replace ${toolNames || 'expensive subscriptions'} with one-time purchase and free alternatives. ${uc.description}`;
+
   return {
-    title: uc.title,
-    description: uc.description,
+    title,
+    description,
     alternates: { canonical: `/use-cases/${slug}` },
-    openGraph: { title: uc.title, description: uc.description, url: `/use-cases/${slug}`, type: 'article' },
-    twitter: { card: 'summary_large_image', title: uc.title, description: uc.description },
+    openGraph: { title, description, url: `/use-cases/${slug}`, type: 'article' },
+    twitter: { card: 'summary_large_image', title, description },
   };
 }
 

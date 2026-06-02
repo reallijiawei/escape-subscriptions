@@ -1,37 +1,166 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import SubscriptionCalculator from '@/components/SubscriptionCalculator';
+import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Software Subscription Cost Calculator',
+  title: 'Software Subscription Cost Calculator — See How Much You Overspend',
   description:
-    'See how much you spend on software subscriptions every year and discover one-time or open-source alternatives.',
+    'Calculate how much you spend on software subscriptions per year. Compare with one-time purchase alternatives and see potential savings. Free tool.',
   alternates: {
     canonical: '/calculator',
   },
   openGraph: {
-    title: 'Software Subscription Cost Calculator',
+    title: 'Software Subscription Cost Calculator — See How Much You Overspend',
     description:
-      'See how much you spend on software subscriptions every year and discover one-time or open-source alternatives.',
+      'Calculate how much you spend on software subscriptions per year. Compare with one-time purchase alternatives and see potential savings.',
     url: '/calculator',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Software Subscription Cost Calculator — See How Much You Overspend',
+    description: 'Calculate how much you spend on software subscriptions per year. Compare with one-time purchase alternatives.',
+  },
 };
+
+const faqItems = [
+  {
+    question: 'How does the subscription cost calculator work?',
+    answer: 'Select the software subscriptions you currently pay for from our list of 50+ popular tools. The calculator totals your monthly and yearly spend, then shows one-time purchase alternatives that could save you money long-term.',
+  },
+  {
+    question: 'How accurate are the subscription prices?',
+    answer: 'We check pricing data weekly and update our database when changes occur. Prices shown are standard retail prices for individual plans — team or enterprise plans may differ. Each tool page shows when it was last verified.',
+  },
+  {
+    question: 'What counts as a subscription?',
+    answer: 'Any software you pay for on a recurring basis — monthly or annually. This includes cloud services, SaaS tools, app subscriptions, and premium tiers of freemium products. One-time purchases and free open-source tools are not subscriptions.',
+  },
+  {
+    question: 'How much can I realistically save?',
+    answer: 'Most users save $300–$800/year by switching to one-time purchase or free alternatives. Over 3 years, savings often exceed $2,000. The exact amount depends on which tools you use and which alternatives you choose.',
+  },
+];
 
 export default function CalculatorPage() {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="text-center mb-10">
-        <span className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-amber-700 text-xs font-semibold uppercase tracking-wider mb-4">
-          Free tool
-        </span>
-        <h1 className="heading-editorial text-4xl text-slate-900 mb-4">
-          Subscription Cost Calculator
-        </h1>
-        <p className="text-lg text-slate-500 max-w-xl mx-auto">
-          See how much you spend on software subscriptions every year and discover one-time or open-source alternatives.
-        </p>
+    <div>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Calculator', url: '/calculator' },
+        ])}
+      />
+      <JsonLd data={faqSchema(faqItems)} />
+
+      {/* Hero */}
+      <section className="bg-slate-900 grain-bg">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <div className="animate-fade-in-up text-center">
+            <span className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+              Free tool
+            </span>
+            <h1 className="heading-editorial text-3xl sm:text-4xl md:text-5xl text-white mb-5">
+              Subscription Cost<br />
+              <span className="text-amber-400">Calculator</span>
+            </h1>
+            <p className="text-lg text-slate-400 max-w-xl mx-auto">
+              See how much you spend on software subscriptions every year and discover one-time or open-source alternatives.
+            </p>
+          </div>
+        </div>
+        <div className="h-16 bg-gradient-to-t from-slate-50 to-transparent" />
+      </section>
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        <Breadcrumb items={[{ name: 'Calculator' }]} />
+
+        {/* Calculator */}
+        <div className="mb-12">
+          <SubscriptionCalculator />
+        </div>
+
+        {/* Why Switch */}
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Why Switch to One-Time Purchase?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { icon: '💰', title: 'Save money', desc: 'Pay once instead of forever. Most alternatives pay for themselves in 2–6 months.' },
+              { icon: '🔒', title: 'Own your data', desc: 'No cloud dependency. Your files stay on your device, not on someone else\'s server.' },
+              { icon: '🛡️', title: 'No price hikes', desc: 'Subscription prices increase every year. One-time purchases don\'t.' },
+            ].map((item) => (
+              <div key={item.title} className="p-4 bg-slate-50 rounded-xl">
+                <span className="text-2xl mb-2 block">{item.icon}</span>
+                <h3 className="font-bold text-slate-900 text-sm mb-1">{item.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Popular Tools */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Most Expensive Subscriptions</h2>
+          <div className="space-y-3">
+            {[
+              { name: 'Adobe Creative Cloud', price: '$55/mo', yearly: '$660/yr', slug: 'adobe-creative-cloud' },
+              { name: 'Notion', price: '$10/mo', yearly: '$120/yr', slug: 'notion' },
+              { name: 'Grammarly', price: '$12/mo', yearly: '$144/yr', slug: 'grammarly' },
+              { name: '1Password', price: '$5/mo', yearly: '$60/yr', slug: '1password' },
+              { name: 'Canva', price: '$13/mo', yearly: '$156/yr', slug: 'canva' },
+            ].map((tool) => (
+              <Link
+                key={tool.slug}
+                href={`/alternatives/${tool.slug}`}
+                className="flex items-center justify-between p-4 bg-slate-50 hover:bg-amber-50 rounded-xl transition-colors group"
+              >
+                <div>
+                  <p className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">{tool.name}</p>
+                  <p className="text-sm text-slate-500">{tool.price} ({tool.yearly})</p>
+                </div>
+                <span className="text-sm text-amber-600 font-semibold flex items-center gap-1.5">
+                  Find alternatives
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* FAQ */}
+        <div className="mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqItems.map((item, i) => (
+              <div key={i} className="bg-white rounded-xl border border-slate-200 p-5">
+                <h3 className="font-bold text-slate-900 mb-2">{item.question}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="bg-slate-900 rounded-2xl p-6 sm:p-8 text-center grain-bg">
+          <div className="relative z-10">
+            <h2 className="text-lg sm:text-xl font-bold text-white mb-2">
+              Ready to stop overpaying?
+            </h2>
+            <p className="text-sm text-slate-400 mb-6">
+              Browse our database of one-time purchase and free alternatives to popular subscription software.
+            </p>
+            <Link
+              href="/search"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-semibold transition-colors"
+            >
+              Browse Alternatives
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </Link>
+          </div>
+        </div>
       </div>
-      <SubscriptionCalculator />
     </div>
   );
 }

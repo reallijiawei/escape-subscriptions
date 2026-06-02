@@ -21,14 +21,15 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-3">
-            <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Navigate</h4>
+          <div className="md:col-span-2">
+            <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Browse</h4>
             <ul className="space-y-3">
               {[
-                { href: '/search', label: 'Browse' },
+                { href: '/search', label: 'All Alternatives' },
                 { href: '/calculator', label: 'Calculator' },
                 { href: '/categories', label: 'Categories' },
-                { href: '/about', label: 'About' },
+                { href: '/stacks', label: 'Stacks' },
+                { href: '/use-cases', label: 'Use Cases' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-slate-400 hover:text-amber-400 transition-colors">
@@ -39,7 +40,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-5">
+          <div className="md:col-span-3">
+            <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Categories</h4>
+            <ul className="space-y-3">
+              {[
+                { href: '/categories/design', label: 'Design' },
+                { href: '/categories/productivity', label: 'Productivity' },
+                { href: '/categories/writing', label: 'Writing' },
+                { href: '/categories/developer-tools', label: 'Developer Tools' },
+                { href: '/categories/security', label: 'Security' },
+                { href: '/categories/video-audio', label: 'Video & Audio' },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-slate-400 hover:text-amber-400 transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-3">
             <h4 className="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-4">Popular</h4>
             <ul className="space-y-3">
               {[
@@ -47,8 +68,8 @@ export default function Footer() {
                 { href: '/alternatives/notion', label: 'Notion Alternatives' },
                 { href: '/alternatives/canva', label: 'Canva Alternatives' },
                 { href: '/alternatives/grammarly', label: 'Grammarly Alternatives' },
-                { href: '/free-alternatives-to/adobe-photoshop', label: 'Free Photoshop Alternatives' },
-                { href: '/free-alternatives-to/notion', label: 'Free Notion Alternatives' },
+                { href: '/alternatives/1password', label: '1Password Alternatives' },
+                { href: '/alternatives/figma', label: 'Figma Alternatives' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-slate-400 hover:text-amber-400 transition-colors">

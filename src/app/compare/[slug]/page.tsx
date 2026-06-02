@@ -7,6 +7,7 @@ import PlatformBadges from '@/components/PlatformBadges';
 import FAQSection from '@/components/FAQSection';
 import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
+import TrustBadge from '@/components/TrustBadge';
 import { getAllComparisons, getComparisonBySlug } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -124,6 +125,9 @@ export default async function ComparePage({ params }: PageProps) {
               Is switching from {subscriptionTool.name} to {software.name} worth it?
               Here&apos;s a detailed comparison of pricing, features, and ownership.
             </p>
+            <div className="mt-4">
+              <TrustBadge lastChecked={software.lastCheckedAt} />
+            </div>
           </div>
         </div>
         <div className="h-16 bg-gradient-to-t from-slate-50 to-transparent" />
@@ -272,6 +276,40 @@ export default async function ComparePage({ params }: PageProps) {
           </div>
         </div>
 
+        {/* Migration Guide */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Migration Guide</h2>
+          <p className="text-slate-600 mb-4 leading-relaxed">
+            Switching from {subscriptionTool.name} to {software.name} is rated as{' '}
+            <span className={`font-semibold ${
+              relation.migrationDifficulty === 'EASY' ? 'text-emerald-600' :
+              relation.migrationDifficulty === 'MEDIUM' ? 'text-amber-600' : 'text-red-600'
+            }`}>
+              {relation.migrationDifficulty.toLowerCase()}
+            </span>.
+            Here&apos;s how to make the move:
+          </p>
+          <div className="space-y-4">
+            {[
+              { step: '1', title: 'Export your data', desc: `Go to ${subscriptionTool.name}'s settings and export your data in CSV, PDF, or native format. Most tools support bulk export.` },
+              { step: '2', title: `Install ${software.name}`, desc: `Download ${software.name} from the official website. ${software.hasFreeTrial ? 'It offers a free trial, so you can test before committing.' : software.pricingType === 'FREE' || software.pricingType === 'OPEN_SOURCE' ? 'It\'s completely free to use.' : `It costs ${software.priceText} — a one-time purchase.`}` },
+              { step: '3', title: 'Import and configure', desc: `Import your exported data into ${software.name}. Set up your preferences, shortcuts, and workflows to match your existing setup.` },
+              { step: '4', title: 'Run in parallel', desc: `Use both tools side-by-side for a week or two. This lets you verify everything works before fully switching.` },
+              { step: '5', title: 'Cancel subscription', desc: `Once you're confident ${software.name} meets your needs, cancel your ${subscriptionTool.name} subscription. You've escaped the subscription!` },
+            ].map((item) => (
+              <div key={item.step} className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl">
+                <span className="flex-shrink-0 w-8 h-8 bg-amber-50 border border-amber-200 rounded-lg flex items-center justify-center text-amber-700 font-bold text-sm">
+                  {item.step}
+                </span>
+                <div>
+                  <h3 className="font-bold text-slate-900 text-sm mb-1">{item.title}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* FAQ */}
         <div className="mb-8">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">Frequently Asked Questions</h2>
@@ -303,6 +341,25 @@ export default async function ComparePage({ params }: PageProps) {
             >
               Open source alternatives
             </Link>
+          </div>
+        </div>
+
+        {/* Related Comparisons */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Related Comparisons</h2>
+          <div className="flex flex-wrap gap-2">
+            {getAllComparisons()
+              .filter((c) => c.subscriptionTool.id === subscriptionTool.id && c.software.id !== software.id)
+              .slice(0, 4)
+              .map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/compare/${c.slug}`}
+                  className="px-4 py-2 bg-slate-50 border border-slate-200 hover:border-amber-300 hover:bg-amber-50 rounded-xl text-sm text-slate-600 hover:text-slate-900 font-medium transition-all"
+                >
+                  {c.software.name} vs {subscriptionTool.name}
+                </Link>
+              ))}
           </div>
         </div>
 

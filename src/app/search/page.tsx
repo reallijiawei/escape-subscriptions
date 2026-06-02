@@ -85,13 +85,43 @@ export default function SearchPage() {
           </div>
         </div>
 
-        <div>
+        <div className="mb-12">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-5">
             Alternative Software
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {software.map((sw) => (
               <SoftwareCard key={sw.id} software={sw} showReplaces />
+            ))}
+          </div>
+        </div>
+
+        {/* Popular Comparisons */}
+        <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
+            Popular Comparisons
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              { alt: 'GIMP', tool: 'Photoshop', slug: 'gimp-vs-adobe-photoshop' },
+              { alt: 'Affinity Photo', tool: 'Photoshop', slug: 'affinity-photo-vs-adobe-photoshop' },
+              { alt: 'Obsidian', tool: 'Notion', slug: 'obsidian-vs-notion' },
+              { alt: 'Bitwarden', tool: '1Password', slug: 'bitwarden-vs-1password' },
+              { alt: 'DaVinci Resolve', tool: 'Premiere Pro', slug: 'davinci-resolve-vs-adobe-premiere-pro' },
+              { alt: 'Inkscape', tool: 'Illustrator', slug: 'inkscape-vs-adobe-illustrator' },
+            ].map((item) => (
+              <Link
+                key={item.slug}
+                href={`/compare/${item.slug}`}
+                className="group flex items-center justify-between p-3 bg-white border border-slate-200 hover:border-amber-300 hover:bg-amber-50/30 rounded-xl transition-all"
+              >
+                <span className="text-sm font-medium text-slate-700 group-hover:text-amber-700 transition-colors">
+                  {item.alt} vs {item.tool}
+                </span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-slate-400 group-hover:text-amber-500 transition-colors">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
             ))}
           </div>
         </div>
