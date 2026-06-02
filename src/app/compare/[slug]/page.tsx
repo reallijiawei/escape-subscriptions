@@ -118,6 +118,7 @@ export default async function ComparePage({ params }: PageProps) {
           pricingType: software.pricingType,
           priceText: software.priceText,
           platforms: software.platforms,
+          categories: software.categories,
         })}
       />
 
