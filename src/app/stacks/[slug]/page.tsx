@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import PricingBadge from '@/components/PricingBadge';
 import FAQSection from '@/components/FAQSection';
-import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema, itemListSchema } from '@/components/JsonLd';
 import { stacks, getStackBySlug, getSubscriptionToolBySlug, software } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -101,6 +101,15 @@ export default async function StackPage({ params }: PageProps) {
         ])}
       />
       <JsonLd data={faqSchema(faqItems)} />
+      <JsonLd
+        data={itemListSchema(
+          items.map((item, i) => ({
+            name: item.alt.name,
+            url: `/software/${item.alt.slug}`,
+            position: i + 1,
+          }))
+        )}
+      />
 
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">

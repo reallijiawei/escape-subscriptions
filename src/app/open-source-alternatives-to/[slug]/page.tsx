@@ -216,6 +216,25 @@ export default async function OpenSourceAlternativesPage({ params }: PageProps) 
           <FAQSection items={faqItems} />
         </div>
 
+        {/* Related Searches */}
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 mb-8">
+          <h2 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Related Open Source Alternatives</h2>
+          <div className="flex flex-wrap gap-2">
+            {subscriptionTools
+              .filter((t) => t.slug !== slug && t.category === tool.category && getOpenSourceAlternativesForTool(t.id).length > 0)
+              .slice(0, 6)
+              .map((t) => (
+                <Link
+                  key={t.id}
+                  href={`/open-source-alternatives-to/${t.slug}`}
+                  className="px-4 py-2 bg-blue-50 border border-blue-200 hover:bg-blue-100 rounded-xl text-sm text-blue-700 font-medium transition-all"
+                >
+                  Open source {t.name} alternatives
+                </Link>
+              ))}
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="bg-slate-900 rounded-2xl p-6 sm:p-8 text-center grain-bg">
           <div className="relative z-10">

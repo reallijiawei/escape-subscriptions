@@ -86,6 +86,7 @@ export default async function SoftwarePage({ params }: PageProps) {
           pricingType: sw.pricingType,
           priceText: sw.priceText,
           platforms: sw.platforms,
+          categories: sw.categories,
         })}
       />
       <JsonLd
@@ -177,7 +178,6 @@ export default async function SoftwarePage({ params }: PageProps) {
             {[
               { label: 'Ownership', value: sw.ownershipLevel, color: sw.ownershipLevel === 'HIGH' ? 'emerald' : sw.ownershipLevel === 'MEDIUM' ? 'amber' : 'red' },
               { label: 'Cloud Dependency', value: sw.cloudDependency, color: sw.cloudDependency === 'NONE' || sw.cloudDependency === 'LOW' ? 'emerald' : sw.cloudDependency === 'MEDIUM' ? 'amber' : 'red' },
-              { label: 'Last Checked', value: formatDate(sw.lastCheckedAt), color: 'slate' },
             ].map((item) => (
               <div key={item.label} className={`p-4 rounded-xl ${item.color === 'emerald' ? 'bg-emerald-50' : item.color === 'amber' ? 'bg-amber-50' : item.color === 'red' ? 'bg-red-50' : 'bg-slate-50'}`}>
                 <p className="text-xs text-slate-500 mb-1">{item.label}</p>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import SoftwareCard from '@/components/SoftwareCard';
 import FAQSection from '@/components/FAQSection';
-import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
+import JsonLd, { breadcrumbSchema, faqSchema, itemListSchema } from '@/components/JsonLd';
 import { useCases, software, subscriptionTools, getUseCaseBySlug } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
 
@@ -80,6 +80,17 @@ export default async function UseCasePage({ params }: PageProps) {
         ])}
       />
       <JsonLd data={faqSchema(faqItems)} />
+      {ucSoftware.length > 0 && (
+        <JsonLd
+          data={itemListSchema(
+            ucSoftware.map((s, i) => ({
+              name: s!.name,
+              url: `/software/${s!.slug}`,
+              position: i + 1,
+            }))
+          )}
+        />
+      )}
 
       {/* Hero */}
       <section className="bg-slate-900 grain-bg">

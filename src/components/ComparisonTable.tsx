@@ -27,12 +27,12 @@ export default function ComparisonTable({ software, subscriptionTool, relation }
     },
     {
       label: 'Platforms',
-      sub: <span className="text-sm text-slate-500">Web, Desktop</span>,
+      sub: <span className="text-sm text-slate-500">Web, Desktop <span className="text-[10px] text-slate-400">(typical)</span></span>,
       alt: <PlatformBadges platforms={software.platforms} />,
     },
     {
       label: 'Offline Support',
-      sub: <span className="text-sm text-slate-400">Limited</span>,
+      sub: <span className="text-sm text-slate-400">Limited <span className="text-[10px] text-slate-400">(typical)</span></span>,
       alt: software.isOfflineSupported ? (
         <span className="inline-flex items-center gap-1.5 text-sm text-emerald-600 font-medium">
           <span className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-xs">✓</span>
@@ -68,7 +68,7 @@ export default function ComparisonTable({ software, subscriptionTool, relation }
     },
     {
       label: 'Cloud Dependency',
-      sub: <span className="text-sm text-red-500 font-medium">High</span>,
+      sub: <span className="text-sm text-red-500 font-medium">High <span className="text-[10px] text-slate-400">(typical)</span></span>,
       alt: (
         <span className={`text-sm font-medium ${
           software.cloudDependency === 'NONE' ? 'text-emerald-600' :

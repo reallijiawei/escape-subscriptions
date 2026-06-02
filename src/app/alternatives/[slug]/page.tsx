@@ -118,15 +118,15 @@ export default async function AlternativePage({ params }: PageProps) {
     : [
     {
       question: `Is there a one-time purchase alternative to ${tool.name}?`,
-      answer: `Yes, there are several one-time purchase alternatives to ${tool.name}. ${bestOverall?.software.name || 'Affinity Photo'} is a popular choice that offers professional features without a subscription.`,
+      answer: `Yes, there are several one-time purchase alternatives to ${tool.name}. ${bestOverall?.software.name || 'The top recommended alternative'} is a popular choice that offers professional features without a subscription.`,
     },
     {
       question: `What is the best free alternative to ${tool.name}?`,
-      answer: `The best free alternative depends on your needs. ${bestFree?.software.name || 'GIMP'} is a popular free and open-source option that can replace ${tool.name} for many users.`,
+      answer: `The best free alternative depends on your needs. ${bestFree?.software.name || 'Several free options'} are available that can replace ${tool.name} for many users.`,
     },
     {
       question: `What is the best open-source alternative to ${tool.name}?`,
-      answer: `Open-source alternatives offer transparency and community support. ${bestFree?.software.name || 'GIMP'} is one of the most popular open-source alternatives to ${tool.name}.`,
+      answer: `Open-source alternatives offer transparency and community support. ${bestFree?.software.name || 'Multiple open-source options'} are among the most popular alternatives to ${tool.name}.`,
     },
     {
       question: `Can I replace ${tool.name} completely?`,

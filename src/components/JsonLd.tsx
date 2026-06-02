@@ -70,6 +70,27 @@ export function faqSchema(questions: { question: string; answer: string }[]) {
   };
 }
 
+const categoryToAppCategory: Record<string, string> = {
+  DESIGN: 'DesignApplication',
+  PRODUCTIVITY: 'BusinessApplication',
+  WRITING: 'BusinessApplication',
+  VIDEO_AUDIO: 'MultimediaApplication',
+  DEVELOPER_TOOLS: 'DeveloperApplication',
+  BUSINESS: 'BusinessApplication',
+  SECURITY: 'SecurityApplication',
+  STORAGE: 'UtilitiesApplication',
+  AI_TOOLS: 'BusinessApplication',
+  EDUCATION: 'EducationalApplication',
+  ENTERTAINMENT: 'EntertainmentApplication',
+  SCREEN_RECORDING: 'MultimediaApplication',
+  PRESENTATION: 'BusinessApplication',
+  VPN: 'SecurityApplication',
+  CRM: 'BusinessApplication',
+  E_COMMERCE: 'BusinessApplication',
+  FORMS: 'BusinessApplication',
+  CAD: 'DesignApplication',
+};
+
 export function softwareApplicationSchema(sw: {
   name: string;
   description: string;
@@ -77,14 +98,19 @@ export function softwareApplicationSchema(sw: {
   pricingType: string;
   priceText?: string;
   platforms: string[];
+  categories?: string[];
 }) {
+  const appCategory = sw.categories
+    ?.map((c) => categoryToAppCategory[c])
+    .find(Boolean) || 'BusinessApplication';
+
   const schema: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: sw.name,
     description: sw.description,
     url: sw.url,
-    applicationCategory: 'BusinessApplication',
+    applicationCategory: appCategory,
     operatingSystem: sw.platforms.join(', '),
   };
 

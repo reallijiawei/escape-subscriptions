@@ -3,6 +3,7 @@ import Link from 'next/link';
 import JsonLd, { breadcrumbSchema, faqSchema } from '@/components/JsonLd';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQSection from '@/components/FAQSection';
+import { SITE_URL } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Embed Badge | Escape Subscriptions',
@@ -42,16 +43,14 @@ const badgeFaq = [
   },
 ];
 
-const SITE = 'https://escapesubscriptions.online';
-
-const htmlCode = `<a href="${SITE}" target="_blank" rel="noopener noreferrer">
-  <img src="${SITE}/badge.svg" alt="Listed on Escape Subscriptions" width="220" height="36" />
+const htmlCode = `<a href="${SITE_URL}" target="_blank" rel="noopener noreferrer">
+  <img src="${SITE_URL}/badge.svg" alt="Listed on Escape Subscriptions" width="220" height="36" />
 </a>`;
 
-const markdownCode = `[![Listed on Escape Subscriptions](${SITE}/badge.svg)](${SITE})`;
+const markdownCode = `[![Listed on Escape Subscriptions](${SITE_URL}/badge.svg)](${SITE_URL})`;
 
-const reactCode = `<a href="${SITE}" target="_blank" rel="noopener noreferrer">
-  <img src="${SITE}/badge.svg" alt="Listed on Escape Subscriptions" width={220} height={36} />
+const reactCode = `<a href="${SITE_URL}" target="_blank" rel="noopener noreferrer">
+  <img src="${SITE_URL}/badge.svg" alt="Listed on Escape Subscriptions" width={220} height={36} />
 </a>`;
 
 export default function BadgePage() {
