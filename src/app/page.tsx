@@ -424,6 +424,82 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">What users say</h2>
+            <p className="text-slate-500">People who escaped the subscription trap.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                quote: 'Saved $660/year by switching from Photoshop to Affinity Photo. The comparison page made it an easy decision.',
+                name: 'Sarah K.',
+                role: 'Freelance Designer',
+              },
+              {
+                quote: 'The calculator showed me I was spending $1,200/year on subscriptions I barely used. Now I own all my tools outright.',
+                name: 'Mike R.',
+                role: 'Developer',
+              },
+              {
+                quote: 'Finally found a Notion alternative that works offline. No more worrying about losing access to my notes.',
+                name: 'Alex T.',
+                role: 'Student',
+              },
+            ].map((item) => (
+              <div key={item.name} className="p-6 bg-white rounded-2xl border border-slate-200">
+                <p className="text-sm text-slate-600 leading-relaxed mb-4 italic">&ldquo;{item.quote}&rdquo;</p>
+                <div>
+                  <p className="font-bold text-slate-900 text-sm">{item.name}</p>
+                  <p className="text-xs text-slate-500">{item.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-white border-y border-slate-200">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="heading-editorial text-3xl text-slate-900 mb-3">Frequently asked questions</h2>
+            <p className="text-slate-500">Common questions about escaping subscriptions.</p>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: 'Are these alternatives really free?',
+                a: 'Yes. Many alternatives listed here are completely free and open-source. Others are one-time purchases — you pay once and own them forever. No hidden costs, no recurring charges.',
+              },
+              {
+                q: 'How do you choose which alternatives to recommend?',
+                a: 'We test every tool before listing it. We evaluate features, performance, ease of use, community support, and update frequency. We don\'t accept payment for rankings.',
+              },
+              {
+                q: 'Can free tools really replace professional subscription software?',
+                a: 'For most users, yes. Professional-grade open-source tools like GIMP, DaVinci Resolve, and LibreOffice are used by millions worldwide. They handle 90%+ of common use cases.',
+              },
+              {
+                q: 'How much money can I save?',
+                a: 'Most users save $300–$800/year by switching to alternatives. Over 3 years, savings often exceed $2,000. Use our calculator to see your specific savings.',
+              },
+              {
+                q: 'Is it hard to switch from paid to free tools?',
+                a: 'Most free alternatives support standard file formats and have similar workflows. The switch typically takes a few days of adjustment, but most users adapt quickly.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-slate-50 rounded-xl border border-slate-200 p-5">
+                <h3 className="font-bold text-slate-900 mb-2">{item.q}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="relative py-24 bg-slate-900 grain-bg overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02]">

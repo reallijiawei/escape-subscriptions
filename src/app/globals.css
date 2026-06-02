@@ -179,3 +179,71 @@ html {
   background: #f59e0b;
   transform: skewX(-20deg);
 }
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  header,
+  footer,
+  .grain-bg::before,
+  button,
+  .hover-lift,
+  nav,
+  [aria-label="Breadcrumb"] {
+    display: none !important;
+  }
+
+  .max-w-4xl,
+  .max-w-7xl {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .bg-slate-900 {
+    background: white !important;
+    color: black !important;
+  }
+
+  .text-white,
+  .text-slate-400 {
+    color: black !important;
+  }
+
+  .text-amber-400,
+  .text-amber-600 {
+    color: #b45309 !important;
+  }
+
+  .border {
+    border-color: #ccc !important;
+  }
+
+  .shadow-xl,
+  .shadow-lg {
+    box-shadow: none !important;
+  }
+
+  a {
+    color: #b45309 !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
