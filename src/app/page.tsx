@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import SearchBar from '@/components/SearchBar';
@@ -117,16 +118,18 @@ export default function HomePage() {
             </p>
 
             <div className="max-w-2xl mx-auto animate-fade-in-up delay-300">
-              <SearchBar
-                popularSuggestions={[
-                  'Photoshop',
-                  'Notion',
-                  'Canva',
-                  'Grammarly',
-                  '1Password',
-                  'Dropbox',
-                ]}
-              />
+              <Suspense fallback={<div className="h-14 bg-white/10 rounded-2xl animate-pulse" />}>
+                <SearchBar
+                  popularSuggestions={[
+                    'Photoshop',
+                    'Notion',
+                    'Canva',
+                    'Grammarly',
+                    '1Password',
+                    'Dropbox',
+                  ]}
+                />
+              </Suspense>
             </div>
           </div>
         </div>
