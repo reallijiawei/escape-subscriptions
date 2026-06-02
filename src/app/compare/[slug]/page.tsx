@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -149,7 +150,9 @@ export default async function ComparePage({ params }: PageProps) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
         <div className="flex items-center justify-between mb-6">
           <Breadcrumb items={[{ name: 'Compare', href: '/search' }, { name: `${software.name} vs ${subscriptionTool.name}` }]} />
-          <ShareButtons title={`${software.name} vs ${subscriptionTool.name}`} url={`/compare/${slug}`} />
+          <Suspense fallback={<div className="h-8 w-24 bg-slate-100 rounded animate-pulse" />}>
+            <ShareButtons title={`${software.name} vs ${subscriptionTool.name}`} url={`/compare/${slug}`} />
+          </Suspense>
         </div>
         {/* Detailed Comparison Intro */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
