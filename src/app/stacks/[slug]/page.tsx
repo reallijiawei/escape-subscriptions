@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import PricingBadge from '@/components/PricingBadge';
 import FAQSection from '@/components/FAQSection';
+import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd, { breadcrumbSchema, faqSchema, itemListSchema } from '@/components/JsonLd';
 import { stacks, getStackBySlug, getSubscriptionToolBySlug, software } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
@@ -130,6 +131,7 @@ export default async function StackPage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        <Breadcrumb items={[{ name: 'Stacks', href: '/stacks' }, { name: stack.name }]} />
         {/* SEO Intro */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
           <p className="text-slate-700 leading-relaxed text-base">

@@ -3,12 +3,13 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
+import { SITE_URL } from '@/lib/constants';
 
 const FONT_URL =
   'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://escapesubscriptions.online'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Buy Software Once — One-Time Purchase Alternatives to Subscriptions',
     template: '%s | Escape Subscriptions',

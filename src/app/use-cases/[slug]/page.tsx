@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import SoftwareCard from '@/components/SoftwareCard';
 import FAQSection from '@/components/FAQSection';
+import Breadcrumb from '@/components/Breadcrumb';
 import JsonLd, { breadcrumbSchema, faqSchema, itemListSchema } from '@/components/JsonLd';
 import { useCases, software, subscriptionTools, getUseCaseBySlug } from '@/lib/data';
 import { formatPrice } from '@/lib/utils';
@@ -107,6 +108,7 @@ export default async function UseCasePage({ params }: PageProps) {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10 pb-16">
+        <Breadcrumb items={[{ name: 'Use Cases', href: '/use-cases' }, { name: uc.persona }]} />
         {/* SEO Intro */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-8">
           <p className="text-slate-700 leading-relaxed text-base">

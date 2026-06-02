@@ -1,10 +1,11 @@
 import { MetadataRoute } from 'next';
 import { software, subscriptionTools, categories, getAllComparisons, stacks, useCases, getFreeAlternativesForTool, getOpenSourceAlternativesForTool } from '@/lib/data';
+import { SITE_URL } from '@/lib/constants';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://escapesubscriptions.online';
+  const baseUrl = SITE_URL;
   // Use build date as lastModified for static pages — more honest than new Date() on every build
   const buildDate = new Date('2026-06-02');
 

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import JsonLd from '@/components/JsonLd';
+import { SITE_URL } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Page Not Found | Escape Subscriptions',
@@ -16,12 +17,12 @@ export default function NotFound() {
           '@type': 'WebPage',
           name: 'Page Not Found — Escape Subscriptions',
           description: 'The page you requested does not exist. Browse our collection of one-time purchase and open-source alternatives to subscription software.',
-          url: 'https://escapesubscriptions.online/',
-          image: 'https://escapesubscriptions.online/og.png',
+          url: `${SITE_URL}/`,
+          image: `${SITE_URL}/og.png`,
           isPartOf: {
             '@type': 'WebSite',
             name: 'Escape Subscriptions',
-            url: 'https://escapesubscriptions.online',
+            url: SITE_URL,
           },
         }}
       />
