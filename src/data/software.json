@@ -43,7 +43,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "gimp",
@@ -89,7 +89,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "krita",
@@ -136,7 +136,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "photopea",
@@ -180,7 +180,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "pixelmator-pro",
@@ -188,9 +188,9 @@
     "slug": "pixelmator-pro",
     "description": "A powerful image editing app for Mac with a one-time purchase model.",
     "websiteUrl": "https://www.pixelmator.com/pro/",
-    "pricingType": "ONE_TIME_PURCHASE",
-    "priceText": "$49.99 one-time",
-    "startingPrice": 49.99,
+    "pricingType": "FREE",
+    "priceText": "Free",
+    "startingPrice": 0,
     "currency": "USD",
     "platforms": [
       "MACOS",
@@ -225,7 +225,7 @@
       "adobe-photoshop"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "affinity-designer",
@@ -233,9 +233,9 @@
     "slug": "affinity-designer",
     "description": "A professional vector graphics editor, now free under Canva ownership. Previously a one-time purchase.",
     "websiteUrl": "https://affinity.serif.com/designer/",
-    "pricingType": "FREE",
-    "priceText": "Free",
-    "startingPrice": 0,
+    "pricingType": "ONE_TIME_PURCHASE",
+    "priceText": "One-time purchase starting from $21.99",
+    "startingPrice": 21.99,
     "currency": "USD",
     "platforms": [
       "WINDOWS",
@@ -273,7 +273,7 @@
       "canva"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "inkscape",
@@ -319,7 +319,7 @@
       "adobe-illustrator"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "obsidian",
@@ -369,7 +369,7 @@
       "evernote"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "logseq",
@@ -418,7 +418,7 @@
       "notion"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "anytype",
@@ -466,7 +466,7 @@
       "notion"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "joplin",
@@ -515,7 +515,7 @@
       "evernote"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "standard-notes",
@@ -564,7 +564,7 @@
       "evernote"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "super-productivity",
@@ -614,7 +614,7 @@
       "asana"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "languagetool",
@@ -660,7 +660,7 @@
       "grammarly"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "libreoffice",
@@ -708,7 +708,7 @@
       "microsoft-365"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "scrivener",
@@ -754,7 +754,7 @@
       "notion"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "typora",
@@ -800,7 +800,7 @@
       "notion"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "keepassxc",
@@ -847,7 +847,7 @@
       "lastpass-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "bitwarden",
@@ -897,7 +897,7 @@
       "lastpass-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "ente-auth",
@@ -946,7 +946,7 @@
       "1password"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "syncthing",
@@ -994,7 +994,7 @@
       "google-drive"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "nextcloud",
@@ -1046,7 +1046,7 @@
       "icloud-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "pcloud",
@@ -1095,7 +1095,7 @@
       "icloud-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "mega",
@@ -1143,7 +1143,7 @@
       "icloud-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "davinci-resolve",
@@ -1189,7 +1189,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "kdenlive",
@@ -1235,7 +1235,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "shotcut",
@@ -1281,7 +1281,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "audacity",
@@ -1327,7 +1327,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "reaper",
@@ -1373,7 +1373,7 @@
       "adobe-premiere-pro"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "gnucash",
@@ -1419,7 +1419,7 @@
       "quickbooks"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "akaunting",
@@ -1464,7 +1464,7 @@
       "quickbooks"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "penpot",
@@ -1511,7 +1511,7 @@
       "sketch"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "figma-alternative",
@@ -1557,7 +1557,7 @@
       "sketch"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "signal",
@@ -1604,7 +1604,7 @@
       "slack"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "jitsi-meet",
@@ -1654,7 +1654,7 @@
       "zoom"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "planka",
@@ -1699,7 +1699,7 @@
       "trello"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "vikunja",
@@ -1748,7 +1748,7 @@
       "asana"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "calendso",
@@ -1798,7 +1798,7 @@
       "calendly"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "zoho-mail",
@@ -1845,7 +1845,7 @@
       "microsoft-365"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "ollama",
@@ -1891,7 +1891,7 @@
       "chatgpt-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "lm-studio",
@@ -1937,7 +1937,7 @@
       "chatgpt-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "huggingchat",
@@ -1981,7 +1981,7 @@
       "chatgpt-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "windsurf",
@@ -2027,7 +2027,7 @@
       "github-copilot"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "continue",
@@ -2073,7 +2073,7 @@
       "github-copilot"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "navidrome",
@@ -2120,7 +2120,7 @@
       "spotify-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "jellyfin",
@@ -2169,7 +2169,7 @@
       "netflix"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "plex",
@@ -2219,7 +2219,7 @@
       "netflix"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "anki",
@@ -2268,7 +2268,7 @@
       "duolingo-super"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "listmonk",
@@ -2315,7 +2315,7 @@
       "mailchimp"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "buttondown",
@@ -2359,7 +2359,7 @@
       "mailchimp"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "railway",
@@ -2403,7 +2403,7 @@
       "heroku"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "fly-io",
@@ -2447,7 +2447,7 @@
       "heroku"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "render",
@@ -2491,7 +2491,7 @@
       "heroku"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "darktable",
@@ -2537,7 +2537,7 @@
       "adobe-lightroom"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "rawtherapee",
@@ -2583,7 +2583,7 @@
       "adobe-lightroom"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "lunacy",
@@ -2629,7 +2629,7 @@
       "sketch"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-06-01"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "n8n-community",
@@ -2681,7 +2681,7 @@
       "n8n-cloud"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "activepieces",
@@ -2729,7 +2729,7 @@
       "n8n-cloud"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "node-red",
@@ -2781,7 +2781,7 @@
       "n8n-cloud"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "windmill",
@@ -2833,7 +2833,7 @@
       "n8n-cloud"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "screenity",
@@ -2886,7 +2886,7 @@
       "trupeer"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "obs-studio",
@@ -2940,7 +2940,7 @@
       "clueso"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "sharex",
@@ -2991,7 +2991,7 @@
       "trupeer"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "guidde",
@@ -3041,7 +3041,7 @@
       "clueso"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "tango",
@@ -3091,7 +3091,7 @@
       "trupeer"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "deepseek",
@@ -3137,7 +3137,7 @@
       "chatgpt-plus"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "airmore",
@@ -3183,7 +3183,7 @@
       "fotor"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "ideogram",
@@ -3191,9 +3191,9 @@
     "slug": "ideogram",
     "description": "Freemium AI image generator known for legible text generation in images. Ideogram 3.0 available to all users including free tier.",
     "websiteUrl": "https://ideogram.ai",
-    "pricingType": "FREEMIUM",
-    "priceText": "Free tier available",
-    "startingPrice": null,
+    "pricingType": "SUBSCRIPTION_WITH_FREE_PLAN",
+    "priceText": "Free plan available; paid plans start at $8/month",
+    "startingPrice": 8,
     "currency": "USD",
     "platforms": [
       "WEB"
@@ -3228,7 +3228,7 @@
       "midjourney"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "slidesai",
@@ -3272,7 +3272,7 @@
       "beautiful-ai"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "luma-ai",
@@ -3317,7 +3317,7 @@
       "heygen"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-26"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "stirling-pdf",
@@ -3362,7 +3362,7 @@
       "adobe-acrobat"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "pdf-arranger",
@@ -3407,7 +3407,7 @@
       "adobe-acrobat"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "libreoffice-draw",
@@ -3454,7 +3454,7 @@
       "adobe-acrobat"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "natron",
@@ -3462,7 +3462,7 @@
     "slug": "natron",
     "description": "Node-based compositing software for motion graphics and visual effects, similar to Nuke.",
     "websiteUrl": "https://natrongithub.github.io/",
-    "pricingType": "FREE",
+    "pricingType": "OPEN_SOURCE",
     "priceText": "Free",
     "startingPrice": null,
     "currency": null,
@@ -3500,7 +3500,7 @@
       "adobe-after-effects"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "blender",
@@ -3548,7 +3548,7 @@
       "adobe-after-effects"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "synfig-studio",
@@ -3594,7 +3594,7 @@
       "adobe-after-effects"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "freecad",
@@ -3641,7 +3641,7 @@
       "autocad"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "librecad",
@@ -3688,7 +3688,7 @@
       "autocad"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "openscad",
@@ -3734,7 +3734,7 @@
       "autocad"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "twenty-crm",
@@ -3779,7 +3779,7 @@
       "salesforce"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "hubspot-crm",
@@ -3825,7 +3825,7 @@
       "salesforce"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "espocrm",
@@ -3833,7 +3833,7 @@
     "slug": "espocrm",
     "description": "Lightweight open-source CRM with modern UI, REST API, and workflow automation.",
     "websiteUrl": "https://www.espocrm.com",
-    "pricingType": "FREE",
+    "pricingType": "OPEN_SOURCE",
     "priceText": "Free (self-hosted)",
     "startingPrice": null,
     "currency": null,
@@ -3870,7 +3870,7 @@
       "salesforce"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "newpipe",
@@ -3914,7 +3914,7 @@
       "youtube-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "invidious",
@@ -3959,7 +3959,7 @@
       "youtube-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "ublock-origin",
@@ -4003,7 +4003,7 @@
       "youtube-premium"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "wireguard",
@@ -4052,7 +4052,7 @@
       "expressvpn"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "protonvpn",
@@ -4061,8 +4061,8 @@
     "description": "Free VPN tier with no ads, no logs, Swiss privacy laws, and open source clients.",
     "websiteUrl": "https://protonvpn.com",
     "pricingType": "FREEMIUM",
-    "priceText": "Free tier available",
-    "startingPrice": null,
+    "priceText": "Free plan available; Plus from $2.99/month",
+    "startingPrice": 2.99,
     "currency": null,
     "platforms": [
       "WINDOWS",
@@ -4101,7 +4101,7 @@
       "expressvpn"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "openvpn",
@@ -4109,7 +4109,7 @@
     "slug": "openvpn",
     "description": "Battle-tested open-source VPN protocol with self-hosting support and wide compatibility.",
     "websiteUrl": "https://openvpn.net",
-    "pricingType": "FREE",
+    "pricingType": "SUBSCRIPTION_WITH_FREE_PLAN",
     "priceText": "Free (self-hosted)",
     "startingPrice": null,
     "currency": null,
@@ -4150,7 +4150,7 @@
       "expressvpn"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "plane",
@@ -4158,8 +4158,8 @@
     "slug": "plane",
     "description": "Modern open-source project management with issues, cycles, product planning, and pages.",
     "websiteUrl": "https://plane.so",
-    "pricingType": "FREE",
-    "priceText": "Free (self-hosted)",
+    "pricingType": "FREEMIUM",
+    "priceText": "Free self-hosted; cloud free trial and paid plans",
     "startingPrice": null,
     "currency": null,
     "platforms": [
@@ -4170,7 +4170,7 @@
       "DEVELOPER_TOOLS"
     ],
     "isOpenSource": true,
-    "isOfflineSupported": false,
+    "isOfflineSupported": true,
     "requiresAccount": true,
     "hasFreeTrial": false,
     "ownershipLevel": "HIGH",
@@ -4195,7 +4195,7 @@
       "jira"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "taiga",
@@ -4203,7 +4203,7 @@
     "slug": "taiga",
     "description": "Open-source agile project management for Scrum and Kanban with backlog, sprints, and wiki.",
     "websiteUrl": "https://www.taiga.io",
-    "pricingType": "FREE",
+    "pricingType": "OPEN_SOURCE",
     "priceText": "Free (self-hosted)",
     "startingPrice": null,
     "currency": null,
@@ -4240,7 +4240,7 @@
       "jira"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "openproject",
@@ -4248,7 +4248,7 @@
     "slug": "openproject",
     "description": "Full project management with Gantt charts, time tracking, budgeting, wiki, and agile boards.",
     "websiteUrl": "https://www.openproject.org",
-    "pricingType": "FREE",
+    "pricingType": "FREEMIUM",
     "priceText": "Free (self-hosted)",
     "startingPrice": null,
     "currency": null,
@@ -4286,7 +4286,7 @@
       "jira"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "hoppscotch",
@@ -4331,7 +4331,7 @@
       "postman"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "insomnia",
@@ -4377,7 +4377,7 @@
       "postman"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "httpie",
@@ -4423,7 +4423,7 @@
       "postman"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "woocommerce",
@@ -4468,7 +4468,7 @@
       "shopify"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "opencart",
@@ -4512,7 +4512,7 @@
       "shopify"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "prestashop",
@@ -4520,7 +4520,7 @@
     "slug": "prestashop",
     "description": "Feature-rich open-source e-commerce platform with 600+ built-in features and global reach.",
     "websiteUrl": "https://www.prestashop.com",
-    "pricingType": "FREE",
+    "pricingType": "OPEN_SOURCE",
     "priceText": "Free (self-hosted)",
     "startingPrice": null,
     "currency": null,
@@ -4557,7 +4557,7 @@
       "shopify"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "zammad",
@@ -4565,7 +4565,7 @@
     "slug": "zammad",
     "description": "Web-based open-source helpdesk with ticketing, live chat, knowledge base, and telephony.",
     "websiteUrl": "https://zammad.org",
-    "pricingType": "FREE",
+    "pricingType": "OPEN_SOURCE",
     "priceText": "Free (self-hosted)",
     "startingPrice": null,
     "currency": null,
@@ -4602,7 +4602,7 @@
       "zendesk"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "freescout",
@@ -4647,7 +4647,7 @@
       "zendesk"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "freshdesk",
@@ -4692,7 +4692,7 @@
       "zendesk"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "formbricks",
@@ -4700,7 +4700,7 @@
     "slug": "formbricks",
     "description": "Open-source survey and form builder with in-product micro-surveys and user research tools.",
     "websiteUrl": "https://formbricks.com",
-    "pricingType": "FREE",
+    "pricingType": "OPEN_SOURCE",
     "priceText": "Free (self-hosted)",
     "startingPrice": null,
     "currency": null,
@@ -4738,7 +4738,7 @@
       "surveymonkey"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "tally",
@@ -4783,7 +4783,7 @@
       "surveymonkey"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "limesurvey",
@@ -4829,7 +4829,7 @@
       "surveymonkey"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "google-forms",
@@ -4873,7 +4873,7 @@
       "surveymonkey"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "nocodb",
@@ -4918,7 +4918,7 @@
       "airtable"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "baserow",
@@ -4963,7 +4963,7 @@
       "airtable"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "grist",
@@ -5008,7 +5008,7 @@
       "airtable"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "documenso",
@@ -5053,7 +5053,7 @@
       "docusign"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "opensign",
@@ -5098,7 +5098,7 @@
       "docusign"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "libresign",
@@ -5143,7 +5143,7 @@
       "docusign"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "postiz",
@@ -5151,9 +5151,9 @@
     "slug": "postiz",
     "description": "Open-source social media scheduling tool with AI agent and multi-platform support.",
     "websiteUrl": "https://postiz.com",
-    "pricingType": "FREE",
-    "priceText": "Free (self-hosted)",
-    "startingPrice": null,
+    "pricingType": "OPEN_SOURCE",
+    "priceText": "Free self-hosted; cloud plans from $29/month",
+    "startingPrice": 29,
     "currency": null,
     "platforms": [
       "WEB",
@@ -5188,7 +5188,7 @@
       "hootsuite"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "rustdesk",
@@ -5196,7 +5196,7 @@
     "slug": "rustdesk",
     "description": "Self-hosted remote desktop with file transfer, encrypted connections, and no limits.",
     "websiteUrl": "https://rustdesk.com",
-    "pricingType": "FREE",
+    "pricingType": "OPEN_SOURCE",
     "priceText": "Free (self-hosted)",
     "startingPrice": null,
     "currency": null,
@@ -5236,7 +5236,7 @@
       "teamviewer"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "meshcentral",
@@ -5283,7 +5283,7 @@
       "teamviewer"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "apache-guacamole",
@@ -5328,7 +5328,7 @@
       "teamviewer"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "keepass",
@@ -5374,7 +5374,7 @@
       "dashlane"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "proton-pass",
@@ -5423,7 +5423,7 @@
       "dashlane"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "windscribe",
@@ -5446,7 +5446,7 @@
     "categories": [
       "SECURITY"
     ],
-    "isOpenSource": false,
+    "isOpenSource": true,
     "isOfflineSupported": false,
     "requiresAccount": true,
     "hasFreeTrial": false,
@@ -5473,7 +5473,7 @@
       "expressvpn"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "onlyoffice",
@@ -5523,7 +5523,7 @@
       "microsoft-365"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "google-docs",
@@ -5570,7 +5570,7 @@
       "microsoft-365"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "thunderbird",
@@ -5618,7 +5618,7 @@
       "microsoft-outlook"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "evolution",
@@ -5663,7 +5663,7 @@
       "microsoft-outlook"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "wekan",
@@ -5710,7 +5710,7 @@
       "trello"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   },
   {
     "id": "focalboard",
@@ -5759,6 +5759,6 @@
       "trello"
     ],
     "affiliateUrl": null,
-    "lastCheckedAt": "2026-05-27"
+    "lastCheckedAt": "2026-06-08"
   }
 ]
